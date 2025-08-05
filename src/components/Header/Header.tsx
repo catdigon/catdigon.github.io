@@ -1,3 +1,4 @@
+import { StyledHeader } from './Header.styled';
 import HeaderArt from './HeaderArt';
 import HeaderPresentation from './HeaderPresentation';
 
@@ -5,8 +6,10 @@ export default function Header() {
 
     return (
         <>
-        <HeaderPresentation />
-        <HeaderArt /> 
+            <StyledHeader>
+                <HeaderPresentation />
+                <HeaderArt />
+            </StyledHeader>
         </>
     )
 }
