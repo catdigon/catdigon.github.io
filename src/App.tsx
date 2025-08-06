@@ -1,7 +1,9 @@
 import { StyleBackground } from "./components/Background/Background.styled"
+import Footer from "./components/Footer/Footer"
 import Header from "./components/Header/Header"
 import Navbar from "./components/Navbar/Navbar"
-import ProjectsArea from "./components/ProjectsArea/ProjectsArea"
+import ProjectsSection from "./components/ProjectsSection/ProjectsSection"
+
 
 
 function App() {
@@ -11,7 +13,8 @@ function App() {
     <StyleBackground/>
     <Navbar/> 
     <Header/>
-    <ProjectsArea />
+    <ProjectsSection />
+    <Footer />
     </>
     
   )

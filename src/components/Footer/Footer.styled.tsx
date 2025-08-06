@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledNavbar = styled.nav`
+export const StyledFooter = styled.nav`
 
     background: white;
     border-radius: 14px;
@@ -16,21 +16,6 @@ export const StyledNavbar = styled.nav`
     align-self: center;
     place-self: anchor-center;
     width: 80%;
-    position: fixed;
-    z-index: 99;
-    place-self: start;
-    justify-self: anchor-center;
+    justify-self: anchor-center;`
 
-`
 
-export const StyledLogo = styled.img`
-    height: 34px;
-    width: auto;
-
-`
-
-export const StyleNavbarMenu = styled.ul`
-    display: flex;
-    gap: 1.5rem;
-    margin-bottom: 0rem;
-`
