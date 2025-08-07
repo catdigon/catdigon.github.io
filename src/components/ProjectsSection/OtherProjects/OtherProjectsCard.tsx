@@ -10,7 +10,7 @@ export default function OtherProjectsCard() {
       <Card.Body className="text-end">
         <Card.Title>{OtherProjectsText.title}</Card.Title>
         <Card.Text>{OtherProjectsText.text}</Card.Text>
-        <Button variant="dark">{OtherProjectsText.button} <BsChevronRight style={{ marginLeft: "0.5rem" }} /> </Button>
+        <Button variant="dark" aria-label="Other Projects">{OtherProjectsText.button} <BsChevronRight style={{ marginLeft: "0.5rem" }} /> </Button>
       </Card.Body>
     </Card>
   );

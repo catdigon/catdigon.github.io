@@ -1,21 +1,41 @@
 import styled from "styled-components";
 
-export const StyledFooter = styled.nav`
+export const StyledFooter = styled.footer`
 
     background: white;
     border-radius: 14px;
-    margin: 34px 48px;
+    margin: -2px 48px 34px;
     padding: 14px 22px;
     box-shadow: 0 0.9px 4px 0 var(--Shadow-6, rgba(0, 0, 0, 0.08)), 0 2.6px 8px 0 var(--Shadow-4, rgba(0, 0, 0, 0.06)), 0 5.7px 12px 0 var(--Shadow-3, rgba(0, 0, 0, 0.05)), 0 15px 15px 0 var(--Shadow-2, rgba(0, 0, 0, 0.04));
     max-width: 1400px;
-    display: flex;
-    flex-direction: row;
-    column-gap: 2rem;
-    align-items: center;
-    justify-content: space-between;
-    align-self: center;
-    place-self: anchor-center;
     width: 80%;
-    justify-self: anchor-center;`
+    justify-self: anchor-center;
+
+    h5{
+        font-size: 4rem;
+    }
+
+    a{
+        color: black;
+        text-decoration: none;
+    }
+
+    .btn{
+        --bs-btn-padding-x: 0.1rem;
+        --bs-btn-padding-y: 0.1rem;
+        --bs-btn-font-size: 2.15rem;
+    }
+
+    .btn:hover{
+        color: #0080A3;
+    }    
+    
+    
+    .footeright{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-around;
+    }`
 
 

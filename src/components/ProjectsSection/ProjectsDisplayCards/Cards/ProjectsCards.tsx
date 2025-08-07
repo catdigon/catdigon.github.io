@@ -15,7 +15,7 @@ export default function ProjectsCards() {
             <Card.Body>
               <Card.Title>{projects.title}</Card.Title>
               <Card.Text>{projects.text}</Card.Text>
-              <Button variant="dark">{projects.button} <BsChevronRight style={{ marginLeft: "0.5rem" }} /></Button>
+              <Button variant="dark" aria-label="Project">{projects.button} <BsChevronRight style={{ marginLeft: "0.5rem" }} /></Button>
             </Card.Body>
           </Card>
         </Col>

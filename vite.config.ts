@@ -14,6 +14,7 @@ export default defineConfig({
               minify: false,
               pure: true,
             },
+          
           ],
         ],
       },
