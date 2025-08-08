@@ -20,22 +20,12 @@ export const StyledFooter = styled.footer`
         text-decoration: none;
     }
 
-    .btn{
-        --bs-btn-padding-x: 0.1rem;
-        --bs-btn-padding-y: 0.1rem;
-        --bs-btn-font-size: 2.15rem;
-    }
-
-    .btn:hover{
-        color: #0080A3;
-    }    
-    
     
     .footeright{
         display: flex;
         flex-direction: column;
         align-items: flex-end;
         justify-content: space-around;
-    }`
-
+    }
+    `
 

@@ -4,9 +4,9 @@ export default function IconCv() {
 
 
         <svg xmlns="http://www.w3.org/2000/svg" 
-        width="33" 
-        height="33" 
-        viewBox="0 0 448 512"
+        width="31" 
+        height="31" 
+        viewBox="0 110 464 300"
         fill="currentColor"
         role="img"
         aria-hidden="true"

@@ -2,8 +2,8 @@
 
 import { Row, Col } from "react-bootstrap";
 import { StyledFooter } from "./Footer.styled";
-import BtnGridLinks from "./FooterLinks/FooterBtnLinks";
-import { BsEnvelopeAt} from "react-icons/bs";
+import BtnGridLinks from "./FooterIconLinks/FooterBtnLinks";
+import FooterEmail from "./FooterEmail";
 
 
 export default function Footer() {
@@ -16,10 +16,8 @@ export default function Footer() {
                     {/* Left column */}
                     <Col md={6} className="mb-3">
                         <h5>Get in touch</h5>
-                        <a href="mailto:catdigon.all@gmail.com"> 
-                            <BsEnvelopeAt />
-                                catdigon.all@gmail.com
-                        </a>
+                        <FooterEmail />
+
                     </Col>
 
                     {/* Right column */}

@@ -1,14 +1,19 @@
+import HeaderArt from './ArtHeader/HeaderFinalArt';
 import { StyledHeader } from './Header.styled';
-import HeaderArt from './HeaderArt';
-import HeaderPresentation from './HeaderPresentation';
+import HeaderPresentation from './HeaderText/HeaderPresentation';
+import { Col, Container, Row } from 'react-bootstrap';
 
 export default function Header() {
 
     return (
         <>
             <StyledHeader>
-                <HeaderPresentation />
-                <HeaderArt />
+                <Container>
+                    <Row>
+                        <Col><HeaderPresentation /></Col>
+                        <Col><HeaderArt /></Col>
+                    </Row>
+                </Container>
             </StyledHeader>
         </>
     )

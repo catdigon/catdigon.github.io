@@ -1,15 +1,21 @@
 import { StyledLogo, StyledNavbar, StyleNavbarMenu } from "./Navbar.styled";
-import Button from 'react-bootstrap/Button';
 import ButtonTransparent from "../Button/ButtonTransparent";
+import ButtonCTA from "../Button/ButtonCTA";
+import { Button } from "react-bootstrap";
+import NavbarLogo from "./NavbarLogo";
 
 
 export default function Navbar() {
 
     return (
         <StyledNavbar role="contentinfo">
-            <ButtonTransparent aria-label="Homepage">
-                <StyledLogo src="catdilogo.svg" />
-            </ButtonTransparent>
+
+            <StyledLogo>
+            <Button variant="link"
+            aria-label="Homepage" className="navbarlogo">
+                <NavbarLogo />
+            </Button>
+            </StyledLogo>
 
             <StyleNavbarMenu>
                 <li>
@@ -19,7 +25,7 @@ export default function Navbar() {
                     <ButtonTransparent aria-label="Projects section">Projects</ButtonTransparent>
                 </li>
                 <li>
-                    <Button variant="dark" aria-label="Contacts section">Get in touch</Button>
+                    <ButtonCTA aria-label="Contacts section">Get in touch</ButtonCTA>
                 </li>
             </StyleNavbarMenu>
 

@@ -9,7 +9,7 @@ export default function CardPresentationGlass({ children }: Props) {
 
     return (
         <Overide>
-            <Card border="light" style={{ width: '32rem'}}>
+            <Card border="light">
                 {children}
             </Card>
         </Overide>
@@ -18,6 +18,9 @@ export default function CardPresentationGlass({ children }: Props) {
 
 const Overide = styled.div`
    .card{
+
+        max-width: 32rem;
+        min-width: 20rem;
 
         --bs-card-spacer-y: 2.6rem;
         --bs-card-spacer-x: 1.6rem;

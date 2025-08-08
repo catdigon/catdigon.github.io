@@ -21,4 +21,10 @@ const Overide = styled.div`
     --bs-btn-bg: transparent;
     --bs-btn-border-color: transparent;
     }
+
+    .btn:hover{
+        color: #0080A3;
+        background-color: transparent !important;
+        border-color: transparent !important;
+    }
 `

@@ -1,27 +1,31 @@
 import { FaBehanceSquare, FaLinkedin } from "react-icons/fa";
 import { Button } from "react-bootstrap";
-import { StyledContainer } from "./FooterBtnLinks.styled";
+import { StyledContainer, StyleFooterList } from "./FooterBtnLinks.styled";
 import BtnOrcid from "./IconOrcid";
 import BtnCienciaID from "./IconCienciaID";
 import { FaSquareGithub } from "react-icons/fa6";
 import IconCv from "./IconCv";
 
 
-export default function BtnGridLinks(){
+export default function BtnGridLinks() {
 
-    return(
-        <>
-        <StyledContainer>
-        <div className="mt-3 d-flex gap-2" role="navigation" aria-label="Social links">
+  return (
+    <>
+      <StyledContainer>
+
+        <StyleFooterList>
+          <div className="mt-3 d-flex gap-2" role="navigation" aria-label="Social links">
+            <li>
               <Button
                 variant="link"
-                href="ttps://www.linkedin.com/in/catia-diogo"
+                href="https://www.linkedin.com/in/catia-diogo"
                 aria-label="LinkedIn"
               >
                 <FaLinkedin />
               </Button>
+            </li>
 
-
+            <li>
               <Button
                 variant="link"
                 href="https://www.behance.net/catiadiogo"
@@ -29,8 +33,9 @@ export default function BtnGridLinks(){
               >
                 <FaBehanceSquare />
               </Button>
+            </li>
 
-
+            <li>
               <Button
                 variant="link"
                 href="https://orcid.org/0000-0002-9129-5021"
@@ -38,8 +43,9 @@ export default function BtnGridLinks(){
               >
                 <BtnOrcid />
               </Button>
+            </li>
 
-
+            <li>
               <Button
                 variant="link"
                 href="https://www.cienciavitae.pt//pt/B11F-1F8E-B063"
@@ -47,7 +53,9 @@ export default function BtnGridLinks(){
               >
                 <BtnCienciaID />
               </Button>
+            </li>
 
+            <li>
               <Button
                 variant="link"
                 href="https://github.com/catdigon"
@@ -55,19 +63,20 @@ export default function BtnGridLinks(){
               >
                 <FaSquareGithub />
               </Button>
+            </li>
 
-                <Button
+            <li>
+              <Button
                 variant="link"
                 href="https://github.com/catdigon"
                 aria-label="CV"
               >
-                <IconCv/>
+                <IconCv />
               </Button>
-              
-
-              
-            </div>
-            </StyledContainer>
-        </>
-    )
+            </li>
+          </div>
+          </StyleFooterList>
+      </StyledContainer>
+    </>
+  )
 }

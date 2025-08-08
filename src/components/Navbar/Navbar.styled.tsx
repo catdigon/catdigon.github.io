@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const StyledNavbar = styled.nav`
-
     background: white;
     border-radius: 14px;
     margin: 34px 48px;
@@ -20,17 +19,20 @@ export const StyledNavbar = styled.nav`
     z-index: 99;
     place-self: start;
     justify-self: anchor-center;
-
-`
-
-export const StyledLogo = styled.img`
-    height: 34px;
-    width: auto;
-
 `
 
 export const StyleNavbarMenu = styled.ul`
     display: flex;
     gap: 1.5rem;
     margin-bottom: 0rem;
+`
+
+export const StyledLogo = styled.div`
+   .btn-link{
+    --bs-btn-color: black;
+   }
+
+.btn:hover{
+        color: #0080A3;}
+
 `
