@@ -9,7 +9,7 @@ import FooterEmail from "./FooterEmail";
 export default function Footer() {
 
     return (
-        <StyledFooter>
+        <StyledFooter id="Contacts">
             <footer role="contentinfo" className="py-4 mt-auto">
 
                 <Row>

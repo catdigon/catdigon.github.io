@@ -4,7 +4,7 @@ export default function ProjectsAreaGradientStart() {
 
     return (
         <>
-         <Gradient />
+         <Gradient id="Projects"/>
         </>
     )
 }
