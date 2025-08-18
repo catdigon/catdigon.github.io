@@ -9,6 +9,7 @@ import { appRoutes } from './data/constants';
 
 
 
+
 const router = createBrowserRouter([
   {
     path: appRoutes.HOME,

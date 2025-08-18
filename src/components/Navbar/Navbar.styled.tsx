@@ -32,7 +32,7 @@ export const StyledLogo = styled.div`
     --bs-btn-color: black;
    }
 
-.btn:hover{
-        color: #0080A3;}
+    .btn:hover{
+            color: #0080A3;}
 
 `

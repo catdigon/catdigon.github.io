@@ -1,15 +1,15 @@
-import Button from 'react-bootstrap/Button';
+import Button, { type ButtonProps } from 'react-bootstrap/Button';
 import styled from 'styled-components';
 
-interface Props {
+interface Props extends ButtonProps {
     children: React.ReactNode;
 }
 
-export default function ButtonCTA({ children }: Props) {
+export default function ButtonCTA({ children, ...props }: Props) {
 
     return (
         <Overide>
-            <Button variant='dark'>
+            <Button variant='dark' {...props}>
                 {children}
             </Button>
         </Overide>

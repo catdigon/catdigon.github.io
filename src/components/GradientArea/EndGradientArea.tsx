@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export default function ProjectsAreaGradientEnd() {
+export default function EndGradientArea() {
 
     return (
         <>

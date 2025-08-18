@@ -1,4 +1,4 @@
-import Header from "../../components/Header/Header"
+import AboutMeSection from "../../components/AboutmeSection/AboutmeSection"
 import PageLayout from "../../components/PageLayout/PageLayout"
 
 function AboutMe() {
@@ -6,9 +6,7 @@ function AboutMe() {
   return (
     <>
     <PageLayout>
-
-      <Header />
-
+      <AboutMeSection />
     </PageLayout>
     </>
     

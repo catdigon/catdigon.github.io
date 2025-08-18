@@ -15,8 +15,10 @@ export default function Navbar() {
 
             <StyledLogo>
                 <Link to={appRoutes.HOME}>
-                    <Button variant="link"
-                        aria-label="Homepage" className="navbarlogo">
+                    <Button
+                        variant="link"
+                        aria-label="Go to Homepage"
+                        className="navbarlogo">
                         <NavbarLogo />
                     </Button>
                 </Link>
@@ -27,28 +29,33 @@ export default function Navbar() {
                 <li>
 
                     <Link to={appRoutes.ABOUT_ME}>
-                        <ButtonTransparent aria-label="About me section">
-
+                        <ButtonTransparent
+                            aria-label="Go to About me section">
                             About
-
                         </ButtonTransparent>
                     </Link>
                 </li>
                 <li>
                     <HashLink to={`${appRoutes.HOME}#Projects`}>
-                    <ButtonTransparent aria-label="Projects section">Projects</ButtonTransparent>
+                        <ButtonTransparent
+                            aria-label="Go to Projects section">
+                            Projects
+                        </ButtonTransparent>
                     </HashLink>
                 </li>
                 <li>
 
-                    <a href='#Contacts'>
-                        <ButtonCTA aria-label="Contacts section">Get in touch</ButtonCTA>
-                    </a>
 
+                    <ButtonCTA
+                        aria-label="Go to Contacts section"
+                        onClick={() =>
+                            document.getElementById("Contacts")?.scrollIntoView({ behavior: "smooth" })}>
+                            Get in touch
+                    </ButtonCTA>
                 </li>
             </StyleNavbarMenu>
 
-        </StyledNavbar>
+        </StyledNavbar >
 
     )
 }

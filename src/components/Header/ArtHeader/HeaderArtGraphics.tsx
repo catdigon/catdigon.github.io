@@ -5,7 +5,12 @@ export default function HeaderArtGraphics() {
     return (
         <>
             <StarAnimationStyle>
-                <svg xmlns="http://www.w3.org/2000/svg" width="640" height="28.7rem" viewBox="0 0 640 469" fill="none">
+                <svg 
+                role="img"
+                aria-hidden="true"
+                focusable="false"
+
+                xmlns="http://www.w3.org/2000/svg" width="640" height="28.7rem" viewBox="0 0 640 469" fill="none">
                     <g filter="url(#filter0_ddd_23974_20187)">
                         <rect x="124.026" y="338" width="465" height="116" rx="22" fill="#F88B00" />
                     </g>

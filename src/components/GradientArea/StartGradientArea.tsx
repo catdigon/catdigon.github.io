@@ -1,10 +1,10 @@
 import styled from "styled-components"
 
-export default function ProjectsAreaGradientStart() {
+export default function StratGradientArea() {
 
     return (
         <>
-         <Gradient id="Projects"/>
+         <Gradient/>
         </>
     )
 }

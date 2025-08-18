@@ -3,7 +3,9 @@ export default function CatdigonLogo() {
 
     return (
         <>
-        <svg xmlns="http://www.w3.org/2000/svg"
+        <svg 
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
             width="126"
             height="38"
             viewBox="0 0 130 42"
