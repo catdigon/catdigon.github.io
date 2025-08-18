@@ -11,7 +11,7 @@ export default function ProjectsCards() {
       {ProjectsCardsText.map((projects, idx) => (
         <Col key={idx} xs={12} md={4}>
           <Card>
-            <Card.Img variant="top" src={projects.image} />
+            <Card.Img variant="top" src={projects.image} alt={projects.alt}/>
             <Card.Body>
               <Card.Title>{projects.title}</Card.Title>
               <Card.Text>{projects.text}</Card.Text>

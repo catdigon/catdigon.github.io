@@ -14,9 +14,10 @@ export const StyledContainer = styled.div`
     .btn:hover{
         color: #0080A3;
     } 
-`
 
-export const StyleFooterList = styled.ul`
-    display: flex;
-    gap: 1.5rem;
-    margin-bottom: 0rem;`
+    ul{
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 0rem;
+    }
+`

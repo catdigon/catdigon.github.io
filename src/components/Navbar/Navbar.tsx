@@ -11,7 +11,7 @@ import { HashLink } from 'react-router-hash-link';
 export default function Navbar() {
 
     return (
-        <StyledNavbar role="contentinfo">
+        <StyledNavbar role="navigation">
 
             <StyledLogo>
                 <Link to={appRoutes.HOME}>
