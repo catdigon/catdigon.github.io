@@ -2,14 +2,22 @@ import Card from 'react-bootstrap/Card';
 import CardPresentationGlass from './HeaderPresentation.styled';
 
 
-export default function HeaderPresentation() {
+interface Props {
+    title: string;
+    text: string;
+}
+
+
+export default function HeaderPresentation({title, text}: Props) {
 
     return (
         <CardPresentationGlass>
             <Card.Body>
-                <Card.Title>Hi, My name is Cátia</Card.Title>
+                <Card.Title>
+                    {title}
+                </Card.Title>
                 <Card.Text>
-                    I'm a UX/Product Designer-in-progress with a background in research and storytelling, learning how to design more human and accessible experiences.
+                    {text}
                 </Card.Text>
             </Card.Body>
         </CardPresentationGlass>

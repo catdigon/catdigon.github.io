@@ -1,10 +1,16 @@
 import styled from "styled-components"
 
-export default function StratGradientArea() {
+interface Props{
+    children?: React.ReactNode;
+}
+
+export default function StratGradientArea( {children}: Props) {
 
     return (
         <>
-         <Gradient/>
+         <Gradient>
+            {children}
+         </Gradient>
         </>
     )
 }

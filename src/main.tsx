@@ -3,9 +3,10 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { createBrowserRouter, RouterProvider } from 'react-router';
-import Home from './pages/Homepage';
 import AboutMe from './pages/AboutMe';
 import { appRoutes } from './data/constants';
+import OtherProjectsPage from './pages/OtherProjects';
+import HomePage from './pages/Homepage';
 
 
 
@@ -13,11 +14,15 @@ import { appRoutes } from './data/constants';
 const router = createBrowserRouter([
   {
     path: appRoutes.HOME,
-    element: <Home />,
+    element: <HomePage />,
   },
   {
     path: appRoutes.ABOUT_ME,
     element: <AboutMe />,
+  },
+  {
+    path: appRoutes.OTHER_PROJECTS,
+    element: <OtherProjectsPage />,
   }
 
 ]);

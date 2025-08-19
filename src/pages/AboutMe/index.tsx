@@ -1,7 +1,7 @@
-import AboutMeSection from "../../components/AboutmeSection/AboutmeSection"
+import AboutMeSection from "../../components/AboutMePage/AboutmeSection"
 import PageLayout from "../../components/PageLayout/PageLayout"
 
-function AboutMe() {
+export default function AboutMe() {
 
   return (
     <>
@@ -12,5 +12,3 @@ function AboutMe() {
     
   )
 }
-
-export default AboutMe

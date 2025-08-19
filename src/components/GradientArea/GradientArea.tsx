@@ -1,21 +1,28 @@
 import EndGradientArea from "./EndGradientArea";
-import StratGradientArea from "./StartGradientArea";
+import { MiddleGradientArea } from "./MiddleGradientArea";
+import StartGradientArea from "./StartGradientArea";
+
 
 interface Props {
+    startChildren?: React.ReactNode;
     children: React.ReactNode;
     id?: string;
 }
 
 
-export default function GradientArea( { children, id }: Props ) {
+export default function GradientArea( { startChildren, children, id }: Props ) {
 
     return(
 
         <>
         <div id={id} />
-        <StratGradientArea />
-            {children}
-        <EndGradientArea />
+            <StartGradientArea>
+                {startChildren}
+            </StartGradientArea>
+            <MiddleGradientArea>
+                {children}
+            </MiddleGradientArea>
+            <EndGradientArea />
         </>
 
     )

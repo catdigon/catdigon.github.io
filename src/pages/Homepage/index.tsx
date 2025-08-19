@@ -1,22 +1,20 @@
 
 import Header from "../../components/Header/Header"
+import ProjectsSection from "../../components/HomePage/ProjectsSection"
 import PageLayout from "../../components/PageLayout/PageLayout"
-import ProjectsSection from "../../components/ProjectsSection/ProjectsSection"
 
 
-
-
-function AboutMe() {
+export default function HomePage() {
 
   return (
     <>
     <PageLayout>
-    <Header />
-    <ProjectsSection />
+      <Header />
+      <ProjectsSection />
     </PageLayout>
     </>
     
   )
 }
 
-export default AboutMe
+
