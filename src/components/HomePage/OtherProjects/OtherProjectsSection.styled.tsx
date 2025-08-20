@@ -8,7 +8,7 @@ export const StyledSection = styled.div`
 `
 
 export const StyledCardContainer = styled.div`
-    width: 80%;
+    width: 70%;
     display: flex;
     justify-content: flex-end;
 `

@@ -8,7 +8,7 @@ export default function Header() {
 
     return (
         <>
-            <StyledHeader>
+            <StyledHeader id='Home'>
                 <Container>
                     <Row>
                         <Col>

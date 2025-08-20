@@ -10,7 +10,7 @@ export default function AboutMeSection() {
     return (
 
         <>
-            <StyledGradientArea>
+            <StyledGradientArea id="Aboutme">
                 <GradientArea>
 
                     <ProjectsBreackLine />

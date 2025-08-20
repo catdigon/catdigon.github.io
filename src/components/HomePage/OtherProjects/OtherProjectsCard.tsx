@@ -3,8 +3,8 @@ import { OtherProjectsText } from './OtherProjectsCardText';
 import { BsChevronRight } from 'react-icons/bs';
 import ButtonCTA from '../../Button/ButtonCTA';
 import styled from 'styled-components';
-import { Link } from 'react-router';
 import { appRoutes } from '../../../data/constants';
+import { HashLink } from 'react-router-hash-link';
 
 
 export default function OtherProjectsCard() {
@@ -16,13 +16,13 @@ export default function OtherProjectsCard() {
             <Card.Title>{OtherProjectsText.title}</Card.Title>
             <Card.Text>{OtherProjectsText.text}</Card.Text>
 
-            <Link to={appRoutes.OTHER_PROJECTS}>
+            <HashLink to={`${appRoutes.OTHER_PROJECTS}#OtherProjects`}>
               <ButtonCTA
                 aria-label="Other Projects">
                 {OtherProjectsText.button}
                 <BsChevronRight style={{ marginLeft: "0.5rem" }} />
               </ButtonCTA>
-            </Link>
+            </HashLink>
 
           </Card.Body>
         </Card>

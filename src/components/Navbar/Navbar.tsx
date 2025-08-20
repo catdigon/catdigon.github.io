@@ -3,7 +3,6 @@ import ButtonTransparent from "../Button/ButtonTransparent";
 import ButtonCTA from "../Button/ButtonCTA";
 import { Button } from "react-bootstrap";
 import NavbarLogo from "./NavbarLogo";
-import { Link } from "react-router";
 import { appRoutes } from "../../data/constants";
 import { HashLink } from 'react-router-hash-link';
 
@@ -14,26 +13,25 @@ export default function Navbar() {
         <StyledNavbar role="navigation">
 
             <StyledLogo>
-                <Link to={appRoutes.HOME}>
+                <HashLink to={`${appRoutes.HOME}#Home`}>
                     <Button
                         variant="link"
                         aria-label="Go to Homepage"
                         className="navbarlogo">
                         <NavbarLogo />
                     </Button>
-                </Link>
+                </HashLink>
 
             </StyledLogo>
 
             <StyleNavbarMenu>
                 <li>
-
-                    <Link to={appRoutes.ABOUT_ME}>
+                    <HashLink to={`${appRoutes.ABOUT_ME}#Aboutme`}>
                         <ButtonTransparent
                             aria-label="Go to About me section">
                             About
                         </ButtonTransparent>
-                    </Link>
+                    </HashLink>
                 </li>
                 <li>
                     <HashLink to={`${appRoutes.HOME}#Projects`}>
