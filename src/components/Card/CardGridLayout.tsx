@@ -1,20 +1,16 @@
-import CardLayout from "./Card";
 import { StyledContainerArea, StyledGridCards } from "./CardGrid.Layout.styled";
 
 interface Props{
-    title?: string;
-    data: any;
-    showText?: boolean;
+    children: React.ReactNode
 }
 
-export default function ProjectsArea( {title, data, showText}: Props ) {
+export default function ProjectsArea( {children}: Props ) {
 
     return(
         <>
         <StyledContainerArea>
             <StyledGridCards>
-                <h1>{title}</h1>
-                <CardLayout data={data} showText={showText}></CardLayout>
+                {children}
             </StyledGridCards>
         </StyledContainerArea>
         </>

@@ -1,7 +1,7 @@
 import type { Card } from "../components/Card/Card";
 import { projectsLabel } from "./projectsLabel";
 
-export const OtherProjectsCardsText: Card[] = [
+export const OtherProjectsCardsText2024: Card[] = [
   {
     year: "2024",
     title: "Trading Zones: Pensar as zonas de troca como um terceiro espaço para a criação e investigação artística",
@@ -14,7 +14,9 @@ export const OtherProjectsCardsText: Card[] = [
     buttonLink: "",
     abstract: "",
   },
+];
 
+export const OtherProjectsCardsText2023: Card[] = [
   {
     year: "2023",
     title: "20 Filmes fundamentais do cinema português",
@@ -28,6 +30,34 @@ export const OtherProjectsCardsText: Card[] = [
     abstract: "",
   },
 
+   {
+    year: "2023",
+    title: "Cacildes Adventure",
+    subtitle: "Cacildes Adventure",
+    text: "A RPG created by André Fernandes. I joined initially as a QA tester and later took on the production and editing of promotion video for the game.",
+    image: "/covers/cacildes.jpg",
+    alt: "Cacildes Adventure frame",
+    label: projectsLabel.GAMEMEDIA,
+    buttonLabel: "See project",
+    buttonLink: "",
+    abstract: "",
+  },
+];
+
+export const OtherProjectsCardsText2022: Card[] = [
+  {
+    year: "2022",
+    title: "DigitALL",
+    subtitle: "DigitALL",
+    text: "",
+    image: "/covers/ensino.jpg",
+    alt: "Stop motion films made by students ",
+    label: projectsLabel.EDUCATION,
+    buttonLabel: "See project",
+    buttonLink: "",
+    abstract: "",
+  },
+    
   {
     year: "2022",
     title: "Rafa and David: 'Us' vs 'Them'",
@@ -40,20 +70,22 @@ export const OtherProjectsCardsText: Card[] = [
     buttonLink: "",
     abstract: "By analysing Salaviza's films under the identity scope, similar ideas seem to appear in his work. The identity crisis and the relationship of power become a central theme along with the importance of the interspaces where the main characters take part in the world. Hence, by putting side-by-side Rafa (Salaviza, 2012) and Montanha (Salaviza, 2015) we can observe a space where the interior struggles with the exterior.",
   },
- 
+
   {
-    year: "2023",
-    title: "Cacildes Adventure",
-    subtitle: "Cacildes Adventure",
-    text: "A RPG created by André Fernandes. I joined initially as a QA tester and later took on the production and editing of promotion video for the game.",
-    image: "/covers/cacildes.jpg",
-    alt: "Cacildes Adventure frame",
-    label: projectsLabel.GAMEMEDIA,
+    year: "2022",
+    title: "Recorda-te de mim, sempre! ",
+    subtitle: "Recorda-te de mim, sempre! ",
+    text: "Experimental documentary",
+    image: "/covers/recorda1.jpg",
+    alt: "Film frame",
+    label: projectsLabel.FILM,
     buttonLabel: "See project",
     buttonLink: "",
     abstract: "",
   },
+];
 
+export const OtherProjectsCardsText2020: Card[] = [
   {
     year: "2020",
     title: "BDC - Bratislavské dobrovoľnícke centrum",
@@ -66,8 +98,10 @@ export const OtherProjectsCardsText: Card[] = [
     buttonLink: "",
     abstract: "",
   },
+];
 
-{
+export const OtherProjectsCardsText2019: Card[] = [
+  {
     year: "2019",
     title: "Caminhos Film Festival",
     subtitle: "Caminhos Film Festival",
@@ -75,19 +109,6 @@ export const OtherProjectsCardsText: Card[] = [
     image: "/covers/caminhos.jpg",
     alt: "Festival photos",
     label: projectsLabel.GAMEMEDIA,
-    buttonLabel: "See project",
-    buttonLink: "",
-    abstract: "",
-  },
-
-{
-    year: "2022",
-    title: "Recorda-te de mim, sempre! ",
-    subtitle: "Recorda-te de mim, sempre! ",
-    text: "Experimental documentary",
-    image: "/covers/recorda1.jpg",
-    alt: "Film frame",
-    label: projectsLabel.FILM,
     buttonLabel: "See project",
     buttonLink: "",
     abstract: "",
@@ -105,7 +126,9 @@ export const OtherProjectsCardsText: Card[] = [
     buttonLink: "",
     abstract: "",
   },
+];
 
+export const OtherProjectsCardsText2018: Card[] = [
   {
     year: "2018",
     title: "Mãe da minha mãe",
@@ -140,19 +163,6 @@ export const OtherProjectsCardsText: Card[] = [
     image: "/covers/agora.jpg",
     alt: "Film frame",
     label: projectsLabel.FILM,
-    buttonLabel: "See project",
-    buttonLink: "",
-    abstract: "",
-  },
-
-  {
-    year: "2022",
-    title: "DigitALL",
-    subtitle: "DigitALL",
-    text: "",
-    image: "/covers/ensino.jpg",
-    alt: "Stop motion films made by students ",
-    label: projectsLabel.EDUCATION,
     buttonLabel: "See project",
     buttonLink: "",
     abstract: "",

@@ -1,11 +1,12 @@
-import { Badge, Card, Col, Row } from "react-bootstrap";
+import { Badge, Card } from "react-bootstrap";
 import ButtonCTA from "../Button/ButtonCTA";
 import { BsChevronRight } from "react-icons/bs";
 import { StyledCard, StyledCardImgContainer } from "./Card.styled";
 
 interface Props {
-  data: Card[]
+  card: Card;
   showText?: boolean;
+  showLabel?: boolean;
 }
 
 export interface Card {
@@ -22,50 +23,44 @@ export interface Card {
 }
 
 
-export default function CardLayout({ data, showText = true }: Props) {
+export default function CardItem({ card, showText = true, showLabel = true }: Props) {
   return (
     <>
-      <StyledCard>
-        <Row className="g-4">
-          {data.map((projects, idx) => (
-            <Col key={idx} xs={12} md={4}>
+               <StyledCard>  
               <Card>
                 <StyledCardImgContainer>
                   <Card.Img
                     variant="top"
-                    src={projects.image}
-                    alt={projects.alt}
+                    src={card.image}
+                    alt={card.alt}
                   />
                 </StyledCardImgContainer>
 
                 <Card.Body>
-                  {projects.label && (<Badge bg="light" text="dark">
-                    {projects.label}
+                  {showLabel && card.label && (
+                    <Badge bg="light" text="dark">
+                    {card.label}
                   </Badge>
                   )}
 
                   <Card.Title>
-                    {projects.subtitle}
+                    {card.subtitle}
                   </Card.Title>
 
-                  {showText && projects.text && (
+                  {showText && card.text && (
                     <Card.Text>
-                      {projects.text}
+                      {card.text}
                     </Card.Text>
                   )}
 
                   <ButtonCTA aria-label="Project">
-                    {projects.buttonLabel}
+                    {card.buttonLabel}
                     <BsChevronRight style={{ marginLeft: "0.5rem" }} />
                   </ButtonCTA>
 
                 </Card.Body>
               </Card>
-            </Col>
-          ))}
-        </Row>
-
-      </StyledCard>
+                  </StyledCard> 
     </>
   );
 }
