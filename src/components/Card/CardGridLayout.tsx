@@ -1,4 +1,4 @@
-import { StyledContainerArea, StyledGridCards } from "./CardGrid.Layout.styled";
+import { StyledContainerArea, StyledGridCards } from "./CardGridLayout.styled";
 
 interface Props{
     children: React.ReactNode

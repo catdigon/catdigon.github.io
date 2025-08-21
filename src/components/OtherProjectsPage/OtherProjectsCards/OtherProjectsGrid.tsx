@@ -14,7 +14,7 @@ export default function OtherProjectsCards() {
                             <h4 style={{ height: 0 }}>
                                 {index === 0 ? "2024" : ""}
                             </h4>
-                            <CardItem card={project} showText={false}/>
+                            <CardItem card={project} showText={false} />
                         </Col>
                     ))
                     }
@@ -24,16 +24,17 @@ export default function OtherProjectsCards() {
                             <h4 style={{ height: 0 }}>
                                 {index === 0 ? "2023" : ""}
                             </h4>
-                            <CardItem card={project} showText={false}/>
+                            <CardItem card={project} showText={false} />
                         </Col>
                     ))
                     }
+
                     {OtherProjectsCardsText2022.map((project, index) => (
                         <Col xs={12} md={4}>
                             <h4 style={{ height: 0 }}>
                                 {index === 0 ? "2022" : ""}
                             </h4>
-                            <CardItem card={project} showText={false}/>
+                            <CardItem card={project} showText={false} />
                         </Col>
                     ))
                     }
@@ -43,7 +44,7 @@ export default function OtherProjectsCards() {
                             <h4 style={{ height: 0 }}>
                                 {index === 0 ? "2020" : ""}
                             </h4>
-                            <CardItem card={project} showText={false}/>
+                            <CardItem card={project} showText={false} />
                         </Col>
                     ))
                     }
@@ -53,7 +54,7 @@ export default function OtherProjectsCards() {
                             <h4 style={{ height: 0 }}>
                                 {index === 0 ? "2019" : ""}
                             </h4>
-                            <CardItem card={project} showText={false}/>
+                            <CardItem card={project} showText={false} />
                         </Col>
                     ))
                     }
@@ -63,7 +64,7 @@ export default function OtherProjectsCards() {
                             <h4 style={{ height: 0 }}>
                                 {index === 0 ? "2018" : ""}
                             </h4>
-                            <CardItem card={project} showText={false}/>
+                            <CardItem card={project} showText={false} />
                         </Col>
                     ))
                     }

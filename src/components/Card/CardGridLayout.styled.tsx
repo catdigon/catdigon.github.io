@@ -13,4 +13,5 @@ export const StyledGridCards = styled.div`
     display: flex;
     width: 70%;
     flex-direction: column;
+    justify-self: anchor-center;
 `

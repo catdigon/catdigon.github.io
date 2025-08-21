@@ -1,4 +1,6 @@
+import OtherProjectsCards from "../../components/OtherProjectsPage/OtherProjectsCards/OtherProjectsGrid";
 import OtherProjectsLayout from "../../components/OtherProjectsPage/OtherProjectsMain";
+
 import PageLayout from "../../components/PageLayout/PageLayout";
 
 export default function OtherProjectsPage() {
@@ -7,10 +9,12 @@ export default function OtherProjectsPage() {
     <>
       <PageLayout>
 
-      <OtherProjectsLayout />
+        <OtherProjectsLayout>
+          <OtherProjectsCards />
+        </OtherProjectsLayout>
 
-    </PageLayout>
+      </PageLayout>
     </>
-    
+
   )
 }

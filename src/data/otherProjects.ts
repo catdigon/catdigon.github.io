@@ -1,8 +1,10 @@
-import type { Card } from "../components/Card/Card";
+import { appRoutes } from "./constants";
+import type { CardProject } from "./models";
 import { projectsLabel } from "./projectsLabel";
 
-export const OtherProjectsCardsText2024: Card[] = [
+export const OtherProjectsCardsText2024: CardProject[] = [
   {
+    id:"trading-zones",
     year: "2024",
     title: "Trading Zones: Pensar as zonas de troca como um terceiro espaço para a criação e investigação artística",
     subtitle: "Trading Zones",
@@ -11,13 +13,16 @@ export const OtherProjectsCardsText2024: Card[] = [
     alt: "Dossiers edition cover",
     label: projectsLabel.WRITING,
     buttonLabel: "See project",
-    buttonLink: "",
-    abstract: "",
+    buttonLink: appRoutes.PROJECT_DETAIL.replace(':id', 'trading-zones'),
+    abstract: "Do we need to create a third space to reflect upon the world we inhabit alongside the Other? Trading Zones (Archive Books, 2022) initiates negotiations between cinema and our condition in the world, presenting cinema as a borderless space and as a tool for artistic and anthropological investigation.",
+    primaryOutButton: "Read Article",
+    primaryOutButtonLink: "",
   },
 ];
 
-export const OtherProjectsCardsText2023: Card[] = [
+export const OtherProjectsCardsText2023: CardProject[] = [
   {
+    id: "20-filmes-fundamentais-do-cinema-portugues",
     year: "2023",
     title: "20 Filmes fundamentais do cinema português",
     subtitle: "20 Filmes fundamentais do cinema português",
@@ -26,12 +31,15 @@ export const OtherProjectsCardsText2023: Card[] = [
     alt: "Book cover",
     label: projectsLabel.WRITING,
     buttonLabel: "See project",
-    buttonLink: "",
+    buttonLink: appRoutes.PROJECT_DETAIL.replace(':id', '20-filmes-fundamentais-do-cinema-portugues'),
     abstract: "",
+    primaryOutButton: "Read Book",
+    primaryOutButtonLink: "",
   },
 
    {
-    year: "2023",
+    id: "cacildes-adventure",
+    year: "2023 - current",
     title: "Cacildes Adventure",
     subtitle: "Cacildes Adventure",
     text: "A RPG created by André Fernandes. I joined initially as a QA tester and later took on the production and editing of promotion video for the game.",
@@ -39,13 +47,16 @@ export const OtherProjectsCardsText2023: Card[] = [
     alt: "Cacildes Adventure frame",
     label: projectsLabel.GAMEMEDIA,
     buttonLabel: "See project",
-    buttonLink: "",
+    buttonLink: appRoutes.PROJECT_DETAIL.replace(':id', 'cacildes-adventure'),
     abstract: "",
+    primaryOutButton: "Visite website",
+    primaryOutButtonLink: "",
   },
 ];
 
-export const OtherProjectsCardsText2022: Card[] = [
+export const OtherProjectsCardsText2022: CardProject[] = [
   {
+    id: "digitall",
     year: "2022",
     title: "DigitALL",
     subtitle: "DigitALL",
@@ -54,11 +65,14 @@ export const OtherProjectsCardsText2022: Card[] = [
     alt: "Stop motion films made by students ",
     label: projectsLabel.EDUCATION,
     buttonLabel: "See project",
-    buttonLink: "",
+    buttonLink: appRoutes.PROJECT_DETAIL.replace(':id', 'digitall'),
     abstract: "",
+    primaryOutButton: "",
+    primaryOutButtonLink: "",
   },
     
   {
+    id: "rafa-and-david",
     year: "2022",
     title: "Rafa and David: 'Us' vs 'Them'",
     subtitle: "Rafa and David",
@@ -67,11 +81,14 @@ export const OtherProjectsCardsText2022: Card[] = [
     alt: "Audiovisual Essay Frame",
     label: projectsLabel.WRITING,
     buttonLabel: "See project",
-    buttonLink: "",
+    buttonLink: appRoutes.PROJECT_DETAIL.replace(':id', 'rafa-and-david'),
     abstract: "By analysing Salaviza's films under the identity scope, similar ideas seem to appear in his work. The identity crisis and the relationship of power become a central theme along with the importance of the interspaces where the main characters take part in the world. Hence, by putting side-by-side Rafa (Salaviza, 2012) and Montanha (Salaviza, 2015) we can observe a space where the interior struggles with the exterior.",
+    primaryOutButton: "Read Article",
+    primaryOutButtonLink: "",
   },
 
   {
+    id: "recorda-te-de-mim",
     year: "2022",
     title: "Recorda-te de mim, sempre! ",
     subtitle: "Recorda-te de mim, sempre! ",
@@ -80,13 +97,16 @@ export const OtherProjectsCardsText2022: Card[] = [
     alt: "Film frame",
     label: projectsLabel.FILM,
     buttonLabel: "See project",
-    buttonLink: "",
+    buttonLink: appRoutes.PROJECT_DETAIL.replace(':id', 'recorda-te-de-mim'),
     abstract: "",
+    primaryOutButton: "",
+    primaryOutButtonLink: "",
   },
 ];
 
-export const OtherProjectsCardsText2020: Card[] = [
+export const OtherProjectsCardsText2020: CardProject[] = [
   {
+    id: "bdc",
     year: "2020",
     title: "BDC - Bratislavské dobrovoľnícke centrum",
     subtitle: "BDC - Bratislavské dobrovoľnícke centrum",
@@ -95,13 +115,16 @@ export const OtherProjectsCardsText2020: Card[] = [
     alt: "Project photos",
     label: projectsLabel.GAMEMEDIA,
     buttonLabel: "See project",
-    buttonLink: "",
+    buttonLink: appRoutes.PROJECT_DETAIL.replace(':id', 'bdc'),
     abstract: "",
+    primaryOutButton: "",
+    primaryOutButtonLink: "",
   },
 ];
 
-export const OtherProjectsCardsText2019: Card[] = [
+export const OtherProjectsCardsText2019: CardProject[] = [
   {
+    id:"caminhos-film-festival",
     year: "2019",
     title: "Caminhos Film Festival",
     subtitle: "Caminhos Film Festival",
@@ -110,11 +133,14 @@ export const OtherProjectsCardsText2019: Card[] = [
     alt: "Festival photos",
     label: projectsLabel.GAMEMEDIA,
     buttonLabel: "See project",
-    buttonLink: "",
+    buttonLink: appRoutes.PROJECT_DETAIL.replace(':id', 'caminhos-film-festival'),
     abstract: "",
+    primaryOutButton: "Visit the Website",
+    primaryOutButtonLink: "",
   },
 
   {
+    id: "entre-tanto",
     year: "2019",
     title: "Entre Tanto",
     subtitle: "Entre Tanto",
@@ -123,13 +149,16 @@ export const OtherProjectsCardsText2019: Card[] = [
     alt: "Film frame",
     label: projectsLabel.FILM,
     buttonLabel: "See project",
-    buttonLink: "",
+    buttonLink: appRoutes.PROJECT_DETAIL.replace(':id', 'entre-tanto'),
     abstract: "",
+    primaryOutButton: "",
+    primaryOutButtonLink: "",
   },
 ];
 
-export const OtherProjectsCardsText2018: Card[] = [
+export const OtherProjectsCardsText2018: CardProject[] = [
   {
+    id: "mae-da-minha-mae",
     year: "2018",
     title: "Mãe da minha mãe",
     subtitle: "Mãe da minha mãe",
@@ -138,11 +167,14 @@ export const OtherProjectsCardsText2018: Card[] = [
     alt: "Film frame",
     label: projectsLabel.FILM,
     buttonLabel: "See project",
-    buttonLink: "",
+    buttonLink: appRoutes.PROJECT_DETAIL.replace(':id', 'mae-da-minha-mae'),
     abstract: "",
+    primaryOutButton: "",
+    primaryOutButtonLink: "",
   },
 
   {
+    id: "ma-ras-ma-ti-ca",
     year: "2018",
     title: "Ma.ras.má.ti.ca",
     subtitle: "Ma.ras.má.ti.ca",
@@ -151,11 +183,14 @@ export const OtherProjectsCardsText2018: Card[] = [
     alt: "Film frame",
     label: projectsLabel.FILM,
     buttonLabel: "See project",
-    buttonLink: "",
+    buttonLink: appRoutes.PROJECT_DETAIL.replace(':id', 'ma-ras-ma-ti-ca'),
     abstract: "",
+    primaryOutButton: "",
+    primaryOutButtonLink: "",
   },
 
   {
+    id: "e-agora-estamos-aqui",
     year: "2018",
     title: "E agora estamos aqui",
     subtitle: "E agora estamos aqui",
@@ -164,7 +199,9 @@ export const OtherProjectsCardsText2018: Card[] = [
     alt: "Film frame",
     label: projectsLabel.FILM,
     buttonLabel: "See project",
-    buttonLink: "",
+    buttonLink: appRoutes.PROJECT_DETAIL.replace(':id', 'e-agora-estamos-aqui'),
     abstract: "",
+    primaryOutButton: "",
+    primaryOutButtonLink: "",
   },
 ];

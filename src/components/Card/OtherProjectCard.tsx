@@ -1,0 +1,79 @@
+import { Badge, Card, Figure } from "react-bootstrap";
+import ButtonTransparent from "../Button/ButtonTransparent";
+import { appRoutes } from "../../data/constants";
+import { HashLink } from "react-router-hash-link";
+import { IoChevronBackOutline } from "react-icons/io5";
+import { Link } from "react-router";
+import ButtonCTA from "../Button/ButtonCTA";
+import { GoLinkExternal } from "react-icons/go";
+import { StyledImageCard, StyledOtherCard } from "./OtherProjectCard.styled";
+import { StyledGridCards } from "./CardGridLayout.styled";
+import type { CardProject } from "../../data/models";
+
+
+
+interface Props {
+    card: CardProject ;
+}
+
+
+
+export default function OtherProjectCardDetails({ card }: Props){
+
+    return (
+        <>
+            <StyledGridCards style={{ marginTop: 20, marginLeft: 20, marginRight: 20, paddingBottom: 20 }}>
+
+                <HashLink to={appRoutes.OTHER_PROJECTS}>
+                    <ButtonTransparent
+                        aria-label="Go back">
+                        <IoChevronBackOutline
+                            style={{ marginLeft: "0.5rem" }} />
+                        Return
+                    </ButtonTransparent>
+                </HashLink>
+
+                <StyledOtherCard>
+                    <Card>
+                        <Card.Body>
+
+                            <Badge bg="light" text="dark">{card.label}</Badge>
+
+                            <Card.Title>{card.title}</Card.Title>
+                            <Card.Text>{card.text}</Card.Text>
+
+                            {card.abstract && (
+                            <Card.Subtitle className="mb-2">Abstract</Card.Subtitle>
+                            )}
+
+                            {card.abstract && (
+                            <Card.Text>{card.abstract}</Card.Text> 
+                            )}
+
+                            <Card.Subtitle className="mb-2">Year</Card.Subtitle>
+                            <Card.Text>{card.year}</Card.Text>
+
+                            {card.primaryOutButton && (
+                            <Link to={card.primaryOutButtonLink!}>
+                                <ButtonCTA aria-label="Project">
+                                    {card.primaryOutButton}
+                                    <GoLinkExternal style={{ marginLeft: "0.5rem" }} />
+                                </ButtonCTA>
+                            </Link>
+                            )}
+                        </Card.Body>
+
+                        <StyledImageCard>
+                            <Card.Img
+                                variant="top"
+                                src={card.image}
+                                alt={card.alt} />
+                            <Figure.Caption>{card.alt}</Figure.Caption>
+                        </StyledImageCard>
+
+                    </Card>
+                </StyledOtherCard>
+            </StyledGridCards>
+        </>
+    )
+}

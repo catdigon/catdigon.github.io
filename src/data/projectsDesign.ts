@@ -1,8 +1,9 @@
-import type { Card } from "../components/Card/Card";
+import type { CardProject } from "./models";
 import { projectsLabel } from "./projectsLabel";
 
-export const ProjectsCardsText: Card[] = [
+export const ProjectsCardsText: CardProject[] = [
   {
+    id: "cinemateca",
     year: "October 2024 - April 2025",
     title: "Cinemateca Website",
     subtitle: "Cinemateca",
@@ -15,6 +16,7 @@ export const ProjectsCardsText: Card[] = [
     abstract: "",
   },
   {
+    id:"portal-felix",
     year: "October 2024 - February 2025",
     title: "Portal Félix Plataform",
     subtitle: "Portal Félix",
@@ -27,6 +29,7 @@ export const ProjectsCardsText: Card[] = [
     abstract: "",
   },
   {
+    id: "impact-of-notification",
     year: "December 2024 - July 2025",
     title: "Impact of Notifications on Reading Tasks",
     subtitle: "Impact of Notifications",
