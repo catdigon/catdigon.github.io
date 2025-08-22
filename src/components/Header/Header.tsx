@@ -1,22 +1,28 @@
-import HeaderArt from './ArtHeader/HeaderFinalArt';
 import { StyledHeader } from './Header.styled';
 import HeaderPresentation from './HeaderText/HeaderPresentation';
 import { Col, Container, Row } from 'react-bootstrap';
 
 
-export default function Header() {
+interface Props{
+    id?: string;
+    title: string;
+    text: string;
+    children: React.ReactNode;
+}
+
+export default function Header( {id, title, text, children}: Props) {
 
     return (
         <>
-            <StyledHeader id='Home'>
+            <StyledHeader id={id}>
                 <Container>
                     <Row>
                         <Col>
                             <HeaderPresentation
-                                title={'Hi, My name is Cátia.'}
-                                text={"I'm a UX/Product Designer-in-progress with a background in research and storytelling, learning how to design more human and accessible experiences."} /></Col>
+                                title={title}
+                                text={text} /></Col>
                         <Col>
-                            <HeaderArt />
+                        {children}
                         </Col>
                     </Row>
                 </Container>

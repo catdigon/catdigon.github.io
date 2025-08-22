@@ -13,6 +13,7 @@ export default function OtherProjectsLayout( {children}: Props) {
 
         <>
             <StyledHeader id="OtherProjects" />
+            
             <GradientArea 
                 startChildren={<HeaderTextOtherProject />
                 }>

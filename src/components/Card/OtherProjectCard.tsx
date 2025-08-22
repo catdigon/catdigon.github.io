@@ -7,7 +7,6 @@ import { Link } from "react-router";
 import ButtonCTA from "../Button/ButtonCTA";
 import { GoLinkExternal } from "react-icons/go";
 import { StyledImageCard, StyledOtherCard } from "./OtherProjectCard.styled";
-import { StyledGridCards } from "./CardGridLayout.styled";
 import type { CardProject } from "../../data/models";
 
 
@@ -20,8 +19,7 @@ export default function OtherProjectCardDetails({ card }: Props){
 
     return (
         <>
-            <StyledGridCards style={{ marginTop: 20, marginLeft: 20, marginRight: 20, paddingBottom: 20 }}>
-
+            
                 <HashLink to={appRoutes.OTHER_PROJECTS}>
                     <ButtonTransparent
                         aria-label="Go back">
@@ -76,7 +74,6 @@ export default function OtherProjectCardDetails({ card }: Props){
                         </Row>
                     </Card>
                 </StyledOtherCard>
-            </StyledGridCards>
         </>
     )
 }

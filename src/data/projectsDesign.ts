@@ -1,3 +1,4 @@
+import { appRoutes } from "./constants";
 import type { CardProject } from "./models";
 import { projectsLabel } from "./projectsLabel";
 
@@ -12,7 +13,7 @@ export const ProjectsCardsText: CardProject[] = [
     alt: "Cinemateca's landing page image",
     label: projectsLabel.ACADEMIC,
     buttonLabel: "See full project",
-    buttonLink: "",
+    buttonLink: appRoutes.PROJECT,
     abstract: "",
   },
   {

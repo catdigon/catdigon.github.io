@@ -7,7 +7,8 @@ import AboutMe from './pages/AboutMe';
 import { appRoutes } from './data/constants';
 import OtherProjectsPage from './pages/OtherProjects';
 import HomePage from './pages/Homepage';
-import OtherProjectDetailPage from './pages/OtherProjectsDetails/otherproject';
+import OtherProjectDetailPage from './pages/OtherProjectsDetails';
+import ProjectPage from './pages/Projects';
 
 
 const router = createBrowserRouter([
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
   {
     path: appRoutes.OTHER_PROJECT_DETAIL,
     element: <OtherProjectDetailPage />,
+  },
+  {
+    path: appRoutes.PROJECT,
+    element: <ProjectPage />,
   }
 
 ]);

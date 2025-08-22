@@ -1,17 +1,15 @@
 import styled from "styled-components";
 import OtherProjectsCard from "./OtherProjectsCard";
-import { StyledCardContainer, StyledSection } from "./OtherProjectsSection.styled";
+import { StyledSection } from "./OtherProjectsSection.styled";
 
 export default function OtherProjectsSection() {
 
     return (
         <>
             <StyledSection>
-                <StyledCardContainer>
                     <Overide>
                         <OtherProjectsCard />
                     </Overide>
-                </StyledCardContainer>
             </StyledSection>
         </>
     )
