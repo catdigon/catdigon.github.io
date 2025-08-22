@@ -1,8 +1,10 @@
 import { Col, Row } from "react-bootstrap";
-import CardItem, { type Card } from "./Card";
+import CardItem from "./Card";
+import type { CardProject } from "../../data/models";
+
 
 interface Props {
-  data: Card[];
+  data: CardProject[];
   showText?: boolean;
   showLabel?: boolean;
 }

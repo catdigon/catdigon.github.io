@@ -10,8 +10,6 @@ import HomePage from './pages/Homepage';
 import OtherProjectDetailPage from './pages/OtherProjectsDetails/otherproject';
 
 
-
-
 const router = createBrowserRouter([
   {
     path: appRoutes.HOME,
@@ -26,7 +24,7 @@ const router = createBrowserRouter([
     element: <OtherProjectsPage />,
   },
   {
-    path: appRoutes.PROJECT_DETAIL,
+    path: appRoutes.OTHER_PROJECT_DETAIL,
     element: <OtherProjectDetailPage />,
   }
 

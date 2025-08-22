@@ -6,6 +6,8 @@ export interface CardProject {
   text?: string;
   image: string;
   alt: string;
+  imageProject?: string;
+  altImageProject?: string;
   label?: string;
   buttonLabel: string;
   buttonLink: string;

@@ -1,4 +1,4 @@
-import { Badge, Card, Figure } from "react-bootstrap";
+import { Badge, Card, Col, Figure, Row } from "react-bootstrap";
 import ButtonTransparent from "../Button/ButtonTransparent";
 import { appRoutes } from "../../data/constants";
 import { HashLink } from "react-router-hash-link";
@@ -11,11 +11,9 @@ import { StyledGridCards } from "./CardGridLayout.styled";
 import type { CardProject } from "../../data/models";
 
 
-
 interface Props {
     card: CardProject ;
 }
-
 
 
 export default function OtherProjectCardDetails({ card }: Props){
@@ -35,6 +33,8 @@ export default function OtherProjectCardDetails({ card }: Props){
 
                 <StyledOtherCard>
                     <Card>
+                        <Row>
+                             <Col sm={12} lg={7}>
                         <Card.Body>
 
                             <Badge bg="light" text="dark">{card.label}</Badge>
@@ -62,15 +62,18 @@ export default function OtherProjectCardDetails({ card }: Props){
                             </Link>
                             )}
                         </Card.Body>
+                        </Col>
 
+                        <Col sm={12} lg={5}>
                         <StyledImageCard>
                             <Card.Img
                                 variant="top"
-                                src={card.image}
-                                alt={card.alt} />
-                            <Figure.Caption>{card.alt}</Figure.Caption>
+                                src={card.imageProject || card.image}
+                                alt={card.altImageProject || card.alt} />
+                            <Figure.Caption>{card.altImageProject || card.alt}</Figure.Caption>
                         </StyledImageCard>
-
+                        </Col>
+                        </Row>
                     </Card>
                 </StyledOtherCard>
             </StyledGridCards>
