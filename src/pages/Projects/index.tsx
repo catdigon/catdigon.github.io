@@ -1,5 +1,5 @@
 import PageLayout from "../../components/PageLayout/PageLayout";
-import ProjectLayoutDisplay from "../../components/ProjectLayout/ProjectsLayout";
+import ProjectLayoutDisplay from "../../components/ProjectLayout/ProjectPageLayout";
 
 export default function ProjectPage() {
 

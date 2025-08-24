@@ -7,10 +7,6 @@ export const StyledProjectCard = styled.div`
         --bs-card-border-color: transparent;    
     }
 
-    p{
-        margin-bottom: 2rem;
-    }
-
     .badge{
         margin-bottom: 10px;
     }
@@ -19,11 +15,20 @@ export const StyledProjectCard = styled.div`
         margin-top: 0.5rem;
     }
 
-    .card-img-top{
-        border-radius: var(--bs-card-border-radius);
+    .card-title{
+        margin-bottom: 6px;
     }
 
-    .figure{
-        align-self: anchor-center;
+    .card-body{
+        padding: 0;
+         margin-top: 40px
     }
+
+
+`
+
+export const BadgeContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px
 `

@@ -26,7 +26,7 @@ export default function ActiveBarProgress({ active = true, showLabel = true, lab
                 <ProgressBar id="progress-bar"
                     variant="info"
                     now={0}
-                    style={{ height: 2, width: 150}} />
+                    style={{ height: 2}} />
             }
         </>
     )
