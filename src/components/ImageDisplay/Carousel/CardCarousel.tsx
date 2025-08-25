@@ -2,26 +2,26 @@ import Carousel from 'react-bootstrap/Carousel';
 import { StyledCarousel } from './CardCarousel.styled';
 import CarouselImage from './CarouselImage';
 
-interface Props{
-    imageSrc: string;
+interface Props {
+    images: string[];
     imageAlt: string;
     isLink: boolean;
 }
 
-export default function CardCarousel({imageSrc, imageAlt, isLink}: Props) {
+export default function CardCarousel({ images, imageAlt, isLink }: Props) {
     return (
         <>
             <StyledCarousel>
                 <Carousel pause={'hover'} interval={null}>
-                    <Carousel.Item>
-                        <CarouselImage imageSrc={imageSrc} imageAlt={imageAlt} isLink={isLink} />
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <CarouselImage imageSrc={imageSrc} imageAlt={imageAlt} isLink={isLink} />
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <CarouselImage imageSrc={imageSrc} imageAlt={imageAlt} isLink={isLink} />
-                    </Carousel.Item>
+
+                    {images.map((image, index) => (
+                        <Carousel.Item>
+                            <CarouselImage imageSrc={image} imageAlt={imageAlt} isLink={isLink} />
+                        </Carousel.Item>
+                    ))}
+
+
+
                 </Carousel>
             </StyledCarousel>
         </>

@@ -33,7 +33,7 @@ export default function ProjectSectionTree() {
                         </ul>
                     </CardList>
                 </Card.Text>
-                <CardCarousel imageSrc={"/cinemateca.jpg"} imageAlt={"Website"} isLink={true} />
+                <CardCarousel images={["/cinemateca.jpg"]} imageAlt={""} isLink={false}  />
             </ProjectCard>
 
 

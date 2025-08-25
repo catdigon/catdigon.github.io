@@ -6,6 +6,9 @@ import ProgressDisplay from "./ProgressDisplay/ProgressDisplay";
 import { StyledProgressStickyArea } from "./ProgressDisplay/ProgressDisplay.styled";
 import ImageHeader from "./ImageHeader/ImageHeader";
 import ProjectDisplay from "./Project/ProjectDisplay";
+import ProjectsBreackLine from "../HomePage/BreakLine/ProjectsBreak";
+import CardLayout from "../Card/CardLayout";
+import { ProjectsCardsText } from "../../data/projectsDesign";
 
 export default function ProjectLayoutDisplay() {
 
@@ -18,20 +21,29 @@ export default function ProjectLayoutDisplay() {
                 <ImageHeader />
             </Header>
 
-            <div style={{marginTop: -100}}>
-            <GradientArea>
-                <Row>
-                    <Col md={3}>
-                        <StyledProgressStickyArea>
-                            <ProgressDisplay />
-                        </StyledProgressStickyArea>
-                    </Col>
-                    <Col md={9}>
-                        <ProjectDisplay />
-                    </Col>
+            <div style={{ marginTop: -100 }}>
+                <GradientArea>
+                    <Row>
+                        <Col md={3}>
+                            <StyledProgressStickyArea>
+                                <ProgressDisplay />
+                            </StyledProgressStickyArea>
+                        </Col>
+                        <Col md={9}>
+                            <ProjectDisplay />
+                        </Col>
+                    </Row>
 
-                </Row>
-            </GradientArea>
+                    <ProjectsBreackLine />
+                    <div style={{ marginTop: 20}}>
+                        <CardLayout
+                        data={ProjectsCardsText}
+                        showText={false}
+                        showLabel={false} />
+                    </div>
+                    
+
+                </GradientArea>
             </div>
 
         </>

@@ -1,13 +1,11 @@
 import { Card } from "react-bootstrap";
 import { StyledProjectCard } from "./ProjectCard.styled";
 
-
 interface Props{
     title: string;
     description: string;
     children: React.ReactNode
 }
-
 
 export default function ProjectCard( {title, description, children}: Props){
     return(
