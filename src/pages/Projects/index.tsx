@@ -1,5 +1,5 @@
 import PageLayout from "../../components/PageLayout/PageLayout";
-import ProjectLayoutDisplay from "../../components/ProjectLayout/ProjectPageLayout";
+import ProjectLayoutDisplay from "../../components/ProjectLayout/ProjectCinemateca";
 
 export default function ProjectPage() {
 

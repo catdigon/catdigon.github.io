@@ -20,3 +20,13 @@ export const StyledImageArea = styled.div`
         padding-top: 4px;
     }
 `
+
+export const StyledCardImg = styled.div`
+    max-height: 600px;
+    overflow: auto;
+    border-radius: 6px;
+
+    @media (max-width: 768px) {
+        height: 220px;
+    }
+`

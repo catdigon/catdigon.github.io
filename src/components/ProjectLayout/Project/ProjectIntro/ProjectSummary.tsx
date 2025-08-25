@@ -1,6 +1,8 @@
 import ImageProjectDisplay from "../../../ImageDisplay/ImageComponent/ImageComponent";
 import ProjectCard from "../ProjectCard/ProjectCard";
 
+
+
 export default function ProjectSummary() {
 
     return (

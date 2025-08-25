@@ -1,5 +1,5 @@
 import { Card, Figure } from 'react-bootstrap';
-import { StyledImageArea } from './ImageComponent.styled';
+import { StyledCardImg, StyledImageArea } from './ImageComponent.styled';
 import { GoLinkExternal } from 'react-icons/go';
 
 interface Props {
@@ -14,24 +14,29 @@ export default function ImageProjectDisplay({ imageSrc, imageAlt, isLink }: Prop
         <>
             <StyledImageArea>
                 {isLink ? (<a href={imageSrc} target='_blank' rel='noopener'>
-                    <Card.Img
-                        variant="top"
-                        src={imageSrc}
-                        alt={imageAlt} />
-
-                    <GoLinkExternal style={{
-                        position: 'absolute',
-                        right: "2.5%",
-                        top: "4%",
-                    }} />
-                    <Figure.Caption className='img-caption'>{imageAlt}</Figure.Caption>
-                </a>) 
-                :
-                <>
+                    <StyledCardImg>
                         <Card.Img
                             variant="top"
                             src={imageSrc}
                             alt={imageAlt} />
+
+
+                        <GoLinkExternal style={{
+                            position: 'absolute',
+                            right: "3%",
+                            top: "4%",
+                        }} />
+                    </StyledCardImg>
+                    <Figure.Caption className='img-caption'>{imageAlt}</Figure.Caption>
+                </a>)
+                    :
+                    <>
+                        <StyledCardImg>
+                            <Card.Img
+                                variant="top"
+                                src={imageSrc}
+                                alt={imageAlt} />
+                        </StyledCardImg>
                         <Figure.Caption className='img-caption'>{imageAlt}</Figure.Caption>
                     </>
                 }

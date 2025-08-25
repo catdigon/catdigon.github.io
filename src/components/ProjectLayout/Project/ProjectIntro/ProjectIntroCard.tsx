@@ -2,7 +2,6 @@
 
 import { Badge } from "react-bootstrap";
 import ProjectCard from "../ProjectCard/ProjectCard";
-import ProjectSummary from "./ProjectSummary";
 import ProjectDetails from "./ProjectIntroDetails";
 
 interface Props {
@@ -26,7 +25,6 @@ export default function ProjectIntroCard({label, title, text, date, tools}: Prop
                     date={date}
                     tools={tools} />
             </ProjectCard>
-            <ProjectSummary />
         </>
     )
 }
