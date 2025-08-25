@@ -20,7 +20,7 @@ const Overide = styled.div`
    .card{
 
         max-width: 32rem;
-        min-width: 20rem;
+        min-width: 16rem;
 
         --bs-card-spacer-y: 2.6rem;
         --bs-card-spacer-x: 1.6rem;

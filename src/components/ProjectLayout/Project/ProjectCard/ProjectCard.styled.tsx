@@ -24,11 +24,7 @@ export const StyledProjectCard = styled.div`
          margin-top: 40px
     }
 
-
-`
-
-export const BadgeContainer = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px
+    .card-subtitle{
+        margin: 8px 0;
+    }
 `

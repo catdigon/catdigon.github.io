@@ -1,6 +1,6 @@
 import { Card, Figure } from 'react-bootstrap';
-import { StyledImageArea } from './ImageComponent.styled';
 import { GoLinkExternal } from 'react-icons/go';
+import { StyledImageContainer } from './CardCarousel.styled';
 
 interface Props {
     imageSrc: string;
@@ -8,11 +8,11 @@ interface Props {
     isLink: boolean;
 }
 
-export default function ImageProjectDisplay({ imageSrc, imageAlt, isLink }: Props) {
+export default function CarouselImage({ imageSrc, imageAlt, isLink }: Props) {
 
     return (
         <>
-            <StyledImageArea>
+            <StyledImageContainer>
                 {isLink ? (<a href={imageSrc} target='_blank' rel='noopener'>
                     <Card.Img
                         variant="top"
@@ -21,7 +21,7 @@ export default function ImageProjectDisplay({ imageSrc, imageAlt, isLink }: Prop
 
                     <GoLinkExternal style={{
                         position: 'absolute',
-                        right: "2.5%",
+                        right: "8%",
                         top: "4%",
                     }} />
                     <Figure.Caption className='img-caption'>{imageAlt}</Figure.Caption>
@@ -35,10 +35,8 @@ export default function ImageProjectDisplay({ imageSrc, imageAlt, isLink }: Prop
 
                         <Figure.Caption className='img-caption'>{imageAlt}</Figure.Caption>
                     </>
-                
                 }
-
-            </StyledImageArea>
+            </StyledImageContainer>
         </>
     )
 }

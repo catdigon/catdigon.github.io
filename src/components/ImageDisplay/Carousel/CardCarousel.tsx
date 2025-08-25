@@ -1,30 +1,29 @@
 import Carousel from 'react-bootstrap/Carousel';
-import ImageProjectDisplay from '../ImageComponent/ImageComponent';
-import styled from 'styled-components';
+import { StyledCarousel } from './CardCarousel.styled';
+import CarouselImage from './CarouselImage';
 
-export default function CardCarousel() {
+interface Props{
+    imageSrc: string;
+    imageAlt: string;
+    isLink: boolean;
+}
+
+export default function CardCarousel({imageSrc, imageAlt, isLink}: Props) {
     return (
         <>
             <StyledCarousel>
                 <Carousel pause={'hover'} interval={null}>
                     <Carousel.Item>
-                        <ImageProjectDisplay imageSrc={'/cinemateca.jpg'} imageAlt={'Site lindoooo'} isLink={true} />
+                        <CarouselImage imageSrc={imageSrc} imageAlt={imageAlt} isLink={isLink} />
                     </Carousel.Item>
                     <Carousel.Item>
-                        <ImageProjectDisplay imageSrc={'/cinemateca.jpg'} imageAlt={'Site lindoooo'} isLink={true} />
+                        <CarouselImage imageSrc={imageSrc} imageAlt={imageAlt} isLink={isLink} />
                     </Carousel.Item>
                     <Carousel.Item>
-                        <ImageProjectDisplay imageSrc={'/cinemateca.jpg'} imageAlt={'Site lindoooo'} isLink={true} />
+                        <CarouselImage imageSrc={imageSrc} imageAlt={imageAlt} isLink={isLink} />
                     </Carousel.Item>
                 </Carousel>
             </StyledCarousel>
         </>
     );
 }
-
-export const StyledCarousel = styled.div`
-    .carousel-indicators{
-        margin-bottom: 0 !important
-    }
-
-`

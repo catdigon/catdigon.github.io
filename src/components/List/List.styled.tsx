@@ -11,4 +11,5 @@ export const StyledList = styled.ul`
     li{
         list-style-type: disc;
     }
+
 `
