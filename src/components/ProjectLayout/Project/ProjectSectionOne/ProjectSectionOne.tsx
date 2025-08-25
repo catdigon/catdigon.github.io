@@ -1,7 +1,8 @@
 import { Card } from "react-bootstrap";
 import ImageProjectDisplay from "../../../ImageDisplay/ImageComponent/ImageComponent";
-import CardList from "../../../List/List";
+import CardListSimple from "../../../List/ListSimple";
 import ProjectCard from "../ProjectCard/ProjectCard";
+import CardListComplete from "../../../List/ListComplete";
 
 
 export default function ProjectSectionOne() {
@@ -16,13 +17,18 @@ export default function ProjectSectionOne() {
 
                 <Card.Text>When I decided to focus my project on Cinemateca Portuguesa, I realized that the website needed to be designed to serve at least two types of users: frequent visitiors and first-time guests.</Card.Text>
                 <Card.Text>
-                    <CardList>
-                        <ul>
-                            <li>Learn more about the institution and its mission</li>
-                            <li>Find upcoming screenings and events</li>
-                            <li>Explore the archive catalogue and discover available works</li>
-                        </ul>
-                    </CardList>
+                    <CardListSimple list={[
+                        "Learn more about the institution and its mission",
+                        "Find upcoming screenings and events",
+                        "Explore the archive catalogue and discover available works"
+                    ]} />
+                    <CardListComplete title="Este é o título da lista"
+                    list={[
+                        "Learn more about the institution and its mission",
+                        "Find upcoming screenings and events",
+                        "Explore the archive catalogue and discover available works"]}/>
+
+
                 </Card.Text>
             </ProjectCard>
         </>

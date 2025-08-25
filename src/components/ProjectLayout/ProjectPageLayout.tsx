@@ -42,7 +42,6 @@ export default function ProjectLayoutDisplay() {
                         showLabel={false} />
                     </div>
                     
-
                 </GradientArea>
             </div>
 

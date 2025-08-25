@@ -32,12 +32,9 @@ export default function ImageProjectDisplay({ imageSrc, imageAlt, isLink }: Prop
                             variant="top"
                             src={imageSrc}
                             alt={imageAlt} />
-
                         <Figure.Caption className='img-caption'>{imageAlt}</Figure.Caption>
                     </>
-                
                 }
-
             </StyledImageArea>
         </>
     )

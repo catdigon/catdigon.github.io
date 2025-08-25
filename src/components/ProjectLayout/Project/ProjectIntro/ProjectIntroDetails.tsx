@@ -17,7 +17,8 @@ export default function ProjectDetails({ date, tools }: Props) {
                 <Card.Subtitle className="mb-2">Tools</Card.Subtitle>
                 <BadgeContainer>
                     {tools.map((tool, index) => (
-                        <Badge bg="light" text="dark">{tool}
+                        <Badge key={index} bg="light" text="dark">
+                            {tool}
                         </Badge>
                     ))}
                 </BadgeContainer>

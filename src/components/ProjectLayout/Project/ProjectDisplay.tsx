@@ -1,7 +1,5 @@
 import ProjectSectionOne from "./ProjectSectionOne/ProjectSectionOne";
 import ProjectIntroCard from "./ProjectIntro/ProjectIntroCard";
-import ProjectSectionTwo from "./ProjectSectionTwo/ProjectSectionTwo";
-import ProjectSectionTree from "./ProjectSectionTree/ProjectSectionTree";
 import ProjectConclusion from "./ProjectConclusion/ProjectConclusion";
 
 export default function ProjectDisplay() {
@@ -15,8 +13,7 @@ export default function ProjectDisplay() {
             date={"October 2024 - April 2025"} 
             tools={["Figma", "HTML"]} />
             <ProjectSectionOne />
-            <ProjectSectionTwo />
-            <ProjectSectionTree />
+
             <ProjectConclusion />
         </>
     )

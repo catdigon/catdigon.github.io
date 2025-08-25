@@ -15,7 +15,7 @@ export default function CardCarousel({ images, imageAlt, isLink }: Props) {
                 <Carousel pause={'hover'} interval={null}>
 
                     {images.map((image, index) => (
-                        <Carousel.Item>
+                        <Carousel.Item key={index}>
                             <CarouselImage imageSrc={image} imageAlt={imageAlt} isLink={isLink} />
                         </Carousel.Item>
                     ))}

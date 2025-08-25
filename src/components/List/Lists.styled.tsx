@@ -12,4 +12,8 @@ export const StyledList = styled.ul`
         list-style-type: disc;
     }
 
+    .list-title{
+        padding-bottom: 0.2px !important;
+    }
+
 `

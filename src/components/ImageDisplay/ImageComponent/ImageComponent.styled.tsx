@@ -4,6 +4,7 @@ export const StyledImageArea = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 20px;
 
     a{
         text-decoration: none;
@@ -18,6 +19,4 @@ export const StyledImageArea = styled.div`
         justify-self: anchor-center;
         padding-top: 4px;
     }
-
-    padding-bottom: 20px;
 `
