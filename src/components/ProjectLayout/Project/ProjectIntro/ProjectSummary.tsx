@@ -1,4 +1,4 @@
-import ImageProjectDisplay from "../../../ImageDisplay/ImageComponent/ImageComponent";
+import ImageProjectDisplay from "../../../ImageDisplay/ImageComponent/ImageComponentDefault";
 import ProjectCard from "../ProjectCard/ProjectCard";
 
 

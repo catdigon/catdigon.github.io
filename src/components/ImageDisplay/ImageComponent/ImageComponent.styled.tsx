@@ -22,11 +22,11 @@ export const StyledImageArea = styled.div`
 `
 
 export const StyledCardImg = styled.div`
-    max-height: 600px;
+    max-height: 26rem;
     overflow: auto;
     border-radius: 6px;
 
-    @media (max-width: 768px) {
-        height: 220px;
+    @media (max-width: 992px) {
+        height: 18rem;
     }
 `
