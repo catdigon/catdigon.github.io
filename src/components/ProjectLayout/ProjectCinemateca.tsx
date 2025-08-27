@@ -45,11 +45,11 @@ export default function ProjectLayoutDisplay() {
     }, []);
 
     const sectionIds = [
-        "projectSummary",
+        "ProjectSummary",
         "Section1",
         "Section2",
         "Section3",
-        "projectConclusion",
+        "ProjectConclusion",
     ]
 
     const [projectSectionSummaryProgress, setprojectSectionSummaryProgress] = useState<MotionValue<number> | undefined>();
@@ -202,7 +202,7 @@ export default function ProjectLayoutDisplay() {
                                 </ProjectCard>
                             </ProjectSection>
 
-                            <ProjectSection id={"projectConclusion"}
+                            <ProjectSection id={"ProjectConclusion"}
                                 setProjectSectionProgress={setprojectSectionConclusionProgress}
                             >
                                 <ProjectCard

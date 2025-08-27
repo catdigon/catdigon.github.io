@@ -14,7 +14,6 @@ export default function LinkProgressBar({ ids, state , projectProgresses }: Prop
     const [progressValues, setProgressValues] = useState<number[]>([])
 
     useEffect(() => {
-
     
         const unsubcribe = scrollYProgress.on("change", (v) => {
             const totalSections = ids.length
@@ -40,7 +39,10 @@ export default function LinkProgressBar({ ids, state , projectProgresses }: Prop
                     {ids.map((id, i) => {
                         const isActive = progressValues[i] > 0 && progressValues[i] < 100
                         return (
-                        <div key={id} style={{ marginBottom: "1rem" }}>
+                        <div 
+                        key={id} style={{ 
+                            marginBottom: isActive ? "0.6rem" : "0.3rem"
+                             }}>
                             <a
                                 key={id}
                                 //href={`#${id}`}
@@ -55,7 +57,7 @@ export default function LinkProgressBar({ ids, state , projectProgresses }: Prop
 
                                 style={{
                                     fontWeight: isActive ? "bold" : "",
-                                    fontSize: isActive ? "16px" : "13px"
+                                    fontSize: isActive ? "16px" : "13px",
                                 }}
                             >
                                 <label className="section-name">
@@ -69,7 +71,7 @@ export default function LinkProgressBar({ ids, state , projectProgresses }: Prop
                                             top: 0,
                                             left: 0,
                                             right: 0,
-                                            height: 10,
+                                            height: isActive ? 10 : 4,
                                             originX: 0,
                                             backgroundColor: "#0080A3",
                                             borderRadius: 14,
