@@ -19,7 +19,7 @@ export default function ProjectsSection() {
                         data={ProjectsCardsText}
                         showText={true}
                         showLabel={false}
-                    />
+                        showBadgeList={true}/>
                 </ProjectsArea>
                 <ProjectsBreackLine />
                 <OtherProjectsSection />

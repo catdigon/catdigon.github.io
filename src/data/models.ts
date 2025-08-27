@@ -10,6 +10,7 @@ export interface CardProject {
   altImageProject?: string;
   label?: string;
   buttonLabel: string;
+  badge?: Tool[];
   buttonLink: string;
   abstract?: string;
   primaryOutButton?: string;

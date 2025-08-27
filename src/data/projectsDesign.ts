@@ -1,3 +1,4 @@
+import { badgeColor } from "./badgeColor";
 import { appRoutes } from "./constants";
 import type { CardProject } from "./models";
 import { projectsLabel } from "./projectsLabel";
@@ -12,12 +13,40 @@ export const ProjectsCardsText: CardProject[] = [
     image: "/cinemateca.jpg",
     alt: "Cinemateca's landing page image",
     label: projectsLabel.ACADEMIC,
+    badge: [{
+      name: "Figma",
+      badgeColor: badgeColor.PINK
+    },
+    {
+      name: "HTML & CSS",
+      badgeColor: badgeColor.BLUE
+    },
+    {
+      name: "Bootstrap",
+      badgeColor: badgeColor.BLUE
+    },
+    {
+      name: "JavaScript",
+      badgeColor: badgeColor.BLUE
+    },
+    {
+      name: "JSON",
+      badgeColor: badgeColor.BLUE
+    },
+    {
+      name: "Lighthouse",
+      badgeColor: badgeColor.GREEN
+    },
+    {
+      name: "GitHub",
+      badgeColor: badgeColor.DARK
+    }],
     buttonLabel: "See full project",
     buttonLink: appRoutes.PROJECT,
     abstract: "",
   },
   {
-    id:"portal-felix",
+    id: "portal-felix",
     year: "October 2024 - February 2025",
     title: "Portal Félix Plataform",
     subtitle: "Portal Félix",
@@ -25,6 +54,23 @@ export const ProjectsCardsText: CardProject[] = [
     image: "/portal.jpg",
     alt: "Portal Felix prototype image",
     label: projectsLabel.ACADEMIC,
+    badge: [{
+      name: "Notion",
+      badgeColor: badgeColor.RED
+    },
+    {
+      name: "Figma",
+      badgeColor: badgeColor.PINK
+    },
+      {
+      name: "ZOOM",
+      badgeColor: badgeColor.GOLD
+    },
+    {
+      name: "AccessMonitor",
+      badgeColor: badgeColor.GREEN
+    },
+  ],
     buttonLabel: "See full project",
     buttonLink: "",
     abstract: "",
@@ -38,6 +84,27 @@ export const ProjectsCardsText: CardProject[] = [
     image: "/notification.png",
     alt: "Heatmap image from the project",
     label: projectsLabel.RESEARCH,
+    badge: [{
+      name: "GazePoint 3 (Eye Tracking & Biometrics)",
+      badgeColor: badgeColor.GREEN
+    },
+    {
+      name: "AOI Analysis",
+      badgeColor: badgeColor.PURPLE
+    },
+    {
+      name: "Visual Studio Code",
+      badgeColor: badgeColor.BLUE
+    },
+    {
+      name: "Overleaf",
+      badgeColor: badgeColor.RED
+    },
+    {
+      name: "Excel & Docs",
+      badgeColor: badgeColor.RED
+    },
+  ],
     buttonLabel: "See full project",
     buttonLink: "",
     abstract: "",

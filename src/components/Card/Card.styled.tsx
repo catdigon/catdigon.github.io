@@ -34,5 +34,11 @@ export const StyledCard = styled.div`
     .card-img-top{
         border-radius: var(--bs-card-border-radius);
     }
+`
 
+export const BadgeCardContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding-bottom: 1rem;
 `

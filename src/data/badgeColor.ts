@@ -1,10 +1,9 @@
 export const badgeColor = {
-    BLUE: 'primary',
-    GREY: 'secondary',
-    GREEN: 'success',
-    RED: 'danger',
-    YELLOW: 'warning',
-    LIGHT_BLUE: 'info',
-    WHITE: 'light',
-    BLACK: 'dark',
+    BLUE: '#0B64DD',
+    PINK: '#BD1F70',
+    GREEN: '#008A5E',
+    DARK: '#2B394F',
+    PURPLE: '#6B3C9F',
+    RED: '#A71627',
+    GOLD: '#B38500',
 }

@@ -1,7 +1,7 @@
 import { Badge, Card } from "react-bootstrap";
 import ButtonCTA from "../Button/ButtonCTA";
 import { BsChevronRight } from "react-icons/bs";
-import { StyledCard, StyledCardImgContainer } from "./Card.styled";
+import { BadgeCardContainer, StyledCard, StyledCardImgContainer } from "./Card.styled";
 import { HashLink } from "react-router-hash-link";
 import type { CardProject } from "../../data/models";
 
@@ -9,9 +9,10 @@ interface Props {
   card: CardProject;
   showText?: boolean;
   showLabel?: boolean;
+  showBadgeList?: boolean;
 }
 
-export default function CardItem({ card, showText = true, showLabel = true }: Props) {
+export default function CardItem({ card, showText, showLabel, showBadgeList }: Props) {
   return (
     <>
       <StyledCard>
@@ -41,7 +42,24 @@ export default function CardItem({ card, showText = true, showLabel = true }: Pr
               </Card.Text>
             )}
 
-            <HashLink to={card.buttonLink}>
+            {showBadgeList && card.badge && (
+              <BadgeCardContainer>
+                {card.badge?.map((tool, index) => (
+                  <Badge
+                    key={index}
+                    bg="undefined"
+                    style={{
+                      backgroundColor: tool.badgeColor,
+                      marginBottom: 0,
+                      fontWeight: 500
+                    }}>
+                    {tool.name}
+                  </Badge>
+                ))}
+              </BadgeCardContainer>
+            )}
+
+            < HashLink to={card.buttonLink}>
               <ButtonCTA aria-label="Project">
                 {card.buttonLabel}
                 <BsChevronRight style={{ marginLeft: "0.5rem" }} />
@@ -50,7 +68,7 @@ export default function CardItem({ card, showText = true, showLabel = true }: Pr
 
           </Card.Body>
         </Card>
-      </StyledCard>
+      </StyledCard >
     </>
   );
 }

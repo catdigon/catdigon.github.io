@@ -46,17 +46,17 @@ export default function ProjectLayoutDisplay() {
     }, []);
 
     const sectionIds = [
-        "ProjectSummary",
-        "Section1",
-        "Section2",
-        "Section3",
-        "ProjectConclusion",
+        "Summary",
+        "Discovery",
+        "Design",
+        "Implementation",
+        "Conclusion",
     ]
 
     const [projectSectionSummaryProgress, setprojectSectionSummaryProgress] = useState<MotionValue<number> | undefined>();
-    const [projectSection1Progress, setprojectSection1Progress] = useState<MotionValue<number> | undefined>();
-    const [projectSection2Progress, setprojectSection2Progress] = useState<MotionValue<number> | undefined>();
-    const [projectSection3Progress, setprojectSection3Progress] = useState<MotionValue<number> | undefined>();
+    const [projectDiscoveryProgress, setprojectDiscoveryProgress] = useState<MotionValue<number> | undefined>();
+    const [projectDesignProgress, setprojectDesignProgress] = useState<MotionValue<number> | undefined>();
+    const [projectImplementationProgress, setprojectImplementationProgress] = useState<MotionValue<number> | undefined>();
     const [projectSectionConclusionProgress, setprojectSectionConclusionProgress] = useState<MotionValue<number> | undefined>();
 
     return (
@@ -76,9 +76,9 @@ export default function ProjectLayoutDisplay() {
                                 <LinkProgressBar
                                     projectProgresses={[
                                         projectSectionSummaryProgress,
-                                        projectSection1Progress,
-                                        projectSection2Progress,
-                                        projectSection3Progress,
+                                        projectDiscoveryProgress,
+                                        projectDesignProgress,
+                                        projectImplementationProgress,
                                         projectSectionConclusionProgress
                                     ]}
                                     ids={sectionIds}
@@ -86,7 +86,7 @@ export default function ProjectLayoutDisplay() {
                             </StyledProgressStickyArea>
                         </Col>
                         <Col md={8}>
-                            <ProjectSection id={"ProjectSummary"}
+                            <ProjectSection id={"Summary"}
                                 setProjectSectionProgress={setprojectSectionSummaryProgress}
                             >
                                 <ProjectIntroCard
@@ -97,12 +97,32 @@ export default function ProjectLayoutDisplay() {
                                     tools={[
                                         {
                                             name: "Figma",
+                                            badgeColor: badgeColor.PINK
+                                        },
+                                        {
+                                            name: "HTML & CSS",
                                             badgeColor: badgeColor.BLUE
                                         },
                                         {
-                                            name: "HTML",
-                                            badgeColor: badgeColor.RED
-                                        }
+                                            name: "Bootstrap",
+                                            badgeColor: badgeColor.BLUE
+                                        },
+                                        {
+                                            name: "JavaScript",
+                                            badgeColor: badgeColor.BLUE
+                                        },
+                                        {
+                                            name: "JSON",
+                                            badgeColor: badgeColor.BLUE
+                                        },
+                                        {
+                                            name: "Lighthouse",
+                                            badgeColor: badgeColor.GREEN
+                                        },
+                                        {
+                                            name: "GitHub",
+                                            badgeColor: badgeColor.DARK
+                                        },
                                     ]} />
                                 <ProjectCard
                                     title={"The Challenge"}
@@ -115,8 +135,8 @@ export default function ProjectLayoutDisplay() {
                                 </ProjectCard>
                             </ProjectSection>
 
-                            <ProjectSection id={"Section1"}
-                                setProjectSectionProgress={setprojectSection1Progress}
+                            <ProjectSection id={"Discovery"}
+                                setProjectSectionProgress={setprojectDiscoveryProgress}
                             >
                                 <ProjectCard
                                     title={"Define the Concept"}
@@ -151,8 +171,8 @@ export default function ProjectLayoutDisplay() {
                                 </ProjectCard>
                             </ProjectSection>
 
-                            <ProjectSection id={"Section2"}
-                                setProjectSectionProgress={setprojectSection2Progress}
+                            <ProjectSection id={"Design"}
+                                setProjectSectionProgress={setprojectDesignProgress}
                             >
                                 <ProjectCard
                                     title={"Design & Prototyping"}
@@ -195,8 +215,8 @@ export default function ProjectLayoutDisplay() {
                                 </ProjectCard>
                             </ProjectSection>
 
-                            <ProjectSection id={"Section3"}
-                                setProjectSectionProgress={setprojectSection3Progress}
+                            <ProjectSection id={"Implementation"}
+                                setProjectSectionProgress={setprojectImplementationProgress}
                             >
                                 <ProjectCard
                                     title={"From Prototype to Code"}
@@ -252,7 +272,7 @@ export default function ProjectLayoutDisplay() {
                                 </ProjectCard>
                             </ProjectSection>
 
-                            <ProjectSection id={"ProjectConclusion"}
+                            <ProjectSection id={"Conclusion"}
                                 setProjectSectionProgress={setprojectSectionConclusionProgress}
                             >
                                 <ProjectCard
