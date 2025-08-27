@@ -17,6 +17,7 @@ import ImageDisplayScroll from "../ImageDisplay/ImageComponent/ImageComponentScr
 import ImageDisplaySimple from "../ImageDisplay/ImageComponent/ImageComponentDefault";
 import { useEffect, useState } from "react";
 import LinkProgressBar from "../ProgressBar/LinkProgressBar";
+import LinkProgressBarCopy from "../ProgressBar/LinkProgressBar copy";
 
 
 export default function ProjectLayoutDisplay() {
@@ -34,14 +35,22 @@ export default function ProjectLayoutDisplay() {
                     }
                 });
             },
-            { threshold: 0.2}
+            { threshold: 0.2 }
         );
-        sections.forEach ((section) => observer.observe(section));
+        sections.forEach((section) => observer.observe(section));
 
         return () => {
             sections.forEach((section) => observer.unobserve(section));
         };
     }, []);
+
+      const sectionIds = [
+                                "projectIntro",
+                                "section1",
+                                "section2",
+                                "section3",
+                                "projectConclusion",
+                                ]
 
 
     return (
@@ -60,10 +69,13 @@ export default function ProjectLayoutDisplay() {
                             <StyledProgressStickyArea>
                                 <ProgressDisplay />
 
-                            {["projectIntro", "section1", "section2", "section3", "projectConclusion"].map((id) =>(
-                                <LinkProgressBar id={id} state={activeID || ""} />
-                            )
-                            )}
+                                {["projectIntro", "section1", "section2", "section3", "projectConclusion"].map((id) => (
+                                    <LinkProgressBar id={id} state={activeID || ""} />
+                                )
+                                )}
+
+                                    <LinkProgressBarCopy ids={sectionIds} state={activeID || ""} />
+                                
 
                             </StyledProgressStickyArea>
                         </Col>

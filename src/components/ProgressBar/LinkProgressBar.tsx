@@ -1,5 +1,4 @@
 import { StyledLinkProgressBar } from "./LinkProgressBar.styled";
-
 interface Props {
     id: string;
     state: string;
