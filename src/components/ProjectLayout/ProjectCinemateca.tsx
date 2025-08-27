@@ -2,7 +2,6 @@
 import { Card, Col, Row } from "react-bootstrap";
 import GradientArea from "../GradientArea/GradientArea";
 import Header from "../Header/Header";
-import ProgressDisplay from "./ProgressDisplay/ProgressDisplay";
 import { StyledProgressStickyArea } from "./ProgressDisplay/ProgressDisplay.styled";
 import ImageHeader from "./ImageHeader/ImageHeader";
 import ProjectsBreackLine from "../HomePage/BreakLine/ProjectsBreak";
@@ -46,10 +45,10 @@ export default function ProjectLayoutDisplay() {
     }, []);
 
     const sectionIds = [
-        "projectIntro",
-        "section1",
-        "section2",
-        "section3",
+        "projectSummary",
+        "Section1",
+        "Section2",
+        "Section3",
         "projectConclusion",
     ]
 
@@ -69,18 +68,16 @@ export default function ProjectLayoutDisplay() {
                     <Row>
                         <Col md={3}>
                             <StyledProgressStickyArea>
-                                <ProgressDisplay />
-
                                 <LinkProgressBar
                                     projectSectionProgress={projectSectionProgress}
-                                    ids={sectionIds} 
+                                    ids={sectionIds}
                                     state={activeID || ""} />
-
                             </StyledProgressStickyArea>
                         </Col>
                         <Col md={8}>
-                            <ProjectSection setProjectSectionProgress={setProgressSectionProgress} 
-                            id={"ProjectSummary"}>
+                            <ProjectSection id={"ProjectSummary"}
+                                setProjectSectionProgress={setProgressSectionProgress}
+                            >
                                 <ProjectIntroCard
                                     label={"Academic"}
                                     title={"Cinemateca Website"}
@@ -98,8 +95,9 @@ export default function ProjectLayoutDisplay() {
                                 </ProjectCard>
                             </ProjectSection>
 
-
-                            <section id="section1">
+                            <ProjectSection id={"Section1"}
+                                setProjectSectionProgress={setProgressSectionProgress}
+                            >
                                 <ProjectCard
                                     title={"Define the Concept"}
                                     description={"To start the project, the professor provided a basic structure that all students were expected to follow. This included a homepage, an about page, a list of products or items, a news section, and a contact page with a form."}
@@ -134,8 +132,11 @@ export default function ProjectLayoutDisplay() {
                                         isLink={true} />
 
                                 </ProjectCard>
-                            </section>
-                            <section id="section2">
+                            </ProjectSection>
+
+                            <ProjectSection id={"Section2"}
+                                setProjectSectionProgress={setProgressSectionProgress}
+                            >
                                 <ProjectCard
                                     title={"Design & Prototyping"}
                                     description={"The design and prototyping phase was divide intro two main stages, with feedback collected after each iteration. The first state focused on designing the website for visual consistency, improved information architecture, and clearer layout organization. The second state emphasized refining components and integrating interactive behaviors across pages, creating a more dynamic and user-friendly experience."}
@@ -155,8 +156,11 @@ export default function ProjectLayoutDisplay() {
                                         imageAlt={"Components iterations"}
                                         isLink={true} />
                                 </ProjectCard>
-                            </section>
-                            <section id="section3">
+                            </ProjectSection>
+
+                            <ProjectSection id={"Section3"}
+                                setProjectSectionProgress={setProgressSectionProgress}
+                            >
                                 <ProjectCard
                                     title={"From Prototype to Code"}
                                     description={"The prototype was developed into a fully functional website using HTML, CSS, JavaScript, and Bootstrap. To dynamically populate the news and film details pages, I implemented JSON as a personal challenge, which helped deepen my understanding of dynamic data handling."}
@@ -186,8 +190,11 @@ export default function ProjectLayoutDisplay() {
                                         imageAlt={"Overview of Lighthouse results"}
                                         isLink={true} />
                                 </ProjectCard>
-                            </section>
-                            <section id="projectConclusion">
+                            </ProjectSection>
+
+                            <ProjectSection id={"projectConclusion"}
+                                setProjectSectionProgress={setProgressSectionProgress}
+                            >
                                 <ProjectCard
                                     title={"Outcome"}
                                     description={"I took a fresh approach by restructuring and redesigning the website to create a more intuitive and enjoyable experience. The focus was on improving content hierarchy, reducing cognitive load, and making navigation clearer and more accessible."}
@@ -203,7 +210,8 @@ export default function ProjectLayoutDisplay() {
                                     <Card.Text>The code phase pushed me even further. Translating design into a responsive, functional website was constant cycle of building, testing, breaking, and refining. Integrating my ideas within Bootstrap's framework was challenging but taught me how design systems can streamline development without losing creativity or usability.</Card.Text>
                                     <Card.Text>This project took me me further than I expected. Even with areas I'd like to refine, I'm pround of how far I've grown. Above all, I learned that design is never finised. It evolves, just a film in production.</Card.Text>
                                 </ProjectCard>
-                            </section>
+                            </ProjectSection>
+
                         </Col>
                     </Row>
                     <ProjectsBreackLine />

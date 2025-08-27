@@ -4,12 +4,12 @@ import { MotionValue, useScroll } from "motion/react";
 import { useEffect, useRef } from "react";
 
 interface Props{
+    id: string;
     setProjectSectionProgress: React.Dispatch<React.SetStateAction<MotionValue<number> | undefined >>;
-     id: string;
-     children: React.ReactNode;
+    children: React.ReactNode;
 }
 
-export default function ProjectSection({ setProjectSectionProgress, children, id }: Props) {
+export default function ProjectSection({ id, setProjectSectionProgress, children }: Props) {
 
     const ref = useRef(null)
 

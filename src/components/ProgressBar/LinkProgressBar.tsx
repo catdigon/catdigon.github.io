@@ -3,8 +3,6 @@ import { motion, MotionValue, useScroll } from "motion/react"
 import { useEffect, useState } from "react"
 import { ProgressBar } from "react-bootstrap";
 
-
-
 interface Props {
     ids: string[];
     state: string;
@@ -47,16 +45,16 @@ export default function LinkProgressBar({ ids, state , projectSectionProgress }:
                                 key={id}
                                 href={`#${id}`}
                                 style={{
-                                    fontWeight: isActive ? "bold" : "normal",
+                                    fontWeight: isActive ? "bold" : "",
                                     fontSize: isActive ? "16px" : "13px"
                                 }}
                             >
-                                <label>
-                                    {id}
+                                <label className="section-name">
+                                        {id}
                                 </label>
                             </a>
 
-                            {id === "projectIntro" 
+                            {id === "projectSummary" 
                                 ? (
                                     <motion.div
                                         id="scroll-indication"
@@ -67,7 +65,8 @@ export default function LinkProgressBar({ ids, state , projectSectionProgress }:
                                             right: 0,
                                             height: 10,
                                             originX: 0,
-                                            backgroundColor: "#ff0000",
+                                            backgroundColor: "#0080A3",
+                                            borderRadius: 14,
                                         }}
                                         />
                             )

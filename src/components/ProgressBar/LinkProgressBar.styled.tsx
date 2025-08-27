@@ -9,4 +9,14 @@ export const StyledLinkProgressBar = styled.div`
         color: currentColor;
         text-decoration: none;
     }
+
+    a:hover{
+        color: #0080A3;
+        text-decoration: dotted;
+        font-weight: 500;
+    }
+
+    .section-name{
+        cursor: pointer;
+    }
 `
