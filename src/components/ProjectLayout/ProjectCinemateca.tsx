@@ -16,8 +16,9 @@ import CardCarousel from "../ImageDisplay/Carousel/CardCarousel";
 import ImageDisplayScroll from "../ImageDisplay/ImageComponent/ImageComponentScrool";
 import ImageDisplaySimple from "../ImageDisplay/ImageComponent/ImageComponentDefault";
 import { useEffect, useState } from "react";
+import { MotionValue } from "motion";
+import ProjectSection from "./ProjectSections/ProjectSection";
 import LinkProgressBar from "../ProgressBar/LinkProgressBar";
-import LinkProgressBarCopy from "../ProgressBar/LinkProgressBar copy";
 
 
 export default function ProjectLayoutDisplay() {
@@ -44,14 +45,15 @@ export default function ProjectLayoutDisplay() {
         };
     }, []);
 
-      const sectionIds = [
-                                "projectIntro",
-                                "section1",
-                                "section2",
-                                "section3",
-                                "projectConclusion",
-                                ]
+    const sectionIds = [
+        "projectIntro",
+        "section1",
+        "section2",
+        "section3",
+        "projectConclusion",
+    ]
 
+    const [projectSectionProgress, setProgressSectionProgress] = useState<MotionValue<number> | undefined>();
 
     return (
         <>
@@ -69,18 +71,16 @@ export default function ProjectLayoutDisplay() {
                             <StyledProgressStickyArea>
                                 <ProgressDisplay />
 
-                                {["projectIntro", "section1", "section2", "section3", "projectConclusion"].map((id) => (
-                                    <LinkProgressBar id={id} state={activeID || ""} />
-                                )
-                                )}
-
-                                    <LinkProgressBarCopy ids={sectionIds} state={activeID || ""} />
-                                
+                                <LinkProgressBar
+                                    projectSectionProgress={projectSectionProgress}
+                                    ids={sectionIds} 
+                                    state={activeID || ""} />
 
                             </StyledProgressStickyArea>
                         </Col>
                         <Col md={8}>
-                            <section id="projectIntro">
+                            <ProjectSection setProjectSectionProgress={setProgressSectionProgress} 
+                            id={"ProjectSummary"}>
                                 <ProjectIntroCard
                                     label={"Academic"}
                                     title={"Cinemateca Website"}
@@ -96,7 +96,9 @@ export default function ProjectLayoutDisplay() {
                                         imageAlt={"Cinemateca Homepage"}
                                         isLink={true} />
                                 </ProjectCard>
-                            </section>
+                            </ProjectSection>
+
+
                             <section id="section1">
                                 <ProjectCard
                                     title={"Define the Concept"}
