@@ -4,6 +4,7 @@ export const StyledLinkProgressBar = styled.div`
     display: flex;
     flex-direction: column;
     margin-top: 4px;
+    width: 70%;
 
     a{
         color: currentColor;

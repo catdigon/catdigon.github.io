@@ -52,7 +52,11 @@ export default function ProjectLayoutDisplay() {
         "projectConclusion",
     ]
 
-    const [projectSectionProgress, setProgressSectionProgress] = useState<MotionValue<number> | undefined>();
+    const [projectSectionSummaryProgress, setprojectSectionSummaryProgress] = useState<MotionValue<number> | undefined>();
+    const [projectSection1Progress, setprojectSection1Progress] = useState<MotionValue<number> | undefined>();
+    const [projectSection2Progress, setprojectSection2Progress] = useState<MotionValue<number> | undefined>();
+    const [projectSection3Progress, setprojectSection3Progress] = useState<MotionValue<number> | undefined>();
+    const [projectSectionConclusionProgress, setprojectSectionConclusionProgress] = useState<MotionValue<number> | undefined>();
 
     return (
         <>
@@ -69,14 +73,20 @@ export default function ProjectLayoutDisplay() {
                         <Col md={3}>
                             <StyledProgressStickyArea>
                                 <LinkProgressBar
-                                    projectSectionProgress={projectSectionProgress}
+                                    projectProgresses={[
+                                        projectSectionSummaryProgress,
+                                        projectSection1Progress,
+                                        projectSection2Progress,
+                                        projectSection3Progress,
+                                        projectSectionConclusionProgress
+                                    ]}
                                     ids={sectionIds}
                                     state={activeID || ""} />
                             </StyledProgressStickyArea>
                         </Col>
                         <Col md={8}>
                             <ProjectSection id={"ProjectSummary"}
-                                setProjectSectionProgress={setProgressSectionProgress}
+                                setProjectSectionProgress={setprojectSectionSummaryProgress}
                             >
                                 <ProjectIntroCard
                                     label={"Academic"}
@@ -96,7 +106,7 @@ export default function ProjectLayoutDisplay() {
                             </ProjectSection>
 
                             <ProjectSection id={"Section1"}
-                                setProjectSectionProgress={setProgressSectionProgress}
+                                setProjectSectionProgress={setprojectSection1Progress}
                             >
                                 <ProjectCard
                                     title={"Define the Concept"}
@@ -135,7 +145,7 @@ export default function ProjectLayoutDisplay() {
                             </ProjectSection>
 
                             <ProjectSection id={"Section2"}
-                                setProjectSectionProgress={setProgressSectionProgress}
+                                setProjectSectionProgress={setprojectSection2Progress}
                             >
                                 <ProjectCard
                                     title={"Design & Prototyping"}
@@ -159,7 +169,7 @@ export default function ProjectLayoutDisplay() {
                             </ProjectSection>
 
                             <ProjectSection id={"Section3"}
-                                setProjectSectionProgress={setProgressSectionProgress}
+                                setProjectSectionProgress={setprojectSection3Progress}
                             >
                                 <ProjectCard
                                     title={"From Prototype to Code"}
@@ -193,7 +203,7 @@ export default function ProjectLayoutDisplay() {
                             </ProjectSection>
 
                             <ProjectSection id={"projectConclusion"}
-                                setProjectSectionProgress={setProgressSectionProgress}
+                                setProjectSectionProgress={setprojectSectionConclusionProgress}
                             >
                                 <ProjectCard
                                     title={"Outcome"}
