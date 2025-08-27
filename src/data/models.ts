@@ -15,3 +15,8 @@ export interface CardProject {
   primaryOutButton?: string;
   primaryOutButtonLink?: string;
 }
+
+export interface Tool{
+    name: string;
+    badgeColor: string;
+}

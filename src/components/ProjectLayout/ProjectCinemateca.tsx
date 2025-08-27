@@ -18,6 +18,7 @@ import { useEffect, useState } from "react";
 import { MotionValue } from "motion";
 import ProjectSection from "./ProjectSections/ProjectSection";
 import LinkProgressBar from "../ProgressBar/LinkProgressBar";
+import { badgeColor } from "../../data/badgeColor";
 
 
 export default function ProjectLayoutDisplay() {
@@ -93,7 +94,16 @@ export default function ProjectLayoutDisplay() {
                                     title={"Cinemateca Website"}
                                     text={"This was the first project I developed from inital concept to final implementation. The bried was to design a website for a product-based brand, but I chose to reinterpret it by redesigning the Cinemateca Portuguesa website. My goal was to improve navigation, usability, and accessibility while respecting the institution's identity and giving it a fresh, contemporary look."}
                                     date={"October 2024 - April 2025"}
-                                    tools={["Figma", "HTML"]} />
+                                    tools={[
+                                        {
+                                            name: "Figma",
+                                            badgeColor: badgeColor.BLUE
+                                        },
+                                        {
+                                            name: "HTML",
+                                            badgeColor: badgeColor.RED
+                                        }
+                                    ]} />
                                 <ProjectCard
                                     title={"The Challenge"}
                                     description={"The original website presents a dense, overwhelming landing page, a cluttered menu, and an outdated visual hierarchy. For new users, it's easy to get lost. "}
@@ -133,11 +143,8 @@ export default function ProjectLayoutDisplay() {
                                 >
                                     <Card.Text>In parallel, I explored how other cinema - related institutions, including film archives, prodution houses, and film festivals, organize their websitrs. I focused on how content is structured, how nabigation flows, and how components are designed to support usability, accessibility, and institutions needs. This research helped me gather both visual and functional references to guide the design process.</Card.Text>
 
-                                    <CardCarousel
-                                        images={[
-                                            "/projects/cinemateca/reference-v1.jpg",
-                                            "/projects/cinemateca/reference-v2.jpg",
-                                        ]}
+                                    <ImageDisplaySimple
+                                        imageSrc={"/projects/cinemateca/reference-v2.jpg"}
                                         imageAlt={"References board with visuals and notes"}
                                         isLink={true} />
 
@@ -154,17 +161,37 @@ export default function ProjectLayoutDisplay() {
                                     <CardListComplete
                                         title="Key steps in the process:"
                                         list={[
-                                            "Reducing and reorganizing the homepage",
-                                            "Redesigning the naviation menu",
-                                            "Refining content cards",
-                                            "Creating a new footer",
-                                            "Adding interactions",
+                                            {
+                                                title: "Reducing and reorganizing the homepage",
+                                                text: "The original homepage was extremely long and visually overwhelming. I streamlined the layout and prioritized the access to upcomin events, the film archive, and lastest news."
+                                            },
+                                            {
+                                                title: "Redesigning the naviation menu",
+                                                text: "The original structure was confusing, making it difficult to find essential sections like the digital archive. I reorganized the menu for better clarity and added shorcuts on the homepage for quicker access."
+                                            },
+
+                                            {
+                                                title: "Refining content cards",
+                                                text: "I gave special attention to the design of event and news cards, which are highly interactive elements. The goal was to provide key information clearly while maintaining legibility and a balanced use of negative space."
+                                            },
+                                            {
+                                                title: "Creating a new footer",
+                                                text: "A consistent footer was added, mirroring the improved nagigation strucute, along with a “Back to top” interaction for better usability."
+                                            },
+                                            {
+                                                title: "Adding interactions",
+                                                text: "Key micro-interactions were implemented, including a sticky navigation bar that adaptas on scroll, smoth scroll-to-top functionality, hover animations for cards (revealing additional detials on event cards), and clear feedback messages for form submissions with both error and sucess states."
+                                            },
                                         ]} />
 
                                     <CardCarousel
-                                        images={["/projects/cinemateca/design-componets.jpg"]}
-                                        imageAlt={"Components iterations"}
-                                        isLink={true} />
+                                        images={[
+                                            {
+                                                imagesrc: "/projects/cinemateca/design-componets.jpg",
+                                                imageAlt: "",
+                                                isLink: true
+                                            },
+                                        ]} />
                                 </ProjectCard>
                             </ProjectSection>
 
@@ -190,15 +217,38 @@ export default function ProjectLayoutDisplay() {
                                     <Card.Text>Specific improvements included the use of ARIA attributes to enhance semantic structure and assistive techonology suport, as well as adding descriptive alt text to all images to ensure meaningful content for screen readers.</Card.Text>
                                     <CardCarousel
                                         images={[
-                                            "/projects/cinemateca/house1.jpg",
-                                            "/projects/cinemateca/house2.jpg",
-                                            "/projects/cinemateca/house3.jpg",
-                                            "/projects/cinemateca/house4.jpg",
-                                            "/projects/cinemateca/house5.jpg",
-                                            "/projects/cinemateca/house6.jpg"
-                                        ]}
-                                        imageAlt={"Overview of Lighthouse results"}
-                                        isLink={true} />
+
+                                            {
+                                                imagesrc: "/projects/cinemateca/house1.jpg",
+                                                imageAlt: "Overview of Lighthouse Landingpage results for Desktop",
+                                                isLink: true
+                                            },
+                                            {
+                                                imagesrc: "/projects/cinemateca/house2.jpg",
+                                                imageAlt: "",
+                                                isLink: false
+                                            },
+                                            {
+                                                imagesrc: "/projects/cinemateca/house3.jpg",
+                                                imageAlt: "",
+                                                isLink: false
+                                            },
+                                            {
+                                                imagesrc: "/projects/cinemateca/house4.jpg",
+                                                imageAlt: "",
+                                                isLink: false
+                                            },
+                                            {
+                                                imagesrc: "/projects/cinemateca/house5.jpg",
+                                                imageAlt: "",
+                                                isLink: false
+                                            },
+                                            {
+                                                imagesrc: "/projects/cinemateca/house6.jpg",
+                                                imageAlt: "",
+                                                isLink: false
+                                            },
+                                        ]} />
                                 </ProjectCard>
                             </ProjectSection>
 

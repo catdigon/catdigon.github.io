@@ -3,12 +3,10 @@ import { StyledCarousel } from './CardCarousel.styled';
 import CarouselImage from './CarouselImage';
 
 interface Props {
-    images: string[];
-    imageAlt: string;
-    isLink: boolean;
+    images: {imagesrc: string, imageAlt: string, isLink: boolean}[];
 }
 
-export default function CardCarousel({ images, imageAlt, isLink }: Props) {
+export default function CardCarousel({ images }: Props) {
     return (
         <>
             <StyledCarousel>
@@ -16,12 +14,12 @@ export default function CardCarousel({ images, imageAlt, isLink }: Props) {
 
                     {images.map((image, index) => (
                         <Carousel.Item key={index}>
-                            <CarouselImage imageSrc={image} imageAlt={imageAlt} isLink={isLink} />
+                            <CarouselImage 
+                            imageSrc={image.imagesrc} 
+                            imageAlt={image.imageAlt} 
+                            isLink={image.isLink} />
                         </Carousel.Item>
                     ))}
-
-
-
                 </Carousel>
             </StyledCarousel>
         </>

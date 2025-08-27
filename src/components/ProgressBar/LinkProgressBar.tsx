@@ -45,14 +45,11 @@ export default function LinkProgressBar({ ids, state , projectProgresses }: Prop
                              }}>
                             <a
                                 key={id}
-                                //href={`#${id}`}
                                 onClick={ (e) =>{
                                     e.preventDefault()
                                 document.getElementById(id)?.scrollIntoView({
                                     behavior: "smooth",
-                                    block: "center"
                                 })
-                                console.log(id)
                             }}
 
                                 style={{

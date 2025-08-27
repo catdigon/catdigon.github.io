@@ -3,13 +3,14 @@
 import { Badge } from "react-bootstrap";
 import ProjectCard from "../ProjectCard/ProjectCard";
 import ProjectDetails from "./ProjectIntroDetails";
+import type { Tool } from "../../../../data/models";
 
 interface Props {
     label: string;
     title: string;
     text: string
     date: string;
-    tools: string[];
+    tools: Tool[];
 
 }
 
@@ -21,9 +22,11 @@ export default function ProjectIntroCard({label, title, text, date, tools}: Prop
                 title={title}
                 description={text}
             >
-                <ProjectDetails
-                    date={date}
-                    tools={tools} />
+                <ProjectDetails 
+                date={date} 
+                tools={tools}>
+                    
+                </ProjectDetails>
             </ProjectCard>
         </>
     )

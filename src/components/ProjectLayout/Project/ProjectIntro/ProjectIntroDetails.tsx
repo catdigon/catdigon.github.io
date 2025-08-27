@@ -1,9 +1,10 @@
 import { Badge, Card } from "react-bootstrap";
 import { BadgeContainer, StyledProjectDetails } from "./ProjectIntroDetails.styled";
+import type { Tool } from "../../../../data/models";
 
 interface Props {
     date: string;
-    tools: string[];
+    tools: Tool[];
 }
 
 export default function ProjectDetails({ date, tools }: Props) {
@@ -17,8 +18,8 @@ export default function ProjectDetails({ date, tools }: Props) {
                 <Card.Subtitle className="mb-2">Tools</Card.Subtitle>
                 <BadgeContainer>
                     {tools.map((tool, index) => (
-                        <Badge key={index} bg="light" text="dark">
-                            {tool}
+                        <Badge key={index} bg={tool.badgeColor} text="dark">
+                            {tool.name}
                         </Badge>
                     ))}
                 </BadgeContainer>

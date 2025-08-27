@@ -4,7 +4,7 @@ import { StyledList } from "./Lists.styled";
 
 interface Props{
     title?: string;
-    list : string[];
+    list : {title: string; text: string}[];
 }
 
 export default function CardListComplete({title , list}: Props){
@@ -16,8 +16,8 @@ export default function CardListComplete({title , list}: Props){
             {list.map((point, index) =>(
                 <>
                 <li key={index}>
-                    <Card.Subtitle>{point}</Card.Subtitle>
-                    <div>{point}</div>
+                    <Card.Subtitle>{point.title}</Card.Subtitle>
+                    <div>{point.text}</div>
                 </li>
                 </>
             ))}
