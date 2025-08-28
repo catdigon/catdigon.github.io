@@ -15,15 +15,17 @@ export default function ImageDisplaySimple({ imageSrc, imageAlt, isLink }: Props
             <StyledImageArea>
                 {isLink ? (<a href={imageSrc} target='_blank' rel='noopener'>
                         <Card.Img
+                            className='imageLink'
                             variant="top"
                             src={imageSrc}
                             alt={imageAlt} />
-
+                        
                         <GoLinkExternal style={{
                             position: 'absolute',
                             right: "3%",
                             top: "4%",
                         }} />
+
                     <Figure.Caption className='img-caption'>{imageAlt}</Figure.Caption>
                 </a>)
                     :

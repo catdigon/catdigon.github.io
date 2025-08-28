@@ -15,6 +15,7 @@ export default function CarouselImage({ imageSrc, imageAlt, isLink }: Props) {
             <StyledImageContainer>
                 {isLink ? (<a href={imageSrc} target='_blank' rel='noopener'>
                     <Card.Img
+                        className='imageLink'
                         variant="top"
                         src={imageSrc}
                         alt={imageAlt} />
@@ -25,9 +26,9 @@ export default function CarouselImage({ imageSrc, imageAlt, isLink }: Props) {
                         top: "4%",
                     }} />
                     <Figure.Caption className='img-caption'>{imageAlt}</Figure.Caption>
-                </a>) 
-                :
-                <>
+                </a>)
+                    :
+                    <>
                         <Card.Img
                             variant="top"
                             src={imageSrc}

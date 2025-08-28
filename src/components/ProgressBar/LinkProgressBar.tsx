@@ -70,7 +70,7 @@ export default function LinkProgressBar({ ids, state , projectProgresses }: Prop
                                             right: 0,
                                             height: isActive ? 10 : 4,
                                             originX: 0,
-                                            backgroundColor: "#0080A3",
+                                            backgroundColor: "#0080a380",
                                             borderRadius: 14,
                                         }}
                                         />                            

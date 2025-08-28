@@ -14,7 +14,7 @@ export default function ImageDisplayScroll({ imageSrc, imageAlt, isLink }: Props
         <>
             <StyledImageArea>
                 {isLink ? (<a href={imageSrc} target='_blank' rel='noopener'>
-                    <StyledCardImg>
+                    <StyledCardImg className='imageLink'>
                         <Card.Img
                             variant="top"
                             src={imageSrc}

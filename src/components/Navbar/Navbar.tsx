@@ -21,7 +21,6 @@ export default function Navbar() {
                         <NavbarLogo />
                     </Button>
                 </HashLink>
-
             </StyledLogo>
 
             <StyleNavbarMenu>
@@ -42,7 +41,6 @@ export default function Navbar() {
                     </HashLink>
                 </li>
                 <li>
-
 
                     <ButtonCTA
                         aria-label="Go to Contacts section"

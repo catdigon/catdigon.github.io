@@ -7,6 +7,7 @@ export const StyledCarousel = styled.div`
 
     img{
         width: 88%;
+        border-radius: 6px;
     }
 
     .carousel-control-prev, 
@@ -28,6 +29,18 @@ export const StyledImageContainer = styled.div`
         flex-direction: column;
         align-items: center;
         position: relative;
+    }
+
+    a:hover{
+        svg{
+            stroke-width: 1px;
+        }
+    }
+
+    .imageLink:hover{
+        box-shadow: 0 0 0 0px rgba(0, 128, 163, 0.5),
+            0 0 10px rgba(0, 128, 163, 0.3),
+            0 0 30px rgba(0, 128, 163, 0.2);
     }
 
     .img-caption{

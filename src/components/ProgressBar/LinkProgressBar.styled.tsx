@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StyledLinkProgressBar = styled.div`
     display: flex;
     flex-direction: column;
-    margin-top: 4px;
+    margin-top: 2.5rem;
     width: 70%;
     padding-bottom: 34px;
 
@@ -13,8 +13,6 @@ export const StyledLinkProgressBar = styled.div`
     }
 
     a:hover{
-        color: #0080A3;
-        text-decoration: dotted;
         font-weight: 500;
     }
 

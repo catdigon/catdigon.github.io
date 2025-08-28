@@ -68,7 +68,7 @@ export default function ProjectLayoutDisplay() {
 
             <div style={{ marginTop: -100 }}>
                 <GradientArea>
-                    <Row>
+                    <Row style={{margin: "6rem 0"}}>
                         <Col md={3}>
                             <StyledProgressStickyArea>
                                 <LinkProgressBar
