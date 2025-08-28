@@ -2,30 +2,33 @@
 
 import { Badge } from "react-bootstrap";
 import ProjectCard from "../ProjectCard/ProjectCard";
-import ProjectDetails from "./ProjectIntroDetails";
-import type { Tool } from "../../../../data/models";
+import ProjectDetails from "./ProjectIntroCardDetails";
+import { ProjectsCardsText } from "../../../../data/projectsDesign";
 
 interface Props {
-    label: string;
-    title: string;
-    text: string
-    date: string;
-    tools: Tool[];
-
+    projectId: string;
+    description: string[];
 }
 
-export default function ProjectIntroCard({label, title, text, date, tools}: Props) {
+export default function ProjectIntroCard({ projectId, description }: Props) {
+
+    const project = ProjectsCardsText.find((p) => p.id === projectId);
+
+    if (!project) {
+        return <p>Project not found!</p>
+    }
+
     return (
         <>
-            <Badge bg="light" text="dark">{label}</Badge>
+            <Badge bg="light" text="dark">{project.label}</Badge>
             <ProjectCard
-                title={title}
-                description={text}
-            >
-                <ProjectDetails 
-                date={date} 
-                tools={tools}>
-                    
+                title={project.title || ""}
+                description={description}>
+
+                <ProjectDetails
+                    date={project.year || ""}
+                    tools={project.badge || []}>
+
                 </ProjectDetails>
             </ProjectCard>
         </>
