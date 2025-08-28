@@ -19,7 +19,7 @@ import { MotionValue } from "motion";
 import ProjectSection from "./ProjectSections/ProjectSection";
 import LinkProgressBar from "../ProgressBar/LinkProgressBar";
 
-export default function ProjectLayoutDisplay() {
+export default function ProjectCinematecaLayout() {
 
     //ScrollSpy
     const [activeID, setActiveID] = useState<string | null>(null);

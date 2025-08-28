@@ -42,7 +42,7 @@ export const ProjectsCardsText: CardProject[] = [
       badgeColor: badgeColor.DARK
     }],
     buttonLabel: "See full project",
-    buttonLink: appRoutes.PROJECT,
+    buttonLink: appRoutes.CINEMATECA,
     abstract: "",
   },
   {
@@ -72,7 +72,7 @@ export const ProjectsCardsText: CardProject[] = [
     },
   ],
     buttonLabel: "See full project",
-    buttonLink: "",
+    buttonLink: appRoutes.PORTAL_FELIX,
     abstract: "",
   },
   {
@@ -106,7 +106,7 @@ export const ProjectsCardsText: CardProject[] = [
     },
   ],
     buttonLabel: "See full project",
-    buttonLink: "",
+    buttonLink: appRoutes.IMPACT_NOTIFICATIONS,
     abstract: "",
   },
 ];

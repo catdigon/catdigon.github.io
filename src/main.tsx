@@ -8,7 +8,10 @@ import { appRoutes } from './data/constants';
 import OtherProjectsPage from './pages/OtherProjects';
 import HomePage from './pages/Homepage';
 import OtherProjectDetailPage from './pages/OtherProjectsDetails';
-import ProjectPage from './pages/Projects';
+import ProjectCinemateca from './pages/ProjectCinemateca';
+import ProjectNotifications from './pages/ProjectNotifications';
+import ProjectPortalFelix from './pages/ProjectPortal Félix';
+
 
 
 const router = createBrowserRouter([
@@ -29,8 +32,16 @@ const router = createBrowserRouter([
     element: <OtherProjectDetailPage />,
   },
   {
-    path: appRoutes.PROJECT,
-    element: <ProjectPage />,
+    path: appRoutes.CINEMATECA,
+    element: <ProjectCinemateca />,
+  },
+  {
+    path: appRoutes.PORTAL_FELIX,
+    element: <ProjectPortalFelix />,
+  },
+  {
+    path: appRoutes.IMPACT_NOTIFICATIONS,
+    element: <ProjectNotifications />,
   }
 
 ]);

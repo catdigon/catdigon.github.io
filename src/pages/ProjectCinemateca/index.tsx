@@ -1,13 +1,13 @@
 import PageLayout from "../../components/PageLayout/PageLayout";
-import ProjectLayoutDisplay from "../../components/ProjectLayout/ProjectCinemateca";
+import ProjectCinematecaLayout from "../../components/ProjectLayout/ProjectCinemateca";
 
-export default function ProjectPage() {
+export default function ProjectCinemateca() {
 
     return(
         <>
         <PageLayout>
             
-            <ProjectLayoutDisplay />
+            <ProjectCinematecaLayout />
             
         </PageLayout>
         </>

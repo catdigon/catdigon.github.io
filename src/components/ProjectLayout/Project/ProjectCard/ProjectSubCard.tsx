@@ -2,18 +2,16 @@ import { Card } from "react-bootstrap";
 import { StyledProjectCard } from "./ProjectCard.styled";
 
 interface Props {
-    title: string;
-    subtitle?: string;
+    subtitle: string;
     description: string[];
     children: React.ReactNode
 }
 
-export default function ProjectCard({ title, subtitle, description, children }: Props) {
+export default function ProjectSubCard({subtitle, description, children }: Props) {
     return (
         <>
             <StyledProjectCard>
-                <Card.Body>
-                    <Card.Title>{title}</Card.Title>
+                <Card.Body className="sub-card">
                     <Card.Subtitle>{subtitle}</Card.Subtitle>
                     {description?.map((line, idx) => (
                         <Card.Text key={idx}>{line}</Card.Text>

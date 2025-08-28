@@ -7,6 +7,10 @@ export const StyledProjectCard = styled.div`
         --bs-card-border-color: transparent;    
     }
 
+    .sub-card{
+        margin: 1.5rem 0 !important;
+    }
+
     .badge{
         margin-bottom: 10px;
     }
