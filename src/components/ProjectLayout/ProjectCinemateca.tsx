@@ -17,6 +17,9 @@ import { useEffect, useState } from "react";
 import { MotionValue } from "motion";
 import ProjectSection from "./ProjectSections/ProjectSection";
 import LinkProgressBar from "../ProgressBar/LinkProgressBar";
+import ButtonCTA from "../Button/ButtonCTA";
+import { FaFigma, FaGithub } from "react-icons/fa";
+import { GoLinkExternal } from "react-icons/go";
 
 export default function ProjectCinematecaLayout() {
 
@@ -67,7 +70,7 @@ export default function ProjectCinematecaLayout() {
 
             <div style={{ marginTop: -100 }}>
                 <GradientArea>
-                    <Row style={{margin: "6rem 0"}}>
+                    <Row style={{ margin: "6rem 0" }}>
                         <Col md={3}>
                             <StyledProgressStickyArea>
                                 <LinkProgressBar
@@ -117,8 +120,8 @@ export default function ProjectCinematecaLayout() {
                                     ]}
                                 >
                                     <ImageDisplaySimple
-                                        imageSrc={"/projects/cinemateca/cinemateca-broswer.png"}
-                                        imageAlt={"Cinemateca Homepage"}
+                                        imageSrc={"/projects/cinemateca/structure.jpg"}
+                                        imageAlt={"Website Structure"}
                                         isLink={false} />
 
                                     <Card.Text>When I decided to focus my project on Cinemateca Portuguesa, I realized that the website needed to be designed to serve at least two types of users: frequent visitiors and first-time guests.</Card.Text>
@@ -140,7 +143,7 @@ export default function ProjectCinematecaLayout() {
                                 >
 
                                     <ImageDisplaySimple
-                                        imageSrc={"/projects/cinemateca/reference-v2.jpg"}
+                                        imageSrc={"/projects/cinemateca/reference.jpg"}
                                         imageAlt={"References board with visuals and notes"}
                                         isLink={true} />
 
@@ -185,8 +188,13 @@ export default function ProjectCinematecaLayout() {
                                     <CardCarousel
                                         images={[
                                             {
-                                                imagesrc: "/projects/cinemateca/design-componets.jpg",
-                                                imageAlt: "",
+                                                imagesrc: "/projects/cinemateca/components.jpg",
+                                                imageAlt: "Components iterations",
+                                                isLink: true
+                                            },
+                                            {
+                                                imagesrc: "/projects/cinemateca/components1.jpg",
+                                                imageAlt: "Homepage iterations",
                                                 isLink: true
                                             },
                                         ]} />
@@ -263,7 +271,32 @@ export default function ProjectCinematecaLayout() {
                                         "I took a fresh approach by restructuring and redesigning the website to create a more intuitive and enjoyable experience. The focus was on improving content hierarchy, reducing cognitive load, and making navigation clearer and more accessible.",
                                         "The final design brings clarity, visual harmony, and a modern asthetic while staying true to the institution's mission. You can explore the full project and code throught the links below.",
                                     ]}
-                                    children={undefined} />
+                                >
+                                    <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap", gap: "1rem" }}>
+                                        <a href="">
+                                            <ButtonCTA
+                                                aria-label="Go to Figma project">
+                                                <div style={{ display: "flex", gap: "0.4rem", alignItems: "center" }}>
+                                                    <FaFigma />
+                                                    Check the project on Figma
+                                                    <GoLinkExternal />
+                                                </div>
+                                            </ButtonCTA>
+                                        </a>
+
+                                        <a href="">
+                                            <ButtonCTA
+                                                aria-label="Go to GitHub repository">
+                                                <div style={{ display: "flex", gap: "0.4rem", alignItems: "center" }}>
+                                                    <FaGithub />
+                                                    See the GitHub repository
+                                                    <GoLinkExternal />
+                                                </div>
+                                            </ButtonCTA>
+                                        </a>
+                                    </div>
+
+                                </ProjectCard>
 
 
                                 <ProjectCard
@@ -283,7 +316,7 @@ export default function ProjectCinematecaLayout() {
                     </Row>
                     <ProjectsBreackLine />
                     <div style={{ marginTop: 40 }}>
-                        <h3 style={{justifySelf: "center"}}>More case studies</h3>
+                        <h3 style={{ justifySelf: "center" }}>More case studies</h3>
                         <CardLayout
                             data={ProjectsCardsText}
                             showText={false}
