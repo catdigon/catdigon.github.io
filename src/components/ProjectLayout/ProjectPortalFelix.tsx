@@ -279,7 +279,8 @@ export default function ProjectPortalFelixLayout() {
                         </Col>
                     </Row>
                     <ProjectsBreackLine />
-                    <div style={{ marginTop: 20 }}>
+                    <div style={{ marginTop: 40 }}>
+                        <h3 style={{justifySelf: "center"}}>More case studies</h3>
                         <CardLayout
                             data={ProjectsCardsText}
                             showText={false}

@@ -1,4 +1,3 @@
-
 import { Card, Col, Row } from "react-bootstrap";
 import GradientArea from "../GradientArea/GradientArea";
 import Header from "../Header/Header";
@@ -283,7 +282,8 @@ export default function ProjectCinematecaLayout() {
                         </Col>
                     </Row>
                     <ProjectsBreackLine />
-                    <div style={{ marginTop: 20 }}>
+                    <div style={{ marginTop: 40 }}>
+                        <h3 style={{justifySelf: "center"}}>More case studies</h3>
                         <CardLayout
                             data={ProjectsCardsText}
                             showText={false}

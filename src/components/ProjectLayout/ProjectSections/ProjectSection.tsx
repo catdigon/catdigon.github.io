@@ -15,7 +15,7 @@ export default function ProjectSection({ id, setProjectSectionProgress, children
 
     const {scrollYProgress } = useScroll({
         target: ref,
-        offset: ["start start", "end center"]
+        offset: ["start start", "end start"]
     })
 
     useEffect(() => {
