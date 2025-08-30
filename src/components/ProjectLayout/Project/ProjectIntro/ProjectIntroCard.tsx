@@ -30,6 +30,12 @@ export default function ProjectIntroCard({ projectId, description }: Props) {
                     tools={project.badge || []}>
 
                 </ProjectDetails>
+
+                <div style={{
+                    paddingTop: "12px" ,
+                    borderBottom: "0.1rem solid #0080a343",
+                    width: "100%"
+                }}/>
             </ProjectCard>
         </>
     )

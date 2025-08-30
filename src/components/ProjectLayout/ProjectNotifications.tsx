@@ -67,7 +67,7 @@ export default function ProjectCinematecaLayout({projectID} : ProjectProps) {
                 title={"Impact of Notifications"}
                 text={"An academic study on how desktop notifications disrupt attention and reading performance, using an experimental design with eye-tracking and biometric sensor to evaluate attentional disruptions and effects."}
             >
-                <ImageHeader />
+                <ImageHeader image={""} alt={""} />
             </Header>
 
             <div style={{ marginTop: -100 }}>

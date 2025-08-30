@@ -69,7 +69,8 @@ export default function ProjectPortalFelixLayout({projectID} : ProjectProps) {
                 title={"Portal Félix"}
                 text={"From heuristic evaluation to high-fidelity prototypes, this project reimagines Portal Félix — the Cinemateca Portuguesa film database — with a user-centered approach to improve navigation, accessibility, and research workflows."}
             >
-                <ImageHeader />
+                <ImageHeader image={"/projects/portal/portal.png"} 
+                alt={"Portal Felix Mockup"} />
             </Header>
 
             <div style={{ marginTop: -100 }}>
@@ -128,8 +129,8 @@ export default function ProjectPortalFelixLayout({projectID} : ProjectProps) {
                                             "This analysis revealed problemns with navigation clarity, error prevention, and consistency, which were mapped by severity and summarized in an actionable set of recommendations."
                                         ]}
                                     >
-                                        <ImageDisplaySimple
-                                            imageSrc={""}
+                                        <ImageDisplayScroll
+                                            imageSrc={"/projects/portal/find-list.webp"}
                                             imageAlt={"Findings' list (in portuguese)"}
                                             isLink={true} />
                                     </ProjectSubCard>
@@ -142,7 +143,7 @@ export default function ProjectPortalFelixLayout({projectID} : ProjectProps) {
                                         ]}
                                     >
                                         <ImageDisplaySimple
-                                            imageSrc={""}
+                                            imageSrc={"/projects/portal/users.webp"}
                                             imageAlt={"Users Testing Personas"}
                                             isLink={true} />
                                     </ProjectSubCard>
