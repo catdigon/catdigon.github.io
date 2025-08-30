@@ -10,7 +10,7 @@ import HomePage from './pages/Homepage';
 import OtherProjectDetailPage from './pages/OtherProjectsDetails';
 import ProjectCinemateca from './pages/ProjectCinemateca';
 import ProjectNotifications from './pages/ProjectNotifications';
-import ProjectPortalFelix from './pages/ProjectPortal Félix';
+import ProjectPortalFelix from './pages/ProjectPortalFelix';
 import PageLayout from './components/PageLayout/PageLayout';
 
 
