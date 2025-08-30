@@ -4,7 +4,7 @@ export default function ProjectPortalFelix() {
 
     return(
         <>
-            <ProjectPortalFelixLayout projectID={"impact-of-notification"} />
+            <ProjectPortalFelixLayout projectID={"portal-felix"} />
         </>
     )
 }

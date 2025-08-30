@@ -25,7 +25,7 @@ export default function Navbar() {
 
             <StyleNavbarMenu>
                 <li>
-                    <HashLink to={`${appRoutes.ABOUT_ME}`}>
+                    <HashLink to={appRoutes.ABOUT_ME}>
                         <ButtonTransparent
                             aria-label="Go to About me section">
                             About

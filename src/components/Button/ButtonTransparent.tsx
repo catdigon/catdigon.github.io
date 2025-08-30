@@ -26,5 +26,7 @@ const Overide = styled.div`
         color: #0080A3;
         background-color: transparent !important;
         border-color: transparent !important;
+        filter: drop-shadow(0 0 10px rgba(0, 128, 163, 0.4))
+          drop-shadow(0 0 20px rgba(0, 128, 163, 0.2)) !important;
     }
 `

@@ -14,9 +14,10 @@ export default function OtherProjectsCard() {
         <Card>
           <Card.Body className="text-end">
             <Card.Title>{OtherProjectsText.title}</Card.Title>
+            
             <Card.Text>{OtherProjectsText.text}</Card.Text>
 
-            <HashLink to={`${appRoutes.OTHER_PROJECTS}#OtherProjects`}>
+            <HashLink to={appRoutes.OTHER_PROJECTS}>
               <ButtonCTA
                 aria-label="Other Projects">
                 {OtherProjectsText.button}

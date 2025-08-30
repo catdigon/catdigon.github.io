@@ -4,7 +4,7 @@ export default function ProjectNotifications() {
 
     return(
         <>     
-            <ProjectNotificationsLayout projectID={"portal-felix"} />
+            <ProjectNotificationsLayout projectID={"impact-of-notification"} />
         </>
     )
 }

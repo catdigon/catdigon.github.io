@@ -3,7 +3,7 @@ export interface CardProject {
   year?: string;
   title?: string;
   subtitle: string;
-  text?: string;
+  text?: string[];
   image: string;
   alt: string;
   imageProject?: string;
@@ -12,7 +12,7 @@ export interface CardProject {
   buttonLabel: string;
   badge?: Tool[];
   buttonLink: string;
-  abstract?: string;
+  abstract?: string[];
   primaryOutButton?: string;
   primaryOutButtonLink?: string;
 }

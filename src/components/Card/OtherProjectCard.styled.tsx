@@ -8,7 +8,8 @@ export const StyledOtherCard = styled.div`
     }
 
     p{
-        margin-bottom: 2rem;
+        margin: 0 !important;
+        padding-bottom: 8px;
     }
 
     .badge{
@@ -26,6 +27,11 @@ export const StyledOtherCard = styled.div`
     .figure{
         align-self: anchor-center;
     }
+`
+
+export const CardBlock = styled.div`
+    margin-bottom: 1.5rem;
+
 `
 
 export const StyledImageCard = styled.div`

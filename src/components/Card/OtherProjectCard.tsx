@@ -6,7 +6,7 @@ import { IoChevronBackOutline } from "react-icons/io5";
 import { Link } from "react-router";
 import ButtonCTA from "../Button/ButtonCTA";
 import { GoLinkExternal } from "react-icons/go";
-import { StyledImageCard, StyledOtherCard } from "./OtherProjectCard.styled";
+import { CardBlock, StyledImageCard, StyledOtherCard } from "./OtherProjectCard.styled";
 import type { CardProject } from "../../data/models";
 
 
@@ -15,65 +15,77 @@ interface Props {
 }
 
 
-export default function OtherProjectCardDetails({ card }: Props){
+export default function OtherProjectCardDetails({ card }: Props) {
 
     return (
         <>
-            
-                <HashLink to={appRoutes.OTHER_PROJECTS}>
-                    <ButtonTransparent
-                        aria-label="Go back">
-                        <IoChevronBackOutline
-                            style={{ marginLeft: "0.5rem" }} />
-                        Return
-                    </ButtonTransparent>
-                </HashLink>
 
-                <StyledOtherCard>
-                    <Card>
-                        <Row>
-                             <Col sm={12} lg={7}>
-                        <Card.Body>
+            <HashLink to={appRoutes.OTHER_PROJECTS}>
+                <ButtonTransparent
+                    aria-label="Go back">
+                    <IoChevronBackOutline
+                        style={{ marginLeft: "0.5rem" }} />
+                    Return
+                </ButtonTransparent>
+            </HashLink>
 
-                            <Badge bg="light" text="dark">{card.label}</Badge>
+            <StyledOtherCard>
+                <Card>
+                    <Row>
+                        <Col sm={12} lg={7}>
+                            <Card.Body>
 
-                            <Card.Title>{card.title}</Card.Title>
-                            <Card.Text>{card.text}</Card.Text>
+                                <Badge bg="light" text="dark">{card.label}</Badge>
 
-                            {card.abstract && (
-                            <Card.Subtitle className="mb-2">Abstract</Card.Subtitle>
-                            )}
+                                <CardBlock>
+                                    <Card.Title>{card.title}</Card.Title>
+                                    {card.text?.map((item, index) => {
+                                        return (
+                                            <Card.Text key={index}>
+                                                {item}
+                                            </Card.Text>
+                                        )
+                                    })}
+                                </CardBlock>
 
-                            {card.abstract && (
-                            <Card.Text>{card.abstract}</Card.Text> 
-                            )}
+                                <CardBlock>
+                                    {card.abstract && card.abstract.length > 0 && (
+                                        <Card.Subtitle className="mb-2">Abstract</Card.Subtitle>
+                                    )}
 
-                            <Card.Subtitle className="mb-2">Year</Card.Subtitle>
-                            <Card.Text>{card.year}</Card.Text>
+                                    {card.abstract && card.abstract.map((text, index) => (
+                                        <Card.Text key={index}>{text}</Card.Text>
+                                    ))}
+                                </CardBlock>
 
-                            {card.primaryOutButton && (
-                            <Link to={card.primaryOutButtonLink!}>
-                                <ButtonCTA aria-label="Project">
-                                    {card.primaryOutButton}
-                                    <GoLinkExternal style={{ marginLeft: "0.5rem" }} />
-                                </ButtonCTA>
-                            </Link>
-                            )}
-                        </Card.Body>
+                                <CardBlock>
+                                    <Card.Subtitle className="mb-2">Year</Card.Subtitle>
+                                    <Card.Text>{card.year}</Card.Text>
+                                </CardBlock>
+
+                                {card.primaryOutButton && (
+                                    <Link to={card.primaryOutButtonLink!}>
+                                        <ButtonCTA aria-label="Project">
+                                            {card.primaryOutButton}
+                                            <GoLinkExternal style={{ marginLeft: "0.5rem" }} />
+                                        </ButtonCTA>
+                                    </Link>
+                                )}
+                            </Card.Body>
                         </Col>
 
                         <Col sm={12} lg={5}>
-                        <StyledImageCard>
-                            <Card.Img
-                                variant="top"
-                                src={card.imageProject || card.image}
-                                alt={card.altImageProject || card.alt} />
-                            <Figure.Caption>{card.altImageProject || card.alt}</Figure.Caption>
-                        </StyledImageCard>
+                            <StyledImageCard>
+                                <Card.Img
+                                    variant="top"
+                                    src={card.imageProject || card.image}
+                                    alt={card.altImageProject || card.alt} />
+                                <Figure.Caption>{card.altImageProject || card.alt}</Figure.Caption>
+                            </StyledImageCard>
                         </Col>
-                        </Row>
-                    </Card>
-                </StyledOtherCard>
+                    </Row>
+                </Card>
+            </StyledOtherCard>
         </>
     )
 }

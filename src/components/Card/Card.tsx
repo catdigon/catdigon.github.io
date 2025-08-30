@@ -59,7 +59,7 @@ export default function CardItem({ card, showText, showLabel, showBadgeList }: P
               </BadgeCardContainer>
             )}
 
-            < HashLink to={card.buttonLink}>
+            <HashLink to={card.buttonLink}>
               <ButtonCTA aria-label="Project">
                 {card.buttonLabel}
                 <BsChevronRight style={{ marginLeft: "0.5rem" }} />
