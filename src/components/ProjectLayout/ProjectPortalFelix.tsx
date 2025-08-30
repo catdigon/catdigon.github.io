@@ -18,7 +18,14 @@ import ProjectSubCard from "./Project/ProjectCard/ProjectSubCard";
 import ImageDisplayScroll from "../ImageDisplay/ImageComponent/ImageComponentScrool";
 import { ProjectsCardsText } from "../../data/projectsDesign";
 
-export default function ProjectPortalFelixLayout() {
+interface ProjectProps{
+    projectID: string;
+}
+export default function ProjectPortalFelixLayout({projectID} : ProjectProps) {
+
+       const filteredProjects = ProjectsCardsText?.filter(
+        (project) => project.id !== projectID
+    ) || [];
 
     //ScrollSpy
     const [activeID, setActiveID] = useState<string | null>(null);
@@ -86,7 +93,7 @@ export default function ProjectPortalFelixLayout() {
                             <ProjectSection id={"Summary"}
                                 setProjectSectionProgress={setprojectSectionSummaryProgress}
                             >
-                                <ProjectIntroCard projectId={"portal-felix"}
+                                <ProjectIntroCard projectId={projectID}
                                     description={[
                                         "Portal Félix is the official film database of Cinemateca Portuguesa, launched in 2024 as a centralized access point for Portuguese cinematographic heritage. UserFlowed for researchers and the general public, its offers a vast colletion of films, people, events and archival resources.",
                                         "Despites its potencial, the platform faced major usability and accessibility issues. Navigation was confusing, the structure was complex, and users struggled to find information efficiently. This project focused on evaluating the plataform through heuristic analysis and user testing, identifying key pain points, and proposing a user-centered reUserFlow aimed to improve clarity, accessibility, and research workflows.",
@@ -282,7 +289,7 @@ export default function ProjectPortalFelixLayout() {
                     <div style={{ marginTop: 40 }}>
                         <h3 style={{justifySelf: "center"}}>More case studies</h3>
                         <CardLayout
-                            data={ProjectsCardsText}
+                            data={filteredProjects}
                             showText={false}
                             showLabel={false} />
                     </div>

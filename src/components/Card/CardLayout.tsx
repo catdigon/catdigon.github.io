@@ -10,8 +10,6 @@ interface Props {
   showBadgeList?: boolean;
 }
 
-
-
 export default function CardLayout({ data, showText, showLabel, showBadgeList}: Props) {
   return (
     <>

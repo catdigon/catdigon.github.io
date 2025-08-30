@@ -16,7 +16,14 @@ import ProjectSection from "./ProjectSections/ProjectSection";
 import LinkProgressBar from "../ProgressBar/LinkProgressBar";
 import ProjectSubCard from "./Project/ProjectCard/ProjectSubCard";
 
-export default function ProjectCinematecaLayout() {
+interface ProjectProps{
+    projectID: string;
+}
+export default function ProjectCinematecaLayout({projectID} : ProjectProps) {
+
+       const filteredProjects = ProjectsCardsText?.filter(
+        (project) => project.id !== projectID
+    ) || [];
 
     //ScrollSpy
     const [activeID, setActiveID] = useState<string | null>(null);
@@ -84,7 +91,7 @@ export default function ProjectCinematecaLayout() {
                             <ProjectSection id={"Summary"}
                                 setProjectSectionProgress={setprojectSectionSummaryProgress}
                             >
-                                <ProjectIntroCard projectId={"impact-of-notification"}
+                                <ProjectIntroCard projectId={projectID}
                                     description={[
                                         "This group research project explored how desktop notifications affect attention during digital reading tasks. Together with four colleagues, we investigated the cognitive and physiological impact of visual and auditory interruptions on screen-based reading.",
                                         "Using Gazepoint eye-tracking and biometric sensors, we monitored 35 participants under three conditions: no notifications, visual-only, and combined visual-auditory notifications. Metrcis such as eye fixations, blinking rate, hear rate, galvanic skin response (GSR), and pupil dilation were traked and analysed to assess attentional disruption.",
@@ -225,7 +232,7 @@ export default function ProjectCinematecaLayout() {
                     <div style={{ marginTop: 40 }}>
                         <h3 style={{justifySelf: "center"}}>More case studies</h3>
                         <CardLayout
-                            data={ProjectsCardsText}
+                            data={filteredProjects}
                             showText={false}
                             showLabel={false} />
                     </div>

@@ -21,7 +21,14 @@ import ButtonCTA from "../Button/ButtonCTA";
 import { FaFigma, FaGithub } from "react-icons/fa";
 import { GoLinkExternal } from "react-icons/go";
 
-export default function ProjectCinematecaLayout() {
+interface ProjectProps {
+    projectID: string;
+}
+export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
+
+    const filteredProjects = ProjectsCardsText?.filter(
+        (project) => project.id !== projectID
+    ) || [];
 
     //ScrollSpy
     const [activeID, setActiveID] = useState<string | null>(null);
@@ -89,7 +96,7 @@ export default function ProjectCinematecaLayout() {
                             <ProjectSection id={"Summary"}
                                 setProjectSectionProgress={setprojectSectionSummaryProgress}
                             >
-                                <ProjectIntroCard projectId={"cinemateca"}
+                                <ProjectIntroCard projectId={projectID}
                                     description={[
                                         "This was the first project I developed from inital concept to final implementation. The bried was to design a website for a product-based brand, but I chose to reinterpret it by redesigning the Cinemateca Portuguesa website. My goal was to improve navigation, usability, and accessibility while respecting the institution's identity and giving it a fresh, contemporary look.",
                                         "This approach allowed me to explore branding, storytelling, and interface design from a more authentic perspective, balancing visual coherence with clear structure and user-focused interaction."
@@ -318,7 +325,7 @@ export default function ProjectCinematecaLayout() {
                     <div style={{ marginTop: 40 }}>
                         <h3 style={{ justifySelf: "center" }}>More case studies</h3>
                         <CardLayout
-                            data={ProjectsCardsText}
+                            data={filteredProjects}
                             showText={false}
                             showLabel={false} />
                     </div>

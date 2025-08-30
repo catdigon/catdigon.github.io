@@ -4,7 +4,7 @@ export default function ProjectCinemateca() {
 
     return(
         <>
-            <ProjectCinematecaLayout />
+            <ProjectCinematecaLayout projectID={"cinemateca"} />
 
         </>
     )
