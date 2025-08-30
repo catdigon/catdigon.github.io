@@ -11,40 +11,47 @@ import OtherProjectDetailPage from './pages/OtherProjectsDetails';
 import ProjectCinemateca from './pages/ProjectCinemateca';
 import ProjectNotifications from './pages/ProjectNotifications';
 import ProjectPortalFelix from './pages/ProjectPortal Félix';
+import PageLayout from './components/PageLayout/PageLayout';
 
 
 
 const router = createBrowserRouter([
-  {
-    path: appRoutes.HOME,
-    element: <HomePage />,
-  },
-  {
-    path: appRoutes.ABOUT_ME,
-    element: <AboutMe />,
-  },
-  {
-    path: appRoutes.OTHER_PROJECTS,
-    element: <OtherProjectsPage />,
-  },
-  {
-    path: appRoutes.OTHER_PROJECT_DETAIL,
-    element: <OtherProjectDetailPage />,
-  },
-  {
-    path: appRoutes.CINEMATECA,
-    element: <ProjectCinemateca />,
-  },
-  {
-    path: appRoutes.PORTAL_FELIX,
-    element: <ProjectPortalFelix />,
-  },
-  {
-    path: appRoutes.IMPACT_NOTIFICATIONS,
-    element: <ProjectNotifications />,
+  { 
+  element: <PageLayout children={undefined} />,
+  children: [
+    {
+      path: appRoutes.HOME,
+      element: <HomePage />,
+    },
+    {
+      path: appRoutes.ABOUT_ME,
+      element: <AboutMe />,
+    },
+    {
+      path: appRoutes.OTHER_PROJECTS,
+      element: <OtherProjectsPage />,
+    },
+    {
+      path: appRoutes.OTHER_PROJECT_DETAIL,
+      element: <OtherProjectDetailPage />,
+    },
+    {
+      path: appRoutes.CINEMATECA,
+      element: <ProjectCinemateca />,
+    },
+    {
+      path: appRoutes.PORTAL_FELIX,
+      element: <ProjectPortalFelix />,
+    },
+    {
+      path: appRoutes.IMPACT_NOTIFICATIONS,
+      element: <ProjectNotifications />,
+    }
+  ]
   }
 
 ]);
+
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

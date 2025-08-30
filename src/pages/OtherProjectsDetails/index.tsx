@@ -22,12 +22,9 @@ export default function OtherProjectDetailPage() {
 
   return (
     <>
-      <PageLayout>
       <OtherProjectsLayout>
         <OtherProjectCardDetails card={card} />
       </OtherProjectsLayout>
-
-    </PageLayout>
     </>
     
   )
