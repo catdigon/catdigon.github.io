@@ -17,13 +17,18 @@ import LinkProgressBar from "../ProgressBar/LinkProgressBar";
 import ProjectSubCard from "./Project/ProjectCard/ProjectSubCard";
 import ImageDisplayScroll from "../ImageDisplay/ImageComponent/ImageComponentScrool";
 import { ProjectsCardsText } from "../../data/projectsDesign";
+import CardCarousel from "../ImageDisplay/Carousel/CardCarousel";
+import ButtonCTA from "../Button/ButtonCTA";
+import { FaFigma } from "react-icons/fa";
+import { GoLinkExternal } from "react-icons/go";
+import { RiNotionFill } from "react-icons/ri";
 
-interface ProjectProps{
+interface ProjectProps {
     projectID: string;
 }
-export default function ProjectPortalFelixLayout({projectID} : ProjectProps) {
+export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
 
-       const filteredProjects = ProjectsCardsText?.filter(
+    const filteredProjects = ProjectsCardsText?.filter(
         (project) => project.id !== projectID
     ) || [];
 
@@ -69,8 +74,8 @@ export default function ProjectPortalFelixLayout({projectID} : ProjectProps) {
                 title={"Portal Félix"}
                 text={"From heuristic evaluation to high-fidelity prototypes, this project reimagines Portal Félix — the Cinemateca Portuguesa film database — with a user-centered approach to improve navigation, accessibility, and research workflows."}
             >
-                <ImageHeader image={"/projects/portal/portal.png"} 
-                alt={"Portal Felix Mockup"} />
+                <ImageHeader image={"/projects/portal/portal.png"}
+                    alt={"Portal Felix Mockup"} />
             </Header>
 
             <div style={{ marginTop: -100 }}>
@@ -155,9 +160,9 @@ export default function ProjectPortalFelixLayout({projectID} : ProjectProps) {
                                         ]}
                                     >
                                         <ImageDisplaySimple
-                                            imageSrc={""}
-                                            imageAlt={"Final UX insights from evaluation and user testing"}
-                                            isLink={true} />
+                                            imageSrc={"/projects/portal/insights.webp"}
+                                            imageAlt={"Final UX findings from evaluation and user testing"}
+                                            isLink={false} />
                                     </ProjectSubCard>
 
                                 </ProjectCard>
@@ -167,16 +172,16 @@ export default function ProjectPortalFelixLayout({projectID} : ProjectProps) {
                                 setProjectSectionProgress={setprojectUserFlowProgress}
                             >
                                 <ProjectCard
-                                    title={"Phase 2: Insights & ReUserFlow Strategy"}
+                                    title={"Phase 2: Insights & User Flow Strategy"}
                                     description={[
                                         "The goal was to address the most critical pain points and create a more intuitive and effecient experience for the platform's core audience.",
                                         "One of the key insights was that researchers are the primary users of this platform, with highly specific needs such as searching, selecting, and cataloguing film titles for academic work. This led to idealize a focused persona representing a film researcher, which became the reference point for all UserFlow decisions moving forward.",
                                     ]}
                                 >
                                     <ImageDisplaySimple
-                                        imageSrc={""}
-                                        imageAlt={"Persona Investigator"}
-                                        isLink={true} />
+                                        imageSrc={"/projects/portal/persona-final.webp"}
+                                        imageAlt={"Persona Card: Motivations, Pain Points, and Context of Use"}
+                                        isLink={false} />
 
                                     <Card.Text>A critical discovery was that user accont creation was non-functional. While the interface allowed users to start tje process, no confirmation email was ever sent, making it impossible to access personalized tools. This major issue shifted the reUserFlow strategy to prioritize user flows related to account creation, login, and personalized features.</Card.Text>
 
@@ -188,11 +193,11 @@ export default function ProjectPortalFelixLayout({projectID} : ProjectProps) {
                                     >
                                         <div style={{ display: "flex", }}>
                                             <ImageDisplaySimple
-                                                imageSrc={""}
-                                                imageAlt={"Sitemap (Octopus)"}
+                                                imageSrc={"/projects/portal/octo-flow.webp"}
+                                                imageAlt={"Sitemap (Octopus, PT)"}
                                                 isLink={true} />
                                             <ImageDisplaySimple
-                                                imageSrc={""}
+                                                imageSrc={"/projects/portal/flow-design.webp"}
                                                 imageAlt={"User flow (Figma)"}
                                                 isLink={true} />
                                         </div>
@@ -215,10 +220,11 @@ export default function ProjectPortalFelixLayout({projectID} : ProjectProps) {
                                             "This phase began with paper prototypes, built around the defined user flow. A key part of the process was UserFlowing a user account area (a feature not present on the official plataform) and imagining functionalities that could bring value to the user, such as creating favorite lists and managing personal information.",
                                             "",
                                         ]} >
-                                        <ImageDisplayScroll
-                                            imageSrc={""}
-                                            imageAlt={"Paper prototypes"}
-                                            isLink={true} />
+                                            <ImageDisplaySimple
+                                                imageSrc={"/projects/portal/proto1.webp"}
+                                                imageAlt={"Paper Prototypes (Before user testing)"}
+                                                isLink={true} />
+                                        
                                     </ProjectSubCard>
 
                                     <ProjectSubCard
@@ -228,10 +234,18 @@ export default function ProjectPortalFelixLayout({projectID} : ProjectProps) {
                                             "The test revealed area where the task flow could be smoother and where interface elements lacked clarity. Based on these insights, the UserFlow was refined to improve navigation hierarchy, minimize unnecessary steps, and ensure a more intuitive experience.",
                                         ]}
                                     >
-                                        <ImageDisplaySimple
-                                            imageSrc={""}
-                                            imageAlt={"Refined paper prototypes"}
-                                            isLink={true} />
+                                        <CardCarousel images={[
+                                            {
+                                                imagesrc: "/projects/portal/proto2.webp",
+                                                imageAlt: "Paper Prototypes (After feedback/ New pages & changes",
+                                                isLink: true,
+                                            },
+                                            {
+                                                imagesrc: "/projects/portal/proto3.webp",
+                                                imageAlt: "Paper Prototypes (Final version / Refined flow)",
+                                                isLink: true,
+                                            },
+                                        ]} />
                                     </ProjectSubCard>
 
                                     <ProjectSubCard
@@ -249,11 +263,23 @@ export default function ProjectPortalFelixLayout({projectID} : ProjectProps) {
                                             "A favorites system that lets users save, remove, and orginze films intro personalized lists",
                                             "An adapative navigation menu that respondes dynamically to the user’s login state"
                                         ]} />
-
-                                        <ImageDisplaySimple
-                                            imageSrc={""}
-                                            imageAlt={"Figma wirefram with linked interactions"}
-                                            isLink={true} />
+                                        <CardCarousel images={[
+                                            {
+                                                imagesrc: "/projects/portal/wireframes.webp",
+                                                imageAlt: "Figma Wireframes overview (page frames)",
+                                                isLink: true
+                                            },
+                                            {
+                                                imagesrc: "/projects/portal/proto-figma.webp",
+                                                imageAlt: "Figma wireframes with linked interactions",
+                                                isLink: true
+                                            },
+                                            {
+                                                imagesrc: "/projects/portal/components.webp",
+                                                imageAlt: "Figma components library",
+                                                isLink: true
+                                            },
+                                        ]} />
 
                                     </ProjectSubCard>
                                 </ProjectCard>
@@ -269,17 +295,39 @@ export default function ProjectPortalFelixLayout({projectID} : ProjectProps) {
                                         "This project focused on reUserFlowing a key user flow, grounded in heuristic evaluation and user testing. Each UserFlow decision was informed by real user feedback and shaped around the needs of clearly defined personas.",
                                         "The result is a more intuitive, accessible, and user-friendly experience that addresses the plataform's original pain points while respecting its role as both a research and cultural tool.",
                                         "Presented to postgraduated peers, the project was recognised for its clarity, thoughtful iteration, and strong alignment between research insights and UserFlow strategy.",
-                                        ]}
-                                    children={undefined} />
+                                    ]}>
+                                        <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap", gap: "1rem" }}>                                 
+                                                                                <a href="">
+                                                                                    <ButtonCTA
+                                                                                        aria-label="Go to GitHub repository">
+                                                                                        <div style={{ display: "flex", gap: "0.4rem", alignItems: "center" }}>
+                                                                                            <RiNotionFill />
+                                                                                            See the Heuristic Evaluation
+                                                                                            <GoLinkExternal />
+                                                                                        </div>
+                                                                                    </ButtonCTA>
+                                                                                </a>
 
-
+                                                                                <a href="">
+                                                                                    <ButtonCTA
+                                                                                        aria-label="Go to Figma project">
+                                                                                        <div style={{ display: "flex", gap: "0.4rem", alignItems: "center" }}>
+                                                                                            <FaFigma />
+                                                                                            Check the project on Figma
+                                                                                            <GoLinkExternal />
+                                                                                        </div>
+                                                                                    </ButtonCTA>
+                                                                                </a>
+                                                                            </div>
+                                    </ProjectCard>
+                                         
                                 <ProjectCard
                                     title={"Reflection & Learnings"}
                                     description={[
                                         "This project marked a real turning point in my UX learning journey, What began as a broad heuristc evaluation quickly shifted toward a focused reUserFlow after uncovering a critical issue: the account creation system didn't work at all. That discovery helped me understand how usability failures affect trust, cause frustration, and break user expectations.",
                                         "It also reinforced the value of UserFlowing from evidence. User tests and persona creation based on real goals and frustrations helped me move beyond assumptions. I learned that its crucial to build solutions that responde directly to user's needs, tolls that guide, supoport, and respecte users.",
                                         "One key takeways was that great UX often goes unnoticed because it simply works. A plaform should't feel like an obstacle; it should feel natural, even in complex contexts workflows. I came to see that good UserFlow isn't just about looks; it's about making something meaningful and beautiful through function.",
-                                        ]}
+                                    ]}
                                     children={undefined} />
 
                             </ProjectSection>
@@ -288,7 +336,7 @@ export default function ProjectPortalFelixLayout({projectID} : ProjectProps) {
                     </Row>
                     <ProjectsBreackLine />
                     <div style={{ marginTop: 40 }}>
-                        <h3 style={{justifySelf: "center"}}>More case studies</h3>
+                        <h3 style={{ justifySelf: "center" }}>More case studies</h3>
                         <CardLayout
                             data={filteredProjects}
                             showText={false}
