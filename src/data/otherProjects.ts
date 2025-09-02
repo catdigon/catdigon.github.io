@@ -12,9 +12,9 @@ export const OtherProjectsCardsText2024: CardProject[] = [
       "Published in Aniki - Revista Portuguesa da Imagem em Movimento."
 
     ],
-    image: "/covers/aniki.jpg",
+    image: "/covers/aniki.webp",
     alt: "Dossiers edition cover",
-    imageProject: "/covers/aniki-cover.jpg",
+    imageProject: "/covers/aniki-cover.webp",
     altImageProject: "Dossiers edition cover",
     label: projectsLabel.WRITING,
     buttonLabel: "See project",
@@ -36,9 +36,9 @@ export const OtherProjectsCardsText2023: CardProject[] = [
     text: [
       "Paulo Cunha e Manuela Penafria (Eds)",
     ],
-    image: "/covers/20 filmes.jpg",
+    image: "/covers/20-filmes.webp",
     alt: "Book cover",
-    imageProject: "/covers/20 filmes-cover.jpg",
+    imageProject: "/covers/20-filmes-cover.webp",
     altImageProject: "Book cover",
     label: projectsLabel.WRITING,
     buttonLabel: "See project",
@@ -58,7 +58,7 @@ export const OtherProjectsCardsText2023: CardProject[] = [
     text: [
       "A RPG created by André Fernandes. I joined initially as a QA tester and later took on the production and editing of promotion video for the game."
     ],
-    image: "/covers/cacildes.jpg",
+    image: "/covers/cacildes.webp",
     alt: "Cacildes Adventure frame",
     imageProject: "",
     altImageProject: "",
@@ -78,7 +78,7 @@ export const OtherProjectsCardsText2022: CardProject[] = [
     title: "DigitALL",
     subtitle: "DigitALL",
     text: [""],
-    image: "/covers/ensino.jpg",
+    image: "/covers/ensino.webp",
     alt: "Stop motion films made by students ",
     imageProject: "",
     altImageProject: "",
@@ -99,7 +99,7 @@ export const OtherProjectsCardsText2022: CardProject[] = [
       "Published in Journal of Science and Technology of the Arts"
 
     ],
-    image: "/covers/rafa.jpg",
+    image: "/covers/rafa.webp",
     alt: "Audiovisual Essay Frame",
     imageProject: "",
     altImageProject: "",
@@ -121,7 +121,7 @@ export const OtherProjectsCardsText2022: CardProject[] = [
     text: [
       "Experimental documentary"
     ],
-    image: "/covers/recorda1.jpg",
+    image: "/covers/recorda1.webp",
     alt: "Film frame",
     imageProject: "",
     altImageProject: "",
@@ -143,7 +143,7 @@ export const OtherProjectsCardsText2020: CardProject[] = [
     text: [
       "During my volunteering period in Slovakia, I contributes to: Video production and editing; Photography of events; Graphic design for flyers, reports, and visual."
     ],
-    image: "/covers/brochure.jpg",
+    image: "/covers/brochure.webp",
     alt: "Project photos",
     imageProject: "",
     altImageProject: "",
@@ -163,7 +163,7 @@ export const OtherProjectsCardsText2019: CardProject[] = [
     title: "Caminhos Film Festival",
     subtitle: "Caminhos Film Festival",
     text: [""],
-    image: "/covers/caminhos.jpg",
+    image: "/covers/caminhos.webp",
     alt: "Festival photos",
     imageProject: "",
     altImageProject: "",
@@ -183,7 +183,7 @@ export const OtherProjectsCardsText2019: CardProject[] = [
     text: [
       "Documentary short",
       "Official Selection, PrimeirOlhar 2020 - Encontros de Cinema de Viana"],
-    image: "/covers/entre.jpg",
+    image: "/covers/entre.webp",
     alt: "Film frame",
     imageProject: "",
     altImageProject: "",
@@ -205,7 +205,7 @@ export const OtherProjectsCardsText2018: CardProject[] = [
     text: [
       "Documentary short",
       "Work-in-progress screening: Planos Film Festival 2018"],
-    image: "/covers/mae.jpg",
+    image: "/covers/mae.webp",
     alt: "Film frame",
     imageProject: "",
     altImageProject: "",
@@ -227,7 +227,7 @@ export const OtherProjectsCardsText2018: CardProject[] = [
       "Official Selection, Cinedita - Festival de Curtas de Arganil (2019)",
       "Screned at Mostra Criativa - CAI Galeria IPT"
     ],
-    image: "/covers/maras.jpg",
+    image: "/covers/maras.webp",
     alt: "Film frame",
     imageProject: "",
     altImageProject: "",
@@ -248,7 +248,7 @@ export const OtherProjectsCardsText2018: CardProject[] = [
       "Docu-experimental",
       "Screned at Mostra Criativa - CAI Galeria IPT"
     ],
-    image: "/covers/agora.jpg",
+    image: "/covers/agora.webp",
     alt: "Film frame",
     imageProject: "",
     altImageProject: "",

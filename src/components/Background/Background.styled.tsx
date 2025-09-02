@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyleBackground = styled.div`
-    background: url('/background.jpg');
+    background: url('/background.webp');
 
     position: fixed;
     top: 0;

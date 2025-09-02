@@ -2,7 +2,7 @@ import Image from 'react-bootstrap/Image';
 
 export default function MeImg() {
   return <Image 
-      src="src\assets\Me.jpg"  
+      src="/about/me.webp"  
       alt="Photo of me"
       style={{ width: '80%', height: 'auto' }}
 />;
