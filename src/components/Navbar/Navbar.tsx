@@ -1,15 +1,24 @@
-import { StyledLogo, StyledNavbar, StyleNavbarMenu } from "./Navbar.styled";
+import { StyledLogo, StyledNavbar, StyledNavbarContainer, StyleNavbarMenu } from "./Navbar.styled";
 import ButtonTransparent from "../Button/ButtonTransparent";
 import ButtonCTA from "../Button/ButtonCTA";
 import { Button } from "react-bootstrap";
 import NavbarLogo from "./NavbarLogo";
 import { appRoutes } from "../../data/constants";
 import { HashLink } from 'react-router-hash-link';
+import { useEffect, useState } from "react";
 
 
 export default function Navbar() {
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => setScrolled(window.scrollY > 400)
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll)
+    }, []);
 
     return (
+        <StyledNavbarContainer $scrolled={scrolled}>
         <StyledNavbar role="navigation">
 
             <StyledLogo>
@@ -50,8 +59,7 @@ export default function Navbar() {
                     </ButtonCTA>
                 </li>
             </StyleNavbarMenu>
-
         </StyledNavbar >
-
+        </StyledNavbarContainer>
     )
 }

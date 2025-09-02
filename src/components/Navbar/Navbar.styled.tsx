@@ -1,5 +1,25 @@
 import styled from "styled-components";
 
+export const StyledNavbarContainer = styled.div<{$scrolled: boolean}>`
+  position: fixed;
+  width: 100%;
+  height: 128px;
+  z-index: 99;
+  background: transparent;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(0deg, rgba(158, 215, 224, 0) 0%, rgba(158, 215, 224, 0.8) 30%, rgba(158, 215, 224, 1) 80%);
+    opacity: ${({ $scrolled }) => ($scrolled ? 1 : 0)};
+    transition: opacity 0.4s ease-in-out;
+  }
+`
 export const StyledNavbar = styled.nav`
     background: white;
     border-radius: 14px;
@@ -15,9 +35,6 @@ export const StyledNavbar = styled.nav`
     align-self: center;
     place-self: anchor-center;
     width: 80%;
-    position: fixed;
-    z-index: 99;
-    place-self: start;
     justify-self: anchor-center;
 `
 
