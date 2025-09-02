@@ -67,7 +67,9 @@ export default function ProjectCinematecaLayout({projectID} : ProjectProps) {
                 title={"Impact of Notifications"}
                 text={"An academic study on how desktop notifications disrupt attention and reading performance, using an experimental design with eye-tracking and biometric sensor to evaluate attentional disruptions and effects."}
             >
-                <ImageHeader image={""} alt={""} />
+                <ImageHeader 
+                image={"/projects/notifications/not-pc.webp"} 
+                alt={""} />
             </Header>
 
             <div style={{ marginTop: -100 }}>
@@ -146,7 +148,7 @@ export default function ProjectCinematecaLayout({projectID} : ProjectProps) {
                                         "Visual + auditory notifications",
                                     ]} />
                                     <ImageDisplaySimple
-                                        imageSrc={""}
+                                        imageSrc={"/projects/notifications/protocols.webp"}
                                         imageAlt={"Protocols design"}
                                         isLink={false} />
 
@@ -173,7 +175,7 @@ export default function ProjectCinematecaLayout({projectID} : ProjectProps) {
                                         ]} />
 
                                         <ImageDisplaySimple
-                                            imageSrc={""}
+                                            imageSrc={"/projects/notifications/tests.webp"}
                                             imageAlt={"Performing Tests"}
                                             isLink={false} />
                                     </ProjectSubCard>
@@ -195,7 +197,7 @@ export default function ProjectCinematecaLayout({projectID} : ProjectProps) {
                                         "Compared data to understand which areas attracted drew the most attention, whether notifications were directly fixated, and how gaze shifted across the screen",
                                     ]} />
                                     <ImageDisplaySimple
-                                        imageSrc={""}
+                                        imageSrc={"/projects/notifications/gazepoint.webp"}
                                         imageAlt={"Defining AOI's on GazePoint software"}
                                         isLink={false} />
 

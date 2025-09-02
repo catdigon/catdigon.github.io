@@ -66,6 +66,10 @@ export const ProjectsCardsText: CardProject[] = [
       name: "Figma",
       badgeColor: badgeColor.PINK
     },
+    {
+      name: "Octopus.do",
+      badgeColor: badgeColor.PINK
+    },
       {
       name: "ZOOM",
       badgeColor: badgeColor.GOLD

@@ -72,7 +72,9 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
                 title={"Cinemateca"}
                 text={"A redesign of the website of the Cinemateca Portuguesa originally created in 2013. This project explored how to improve navigation, accessibility, and visual coherence, while respecting the institution and its mission with a modern visual."}
             >
-                <ImageHeader image={"/projects/cinemateca/cinemateca-broswer.png"} alt={"Homepage Mockup"} />
+                <ImageHeader 
+                image={"/projects/cinemateca/cinemateca-broswer.webp"} 
+                alt={"Homepage Mockup"} />
             </Header>
 
             <div style={{ marginTop: -100 }}>
@@ -115,7 +117,7 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
                                         "Outdated in terms of hierarchy and accessibility"
                                     ]} />
                                     <ImageDisplayScroll
-                                        imageSrc={"/projects/cinemateca/landingPage.jpg"}
+                                        imageSrc={"/projects/cinemateca/landingPage.webp"}
                                         imageAlt={"Original Cinemateca homepage"}
                                         isLink={true} />
                                 </ProjectCard>
@@ -140,7 +142,7 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
                                         "Access contact and  location information"
                                     ]} />
                                     <ImageDisplaySimple
-                                        imageSrc={"/projects/cinemateca/structure.jpg"}
+                                        imageSrc={"/projects/cinemateca/structure.webp"}
                                         imageAlt={"Site flowchart"}
                                         isLink={false} />
 
@@ -222,7 +224,7 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
                                         ]}
                                 >
                                     <ImageDisplaySimple
-                                        imageSrc={"/projects/cinemateca/code.jpg"}
+                                        imageSrc={"/projects/cinemateca/code.webp"}
                                         imageAlt={"Vs Code: Folder organizations & index.html"}
                                         isLink={false} />
                                 </ProjectCard>
@@ -236,32 +238,32 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
                                         images={[
 
                                             {
-                                                imagesrc: "/projects/cinemateca/house1.jpg",
+                                                imagesrc: "/projects/cinemateca/house1.webp",
                                                 imageAlt: "Landing page evaluation (Desktop) - Lighthouse results",
                                                 isLink: false
                                             },
                                             {
-                                                imagesrc: "/projects/cinemateca/house2.jpg",
+                                                imagesrc: "/projects/cinemateca/house2.webp",
                                                 imageAlt: "Landing page evaluation (Mobile) - Lighthouse results",
                                                 isLink: false
                                             },
                                             {
-                                                imagesrc: "/projects/cinemateca/house3.jpg",
+                                                imagesrc: "/projects/cinemateca/house3.webp",
                                                 imageAlt: "Products page evaluation (Desktop) - Lighthouse results",
                                                 isLink: false
                                             },
                                             {
-                                                imagesrc: "/projects/cinemateca/house4.jpg",
+                                                imagesrc: "/projects/cinemateca/house4.webp",
                                                 imageAlt: "Product detail page evaluation (Desktop) - Lighthouse results",
                                                 isLink: false
                                             },
                                             {
-                                                imagesrc: "/projects/cinemateca/house5.jpg",
+                                                imagesrc: "/projects/cinemateca/house5.webp",
                                                 imageAlt: "News article page evaluation (Mobile) - Lighthouse results",
                                                 isLink: false
                                             },
                                             {
-                                                imagesrc: "/projects/cinemateca/house6.jpg",
+                                                imagesrc: "/projects/cinemateca/house6.webp",
                                                 imageAlt: "Contacts page evaluation (Mobile) - Lighthouse results",
                                                 isLink: false
                                             },
@@ -311,11 +313,11 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
                                 <ProjectCard
                                     title={"Reflection & Learnings"}
                                     description={[
-                                        "Since this was my first full UX/UI project, some decisions reflect the fact that I was still learning. From the beginning, I relied on my cinematic sensibility, since I didn't just want to redesign the website but to reimagine it as something clear, functional, and truly useful for real users.",
-                                        "Balancing respect for the original with a fresh, cinematic feel was challenging, especially when defining the color palette and homepage layout. After exploring several directions,  I chose a yellow-gold tone: emotional, warm, and rooted in cinema's heritage.",
-                                        "The design phase was intense, as I learned to think from the user's perspective, work with new tools, and create a visually engaging structure. The prototyping stage became a turning point, showing me how subtle interactions and motion can bring a design to life without overwhelming the user. ",
-                                        "The code phase pushed me even further. Translating design into a responsive, functional website was a constant cycle of building, testing, breaking, and refining. Integrating my ideas within Bootstrap's framework was challenging but taught me how design systems can streamline development without losing creativity or usability.",
-                                        "This project took me further than I expected. Even with areas I'd like to refine, I'm proud of how far I've grown. Above all, I learned that design is never finished. It evolves, just a film in production."
+                                        "This was my first full UX/UI project, and many decisions reflect my learning process. From the beginning, I relied on my cinematic sensibility, not just to redesign the website, but to reimagine it as something clear, functional, and meaningful for real users.",
+                                        "Balancing respect for the original with a fresh, cinematic feel was challenging, especially when defining the color palette and homepage layout. After testing different directions, I chose a yellow-gold tone: warm, emotional, and rooted in cinema's heritage.",
+                                        "The design phase taught me to think from the user's perspective, explore new tools, and create engaging structures. Prototyping was a turning point, showing me how subtle interactions and motion can enrich a design without overwhelming it.",
+                                        "Coding pushed me even further. Turning the design into a responsive site meant constant cycles of building, testing, and refining. Adapting ideas into Bootstrap's framework was challenging, but it showed me how design systems can speed up development without losing creativity or usability.",
+                                        "This project took me further than I expected. Even with areas I'd like to refine, I'm proud of how much I've grown. Above all, I learned that design, like film, is never truly finished."
                                     ]}
                                     children={undefined} />
 
