@@ -16,12 +16,18 @@ export default function LinkProgressBar({ ids, state , projectProgresses }: Prop
     useEffect(() => {
     
         const unsubcribe = scrollYProgress.on("change", (v) => {
-            const totalSections = ids.length
-            const sectionSize = 1 / totalSections
 
-            const newProgress = ids.map((_, index) => {
-                const start = index * sectionSize
-                const end = (index + 1) * sectionSize
+            const sectionHeights = ids.map(id => {
+                const el = document.getElementById(id)
+                return el?.offsetHeight ?? 0
+            })
+            const totalHeight = sectionHeights.reduce((a, b) => a + b, 0)
+            let accumulatedHeight = 0
+
+            const newProgress = sectionHeights.map((height) => {
+                const start = accumulatedHeight / totalHeight
+                accumulatedHeight += height
+                const end = accumulatedHeight / totalHeight
 
                 if (v <= start) return 0
                 if (v >= end) return 100

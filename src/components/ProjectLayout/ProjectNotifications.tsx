@@ -92,9 +92,8 @@ export default function ProjectCinematecaLayout({projectID} : ProjectProps) {
                             >
                                 <ProjectIntroCard projectId={projectID}
                                     description={[
-                                        "This group research project explored how desktop notifications affect attention during digital reading tasks. Together with four colleagues, we investigated the cognitive and physiological impact of visual and auditory interruptions on screen-based reading.",
-                                        "Using Gazepoint eye-tracking and biometric sensors, we monitored 35 participants under three conditions: no notifications, visual-only, and combined visual-auditory notifications. Metrcis such as eye fixations, blinking rate, hear rate, galvanic skin response (GSR), and pupil dilation were traked and analysed to assess attentional disruption.",
-                                        "The results revelead that notifications may not always cause an immediate shift in visual focus immediatly, they do trigger subtle cognitive and physiological responsed that interfere with sustained attention over time.",
+                                        "This project explored how desktop notifications influence attention during digital reading tasks. Together with four colleagues, we monitored 35 participants using eye-tracking and biometrics sensors across three conditions: no notifications, visual-only, and visual + auditory alerts.",
+                                        "Findings showed that notifications don't always grab immediate attention, but they can subtly interfere with sustained focus over time, highlighting how even small design elements influence impact user attention and experience.",
                                     ]}
                                 />
 
@@ -116,7 +115,7 @@ export default function ProjectCinematecaLayout({projectID} : ProjectProps) {
                                         We started by reviweing literature on attention and digital interruptions to define the research question: <em> How do visual and auditory desktop notifications affect reading focus? </em>
                                         </>,
                                         "From this, we formulated hypotheses and selected key metrics (eye fixations, blinking rate, heart rate, GSR, pupil dilation) to capture cognitive and physiological responses.",
-                                    ]} children={undefined}                                >
+                                    ]} children={undefined} >
                                 </ProjectCard>
 
                                 <ProjectCard
@@ -167,12 +166,13 @@ export default function ProjectCinematecaLayout({projectID} : ProjectProps) {
                                             "Managed sensor placement and screen calibration",
                                             "Controlled task timing and transitions between test conditions",
                                         ]} />
-
                                         <ImageDisplaySimple
                                             imageSrc={"/projects/notifications/tests.webp"}
-                                            imageAlt={"Performing Tests"}
+                                            imageAlt={"Running the eye-tracking and biometric test sension"}
                                             isLink={false} />
+
                                     </ProjectSubCard>
+
                                 </ProjectCard>
                             </ProjectSection>
 
