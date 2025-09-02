@@ -20,6 +20,7 @@ export default function BtnGridLinks() {
               <Button
                 variant="link"
                 href="https://www.linkedin.com/in/catia-diogo"
+                target='_blank' rel='noopener'
                 aria-label="LinkedIn"
               >
                 <FaLinkedin />
@@ -30,6 +31,7 @@ export default function BtnGridLinks() {
               <Button
                 variant="link"
                 href="https://www.behance.net/catiadiogo"
+                target='_blank' rel='noopener'
                 aria-label="Behance"
               >
                 <FaBehanceSquare />
@@ -40,6 +42,7 @@ export default function BtnGridLinks() {
               <Button
                 variant="link"
                 href="https://orcid.org/0000-0002-9129-5021"
+                target='_blank' rel='noopener'
                 aria-label="Orcid"
               >
                 <BtnOrcid />
@@ -50,6 +53,7 @@ export default function BtnGridLinks() {
               <Button
                 variant="link"
                 href="https://www.cienciavitae.pt//pt/B11F-1F8E-B063"
+                target='_blank' rel='noopener'
                 aria-label="Ciencia ID"
               >
                 <BtnCienciaID />
@@ -60,6 +64,7 @@ export default function BtnGridLinks() {
               <Button
                 variant="link"
                 href="https://github.com/catdigon"
+                target='_blank' rel='noopener'
                 aria-label="Github"
               >
                 <FaSquareGithub />
@@ -70,6 +75,7 @@ export default function BtnGridLinks() {
               <Button
                 variant="link"
                 href="https://github.com/catdigon"
+                target='_blank' rel='noopener'
                 aria-label="CV"
               >
                 <IconCv />

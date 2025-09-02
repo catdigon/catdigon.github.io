@@ -103,7 +103,7 @@ export const ProjectsCardsText: CardProject[] = [
       badgeColor: badgeColor.PURPLE
     },
     {
-      name: "Visual Studio Code",
+      name: "JavaScript",
       badgeColor: badgeColor.BLUE
     },
     {

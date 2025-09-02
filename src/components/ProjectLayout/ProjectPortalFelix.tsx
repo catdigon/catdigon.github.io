@@ -18,10 +18,6 @@ import ProjectSubCard from "./Project/ProjectCard/ProjectSubCard";
 import ImageDisplayScroll from "../ImageDisplay/ImageComponent/ImageComponentScrool";
 import { ProjectsCardsText } from "../../data/projectsDesign";
 import CardCarousel from "../ImageDisplay/Carousel/CardCarousel";
-import ButtonCTA from "../Button/ButtonCTA";
-import { FaFigma } from "react-icons/fa";
-import { GoLinkExternal } from "react-icons/go";
-import { RiNotionFill } from "react-icons/ri";
 
 interface ProjectProps {
     projectID: string;
@@ -300,29 +296,11 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
                                         "The result is a more intuitive and accessible experience that addresses usability issues while respecting the plataform's role as a research and cultural tool.",
                                         "The work was presented to postgraduated peers, who highlighted its clarity, strong iteration process, and strong alignment between research and design strategy.",
                                     ]}>
-                                        <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap", gap: "1rem" }}>                                 
-                                                                                <a href="">
-                                                                                    <ButtonCTA
-                                                                                        aria-label="Go to GitHub repository">
-                                                                                        <div style={{ display: "flex", gap: "0.4rem", alignItems: "center" }}>
-                                                                                            <RiNotionFill />
-                                                                                            See the Heuristic Evaluation
-                                                                                            <GoLinkExternal />
-                                                                                        </div>
-                                                                                    </ButtonCTA>
-                                                                                </a>
 
-                                                                                <a href="">
-                                                                                    <ButtonCTA
-                                                                                        aria-label="Go to Figma project">
-                                                                                        <div style={{ display: "flex", gap: "0.4rem", alignItems: "center" }}>
-                                                                                            <FaFigma />
-                                                                                            Check the project on Figma
-                                                                                            <GoLinkExternal />
-                                                                                        </div>
-                                                                                    </ButtonCTA>
-                                                                                </a>
-                                                                            </div>
+                                                        <iframe 
+                                                        style={{border: "1px solid rgba(0, 0, 0, 0.1);", borderRadius: "6px", width: "100%", height: "50vh"}} 
+                                                        src="https://embed.figma.com/proto/4lgh3YQXc4Okn7HjnU8Frm/Portal-Felix?page-id=156%3A2331&node-id=156-2332&p=f&viewport=1953%2C1955%2C0.09&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=156%3A2332&embed-host=share" 
+                                                        allowFullScreen></iframe>
                                     </ProjectCard>
                                          
                                 <ProjectCard

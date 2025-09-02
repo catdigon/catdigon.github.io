@@ -1,4 +1,4 @@
-import { Card, Col, Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import GradientArea from "../GradientArea/GradientArea";
 import Header from "../Header/Header";
 import { StyledProgressStickyArea } from "./ProgressDisplay/ProgressDisplay.styled";
@@ -18,7 +18,7 @@ import { MotionValue } from "motion";
 import ProjectSection from "./ProjectSections/ProjectSection";
 import LinkProgressBar from "../ProgressBar/LinkProgressBar";
 import ButtonCTA from "../Button/ButtonCTA";
-import { FaFigma, FaGithub } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import { GoLinkExternal } from "react-icons/go";
 
 interface ProjectProps {
@@ -72,9 +72,9 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
                 title={"Cinemateca"}
                 text={"A redesign of the website of the Cinemateca Portuguesa originally created in 2013. This project explored how to improve navigation, accessibility, and visual coherence, while respecting the institution and its mission with a modern visual."}
             >
-                <ImageHeader 
-                image={"/projects/cinemateca/cinemateca-broswer.webp"} 
-                alt={"Homepage Mockup"} />
+                <ImageHeader
+                    image={"/projects/cinemateca/cinemateca-broswer.webp"}
+                    alt={"Homepage Mockup"} />
             </Header>
 
             <div style={{ marginTop: -100 }}>
@@ -132,15 +132,15 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
                                         "To start the project, I began by identifing the key user goals, tacking into consideration the website structure I needed to follow.",
                                     ]}
                                 >
-                                    <CardListSimple 
-                                    title="Key user goals:"
-                                    list={[
-                                        "Learn about institution and its mission",
-                                        "Find upcoming screenings and events",
-                                        "Explore the film archive",
-                                        "Read news and editorial content",
-                                        "Access contact and  location information"
-                                    ]} />
+                                    <CardListSimple
+                                        title="Key user goals:"
+                                        list={[
+                                            "Learn about institution and its mission",
+                                            "Find upcoming screenings and events",
+                                            "Explore the film archive",
+                                            "Read news and editorial content",
+                                            "Access contact and  location information"
+                                        ]} />
                                     <ImageDisplaySimple
                                         imageSrc={"/projects/cinemateca/structure.webp"}
                                         imageAlt={"Site flowchart"}
@@ -221,7 +221,7 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
                                     description={[
                                         "The prototype was developed into a fully functional website using HTML, CSS, JavaScript, and Bootstrap. I implemented JSON to dynamically populate news and film pages, which strengthned my understanding of data handling. Adapting the design to Bootstrap components required adjustments, but allowed for faster implementation while keeping visual consistency.",
                                         "Since the project was designed desktop-first, I had to rethink layouts and interactions to ensure a smooth mobile experience. Throughout development, I used GitHub for version control and documentation, following best practices to keep the code organized and maintainable.",
-                                        ]}
+                                    ]}
                                 >
                                     <ImageDisplaySimple
                                         imageSrc={"/projects/cinemateca/code.webp"}
@@ -280,22 +280,14 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
                                         "The final design improved clarity, reduced cognitive load, and created a modern aesthetic aligned with Cinemateca's mission.",
                                     ]}
                                 >
-                                    
-                                    <Card.Text>You can explore the full project and code through the links below.</Card.Text>
+                                    <iframe
+                                        style={{ border: "1px solid rgba(0, 0, 0, 0.1)", borderRadius: "6px", width: "100%", height: "50vh" }}
+                                        src="https://embed.figma.com/proto/yzkj3eD8ZRNSNn8b7BOBle/Cinemateca-Final--Prototipo-?page-id=6%3A164&node-id=12-403&viewport=-50%2C359%2C0.31&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=12%3A403&embed-host=share"
+                                        allowFullScreen>
+                                    </iframe>
 
-                                    <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap", gap: "1rem" }}>
-                                        <a href="">
-                                            <ButtonCTA
-                                                aria-label="Go to Figma project">
-                                                <div style={{ display: "flex", gap: "0.4rem", alignItems: "center" }}>
-                                                    <FaFigma />
-                                                    Check the project on Figma
-                                                    <GoLinkExternal />
-                                                </div>
-                                            </ButtonCTA>
-                                        </a>
-
-                                        <a href="">
+                                    <div style={{ display: "flex", marginBottom: "12px" }}>
+                                        <a href="https://github.com/catdigon/cinemateca" target='_blank' rel='noopener'>
                                             <ButtonCTA
                                                 aria-label="Go to GitHub repository">
                                                 <div style={{ display: "flex", gap: "0.4rem", alignItems: "center" }}>
@@ -306,7 +298,6 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
                                             </ButtonCTA>
                                         </a>
                                     </div>
-
                                 </ProjectCard>
 
 
