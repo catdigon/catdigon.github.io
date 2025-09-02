@@ -4,7 +4,7 @@ import { StyledProjectCard } from "./ProjectCard.styled";
 interface Props {
     title: string;
     subtitle?: string;
-    description: string[];
+    description: React.ReactNode[];
     children: React.ReactNode
 }
 

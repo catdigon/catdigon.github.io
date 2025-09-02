@@ -1,4 +1,4 @@
-import { Card, Col, Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import GradientArea from "../GradientArea/GradientArea";
 import Header from "../Header/Header";
 import { StyledProgressStickyArea } from "./ProgressDisplay/ProgressDisplay.styled";
@@ -49,15 +49,13 @@ export default function ProjectCinematecaLayout({projectID} : ProjectProps) {
 
     const sectionIds = [
         "Summary",
-        "Study Design",
-        "Experiment",
+        "Study & Experiment",
         "Data Analysis",
         "Conclusion",
     ]
 
     const [projectSectionSummaryProgress, setprojectSectionSummaryProgress] = useState<MotionValue<number> | undefined>();
     const [projectStudyProgress, setprojectStudyProgress] = useState<MotionValue<number> | undefined>();
-    const [projectExperimentProgress, setprojectExperimentProgress] = useState<MotionValue<number> | undefined>();
     const [projectAnalysisProgress, setprojectAnalysisProgress] = useState<MotionValue<number> | undefined>();
     const [projectSectionConclusionProgress, setprojectSectionConclusionProgress] = useState<MotionValue<number> | undefined>();
 
@@ -65,7 +63,7 @@ export default function ProjectCinematecaLayout({projectID} : ProjectProps) {
         <>
             <Header
                 title={"Impact of Notifications"}
-                text={"An academic study on how desktop notifications disrupt attention and reading performance, using an experimental design with eye-tracking and biometric sensor to evaluate attentional disruptions and effects."}
+                text={"An academic study exploring how desktop notifications disrupt attention and reading performance. The experiment combined eye-tracking and biometric sensor to evaluate subtle cognitive and physiological effects"}
             >
                 <ImageHeader 
                 image={"/projects/notifications/not-pc.webp"} 
@@ -81,7 +79,6 @@ export default function ProjectCinematecaLayout({projectID} : ProjectProps) {
                                     projectProgresses={[
                                         projectSectionSummaryProgress,
                                         projectStudyProgress,
-                                        projectExperimentProgress,
                                         projectAnalysisProgress,
                                         projectSectionConclusionProgress
                                     ]}
@@ -104,45 +101,36 @@ export default function ProjectCinematecaLayout({projectID} : ProjectProps) {
                                 <ProjectCard
                                     title={"The Objective"}
                                     description={[
-                                        "Our goal was simples: to find it notifications disrupt reading focus, and whether visual or auditory alerts are more distracting.",
+                                        "Investigate whether visual and auditory desktop notifications disrupt reading focus and how they affect sustained attention.",
                                     ]} children={undefined}  >
                                 </ProjectCard>
                             </ProjectSection>
 
-                            <ProjectSection id={"Study Design"}
+                            <ProjectSection id={"Study & Experiment"}
                                 setProjectSectionProgress={setprojectStudyProgress}
                             >
                                 <ProjectCard
                                     title={"Study Design"}
                                     description={[
-                                        "The project began with a thorough literature review and the formulation of our central research question: How do visual and auditory desktop notifications affect reading focus? ",
-                                        "From this foudation, we formulated hypotheses and selected key eye-tracking and biometric metrics to capture cognitive and physiological responses during reading:",
-                                    ]}
-                                >
-                                    <CardListSimple list={[
-                                        "Learn more about the institution and its mission",
-                                        "Find upcoming screenings and events",
-                                        "Explore the archive catalogue and discover available works",
-                                        "Read news, articles, or featueed content produced by the Cinemateca",
-                                        "Access contact and  location information"
-                                    ]} />
-
-                                    <Card.Text>
-                                        To support precise data colletion, we also defined Areas of Interest (AOIs) on the screen, including text blocks, notification zones, and peripheral regions. This allowed us to track where users focused their attention and for how long, helping to uncover sublte sifts caused by the appearance of notifications.
-                                    </Card.Text>
+                                        <>
+                                        We started by reviweing literature on attention and digital interruptions to define the research question: <em> How do visual and auditory desktop notifications affect reading focus? </em>
+                                        </>,
+                                        "From this, we formulated hypotheses and selected key metrics (eye fixations, blinking rate, heart rate, GSR, pupil dilation) to capture cognitive and physiological responses.",
+                                    ]} children={undefined}                                >
                                 </ProjectCard>
-                            </ProjectSection>
 
-                            <ProjectSection id={"Experiment"}
-                                setProjectSectionProgress={setprojectExperimentProgress}
-                            >
                                 <ProjectCard
                                     title={"Protocols & Experiment"}
                                     description={[
-                                        "A full experimental protocol was designed, incorporating three test conditions:"
+                                        ""
                                     ]}
                                 >
-                                    <CardListSimple list={[
+                                    <ProjectSubCard 
+                                    subtitle={"Conditions"} 
+                                    description={[
+                                        "We design a full experimental protocol with three test conditions:"
+                                    ]} >
+                                        <CardListSimple list={[
                                         "No notifications (control)",
                                         "Visual notification only",
                                         "Visual + auditory notifications",
@@ -151,27 +139,33 @@ export default function ProjectCinematecaLayout({projectID} : ProjectProps) {
                                         imageSrc={"/projects/notifications/protocols.webp"}
                                         imageAlt={"Protocols design"}
                                         isLink={false} />
+                                    </ProjectSubCard>
+                                    
+                                    <ProjectSubCard 
+                                    subtitle={"Procedure"} 
+                                    description={[
+                                        "Each session followed the same sequence to ensure consistent data collection:"
+                                    ]} >
+                                        <CardListSimple list={[
+                                        "Sensor calibration and baseline measurements",
+                                        "Participants read short texts aloud under each condition",
+                                        "Collection of cognitive (eye-tracking) and physiological (biometric sensor) data were recorded",
+                                        "Participants completed a post-task questionnaire for qualitative feedback and demographic data",
+                                    ]} />
+                                    </ProjectSubCard>
 
-                                    <Card.Text>
-                                        Each session  began with sensor calibation, followed by baseline measurements on a control screen. Participants were then instructed to read short text aloud while being explosed to the different conditions. This allowed fot the colletion of both cognitive (via eye tracking) and physiologival (via biometric sensors) data during active reading.
-                                    </Card.Text>
-
-                                    <Card.Text>
-                                        At the end, participants completed a demographic and post-task questionnaire, which provided qualitative feedback on their experience and perceived cognitive effort.
-                                    </Card.Text>
 
                                     <ProjectSubCard
-                                        subtitle={"Team Roles & Data Collection"}
+                                        subtitle={"Team Roles"}
                                         description={[
-                                            "The research process was collaborative, with each team member responsivle for key aspects of the study.",
-                                            "My focus was on data acquisition and participant setup, ensuring the integrity of the experimental process. Specifically, I:",
-                                        ]}
+                                            "The study was collaborative, with each team member responsivle for key aspects of the experiment. My role focused on data acquisition and participant setup, ensurign reliable and consistent execution:",
+                                            ]}
                                     >
                                         <CardListSimple list={[
-                                            "Operated the Gazepoint eye-tracking system during each sessions",
-                                            "Ensure accurate and consistent recording of biometric data",
-                                            "Oversaw sensor placement and screen calibration to ensure reliabel readings",
-                                            "Managed task execution and timing, making sure each test condition followed the protocol precisely",
+                                            "Operated the Gazepoint eye-tracking system during all sessions",
+                                            "Ensured accurate recording of biometric data",
+                                            "Managed sensor placement and screen calibration",
+                                            "Controlled task timing and transitions between test conditions",
                                         ]} />
 
                                         <ImageDisplaySimple
@@ -188,22 +182,30 @@ export default function ProjectCinematecaLayout({projectID} : ProjectProps) {
                                 <ProjectCard
                                     title={"Data Analysis"}
                                     description={[
-                                        "I was also responsible for analysing of demographic data and fixation patterns within predefined Areas of Interest (AOIs). As part of this process, I:",
+                                        "I also analysing of demographic data and eye-fixation patterns within predefined Areas of Interest (AOIs), focusing on text blocks, notification zones, and pheripheral areas. This allowed us to understand how notifications influenced attention and reading behavior. My work included:",
                                     ]}
                                 >
-                                    <CardListSimple list={[
-                                        "Defined AOIs using Gazepoint software, focusing on text blocks, notifications zones, and peripheral areas",
-                                        "Used custom JavaScript scripts to extract and calculate fixations count and duration across screens",
-                                        "Compared data to understand which areas attracted drew the most attention, whether notifications were directly fixated, and how gaze shifted across the screen",
+                                    <CardListSimple 
+                                    list={[
+                                        "Defining AOIs and extracted data using Gazepoint software",
+                                        "Using custom JavaScript scripts to calculate fixations count and durations",
+                                        "Comparing data across conditions to detect attention shifts and disruptions",
                                     ]} />
                                     <ImageDisplaySimple
                                         imageSrc={"/projects/notifications/gazepoint.webp"}
                                         imageAlt={"Defining AOI's on GazePoint software"}
                                         isLink={false} />
-
-                                    <Card.Text>
-                                        Throught the process, I noticed that notifications were rarely fixated immediately. Instead, their AOIs were often visited after a delay: suggesting a lingering attentional disruption. Interestingly, in several cases, participants never looked directly at the notifications itself, yet the post-notification areas received attention afterward. This can indicate a subtle cognitive reaction, even in the absence of direct visual engagement.
-                                    </Card.Text>
+                                    
+                                    <ProjectSubCard 
+                                    subtitle={"Key insights"} 
+                                    description={[]} >
+                                        <CardListSimple list={[
+                                        "Notifications were rarely fixated immediately",
+                                        "Attention shifts often occured after notifications, even without direct visual engagement",
+                                        "Conbined visual + auditory alerts caused subtle, lingering disruptions",
+                                        "Even minor interruptions can affect sustained attention over time"
+                                        ]} />
+                                    </ProjectSubCard>
                                 </ProjectCard>
                             </ProjectSection>
 
@@ -213,8 +215,8 @@ export default function ProjectCinematecaLayout({projectID} : ProjectProps) {
                                 <ProjectCard
                                     title={"Outcome"}
                                     description={[
-                                        "The research concluded that digital notifications, particularly those combining audio and visual elements, can subtly disrupt reading focus. While most results did not reach statistical significance, the patterns observed revealed meaningfull trend worth further investigations. Variations across conditions suggest that even minimal interruptions may affect sustained attention, reinforcing the need for future studies with more refined protocols and broader participant samples.",
-                                        "The dingings were compiled intro a structured academic report, collaborativeky written using Overleaf (LaTeX), ensuring clarity, consistency, and rigorous presentation of both data and critical analysis.",
+                                        "The study revealed that digital notifications, particularly combined audio-visual alerts, can subtly disrupt reading focus, influencing sustained attention even when users are not directly looking at them.",
+                                        "The project demonstrated my ability to design and execute experiments, handle eye-tracking and biometric data, and extract meaningful insights. Results were complied into a structured academic report using Overleaf (LaTex), ensuring clarity, rigor, and a professional presention of both data and analysis.",
                                     ]}
                                     children={undefined} />
 
@@ -222,9 +224,9 @@ export default function ProjectCinematecaLayout({projectID} : ProjectProps) {
                                 <ProjectCard
                                     title={"Reflection & Learnings"}
                                     description={[
-                                        "Coming from a background in cinema and qualitative research, this was my first time applying empirical, data-driven methods. Working with biometric and analytical frameworks expanded my understanding of how design can influence user attention and reduce cognitive overload.",
-                                        "One key insight was realizing that digital stimuli don't always trigger immediate or visible reactions: yet they can leave subtle, lasting effects on users' cognitive states. Even minor notifications can  impact, revealing how delicate and easily fragmented digital attention can be.",
-                                        "This project sparked an interest in exploring the intersection of design, attention, and emotion in digital environments. It also showed me how quantitative methods can strengthen creative intuiton and help build more thoughtful, user-centered interfaces.",
+                                        "Coming from a background in cinema and qualitative research, this project was my first opportunity to apply empirical, data-driven methods. Working with eye-tracking and biometric data taught me how design decisions can sublty influence attention and cognitive load.",
+                                        "I learned that digital stimuli don't always trigger immediate reactions, yet they can have lasting effects on user focus and engagement, highlighting the importance of designing with attention and cognitive load in mind.",
+                                        "This experience strengthened my ability to combine analytical methods with creative intuition, turning quantitative insights into actionable design improvements. It also sparked my ongoing interest in exploring how design, attention, attention, and emotion intersect in digital environments.",
                                         ]}
                                     children={undefined} />
                             </ProjectSection>
