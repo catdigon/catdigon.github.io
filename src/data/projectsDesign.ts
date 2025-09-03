@@ -103,10 +103,6 @@ export const ProjectsCardsText: CardProject[] = [
       badgeColor: badgeColor.PURPLE
     },
     {
-      name: "JavaScript",
-      badgeColor: badgeColor.BLUE
-    },
-    {
       name: "Overleaf",
       badgeColor: badgeColor.RED
     },

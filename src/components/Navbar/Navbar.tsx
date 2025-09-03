@@ -6,6 +6,7 @@ import NavbarLogo from "./NavbarLogo";
 import { appRoutes } from "../../data/constants";
 import { HashLink } from 'react-router-hash-link';
 import { useEffect, useState } from "react";
+import { FiMenu } from "react-icons/fi";
 
 export default function NavBar() {
     const [scrolled, setScrolled] = useState(false);
@@ -35,12 +36,10 @@ export default function NavBar() {
                             </StyledLogo>
                         </Navbar.Brand>
 
+                        <Navbar.Toggle aria-controls="main-navbar" id="btn-toggle">
+                            <FiMenu size={26} />
+                        </Navbar.Toggle>
 
-
-                        {/* Botão hamburguer visível em mobile */}
-                        <Navbar.Toggle aria-controls="main-navbar" />
-
-                        {/* Menu colapsável */}
                         <Navbar.Collapse id="main-navbar">
                             <Nav className="ms-auto">
                                 <Nav.Link>

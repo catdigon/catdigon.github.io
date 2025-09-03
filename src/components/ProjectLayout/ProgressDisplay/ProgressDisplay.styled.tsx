@@ -2,5 +2,5 @@ import styled from "styled-components";
 
 export const StyledProgressStickyArea = styled.div`
     position: sticky;
-    top: 22%;
+    top: 20vh;
 `

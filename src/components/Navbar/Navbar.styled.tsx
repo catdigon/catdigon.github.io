@@ -19,6 +19,20 @@ export const StyledNavbarContainer = styled.div<{$scrolled: boolean}>`
     opacity: ${({ $scrolled }) => ($scrolled ? 1 : 0)};
     transition: opacity 0.4s ease-in-out;
   }
+
+  #btn-toggle{
+    border: none;
+  }
+
+  #btn-toggle:hover{
+        color: #0080A3;
+        filter: drop-shadow(0 0 10px rgb(0, 128, 163))
+          drop-shadow(0 0 30px rgb(0, 128, 163)) !important;
+  }
+
+  .navbar-toggler:focus{
+    box-shadow: none;
+  }
 `
 export const StyledNavbar = styled.div`
     background: white;
@@ -29,13 +43,6 @@ export const StyledNavbar = styled.div`
     width: 80%;
     justify-self: anchor-center;
 `
-
-export const StyleNavbarMenu = styled.ul`
-    display: flex;
-    gap: 1.5rem;
-    margin-bottom: 0rem;
-`
-
 export const StyledLogo = styled.div`
    .btn-link{
     --bs-btn-color: black;
