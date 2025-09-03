@@ -21,7 +21,6 @@ export default function AboutMeSection() {
                                 <Col className="StyledImgContainer">
                                     <ImagesArea />
                                 </Col>
-
                                 <Col>
                                     <AboutMeText />
                                 </Col>

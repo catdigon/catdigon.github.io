@@ -12,7 +12,8 @@ export const StyledFooter = styled.footer`
     justify-self: anchor-center;
 
     h5{
-        font-size: 4rem;
+        font-size: 3.5rem;
+        font-weight: 600;
     }
 
     a{

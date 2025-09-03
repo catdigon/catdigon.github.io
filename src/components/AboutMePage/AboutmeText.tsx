@@ -6,7 +6,7 @@ export default function AboutMeText() {
     return (
         <>
             <Overide>
-                <Card style={{ width: '80%' }}>
+                <Card>
                     <Card.Body>
                         <Card.Title>Hi, my name is Cátia!</Card.Title>
 
@@ -41,12 +41,13 @@ export default function AboutMeText() {
 const Overide = styled.div`
 
 .card{
+    width: 80%;
     background-color: transparent !important;
     border: none !important;
 };
 
 .h5{
-    font-size: 1.70rem;
+    font-size: 2rem;
 }
     
 `

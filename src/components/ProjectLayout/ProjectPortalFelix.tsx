@@ -318,7 +318,7 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
                     </Row>
                     <ProjectsBreackLine />
                     <div style={{ marginTop: 40 }}>
-                        <h3 style={{ justifySelf: "center" }}>More case studies</h3>
+                        <h3 style={{ justifySelf: "center", fontWeight: 600 }}>More projects</h3>
                         <CardLayout
                             data={filteredProjects}
                             showText={false}

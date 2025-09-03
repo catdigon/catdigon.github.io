@@ -37,4 +37,9 @@ const Overide = styled.div`
         display: flex;
         flex-direction: column;
     }
+
+    .card-title{
+        font-size: 2rem;
+        font-weight: 550;
+    }
 `
