@@ -1,7 +1,7 @@
 import { Outlet } from "react-router";
 import { StyleBackground } from "../Background/Background.styled";
 import Footer from "../Footer/Footer";
-import Navbar from "../Navbar/Navbar";
+import NavBar from "../Navbar/Navbar";
 import ScrollToTop from "../ScroolToTop/ScrollToTop";
 
 interface Props {
@@ -14,7 +14,7 @@ export default function PageLayout({ children }: Props) {
         <>
         <ScrollToTop />
             <StyleBackground />
-            <Navbar />
+            <NavBar />
                 <main>
                 <Outlet />
                 {children}

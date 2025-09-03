@@ -80,7 +80,7 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
             <div style={{ marginTop: -100 }}>
                 <GradientArea>
                     <Row style={{ margin: "6rem 0" }}>
-                        <Col md={3}>
+                        <Col md={3} className="d-none d-md-block">
                             <StyledProgressStickyArea>
                                 <LinkProgressBar
                                     projectProgresses={[
