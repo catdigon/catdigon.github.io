@@ -22,7 +22,6 @@ export default function NavBar() {
             <StyledNavbar role="navigation">
                 <Navbar expand="md">
                     <Container>
-
                         <Navbar.Brand>
                             <StyledLogo>
                                 <HashLink to={`${appRoutes.HOME}#Home`}>
