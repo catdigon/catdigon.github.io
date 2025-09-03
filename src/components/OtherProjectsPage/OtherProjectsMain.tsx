@@ -1,28 +1,26 @@
 import GradientArea from "../GradientArea/GradientArea";
-import { StyledHeader } from "../Header/Header.styled";
+import Header from "../Header/Header";
 import ProjectsBreackLine from "../HomePage/BreakLine/ProjectsBreak";
-import HeaderTextOtherProject from "./OtherProjectsHeader";
 
 interface Props {
-    children : React.ReactNode
+    children: React.ReactNode
 }
 
-export default function OtherProjectsLayout( {children}: Props) {
+export default function OtherProjectsLayout({ children }: Props) {
 
     return (
 
         <>
-            <StyledHeader id="OtherProjects" />
-            
-            <GradientArea 
-                startChildren={<HeaderTextOtherProject />
-                }>
-                    
-                <ProjectsBreackLine />
-                
-                {children}
-                
-            </GradientArea>
+            <Header
+                title={"Other Creative Projects"}
+                text={"This page brings together a selection of projects I've contributed to ouside the UX field. These works reflect my ongoing interest in narrative, colaboration, and creative technology."}
+                children={undefined} />
+            <div style={{ marginTop: "-10rem" }}>
+                <GradientArea>
+                    <ProjectsBreackLine />
+                    {children}
+                </GradientArea>
+            </div>
         </>
     )
 }

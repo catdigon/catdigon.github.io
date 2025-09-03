@@ -39,7 +39,6 @@ export default function AboutMeText() {
 }
 
 const Overide = styled.div`
-
 .card{
     width: 80%;
     background-color: transparent !important;
@@ -49,5 +48,12 @@ const Overide = styled.div`
 .h5{
     font-size: 2rem;
 }
-    
+
+@media(max-width: 992px){
+    .card{
+        width: 90%;
+        padding-bottom: 2rem;
+        justify-self: anchor-center;
+    }
+}  
 `

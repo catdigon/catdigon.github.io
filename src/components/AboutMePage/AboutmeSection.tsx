@@ -12,16 +12,21 @@ export default function AboutMeSection() {
         <>
             <StyledGradientArea id="Aboutme">
                 <GradientArea>
-
                     <ProjectsBreackLine />
 
                     <StyledAboutme>
-                        <Container className="AboutmeContainer">
+                        <Container className="AboutmeContainer" >
                             <Row>
-                                <Col className="StyledImgContainer">
+                                <Col 
+                                xs={12} 
+                                lg={6} 
+                                className="order-2 order-lg-1 StyledImgContainer" >
                                     <ImagesArea />
                                 </Col>
-                                <Col>
+                                <Col 
+                                xs={12} 
+                                lg={6} 
+                                className="order-1 order-lg-2 StyledImgContainer">
                                     <AboutMeText />
                                 </Col>
                             </Row>
@@ -31,5 +36,4 @@ export default function AboutMeSection() {
             </StyledGradientArea>
         </>
     )
-
 }

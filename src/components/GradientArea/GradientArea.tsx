@@ -5,21 +5,18 @@ import StartGradientArea from "./StartGradientArea";
 
 
 interface Props {
-    startChildren?: React.ReactNode;
     children: React.ReactNode;
     id?: string;
 }
 
 
-export default function GradientArea( { startChildren, children, id }: Props ) {
+export default function GradientArea( {children, id }: Props ) {
 
     return(
 
         <>
         <div id={id} />
-            <StartGradientArea>
-                {startChildren}
-            </StartGradientArea>
+            <StartGradientArea/>
             <MiddleGradientArea>
                 <BodyContainer>
                 {children}

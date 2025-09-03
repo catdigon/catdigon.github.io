@@ -2,12 +2,10 @@ import styled from "styled-components";
 
 export const StyledAboutme = styled.div`
     background: #9ED7E0;
-    width: 100%;
-    display: flex;
     justify-content: center;
 
     .AboutmeContainer{
-      margin-top: 2rem;
+      margin-top: 3rem;
     }
 
     .StyledImgContainer{
