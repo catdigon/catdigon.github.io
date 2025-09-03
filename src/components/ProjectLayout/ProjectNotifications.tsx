@@ -10,7 +10,7 @@ import ProjectIntroCard from "./Project/ProjectIntro/ProjectIntroCard";
 import ProjectCard from "./Project/ProjectCard/ProjectCard";
 import CardListSimple from "../List/ListSimple";
 import ImageDisplaySimple from "../ImageDisplay/ImageComponent/ImageComponentDefault";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { MotionValue } from "motion";
 import ProjectSection from "./ProjectSections/ProjectSection";
 import LinkProgressBar from "../ProgressBar/LinkProgressBar";
@@ -24,28 +24,6 @@ export default function ProjectCinematecaLayout({projectID} : ProjectProps) {
        const filteredProjects = ProjectsCardsText?.filter(
         (project) => project.id !== projectID
     ) || [];
-
-    //ScrollSpy
-    const [activeID, setActiveID] = useState<string | null>(null);
-
-    useEffect(() => {
-        const sections = document.querySelectorAll("section");
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        setActiveID(entry.target.id);
-                    }
-                });
-            },
-            { threshold: 0.2 }
-        );
-        sections.forEach((section) => observer.observe(section));
-
-        return () => {
-            sections.forEach((section) => observer.unobserve(section));
-        };
-    }, []);
 
     const sectionIds = [
         "Summary",
@@ -82,8 +60,7 @@ export default function ProjectCinematecaLayout({projectID} : ProjectProps) {
                                         projectAnalysisProgress,
                                         projectSectionConclusionProgress
                                     ]}
-                                    ids={sectionIds}
-                                    state={activeID || ""} />
+                                    ids={sectionIds}/>
                             </StyledProgressStickyArea>
                         </Col>
                         <Col md={8}>

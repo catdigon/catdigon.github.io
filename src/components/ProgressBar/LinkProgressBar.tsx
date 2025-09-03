@@ -4,11 +4,10 @@ import { useEffect, useState } from "react"
 
 interface Props {
     ids: string[];
-    state: string;
     projectProgresses: Array<MotionValue<number> | undefined>;
 }
 
-export default function LinkProgressBar({ ids, state , projectProgresses }: Props) {
+export default function LinkProgressBar({ ids, projectProgresses }: Props) {
 
     const { scrollYProgress } = useScroll()
     const [progressValues, setProgressValues] = useState<number[]>([])
