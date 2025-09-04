@@ -41,7 +41,7 @@ export default function NavBar() {
 
                         <Navbar.Collapse id="main-navbar">
                             <Nav className="ms-auto">
-                                <Nav.Link>
+                                <Nav.Link as="div">
                                     <HashLink to={appRoutes.ABOUT_ME}>
                                         <ButtonTransparent
                                             aria-label="Go to About me section">
@@ -49,7 +49,7 @@ export default function NavBar() {
                                         </ButtonTransparent>
                                     </HashLink>
                                 </Nav.Link>
-                                <Nav.Link>
+                                <Nav.Link as="div">
                                     <HashLink to={`${appRoutes.HOME}#Projects`}>
                                         <ButtonTransparent
                                             aria-label="Go to Projects section">
@@ -57,7 +57,7 @@ export default function NavBar() {
                                         </ButtonTransparent>
                                     </HashLink>
                                 </Nav.Link>
-                                <Nav.Link>
+                                <Nav.Link as="div">
                                     <ButtonCTA
                                         aria-label="Go to Contacts section"
                                         onClick={() =>

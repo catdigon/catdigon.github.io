@@ -3,7 +3,7 @@ import GradientArea from "../GradientArea/GradientArea";
 import Header from "../Header/Header";
 import { StyledProgressStickyArea } from "./ProgressDisplay/ProgressDisplay.styled";
 import ImageHeader from "./ImageHeader/ImageHeader";
-import ProjectsBreackLine from "../HomePage/BreakLine/ProjectsBreak";
+import ProjectsBreackLine from "../BreakLine/ProjectsBreak";
 import CardLayout from "../Card/CardLayout";
 import { ProjectsCardsText } from "../../data/projectsDesign";
 import ProjectIntroCard from "./Project/ProjectIntro/ProjectIntroCard";
@@ -13,13 +13,10 @@ import CardListComplete from "../List/ListComplete";
 import CardCarousel from "../ImageDisplay/Carousel/CardCarousel";
 import ImageDisplayScroll from "../ImageDisplay/ImageComponent/ImageComponentScrool";
 import ImageDisplaySimple from "../ImageDisplay/ImageComponent/ImageComponentDefault";
-import { useState } from "react";
-import { MotionValue } from "motion";
-import ProjectSection from "./ProjectSections/ProjectSection";
-import LinkProgressBar from "../ProgressBar/LinkProgressBar";
 import ButtonCTA from "../Button/ButtonCTA";
 import { FaGithub } from "react-icons/fa";
 import { GoLinkExternal } from "react-icons/go";
+import { useSectionProgress } from "./ProgressDisplay/ProgressDisplayLogic";
 
 interface ProjectProps {
     projectID: string;
@@ -38,11 +35,7 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
         "Conclusion",
     ]
 
-    const [projectSectionSummaryProgress, setprojectSectionSummaryProgress] = useState<MotionValue<number> | undefined>();
-    const [projectDiscoveryProgress, setprojectDiscoveryProgress] = useState<MotionValue<number> | undefined>();
-    const [projectDesignProgress, setprojectDesignProgress] = useState<MotionValue<number> | undefined>();
-    const [projectImplementationProgress, setprojectImplementationProgress] = useState<MotionValue<number> | undefined>();
-    const [projectSectionConclusionProgress, setprojectSectionConclusionProgress] = useState<MotionValue<number> | undefined>();
+    const { sectionRefs, progress, activeSection } = useSectionProgress(sectionIds);
 
     return (
         <>
@@ -60,21 +53,33 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
                     <Row style={{ margin: "6rem 0" }}>
                         <Col md={3} className="d-none d-md-block">
                             <StyledProgressStickyArea>
-                                <LinkProgressBar
-                                    projectProgresses={[
-                                        projectSectionSummaryProgress,
-                                        projectDiscoveryProgress,
-                                        projectDesignProgress,
-                                        projectImplementationProgress,
-                                        projectSectionConclusionProgress
-                                    ]}
-                                    ids={sectionIds} />
+                                {sectionIds.map((id) => {
+                                    const pct = Math.round((progress[id] || 0) * 100);
+                                    const isActive = activeSection === id;
+                                    return (
+                                        <div key={id} style={{ marginBottom: "0.6rem" }}>
+                                            <a
+                                                key={id}
+                                                href={`#${id}`}
+                                                style={{
+                                                    fontWeight: isActive ? 600 : 400,
+                                                }}
+                                            >
+                                                {id}
+                                                <div className="progress-bar"
+                                                    style={{
+                                                        height: isActive ? "8px" : "4px",
+                                                        width: `${pct}%`,
+                                                    }}></div>
+                                            </a>
+                                        </div>
+                                    )
+                                })}
                             </StyledProgressStickyArea>
                         </Col>
                         <Col md={8}>
-                            <ProjectSection id={"Summary"}
-                                setProjectSectionProgress={setprojectSectionSummaryProgress}
-                            >
+                            <section id={"Summary"}
+                                ref={el => { sectionRefs.current["Summary"] = el }}>
                                 <ProjectIntroCard projectId={projectID}
                                     description={[
                                         "This was the first project I developed from initial concept to final implementation. The brief was to design a website for a product-based brand, but I chose to reinterpret it by redesigning the Cinemateca Portuguesa website. My goal was to improve navigation, usability, and accessibility while respecting the institution's identity and giving it a fresh, contemporary look.",
@@ -98,11 +103,10 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
                                         imageAlt={"Original Cinemateca homepage"}
                                         isLink={true} />
                                 </ProjectCard>
-                            </ProjectSection>
+                            </section>
 
-                            <ProjectSection id={"Discovery"}
-                                setProjectSectionProgress={setprojectDiscoveryProgress}
-                            >
+                            <section id={"Discovery"}
+                                ref={el => { sectionRefs.current["Discovery"] = el }}>
                                 <ProjectCard
                                     title={"Define the Concept"}
                                     description={[
@@ -137,11 +141,10 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
                                         isLink={true} />
 
                                 </ProjectCard>
-                            </ProjectSection>
+                            </section>
 
-                            <ProjectSection id={"Design"}
-                                setProjectSectionProgress={setprojectDesignProgress}
-                            >
+                            <section id={"Design"}
+                                ref={el => { sectionRefs.current["Design"] = el }}>
                                 <ProjectCard
                                     title={"Design & Prototyping"}
                                     description={[
@@ -188,11 +191,10 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
                                             },
                                         ]} />
                                 </ProjectCard>
-                            </ProjectSection>
+                            </section>
 
-                            <ProjectSection id={"Implementation"}
-                                setProjectSectionProgress={setprojectImplementationProgress}
-                            >
+                            <section id={"Implementation"}
+                                ref={el => { sectionRefs.current["Implementation"] = el }}>
                                 <ProjectCard
                                     title={"From Prototype to Code"}
                                     description={[
@@ -246,11 +248,10 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
                                             },
                                         ]} />
                                 </ProjectCard>
-                            </ProjectSection>
+                            </section>
 
-                            <ProjectSection id={"Conclusion"}
-                                setProjectSectionProgress={setprojectSectionConclusionProgress}
-                            >
+                            <section id={"Conclusion"}
+                                ref={el => { sectionRefs.current["Conclusion"] = el }}>
                                 <ProjectCard
                                     title={"Outcome"}
                                     description={[
@@ -289,7 +290,7 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
                                     ]}
                                     children={undefined} />
 
-                            </ProjectSection>
+                            </section>
 
                         </Col>
                     </Row>

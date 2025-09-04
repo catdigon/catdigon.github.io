@@ -1,23 +1,19 @@
-
 import { Col, Row } from "react-bootstrap";
 import GradientArea from "../GradientArea/GradientArea";
 import Header from "../Header/Header";
 import { StyledProgressStickyArea } from "./ProgressDisplay/ProgressDisplay.styled";
 import ImageHeader from "./ImageHeader/ImageHeader";
-import ProjectsBreackLine from "../HomePage/BreakLine/ProjectsBreak";
+import ProjectsBreackLine from "../BreakLine/ProjectsBreak";
 import CardLayout from "../Card/CardLayout";
 import ProjectIntroCard from "./Project/ProjectIntro/ProjectIntroCard";
 import ProjectCard from "./Project/ProjectCard/ProjectCard";
 import CardListSimple from "../List/ListSimple";
 import ImageDisplaySimple from "../ImageDisplay/ImageComponent/ImageComponentDefault";
-import { useState } from "react";
-import { MotionValue } from "motion";
-import ProjectSection from "./ProjectSections/ProjectSection";
-import LinkProgressBar from "../ProgressBar/LinkProgressBar";
 import ProjectSubCard from "./Project/ProjectCard/ProjectSubCard";
 import ImageDisplayScroll from "../ImageDisplay/ImageComponent/ImageComponentScrool";
 import { ProjectsCardsText } from "../../data/projectsDesign";
 import CardCarousel from "../ImageDisplay/Carousel/CardCarousel";
+import { useSectionProgress } from "./ProgressDisplay/ProgressDisplayLogic";
 
 interface ProjectProps {
     projectID: string;
@@ -36,11 +32,7 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
         "Conclusion",
     ]
 
-    const [projectSectionSummaryProgress, setprojectSectionSummaryProgress] = useState<MotionValue<number> | undefined>();
-    const [projectHeuristicEvaluationProgress, setprojectHeuristicEvaluationProgress] = useState<MotionValue<number> | undefined>();
-    const [projectUserFlowProgress, setprojectUserFlowProgress] = useState<MotionValue<number> | undefined>();
-    const [projectWireframesProgress, setprojectWireframesProgress] = useState<MotionValue<number> | undefined>();
-    const [projectSectionConclusionProgress, setprojectSectionConclusionProgress] = useState<MotionValue<number> | undefined>();
+    const { sectionRefs, progress, activeSection } = useSectionProgress(sectionIds);
 
     return (
         <>
@@ -48,7 +40,7 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
                 title={"Portal Félix"}
                 text={"From heuristic evaluation to high-fidelity prototypes, this project reimagines Portal Félix — the Cinemateca Portuguesa film database — with a user-centered approach to improve navigation, accessibility, and research workflows."}
             >
-                <ImageHeader 
+                <ImageHeader
                     image={"/projects/portal/portal.webp"}
                     alt={"Portal Felix Mockup"} />
             </Header>
@@ -58,21 +50,34 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
                     <Row style={{ margin: "6rem 0" }}>
                         <Col md={3} className="d-none d-md-block">
                             <StyledProgressStickyArea>
-                                <LinkProgressBar
-                                    projectProgresses={[
-                                        projectSectionSummaryProgress,
-                                        projectHeuristicEvaluationProgress,
-                                        projectUserFlowProgress,
-                                        projectWireframesProgress,
-                                        projectSectionConclusionProgress
-                                    ]}
-                                    ids={sectionIds} />
+                                {sectionIds.map((id) => {
+                                    const pct = Math.round((progress[id] || 0) * 100);
+                                    const isActive = activeSection === id;
+                                    return (
+                                        <div key={id} style={{ marginBottom: "0.6rem" }}>
+                                            <a
+                                                key={id}
+                                                href={`#${id}`}
+                                                style={{
+                                                    fontWeight: isActive ? 600 : 400,
+                                                }}
+                                            >
+                                                {id}
+                                                <div className="progress-bar"
+                                                style={{
+                                                    height: isActive ? "8px" : "4px",
+                                                    width: `${pct}%`,
+                                                }}>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    )
+                                })}
                             </StyledProgressStickyArea>
                         </Col>
                         <Col md={8}>
-                            <ProjectSection id={"Summary"}
-                                setProjectSectionProgress={setprojectSectionSummaryProgress}
-                            >
+                            <section id={"Summary"}
+                                ref={el => { sectionRefs.current["Summary"] = el }}>
                                 <ProjectIntroCard projectId={projectID}
                                     description={[
                                         "Portal Félix is the official film database of Cinemateca Portuguesa, launched in 2024 as a centralized access point for Portuguese cinematographic heritage. Designed for both researchers and the general public, it offers a vast colletion of films, people, events and archival resources.",
@@ -90,11 +95,10 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
                                     children={undefined}
                                 />
 
-                            </ProjectSection>
+                            </section>
 
-                            <ProjectSection id={"Heuristic Evaluation"}
-                                setProjectSectionProgress={setprojectHeuristicEvaluationProgress}
-                            >
+                            <section id={"Heuristic Evaluation"}
+                                ref={el => { sectionRefs.current["Heuristic Evaluation"] = el }}>
                                 <ProjectCard
                                     title={"Phase 1: Heuristic Evaluation & User Testing"}
                                     description={[
@@ -126,10 +130,10 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
                                             imageAlt={"Users Testing Personas"}
                                             isLink={true} />
 
-                                            <ImageDisplayScroll 
-                                        imageSrc={"/projects/portal/script-test.webp"} 
-                                        imageAlt={"Usability testing script with task scenarios (PT)"} 
-                                        isLink={true} />
+                                        <ImageDisplayScroll
+                                            imageSrc={"/projects/portal/script-test.webp"}
+                                            imageAlt={"Usability testing script with task scenarios (PT)"}
+                                            isLink={true} />
                                     </ProjectSubCard>
 
                                     <ProjectSubCard
@@ -145,11 +149,10 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
                                     </ProjectSubCard>
 
                                 </ProjectCard>
-                            </ProjectSection>
+                            </section>
 
-                            <ProjectSection id={"User Flow"}
-                                setProjectSectionProgress={setprojectUserFlowProgress}
-                            >
+                            <section id={"User Flow"}
+                                ref={el => { sectionRefs.current["User Flow"] = el }}>
                                 <ProjectCard
                                     title={"Phase 2: Insights & User Flow Strategy"}
                                     description={[
@@ -183,11 +186,10 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
                                         </div>
                                     </ProjectSubCard>
                                 </ProjectCard>
-                            </ProjectSection>
+                            </section>
 
-                            <ProjectSection id={"Wireframes & Prototype"}
-                                setProjectSectionProgress={setprojectWireframesProgress}
-                            >
+                            <section id={"Wireframes & Prototype"}
+                                ref={el => { sectionRefs.current["Wireframes & Prototype"] = el }}>
                                 <ProjectCard
                                     title={"Phase 3: Wireframes & Prototyping"}
                                     description={[
@@ -200,11 +202,11 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
                                             "I began the phase by creating low-fidelity paper prototypes based on the defined user flow. I focus on designing the user account area and explored value-adding features like favorites lists and profile managements.",
                                             "These prototypes served as a way to experiment with the proposed solutions and understand how users might interact with them, before commiting to a final design.",
                                         ]} >
-                                            <ImageDisplaySimple
-                                                imageSrc={"/projects/portal/proto1.webp"}
-                                                imageAlt={"Paper Prototypes (Before user testing)"}
-                                                isLink={true} />
-                                        
+                                        <ImageDisplaySimple
+                                            imageSrc={"/projects/portal/proto1.webp"}
+                                            imageAlt={"Paper Prototypes (Before user testing)"}
+                                            isLink={true} />
+
                                     </ProjectSubCard>
 
                                     <ProjectSubCard
@@ -261,11 +263,10 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
                                         ]} />
                                     </ProjectSubCard>
                                 </ProjectCard>
-                            </ProjectSection>
+                            </section>
 
-                            <ProjectSection id={"Conclusion"}
-                                setProjectSectionProgress={setprojectSectionConclusionProgress}
-                            >
+                            <section id={"Conclusion"}
+                                ref={el => { sectionRefs.current["Conclusion"] = el }}>
                                 <ProjectCard
                                     title={"Outcome"}
                                     description={[
@@ -274,12 +275,12 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
                                         "The work was presented to postgraduated peers, who highlighted its clarity, strong iteration process, and strong alignment between research and design strategy.",
                                     ]}>
 
-                                                        <iframe 
-                                                        style={{border: "1px solid rgba(0, 0, 0, 0.1);", borderRadius: "6px", width: "100%", height: "50vh"}} 
-                                                        src="https://embed.figma.com/proto/4lgh3YQXc4Okn7HjnU8Frm/Portal-Felix?page-id=156%3A2331&node-id=156-2332&p=f&viewport=1953%2C1955%2C0.09&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=156%3A2332&embed-host=share" 
-                                                        allowFullScreen></iframe>
-                                    </ProjectCard>
-                                         
+                                    <iframe
+                                        style={{ border: "1px solid rgba(0, 0, 0, 0.1);", borderRadius: "6px", width: "100%", height: "50vh" }}
+                                        src="https://embed.figma.com/proto/4lgh3YQXc4Okn7HjnU8Frm/Portal-Felix?page-id=156%3A2331&node-id=156-2332&p=f&viewport=1953%2C1955%2C0.09&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=156%3A2332&embed-host=share"
+                                        allowFullScreen></iframe>
+                                </ProjectCard>
+
                                 <ProjectCard
                                     title={"Reflection & Learnings"}
                                     description={[
@@ -289,7 +290,7 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
                                     ]}
                                     children={undefined} />
 
-                            </ProjectSection>
+                            </section>
 
                         </Col>
                     </Row>

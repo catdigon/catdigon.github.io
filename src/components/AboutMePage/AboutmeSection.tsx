@@ -1,7 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap";
 import GradientArea from "../GradientArea/GradientArea";
 import { StyledAboutme, StyledGradientArea } from "./AboutmeSection.styled";
-import ProjectsBreackLine from "../HomePage/BreakLine/ProjectsBreak";
+import ProjectsBreackLine from "../BreakLine/ProjectsBreak";
 import ImagesArea from "./ImagesArea/ImagesArea";
 import AboutMeText from "./AboutmeText";
 

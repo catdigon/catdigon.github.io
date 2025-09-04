@@ -1,6 +1,6 @@
 import GradientArea from "../GradientArea/GradientArea";
 import Header from "../Header/Header";
-import ProjectsBreackLine from "../HomePage/BreakLine/ProjectsBreak";
+import ProjectsBreackLine from "../BreakLine/ProjectsBreak";
 
 interface Props {
     children: React.ReactNode

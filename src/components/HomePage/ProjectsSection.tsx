@@ -2,10 +2,8 @@ import { ProjectsCardsText } from "../../data/projectsDesign";
 import ProjectsArea from "../Card/CardGridLayout";
 import CardLayout from "../Card/CardLayout";
 import GradientArea from "../GradientArea/GradientArea";
-import ProjectsBreackLine from "./BreakLine/ProjectsBreak";
+import ProjectsBreackLine from "../BreakLine/ProjectsBreak";
 import OtherProjectsSection from "./OtherProjects/OtherProjectsSection";
-
-
 
 
 export default function ProjectsSection() {
