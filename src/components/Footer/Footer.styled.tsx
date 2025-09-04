@@ -11,7 +11,8 @@ export const StyledFooter = styled.footer`
     width: 80%;
     justify-self: anchor-center;
 
-    h5{
+    span{
+        font-family: "Outfit", sans-serif !important;
         font-size: 3.5rem;
         font-weight: 600;
     }

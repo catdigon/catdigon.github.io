@@ -15,7 +15,7 @@ export default function Footer() {
                 <Row>
                     {/* Left column */}
                     <Col md={6} className="mb-3">
-                        <h5>Get in touch</h5>
+                        <span>Get in touch</span>
                         <FooterEmail />
 
                     </Col>

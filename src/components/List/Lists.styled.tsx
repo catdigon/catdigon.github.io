@@ -10,6 +10,7 @@ export const StyledList = styled.ul`
 
     li{
         list-style-type: disc;
+        padding-top: 1rem;
     }
 
     .list-title{

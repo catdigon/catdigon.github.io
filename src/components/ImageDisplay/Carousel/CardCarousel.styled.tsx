@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledCarousel = styled.div`
     .carousel-indicators{
-        margin-bottom: 48px !important
+        margin-bottom: 48px !important;
         }
 
     img{
@@ -12,8 +12,10 @@ export const StyledCarousel = styled.div`
 
     .carousel-control-prev, 
     .carousel-control-next{
-        width: 5%;
-        opacity: .4 !important;
+       min-width: 48px;
+       min-height: 48px;
+       width: 8%;
+       opacity: .6 !important;
     }
 `
 

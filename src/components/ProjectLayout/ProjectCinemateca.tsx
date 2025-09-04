@@ -259,6 +259,7 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
                                     ]}
                                 >
                                     <iframe
+                                        title="Cinemateca Prototype in Figma"
                                         style={{ border: "1px solid rgba(0, 0, 0, 0.1)", borderRadius: "6px", width: "100%", height: "50vh" }}
                                         src="https://embed.figma.com/proto/yzkj3eD8ZRNSNn8b7BOBle/Cinemateca-Final--Prototipo-?page-id=6%3A164&node-id=12-403&viewport=-50%2C359%2C0.31&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=12%3A403&embed-host=share"
                                         allowFullScreen>

@@ -12,11 +12,9 @@ export default function CardListSimple({title, list}: Props){
         <>
         <Card.Header style={{paddingTop: 4}}><strong>{title}</strong></Card.Header>
         <StyledList>
-            <ul>
             {list.map((point, index) =>(
                 <li key={index}>{point}</li>
             ))}
-            </ul>
         </StyledList>
         </>
     )

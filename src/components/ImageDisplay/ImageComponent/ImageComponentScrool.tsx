@@ -18,7 +18,7 @@ export default function ImageDisplayScroll({ imageSrc, imageAlt, isLink }: Props
                         <Card.Img
                             variant="top"
                             src={imageSrc}
-                            alt={imageAlt} />
+                            alt= "" />
 
                         <GoLinkExternal style={{
                             position: 'absolute',
@@ -34,7 +34,7 @@ export default function ImageDisplayScroll({ imageSrc, imageAlt, isLink }: Props
                             <Card.Img
                                 variant="top"
                                 src={imageSrc}
-                                alt={imageAlt} />
+                                alt= "" />
                         </StyledCardImg>
                         <Figure.Caption className='img-caption'>{imageAlt}</Figure.Caption>
                     </>

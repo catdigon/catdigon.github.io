@@ -276,6 +276,7 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
                                     ]}>
 
                                     <iframe
+                                        title="Portal Félix Prototype in Figma"
                                         style={{ border: "1px solid rgba(0, 0, 0, 0.1);", borderRadius: "6px", width: "100%", height: "50vh" }}
                                         src="https://embed.figma.com/proto/4lgh3YQXc4Okn7HjnU8Frm/Portal-Felix?page-id=156%3A2331&node-id=156-2332&p=f&viewport=1953%2C1955%2C0.09&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=156%3A2332&embed-host=share"
                                         allowFullScreen></iframe>

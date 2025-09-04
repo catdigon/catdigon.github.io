@@ -18,7 +18,7 @@ export default function ImageDisplaySimple({ imageSrc, imageAlt, isLink }: Props
                             className='imageLink'
                             variant="top"
                             src={imageSrc}
-                            alt={imageAlt} />
+                            alt= "" />
                         
                         <GoLinkExternal style={{
                             position: 'absolute',
@@ -33,7 +33,7 @@ export default function ImageDisplaySimple({ imageSrc, imageAlt, isLink }: Props
                             <Card.Img
                                 variant="top"
                                 src={imageSrc}
-                                alt={imageAlt} />
+                                alt= ""/>
                         <Figure.Caption className='img-caption'>{imageAlt}</Figure.Caption>
                     </>
                 }
