@@ -12,10 +12,8 @@ export default function BtnGridLinks() {
   return (
     <>
       <StyledContainer>
-
-        
-          <div className="mt-3 d-flex gap-2" role="navigation" aria-label="Social links">
-            <ul>
+        <div className="mt-3 d-flex gap-2" role="navigation" aria-label="Social links">
+          <ul>
             <li>
               <Button
                 variant="link"
@@ -74,16 +72,16 @@ export default function BtnGridLinks() {
             <li>
               <Button
                 variant="link"
-                href="https://github.com/catdigon"
+                href="https://drive.google.com/file/d/1GFhfCTkgHvR6ikYs9KTQF3egx59h-fc1/view?usp=sharing"
                 target='_blank' rel='noopener'
                 aria-label="CV"
               >
                 <IconCv />
               </Button>
             </li>
-            </ul>
-          </div>
-          
+          </ul>
+        </div>
+
       </StyledContainer>
     </>
   )
