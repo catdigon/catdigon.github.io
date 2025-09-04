@@ -2,7 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { createBrowserRouter, RouterProvider } from 'react-router';
+import { createHashRouter, RouterProvider } from 'react-router';
 import AboutMe from './pages/AboutMe';
 import { appRoutes } from './data/constants';
 import OtherProjectsPage from './pages/OtherProjects';
@@ -15,7 +15,7 @@ import ProjectPortalFelix from './pages/ProjectPortal Félix';
 
 
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   { 
   element: <PageLayout children={undefined} />,
   children: [
