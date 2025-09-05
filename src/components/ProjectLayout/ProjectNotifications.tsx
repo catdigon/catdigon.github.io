@@ -39,7 +39,8 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
             >
                 <ImageHeader
                     image={"/projects/notifications/not-pc.webp"}
-                    alt={""} />
+                    alt={"Protocol with highlighted AIOs showing notifications"} 
+                    imageMobile={"/projects/notifications/not-pc-mobile.webp"} />
             </Header>
 
             <div style={{ marginTop: -100 }}>
@@ -121,7 +122,9 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
                                         <ImageDisplaySimple
                                             imageSrc={"/projects/notifications/protocols.webp"}
                                             imageAlt={"Protocols design"}
-                                            isLink={false} />
+                                            isLink={false}
+                                            imageMobile={"/projects/notifications/protocols-mobile.webp"} 
+                                            imageLink={"/projects/notifications/protocols.webp"} />
                                     </ProjectSubCard>
 
                                     <ProjectSubCard
@@ -153,8 +156,9 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
                                         <ImageDisplaySimple
                                             imageSrc={"/projects/notifications/tests.webp"}
                                             imageAlt={"Running the eye-tracking and biometric test sension"}
-                                            isLink={false} />
-
+                                            isLink={false}
+                                            imageMobile={"/projects/notifications/tests-mobile.webp"} 
+                                            imageLink={"/projects/notifications/tests.webp"} />
                                     </ProjectSubCard>
 
                                 </ProjectCard>
@@ -177,7 +181,9 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
                                     <ImageDisplaySimple
                                         imageSrc={"/projects/notifications/gazepoint.webp"}
                                         imageAlt={"Defining AOI's on GazePoint software"}
-                                        isLink={false} />
+                                        isLink={false}
+                                        imageMobile={"/projects/notifications/gazepoint-mobile.webp"} 
+                                        imageLink={"/projects/notifications/gazepoint.webp"} />
 
                                     <ProjectSubCard
                                         subtitle={"Key insights"}

@@ -42,7 +42,8 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
             >
                 <ImageHeader
                     image={"/projects/portal/portal.webp"}
-                    alt={"Portal Felix Mockup"} />
+                    alt={"Portal Felix Mockup"} 
+                    imageMobile={"/projects/portal/portal.webp"} />
             </Header>
 
             <div style={{ marginTop: -100 }}>
@@ -115,7 +116,9 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
                                         <ImageDisplayScroll
                                             imageSrc={"/projects/portal/find-list.webp"}
                                             imageAlt={"Findings' list (PT)"}
-                                            isLink={true} />
+                                            isLink={true}
+                                            imageMobile={"/projects/portal/find-list-mobile.webp"} 
+                                            imageLink={"/projects/portal/find-list.webp"} />
                                     </ProjectSubCard>
 
                                     <ProjectSubCard
@@ -128,12 +131,16 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
                                         <ImageDisplaySimple
                                             imageSrc={"/projects/portal/users.webp"}
                                             imageAlt={"Users Testing Personas"}
-                                            isLink={true} />
+                                            isLink={true}
+                                            imageMobile={"/projects/portal/users-mobile.webp"} 
+                                            imageLink={"/projects/portal/users.webp"} />
 
                                         <ImageDisplayScroll
                                             imageSrc={"/projects/portal/script-test.webp"}
                                             imageAlt={"Usability testing script with task scenarios (PT)"}
-                                            isLink={true} />
+                                            isLink={true}
+                                            imageMobile={"/projects/portal/script-test-mobile.webp"} 
+                                            imageLink={"/projects/portal/script-test.webp"} />
                                     </ProjectSubCard>
 
                                     <ProjectSubCard
@@ -145,7 +152,9 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
                                         <ImageDisplaySimple
                                             imageSrc={"/projects/portal/insights.webp"}
                                             imageAlt={"Final UX findings from evaluation and user testing"}
-                                            isLink={false} />
+                                            isLink={false}
+                                            imageMobile={"/projects/portal/insights-mobile.web"} 
+                                            imageLink={"/projects/portal/insights.webp"} />
                                     </ProjectSubCard>
 
                                 </ProjectCard>
@@ -162,10 +171,10 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
                                 >
                                     <ImageDisplaySimple
                                         imageSrc={"/projects/portal/persona-final.webp"}
-                                        imageAlt={"Persona Card: Motivations, Pain Points, and Context of Use"}
-                                        isLink={false} />
-
-
+                                        imageAlt={"Persona card: Motivations, pain points, and context of use"}
+                                        isLink={false}
+                                        imageMobile={"/projects/portal/persona-finalmobile.webp"} 
+                                        imageLink={"/projects/portal/persona-final.webp"} />
 
                                     <ProjectSubCard
                                         subtitle={"Sitemap & User flow"}
@@ -174,16 +183,24 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
                                             "To improve navigation and structural, I mapped a new sitemap and user flows using Octopus.do and Figma, establising a clearer and more efficient experience."
                                         ]}
                                     >
-                                        <div style={{ display: "flex", }}>
+                                        <Row>
+                                            <Col md={4}>
                                             <ImageDisplaySimple
-                                                imageSrc={"/projects/portal/octo-flow.webp"}
-                                                imageAlt={"Sitemap (Octopus.do, PT)"}
-                                                isLink={true} />
+                                                    imageSrc={"/projects/portal/octo-flow.webp"}
+                                                    imageAlt={"Sitemap (Octopus.do, PT)"}
+                                                    isLink={true}
+                                                    imageMobile={"/projects/portal/octo-flow-mobile.webp"} 
+                                                    imageLink={"/projects/portal/octo-flow.webp"} />
+                                            </Col>
+                                            <Col md={8}>
                                             <ImageDisplaySimple
-                                                imageSrc={"/projects/portal/flow-design.webp"}
-                                                imageAlt={"User flow (Figma)"}
-                                                isLink={true} />
-                                        </div>
+                                                    imageSrc={"/projects/portal/flow-design.webp"}
+                                                    imageAlt={"User flow (Figma)"}
+                                                    isLink={true}
+                                                    imageMobile={"/projects/portal/flow-design-mobile.webp"} 
+                                                    imageLink={"/projects/portal/flow-design.webp"} />
+                                                </Col>
+                                        </Row>
                                     </ProjectSubCard>
                                 </ProjectCard>
                             </section>
@@ -204,8 +221,10 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
                                         ]} >
                                         <ImageDisplaySimple
                                             imageSrc={"/projects/portal/proto1.webp"}
-                                            imageAlt={"Paper Prototypes (Before user testing)"}
-                                            isLink={true} />
+                                            imageAlt={"Paper prototypes (Before user testing)"}
+                                            isLink={true}
+                                            imageMobile={"/projects/portal/proto1-mobile.webp"} 
+                                            imageLink={"/projects/portal/proto1.webp"} />
 
                                     </ProjectSubCard>
 
@@ -218,14 +237,18 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
                                     >
                                         <CardCarousel images={[
                                             {
-                                                imagesrc: "/projects/portal/proto2.webp",
-                                                imageAlt: "Paper Prototypes (After feedback/ New pages & changes",
+                                                imageSrc: "/projects/portal/proto2.webp",
+                                                imageAlt: "Paper prototypes (After feedback/ New pages & changes",
                                                 isLink: true,
+                                                imageMobile: "/projects/portal/proto2-mobile.webp",
+                                                imageLink: "/projects/portal/proto2.webp",
                                             },
                                             {
-                                                imagesrc: "/projects/portal/proto3.webp",
-                                                imageAlt: "Paper Prototypes (Final version / Refined flow)",
+                                                imageSrc: "/projects/portal/proto3.webp",
+                                                imageAlt: "Paper prototypes (Final version / Refined flow)",
                                                 isLink: true,
+                                                imageMobile: "/projects/portal/proto3-mobile.webp",
+                                                imageLink: "/projects/portal/proto3.webp",
                                             },
                                         ]} />
                                     </ProjectSubCard>
@@ -244,23 +267,13 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
                                             "Favorites system to save, remove, and orginze films into personalized lists",
                                             "Adapative navigation menu responsive to the user's login state"
                                         ]} />
-                                        <CardCarousel images={[
-                                            {
-                                                imagesrc: "/projects/portal/wireframes.webp",
-                                                imageAlt: "Figma Wireframes overview (page frames)",
-                                                isLink: true
-                                            },
-                                            {
-                                                imagesrc: "/projects/portal/proto-figma.webp",
-                                                imageAlt: "Figma wireframes with linked interactions",
-                                                isLink: true
-                                            },
-                                            {
-                                                imagesrc: "/projects/portal/components.webp",
-                                                imageAlt: "Figma components library",
-                                                isLink: true
-                                            },
-                                        ]} />
+                                        
+                                        <iframe 
+                                        title="Portal Félix Project in Figma"
+                                        style={{border: "1px solid rgba(0, 0, 0, 0.1);", borderRadius: "6px", width: "100%", height: "50vh"}}
+                                        src="https://embed.figma.com/design/4lgh3YQXc4Okn7HjnU8Frm/Portal-Felix?node-id=842-4525&embed-host=share" 
+                                        allowFullScreen>
+                                        </iframe>
                                     </ProjectSubCard>
                                 </ProjectCard>
                             </section>
@@ -279,7 +292,8 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
                                         title="Portal Félix Prototype in Figma"
                                         style={{ border: "1px solid rgba(0, 0, 0, 0.1);", borderRadius: "6px", width: "100%", height: "50vh" }}
                                         src="https://embed.figma.com/proto/4lgh3YQXc4Okn7HjnU8Frm/Portal-Felix?page-id=156%3A2331&node-id=156-2332&p=f&viewport=1953%2C1955%2C0.09&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=156%3A2332&embed-host=share"
-                                        allowFullScreen></iframe>
+                                        allowFullScreen>
+                                        </iframe>
                                 </ProjectCard>
 
                                 <ProjectCard

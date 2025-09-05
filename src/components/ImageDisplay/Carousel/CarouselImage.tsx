@@ -4,21 +4,34 @@ import { StyledImageContainer } from './CardCarousel.styled';
 
 interface Props {
     imageSrc: string;
+    imageMobile: string;
     imageAlt: string;
     isLink: boolean;
+    imageLink: string;
 }
 
-export default function CarouselImage({ imageSrc, imageAlt, isLink }: Props) {
+export default function CarouselImage({ imageSrc, imageMobile, imageAlt, isLink, imageLink }: Props) {
+
+    const imgVersions = [
+        imageMobile ? `${imageMobile} 767w` : null,
+        imageSrc ? `${imageSrc} 1920w` : null,
+    ].filter(Boolean);
+
+    const imgProps = {
+        src: imageSrc,
+        srcSet: imgVersions.join(', '),
+        sizes: `(max-width: 767px) 100vw, 1920px`,
+        imageAlt,
+    };
 
     return (
         <>
             <StyledImageContainer>
-                {isLink ? (<a href={imageSrc} target='_blank' rel='noopener'>
+                {isLink ? (<a style={{paddingTop: "6px"}}href={imageLink} target='_blank' rel='noopener'>
                     <Card.Img
                         className='imageLink'
                         variant="top"
-                        src={imageSrc}
-                        alt= "" />
+                        {...imgProps}/>
 
                     <GoLinkExternal style={{
                         position: 'absolute',
@@ -31,8 +44,7 @@ export default function CarouselImage({ imageSrc, imageAlt, isLink }: Props) {
                     <>
                         <Card.Img
                             variant="top"
-                            src={imageSrc}
-                            alt= "" />
+                            {...imgProps}/>
 
                         <Figure.Caption className='img-caption'>{imageAlt}</Figure.Caption>
                     </>

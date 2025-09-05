@@ -45,7 +45,8 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
             >
                 <ImageHeader
                     image={"/projects/cinemateca/cinemateca-broswer.webp"}
-                    alt={"Homepage Mockup"} />
+                    alt={"Homepage Mockup"} 
+                    imageMobile={"/projects/cinemateca/cinemateca-broswer-mobile.webp"}/>
             </Header>
 
             <div style={{ marginTop: -100 }}>
@@ -101,7 +102,9 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
                                     <ImageDisplayScroll
                                         imageSrc={"/projects/cinemateca/landingPage.webp"}
                                         imageAlt={"Original Cinemateca homepage"}
-                                        isLink={true} />
+                                        isLink={true}
+                                        imageMobile={"/projects/cinemateca/landingPage-mobile.webp"} 
+                                        imageLink={"/projects/cinemateca/landingPage.webp"}/>
                                 </ProjectCard>
                             </section>
 
@@ -125,7 +128,9 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
                                     <ImageDisplaySimple
                                         imageSrc={"/projects/cinemateca/structure.webp"}
                                         imageAlt={"Site flowchart"}
-                                        isLink={false} />
+                                        isLink={false}
+                                        imageMobile={"/projects/cinemateca/structure-mobile.webp"} 
+                                        imageLink={"/projects/cinemateca/structure.webp"} />
 
                                 </ProjectCard>
                                 <ProjectCard
@@ -138,7 +143,9 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
                                     <ImageDisplaySimple
                                         imageSrc={"/projects/cinemateca/reference.webp"}
                                         imageAlt={"Site references with notes and components & flow"}
-                                        isLink={true} />
+                                        isLink={true}
+                                        imageMobile={"/projects/cinemateca/reference-mobile.webp"} 
+                                        imageLink={"/projects/cinemateca/references.webp"} />
 
                                 </ProjectCard>
                             </section>
@@ -176,18 +183,21 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
                                                 text: "Key micro-interactions were implemented, including a sticky navigation bar that adapts on scroll, smooth scroll-to-top functionality, hover animations for cards (revealing additional details on event cards), and clear feedback messages for form submissions with both error and success states."
                                             },
                                         ]} />
-
                                     <CardCarousel
                                         images={[
                                             {
-                                                imagesrc: "/projects/cinemateca/components.webp",
+                                                imageSrc: "/projects/cinemateca/components.webp",
                                                 imageAlt: "Design iterations for three components",
-                                                isLink: true
+                                                isLink: true,
+                                                imageMobile: "/projects/cinemateca/components-mobile.webp",
+                                                imageLink: "/projects/cinemateca/components.webp"
                                             },
                                             {
-                                                imagesrc: "/projects/cinemateca/components1.webp",
+                                                imageSrc: "/projects/cinemateca/components1.webp",
                                                 imageAlt: "Homepage design iterations",
-                                                isLink: true
+                                                isLink: true,
+                                                imageMobile: "/projects/cinemateca/components1-mobile.webp",
+                                                imageLink: "/projects/cinemateca/components1.webp",
                                             },
                                         ]} />
                                 </ProjectCard>
@@ -204,8 +214,10 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
                                 >
                                     <ImageDisplaySimple
                                         imageSrc={"/projects/cinemateca/code.webp"}
-                                        imageAlt={"Vs Code: Folder organizations & index.html"}
-                                        isLink={false} />
+                                        imageAlt={"Vsv Code: Folder organizations & index.html"}
+                                        isLink={true}
+                                        imageMobile={"/projects/cinemateca/code-mobile.webp"} 
+                                        imageLink={"/projects/cinemateca/code.webp"}  />
                                 </ProjectCard>
                                 <ProjectCard
                                     title={"Accessibility & Responsiveness"}
@@ -215,36 +227,47 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
                                 >
                                     <CardCarousel
                                         images={[
-
                                             {
-                                                imagesrc: "/projects/cinemateca/house1.webp",
+                                                imageSrc: "/projects/cinemateca/house1.webp",
                                                 imageAlt: "Landing page evaluation (Desktop) - Lighthouse results",
-                                                isLink: false
+                                                isLink: false,
+                                                imageMobile: "/projects/cinemateca/house1-mobile.webp",
+                                                imageLink: "/projects/cinemateca/house1.webp",
                                             },
                                             {
-                                                imagesrc: "/projects/cinemateca/house2.webp",
+                                                imageSrc: "/projects/cinemateca/house2.webp",
                                                 imageAlt: "Landing page evaluation (Mobile) - Lighthouse results",
-                                                isLink: false
+                                                isLink: false,
+                                                imageMobile: "/projects/cinemateca/house2-mobile.webp",
+                                                imageLink: "/projects/cinemateca/house2.webp",
                                             },
                                             {
-                                                imagesrc: "/projects/cinemateca/house3.webp",
+                                                imageSrc: "/projects/cinemateca/house3.webp",
                                                 imageAlt: "Products page evaluation (Desktop) - Lighthouse results",
-                                                isLink: false
+                                                isLink: false,
+                                                imageMobile: "/projects/cinemateca/house3-mobile.webp",
+                                                imageLink: "/projects/cinemateca/house3.webp",
                                             },
                                             {
-                                                imagesrc: "/projects/cinemateca/house4.webp",
+                                                imageSrc: "/projects/cinemateca/house4.webp",
                                                 imageAlt: "Product detail page evaluation (Desktop) - Lighthouse results",
-                                                isLink: false
+                                                isLink: false,
+                                                imageMobile: "/projects/cinemateca/house4-mobile.webp",
+                                                imageLink: "/projects/cinemateca/house4.webp",
                                             },
                                             {
-                                                imagesrc: "/projects/cinemateca/house5.webp",
+                                                imageSrc: "/projects/cinemateca/house5.webp",
                                                 imageAlt: "News article page evaluation (Mobile) - Lighthouse results",
-                                                isLink: false
+                                                isLink: false,
+                                                imageMobile: "/projects/cinemateca/house5-mobile.webp",
+                                                imageLink: "/projects/cinemateca/house5.webp",
                                             },
                                             {
-                                                imagesrc: "/projects/cinemateca/house6.webp",
+                                                imageSrc: "/projects/cinemateca/house6.webp",
                                                 imageAlt: "Contacts page evaluation (Mobile) - Lighthouse results",
-                                                isLink: false
+                                                isLink: false,
+                                                imageMobile: "/projects/cinemateca/house6-mobile.webp",
+                                                imageLink: "/projects/cinemateca/house6.webp",
                                             },
                                         ]} />
                                 </ProjectCard>

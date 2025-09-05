@@ -17,11 +17,12 @@ export default function Header( {id, title, text, children}: Props) {
             <StyledHeader id={id}>
                 <Container>
                     <Row>
-                        <Col>
+                        <Col md={6}>
                             <HeaderPresentation
                                 title={title}
-                                text={text} /></Col>
-                        <Col>
+                                text={text} />
+                                </Col>
+                        <Col md={6}>
                         {children}
                         </Col>
                     </Row>

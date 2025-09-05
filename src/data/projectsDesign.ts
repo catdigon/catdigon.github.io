@@ -12,7 +12,8 @@ export const ProjectsCardsText: CardProject[] = [
     text: [
       "A design of the website of the Cinemateca Portuguesa originally created in 2013."
     ],
-    image: "projects/cinemateca.webp",
+    imageDesktop: "projects/cinemateca.webp",
+    imageMobile: "projects/cinemateca-mobile.webp",
     alt: "Cinemateca's landing page image",
     label: projectsLabel.ACADEMIC,
     badge: [{
@@ -55,7 +56,8 @@ export const ProjectsCardsText: CardProject[] = [
     text: [
       "A UX evaluation and user-centered design of Portal Félix, aiming to improve usability, accessibility, and workflows."
     ],
-    image: "projects/portal.webp",
+    imageDesktop: "projects/portal.webp",
+    imageMobile: "projects/portal-mobile.webp",
     alt: "Portal Felix prototype image",
     label: projectsLabel.ACADEMIC,
     badge: [{
@@ -91,7 +93,8 @@ export const ProjectsCardsText: CardProject[] = [
     text: [
       "An academic research project exploring how desktop notifications impact attention and reading performance."
     ],
-    image: "projects/notification.webp",
+    imageDesktop: "projects/notification.webp",
+    imageMobile: "projects/notification-mobile.webp",
     alt: "Heatmap image from the project",
     label: projectsLabel.RESEARCH,
     badge: [{

@@ -3,7 +3,11 @@ import { StyledCarousel } from './CardCarousel.styled';
 import CarouselImage from './CarouselImage';
 
 interface Props {
-    images: {imagesrc: string, imageAlt: string, isLink: boolean}[];
+    images: { imageSrc: string, 
+              imageMobile: string, 
+              imageAlt: string, 
+              imageLink: string,
+              isLink: boolean} [];
 }
 
 export default function CardCarousel({ images }: Props) {
@@ -15,9 +19,11 @@ export default function CardCarousel({ images }: Props) {
                     {images.map((image, index) => (
                         <Carousel.Item key={index}>
                             <CarouselImage 
-                            imageSrc={image.imagesrc} 
-                            imageAlt={image.imageAlt} 
-                            isLink={image.isLink} />
+                                imageSrc={image.imageSrc}
+                                imageMobile={image.imageMobile}
+                                imageAlt={image.imageAlt}
+                                isLink={image.isLink} 
+                                imageLink={image.imageLink} />
                         </Carousel.Item>
                     ))}
                 </Carousel>

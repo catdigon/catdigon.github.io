@@ -29,6 +29,7 @@ export const StyledImageArea = styled.div`
 
     .img-caption{
         justify-self: anchor-center;
+        text-align: center;
         padding-top: 4px;
     }
 

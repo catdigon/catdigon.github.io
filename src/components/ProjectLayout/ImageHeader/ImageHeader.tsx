@@ -3,15 +3,28 @@ import { StyledImageCover } from './ImageHeader.styled';
 
 interface Props{
     image: string;
+    imageMobile: string;
     alt: string;
 }
 
-export default function ImageHeader({image, alt}: Props){
+export default function ImageHeader({image, imageMobile,  alt}: Props){
+
+    const imgVersions = [
+        imageMobile ? `${imageMobile} 767w` : null,
+        image ? `${image} 1920w` : null,
+        ].filter(Boolean);
+
+    const imgProps = {
+    src: image,
+    srcSet: imgVersions.join(', '),
+    sizes: `(max-width: 767px) 100vw, 1920px`,
+    alt,
+  };
 
     return(
         <>
         <StyledImageCover>
-                <Image src={image} alt={alt} rounded/>
+                <Image {...imgProps} rounded />
             </StyledImageCover>
         </>
     )

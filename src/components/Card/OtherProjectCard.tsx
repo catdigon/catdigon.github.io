@@ -11,11 +11,21 @@ import type { CardProject } from "../../data/models";
 
 
 interface Props {
-    card: CardProject ;
+    card: CardProject;
 }
 
 
 export default function OtherProjectCardDetails({ card }: Props) {
+
+    const imgVersions = [
+        card.imageMobile ? `${card.imageMobile} 767w` : null,
+        card.imageDesktop ? `${card.imageDesktop} 1920w` : null,
+        ].filter(Boolean).join(', ');
+
+        const imgProjectsVersions = [
+        card.imageProjectMobile ? `${card.imageProjectMobile} 767w` : null,
+        card.imageProject ? `${card.imageProject} 1920w` : null,
+        ].filter(Boolean).join(', ');
 
     return (
         <>
@@ -78,7 +88,9 @@ export default function OtherProjectCardDetails({ card }: Props) {
                             <StyledImageCard>
                                 <Card.Img
                                     variant="top"
-                                    src={card.imageProject || card.image}
+                                    src={card.imageProject || card.imageDesktop}
+                                    srcSet={ imgProjectsVersions || imgVersions}
+                                    sizes="(max-width: 767px) 100vw, 1920px"
                                     alt={card.altImageProject || card.alt} />
                                 <Figure.Caption>{card.altImageProject || card.alt}</Figure.Caption>
                             </StyledImageCard>

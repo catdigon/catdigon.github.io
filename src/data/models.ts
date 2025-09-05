@@ -4,9 +4,11 @@ export interface CardProject {
   title?: string;
   subtitle: string;
   text?: string[];
-  image: string;
+  imageDesktop: string;
+  imageMobile: string;
   alt: string;
   imageProject?: string;
+  imageProjectMobile?: string;
   altImageProject?: string;
   label?: string;
   buttonLabel: string;

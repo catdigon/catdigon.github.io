@@ -10,11 +10,12 @@ export const OtherProjectsCardsText2024: CardProject[] = [
     subtitle: "Trading Zones",
     text: [
       "Published in Aniki - Revista Portuguesa da Imagem em Movimento."
-
     ],
-    image: "/covers/aniki.webp",
+    imageDesktop: "/covers/aniki.webp",
+    imageMobile: "/covers/aniki-mobile.webp",
     alt: "Dossiers edition cover",
     imageProject: "/covers/aniki-cover.webp",
+    imageProjectMobile: "/covers/aniki-cover-mobile.webp",
     altImageProject: "Dossiers edition cover",
     label: projectsLabel.WRITING,
     buttonLabel: "See project",
@@ -36,9 +37,11 @@ export const OtherProjectsCardsText2023: CardProject[] = [
     text: [
       "Paulo Cunha e Manuela Penafria (Eds)",
     ],
-    image: "/covers/20-filmes.webp",
+    imageDesktop: "/covers/20-filmes.webp",
+    imageMobile: "/covers/20-filmes-mobile.webp",
     alt: "Book cover",
     imageProject: "/covers/20-filmes-cover.webp",
+    imageProjectMobile: "/covers/20-filmes-cover.webp",
     altImageProject: "Book cover",
     label: projectsLabel.WRITING,
     buttonLabel: "See project",
@@ -58,7 +61,8 @@ export const OtherProjectsCardsText2023: CardProject[] = [
     text: [
       "A RPG created by André Fernandes. I joined initially as a QA tester and later took on the production and editing of promotion video for the game."
     ],
-    image: "/covers/cacildes.webp",
+    imageDesktop: "/covers/cacildes.webp",
+    imageMobile: "/covers/cacildes.webp",
     alt: "Cacildes Adventure frame",
     imageProject: "",
     altImageProject: "",
@@ -78,7 +82,8 @@ export const OtherProjectsCardsText2022: CardProject[] = [
     title: "DigitALL",
     subtitle: "DigitALL",
     text: [""],
-    image: "/covers/ensino.webp",
+    imageDesktop: "/covers/ensino.webp",
+    imageMobile: "/covers/ensino-mobile.webp",
     alt: "Stop motion films made by students ",
     imageProject: "",
     altImageProject: "",
@@ -97,9 +102,9 @@ export const OtherProjectsCardsText2022: CardProject[] = [
     subtitle: "Rafa and David",
     text: [
       "Published in Journal of Science and Technology of the Arts"
-
     ],
-    image: "/covers/rafa.webp",
+    imageDesktop: "/covers/rafa.webp",
+    imageMobile: "/covers/rafa-mobile.webp",
     alt: "Audiovisual Essay Frame",
     imageProject: "",
     altImageProject: "",
@@ -121,7 +126,8 @@ export const OtherProjectsCardsText2022: CardProject[] = [
     text: [
       "Experimental documentary"
     ],
-    image: "/covers/recorda1.webp",
+    imageDesktop: "/covers/recorda.webp",
+    imageMobile: "/covers/recorda-mobile.webp",
     alt: "Film frame",
     imageProject: "",
     altImageProject: "",
@@ -143,7 +149,8 @@ export const OtherProjectsCardsText2020: CardProject[] = [
     text: [
       "During my volunteering period in Slovakia, I contributes to: Video production and editing; Photography of events; Graphic design for flyers, reports, and visual."
     ],
-    image: "/covers/brochure.webp",
+    imageDesktop: "/covers/brochure.webp",
+    imageMobile: "/covers/brochure-mobile.webp",
     alt: "Project photos",
     imageProject: "",
     altImageProject: "",
@@ -163,7 +170,8 @@ export const OtherProjectsCardsText2019: CardProject[] = [
     title: "Caminhos Film Festival",
     subtitle: "Caminhos Film Festival",
     text: [""],
-    image: "/covers/caminhos.webp",
+    imageDesktop: "/covers/caminhos.webp",
+    imageMobile: "/covers/caminhos-mobile.webp",
     alt: "Festival photos",
     imageProject: "",
     altImageProject: "",
@@ -183,9 +191,11 @@ export const OtherProjectsCardsText2019: CardProject[] = [
     text: [
       "Documentary short",
       "Official Selection, PrimeirOlhar 2020 - Encontros de Cinema de Viana"],
-    image: "/covers/entre.webp",
+    imageDesktop: "/covers/entre.webp",
+    imageMobile: "/covers/entre-mobile.webp",
     alt: "Film frame",
-    imageProject: "",
+    imageProject: "/covers/entre-tanto-cover.webp",
+    imageProjectMobile: "/covers/entre-tanto-cover-mobile.webp",
     altImageProject: "",
     label: projectsLabel.FILM,
     buttonLabel: "See project",
@@ -205,7 +215,8 @@ export const OtherProjectsCardsText2018: CardProject[] = [
     text: [
       "Documentary short",
       "Work-in-progress screening: Planos Film Festival 2018"],
-    image: "/covers/mae.webp",
+    imageDesktop: "/covers/mae.webp",
+    imageMobile: "/covers/mae-mobile.webp",
     alt: "Film frame",
     imageProject: "",
     altImageProject: "",
@@ -227,7 +238,8 @@ export const OtherProjectsCardsText2018: CardProject[] = [
       "Official Selection, Cinedita - Festival de Curtas de Arganil (2019)",
       "Screned at Mostra Criativa - CAI Galeria IPT"
     ],
-    image: "/covers/maras.webp",
+    imageDesktop: "/covers/maras.webp",
+    imageMobile: "/covers/maras-mobile.webp",
     alt: "Film frame",
     imageProject: "",
     altImageProject: "",
@@ -248,7 +260,8 @@ export const OtherProjectsCardsText2018: CardProject[] = [
       "Docu-experimental",
       "Screned at Mostra Criativa - CAI Galeria IPT"
     ],
-    image: "/covers/agora.webp",
+    imageDesktop: "/covers/agora.webp",
+    imageMobile: "/covers/agora-mobile.webp",
     alt: "Film frame",
     imageProject: "",
     altImageProject: "",
