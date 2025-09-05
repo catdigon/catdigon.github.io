@@ -72,7 +72,7 @@ export default function BtnGridLinks() {
             <li>
               <Button
                 variant="link"
-                href="https://drive.google.com/file/d/1GFhfCTkgHvR6ikYs9KTQF3egx59h-fc1/view?usp=sharing"
+                href="/doc/CatDiGon-CV.pdf"
                 target='_blank' rel='noopener'
                 aria-label="CV"
               >

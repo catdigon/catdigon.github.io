@@ -21,9 +21,13 @@ export default function OtherProjectsCards() {
                     {projectYears.map(({year, projects}) => 
                         projects.map((project, index) => (
                             <Col key={`${year}-${index}`} xs={12} md={4}>
+                            {index === 0 ? ( 
                             <h4 style={{ height: 0 }}>
-                                {index === 0 ? "2024" : ""}
+                                {year}
                             </h4>
+                            ) : (
+                                <div style={{height: "0.5rem"}} />
+                            )}
                             <CardItem card={project} showText={false} />
                         </Col>
                         ))
