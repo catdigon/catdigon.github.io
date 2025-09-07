@@ -7,7 +7,7 @@ interface Props {
     imageMobile: string;
     imageAlt: string;
     isLink: boolean;
-    imageLink: string;
+    imageLink?: string;
 }
 
 export default function ImageDisplaySimple({ imageSrc, imageMobile, imageAlt, isLink, imageLink }: Props) {

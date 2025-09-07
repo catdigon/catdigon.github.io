@@ -5,26 +5,52 @@ import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import NavbarLogo from "./NavbarLogo";
 import { appRoutes } from "../../data/constants";
 import { HashLink } from 'react-router-hash-link';
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { FiMenu } from "react-icons/fi";
 
 export default function NavBar() {
     const [scrolled, setScrolled] = useState(false);
+    const [expanded, setExpanded] = useState(false)
+
+    const navRef = useRef<HTMLDivElement | null>(null)
 
     useEffect(() => {
-        const handleScroll = () => setScrolled(window.scrollY > 150)
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 150);
+            if (expanded) setExpanded(false);
+        };
+
+        const handleClickOutside = (event: MouseEvent) => {
+            if (
+                expanded &&
+                navRef.current &&
+                !navRef.current.contains(event.target as Node)
+            ) {
+                setExpanded(false)
+            }
+        };
+
         window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll)
-    }, []);
+        document.addEventListener("mousedown", handleClickOutside)
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll)
+            document.removeEventListener("mousedown", handleClickOutside)
+        }
+    }, [expanded]);
 
     return (
         <StyledNavbarContainer $scrolled={scrolled}>
             <StyledNavbar role="navigation">
-                <Navbar expand="md">
+                <Navbar expand="md"
+                    ref={navRef}
+                    expanded={expanded}>
                     <Container>
                         <Navbar.Brand>
                             <StyledLogo>
-                                <HashLink to={`${appRoutes.HOME}#Home`}>
+                                <HashLink
+                                    to={`${appRoutes.HOME}#Home`}
+                                    onClick={() => setExpanded(false)}>
                                     <Button
                                         variant="link"
                                         aria-label="Go to Homepage"
@@ -35,14 +61,19 @@ export default function NavBar() {
                             </StyledLogo>
                         </Navbar.Brand>
 
-                        <Navbar.Toggle aria-controls="main-navbar" id="btn-toggle">
+                        <Navbar.Toggle
+                            aria-controls="main-navbar"
+                            id="btn-toggle"
+                            onClick={() => setExpanded(expanded ? false : true)}>
                             <FiMenu size={26} />
                         </Navbar.Toggle>
 
                         <Navbar.Collapse id="main-navbar">
                             <Nav className="ms-auto">
                                 <Nav.Link as="div">
-                                    <HashLink to={appRoutes.ABOUT_ME}>
+                                    <HashLink
+                                        to={appRoutes.ABOUT_ME}
+                                        onClick={() => setExpanded(false)}>
                                         <ButtonTransparent
                                             aria-label="Go to About me section">
                                             About
@@ -50,7 +81,9 @@ export default function NavBar() {
                                     </HashLink>
                                 </Nav.Link>
                                 <Nav.Link as="div">
-                                    <HashLink to={`${appRoutes.HOME}#Projects`}>
+                                    <HashLink
+                                        to={`${appRoutes.HOME}#Projects`}
+                                        onClick={() => setExpanded(false)}>
                                         <ButtonTransparent
                                             aria-label="Go to Projects section">
                                             Projects
@@ -61,7 +94,9 @@ export default function NavBar() {
                                     <ButtonCTA
                                         aria-label="Go to Contacts section"
                                         onClick={() =>
-                                            document.getElementById("Contacts")?.scrollIntoView({ behavior: "smooth" })}>
+                                            document.getElementById("Contacts")?.scrollIntoView({ behavior: "smooth" })
+                                            &&
+                                            setExpanded(false)}>
                                         Get in touch
                                     </ButtonCTA>
                                 </Nav.Link>

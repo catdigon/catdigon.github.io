@@ -6,7 +6,7 @@ interface Props {
     images: { imageSrc: string, 
               imageMobile: string, 
               imageAlt: string, 
-              imageLink: string,
+              imageLink?: string,
               isLink: boolean} [];
 }
 

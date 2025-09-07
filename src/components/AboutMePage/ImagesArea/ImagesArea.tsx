@@ -1,4 +1,4 @@
-import FigueiraImg from "./Images/FigueiraImg.";
+import FigueiraImg from "./Images/FigueiraImg";
 import MeImg from "./Images/MeImg";
 import { StyledFigueira, StyledMe } from "./ImagesArea.styled";
 

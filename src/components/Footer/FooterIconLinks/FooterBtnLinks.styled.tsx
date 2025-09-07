@@ -20,4 +20,10 @@ export const StyledContainer = styled.div`
         gap: 0.5rem;
         margin-bottom: 0rem;
     }
+
+    @media (max-width: 767px){
+        ul{
+            gap: 0.3rem;
+        }
+    }
 `
