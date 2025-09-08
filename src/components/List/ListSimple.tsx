@@ -2,20 +2,27 @@ import { Card } from "react-bootstrap";
 import { StyledList } from "./Lists.styled";
 
 
-interface Props{
+interface Props {
     title?: string;
-    list : string[];
+    list: string[];
 }
 
-export default function CardListSimple({title, list}: Props){
-    return(
+export default function CardListSimple({ title, list }: Props) {
+    return (
         <>
-        <Card.Header style={{paddingTop: 4}}><strong>{title}</strong></Card.Header>
-        <StyledList>
-            {list.map((point, index) =>(
-                <li key={index}>{point}</li>
-            ))}
-        </StyledList>
+            <Card.Header
+                style={{
+                    paddingTop: 4,
+                    paddingBottom: 10,
+                    fontSize: "17px"
+                }}>
+                <strong>{title}</strong>
+            </Card.Header>
+            <StyledList>
+                {list.map((point, index) => (
+                    <li key={index}>{point}</li>
+                ))}
+            </StyledList>
         </>
     )
 }

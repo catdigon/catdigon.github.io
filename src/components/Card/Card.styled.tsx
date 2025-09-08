@@ -27,6 +27,10 @@ export const StyledCard = styled.div`
         padding: 8px 0;
     }
 
+    .card-title{
+        font-size: 22px;
+    }
+
     .badge{
         margin-bottom: 10px;
     }

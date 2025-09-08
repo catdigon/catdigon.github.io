@@ -1,10 +1,23 @@
 import styled from "styled-components";
 
 export const StyledHeader = styled.div`
-    padding: 12.5rem 0rem 4rem 0;
+    padding: 14rem 0rem 4rem 0;
     display: flex;
     justify-self: anchor-center;
     width: 70%;
-    justify-content: space-between;
-    
+    justify-content: space-between;   
+`
+
+export const StyledBtnContainer = styled.div`
+    display: flex;
+    justify-content: end;
+    max-width: 32rem;
+    margin-top: 1rem;
+
+    .btn-presentation{
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
 `

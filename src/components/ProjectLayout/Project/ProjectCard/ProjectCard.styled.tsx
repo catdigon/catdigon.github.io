@@ -21,6 +21,11 @@ export const StyledProjectCard = styled.div`
 
     .card-title{
         margin-bottom: 6px;
+        font-size: 24px;
+    }
+
+    .card-subtitle{
+        font-size: 18px;
     }
 
     .card-body{

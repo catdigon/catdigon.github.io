@@ -38,7 +38,7 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
         <>
             <Header
                 title={"Portal Félix"}
-                text={"From heuristic evaluation to high-fidelity prototypes, this project reimagines Portal Félix — the Cinemateca Portuguesa film database — with a user-centered approach to improve navigation, accessibility, and research workflows."}
+                text={"This project reimagines the platform through a user-centered design process. From heuristic evaluation to high-fidelity prototypes, the goal was to improve navigation, accessibility, and research workflows."}
             >
                 <ImageHeader
                     image={"/projects/portal/portal.webp"}
@@ -82,16 +82,16 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
                                 <ProjectIntroCard projectId={projectID}
                                     description={[
                                         "Portal Félix is the official film database of Cinemateca Portuguesa, launched in 2024 as a centralized access point for Portuguese cinematographic heritage. Designed for both researchers and the general public, it offers a vast colletion of films, people, events and archival resources.",
-                                        "Despites its potencial, the platform presented major usability and accessibility issues. Navigation was confusing, the structure complex, and users often struggled to find information efficiently.",
-                                        "This project focused on evaluating the plataform through heuristic analysis and user testing, identifying key pain points, and proposing a user-centered redesign aimed at improving clarity, accessibility, and research workflows.",
+                                        "Despites its potencial, the platform faced major usability and accessibility challengess. Navigation was confusing, the structure complex, and users often struggled to find information efficiently.",
+                                        "This project focused on evaluating the plataform through heuristic analysis and user testing, identifying key pain points, and proposing a user-centered redesign to improving clarity, accessibility, and research workflows.",
                                     ]}
                                 />
 
                                 <ProjectCard
                                     title={"The Challenge"}
                                     description={[
-                                        "Working with Portal Félix, I quickly realized how much potential the platform had, but also how hard it was to use. As a research tool for scholars, filmmakers, and cinema enthusiasts, it should have been clear and intuitive. Instead, the complex structure, confusing navigations, and lack of accessibility created confusion and frustration.",
-                                        "My goal was to address these usability issues and reimagine how the platform could better serve its audience: making research seamless while preserving its depth of information and cultural identity."
+                                        "While exploring the Portal Félix, I quickly recognized the platform's potential, but also its usability issues. As a research tool, it needed to clear and intuitive. Instead, its complex structure, confusing navigations, and limited accessibility often led to confusion and frustration.",
+                                        "My goal was to address these usability problems and reimagine the platform to better serve its audience: making research seamless while preserving its depth of information and cultural identity."
                                     ]}
                                     children={undefined}
                                 />
@@ -109,7 +109,7 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
                                     <ProjectSubCard
                                         subtitle={"Heuristic Evaluation"}
                                         description={[
-                                            "To understand the plataform's current state, I started with a heurisct evaluation, applying Nielsen's principles to key sections such as the homepage, navigation menu, search, and results page.",
+                                            "To understand the plataform's current state, I began with a heurisct evaluation, applying Nielsen's principles to key sections such as the homepage, navigation menu, search, and results page.",
                                             "This analysis revealed major issues with navigation clarity, error prevention, and consistency. Each problem was mapped by severity and summarized into actionable recommendations."
                                         ]}
                                     >
@@ -124,8 +124,8 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
                                     <ProjectSubCard
                                         subtitle={"User Testing"}
                                         description={[
-                                            "Next, I conducted user testing to validate these findings and uncover real user frustrations. I design a test plan around three user profiles, with tasks such as searching for a film by director and locating archived documents.",
-                                            "The sessions highlighted recurring issues: unclear flows, lack of feedback, and inefficient navigation paths."
+                                            "Next, I conducted user testing to validate the heuristic findings and uncover real user frustrations. I designed a test plan around three user profiles, with tasks such as searching for a film by director and locating archived documents.",
+                                            "The sessions highlighted recurring challenges, including unclear flows, lack of feedback, and inefficient navigation paths."
                                         ]}
                                     >
                                         <ImageDisplaySimple
@@ -146,7 +146,7 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
                                     <ProjectSubCard
                                         subtitle={"Accessibility Assessment"}
                                         description={[
-                                            "Finally, I assessed accessibility using tools like Windows Screen Reader, 250% zoom, and AccessMonitor validador. The results confirmed critical gaps, including missing alt text, poor focus management, and low color contrast, benchmarked against WCAG 2.1 guidelines.",
+                                            "Finally, I assessed accessibility using tools sucha as Windows Screen Reader, 250% zoom, and AccessMonitor validator. The evaluation revealed critical gaps, including missing alt text, poor focus management, and low color contrast, benchmarked against WCAG 2.1 guidelines.",
                                         ]}
                                     >
                                         <ImageDisplaySimple
@@ -165,8 +165,8 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
                                 <ProjectCard
                                     title={"Phase 2: Insights & User Flow Strategy"}
                                     description={[
-                                        "Based on the evaluation, I decided to focus the redesign around film researchers as the core users. Their highly specific needs, like searching, selecting, and cataloguing film for academic work, made them a strong reference point.",
-                                        "To guide decisions, I created a dedicated persona mapping their motivations, paing points, and context of use.",
+                                        "Based on the evaluation, I focused the redesign on film researchers as the core users. Their highly specific needs, such as searching, selecting, and cataloguing film for academic work, made them a strong reference point for design decisions.",
+                                        "To guide decisions, I created a dedicated persona outlining their motivations, pain points, and context of use.",
                                     ]}
                                 >
                                     <ImageDisplaySimple
@@ -179,8 +179,8 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
                                     <ProjectSubCard
                                         subtitle={"Sitemap & User flow"}
                                         description={[
-                                            "A critical discovery was that account creation simply didn't work — users could start the process, but no confirmation email was ever sent. This made the feature inaccessible and shifted the redesign focus to account creation, login, and personalization flows.",
-                                            "To improve navigation and structural, I mapped a new sitemap and user flows using Octopus.do and Figma, establising a clearer and more efficient experience."
+                                            "A critical discovery was that account creation did not work — users could start the process, but no confirmation email was ever sent. This made the feature inaccessible and shifted the redesign focus to account creation, login, and personalization flows.",
+                                            "To improve navigation and structure, I mapped a new sitemap and user flows using Octopus.do and Figma, establising a clearer and more efficient experience."
                                         ]}
                                     >
                                         <Row>
@@ -216,8 +216,8 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
                                     <ProjectSubCard
                                         subtitle={"Low-fidelity paper prototypes"}
                                         description={[
-                                            "I began the phase by creating low-fidelity paper prototypes based on the defined user flow. I focus on designing the user account area and explored value-adding features like favorites lists and profile managements.",
-                                            "These prototypes served as a way to experiment with the proposed solutions and understand how users might interact with them, before commiting to a final design.",
+                                            "I began this phase by creating low-fidelity paper prototypes based on the defined user flow. I focused on designing the user account area and explored value-adding features like favorites lists and profile management.",
+                                            "These prototypes allowed me to experiment with the proposed solutions and understand how users might interact with them before committing to a final design.",
                                         ]} >
                                         <ImageDisplaySimple
                                             imageSrc={"/projects/portal/proto1.webp"}
@@ -231,8 +231,8 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
                                     <ProjectSubCard
                                         subtitle={"Usability test with an user"}
                                         description={[
-                                            "To validate the concept, I conducted usability testing with the prototypes. The participant was asked to complete core tasks like creating an account, saving a film to favorites list, and exploring film pages.",
-                                            "The test revealed areas where the task flow and interface elements lacked clarity. These insights guided refinements to the navigation hierarchy, reduce unnecessary steps, and improved overall usability.",
+                                            "To validate the concept, I conducted usability testing with the prototypes. The participant was asked to complete core tasks such as creating an account, saving a film to favorites list, and exploring film pages.",
+                                            "The test revealed areas where the task flow and interface elements lacked clarity. These insights guided refinements to the navigation hierarchy, reduced unnecessary steps, and improved overall usability.",
                                         ]}
                                     >
                                         <CardCarousel images={[
@@ -256,16 +256,16 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
                                     <ProjectSubCard
                                         subtitle={"Figma prototypes"}
                                         description={[
-                                            "With the refined structure, I developed as interactive wireframes in Figma. I implemented a component-based system using variants to ensure consistency and efficient updates, and applied auto-layouts for flexibility, allowing the interface to adapt to different content lengths and screen sizes.",
+                                            "With the refined structure, I developed interactive wireframes in Figma. I implemented a component-based system using variants to ensure consistency and efficient updates, and applied auto-layouts for flexibility, allowing the interface to adapt to different content lengths and screen sizes.",
                                             "Key interactions prototyped included:",
                                         ]}
                                     >
                                         <CardListSimple list={[
-                                            "Refined search experience with autocomplete and a simpified input",
-                                            "Account creation, login, and password recovery with clear sucess and error messages",
+                                            "Refined search experience with autocomplete and a simplified input",
+                                            "Account creation, login, and password recovery with clear success and error messages",
                                             "Profile management with editable and updatable personal information",
-                                            "Favorites system to save, remove, and orginze films into personalized lists",
-                                            "Adapative navigation menu responsive to the user's login state"
+                                            "Favorites system to save, remove, and organize films into personalized lists",
+                                            "Adaptive navigation menu responsive to the user's login state"
                                         ]} />
                                         
                                         <iframe 
@@ -283,9 +283,9 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
                                 <ProjectCard
                                     title={"Outcome"}
                                     description={[
-                                        "This project centered on redesigning a critical user flow of Portal Félix, guided by heuristic evaluation, user testing, and persona-driven insights.",
-                                        "The result is a more intuitive and accessible experience that addresses usability issues while respecting the plataform's role as a research and cultural tool.",
-                                        "The work was presented to postgraduated peers, who highlighted its clarity, strong iteration process, and strong alignment between research and design strategy.",
+                                        "This project focused on redesigning a critical user flow of Portal Félix, guided by heuristic evaluation, user testing, and persona-driven insights.",
+                                        "The result is a more intuitive and accessible experience that resolves usability issues while respecting the platform's role as a research and cultural resource.",
+                                        "The work was presented to postgraduate peers, who praised its clarity, iterative process, and strong alignment between research and design strategy.",
                                     ]}>
 
                                     <iframe
@@ -299,9 +299,9 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
                                 <ProjectCard
                                     title={"Reflection & Learnings"}
                                     description={[
-                                        "This project was a turning point in my UX learning journey. Discovering that the account creation system didn't work revealed how fundamental usability failures can affect trust, cause frustration, disrupt user expectations and block access to value.",
+                                        "This project was a turning point in my UX learning journey. Discovering that the account creation system didn't work highlighted how fundamental usability failures can affect trust, cause frustration, disrupt user expectations, and block access to value.",
                                         "I learned the importance of grounding design in evidence: user testing and persona creation helped me move beyond assumptions and focus on solving real problems.",
-                                        "A key takeway is that great UX often goes unnoticed because it simply works. A plaform should support user seamlessly, even in complex workflows. This experience taught me that good design isn't just about aesthetics, but about making function meaninful and effortless.",
+                                        "A key takeaway is that great UX often goes unnoticed because it simply works. A platform should support user seamlessly, even in complex workflows. This experience taught me that good design isn't just about aesthetics, but it's about making functionality meaningful and effortless.",
                                     ]}
                                     children={undefined} />
 

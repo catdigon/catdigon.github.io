@@ -196,7 +196,7 @@ export const OtherProjectsCardsText2019: CardProject[] = [
     alt: "Film frame",
     imageProject: "/covers/entre-tanto-cover.webp",
     imageProjectMobile: "/covers/entre-tanto-cover-mobile.webp",
-    altImageProject: "",
+    altImageProject: "Film poster",
     label: projectsLabel.FILM,
     buttonLabel: "See project",
     buttonLink: appRoutes.OTHER_PROJECT_DETAIL.replace(':id', 'entre-tanto'),

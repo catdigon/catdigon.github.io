@@ -1,12 +1,10 @@
 import Card from 'react-bootstrap/Card';
 import CardPresentationGlass from './HeaderPresentation.styled';
 
-
 interface Props {
     title: string;
     text: string;
 }
-
 
 export default function HeaderPresentation({title, text}: Props) {
 
@@ -21,6 +19,5 @@ export default function HeaderPresentation({title, text}: Props) {
                 </Card.Text>
             </Card.Body>
         </CardPresentationGlass>
-
     )
 }

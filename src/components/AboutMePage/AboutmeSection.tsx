@@ -19,13 +19,13 @@ export default function AboutMeSection() {
                             <Row>
                                 <Col 
                                 xs={12} 
-                                lg={6} 
+                                lg={5} 
                                 className="order-2 order-lg-1 StyledImgContainer" >
                                     <ImagesArea />
                                 </Col>
                                 <Col 
                                 xs={12} 
-                                lg={6} 
+                                lg={7} 
                                 className="order-1 order-lg-2 StyledImgContainer">
                                     <AboutMeText />
                                 </Col>

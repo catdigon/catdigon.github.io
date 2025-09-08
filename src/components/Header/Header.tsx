@@ -1,16 +1,21 @@
-import { StyledHeader } from './Header.styled';
+import type React from 'react';
+import { StyledBtnContainer, StyledHeader } from './Header.styled';
 import HeaderPresentation from './HeaderText/HeaderPresentation';
 import { Col, Container, Row } from 'react-bootstrap';
+import ButtonCTA from '../Button/ButtonCTA';
 
 
-interface Props{
+interface Props {
     id?: string;
     title: string;
     text: string;
+    isButton?: boolean;
+    button?: React.ReactNode;
+    link?: string;
     children: React.ReactNode;
 }
 
-export default function Header( {id, title, text, children}: Props) {
+export default function Header({ id, title, text, isButton, button, link, children }: Props) {
 
     return (
         <>
@@ -21,9 +26,20 @@ export default function Header( {id, title, text, children}: Props) {
                             <HeaderPresentation
                                 title={title}
                                 text={text} />
-                                </Col>
+
+                            {isButton && (
+                                <StyledBtnContainer>
+                                    <ButtonCTA className='btn-presentation'
+                                        href={link}
+                                        target='_blank' rel='noopener'
+                                        aria-label="CV">
+                                        {button}
+                                    </ButtonCTA>
+                                </StyledBtnContainer>
+                            )}
+                        </Col>
                         <Col md={6}>
-                        {children}
+                            {children}
                         </Col>
                     </Row>
                 </Container>

@@ -17,18 +17,18 @@ export default function AboutMeText() {
 
                         <Card.Text>
                             I began in the arts, fascinated by how creativity can bring people together.
-                            I once dreamed of directing films, but editing captured me - the structures, rhythmas, and problem-solving behind every story.
+                            I once dreamed of directing films, but editing captured me — the structures, rhythms, and problem-solving behind every story.
                             That same love for structure and intention eventually led me to design.
                         </Card.Text>
 
                         <Card.Text>
                             My approach blends curiosity, creative chaos, and structured research.
-                            I start with a question, explore perspectives, and shape responses based on what I discover - not assumptions.
+                            I start with a question, explore perspectives, and shape responses based on what I discover — not on assumptions.
                         </Card.Text>
 
                         <Card.Text>
                             I believe design, like art, should listen before it speaks.
-                            The workd isn't made for a few - it's shaped by all of us, together.
+                            The world isn't made for a few — it's shaped by all of us, together.
                         </Card.Text>
 
                     </Card.Body>
@@ -47,6 +47,7 @@ const Overide = styled.div`
 
 .h5{
     font-size: 2rem;
+    padding-bottom: 1.5rem;
 }
 
 @media(max-width: 992px){

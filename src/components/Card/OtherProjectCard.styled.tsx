@@ -11,7 +11,7 @@ export const StyledOtherCard = styled.div`
         margin: 0 !important;
         padding-bottom: 8px;
     }
-
+    
     .badge{
         margin-bottom: 10px;
     }
@@ -32,6 +32,9 @@ export const StyledOtherCard = styled.div`
 export const CardBlock = styled.div`
     margin-bottom: 1.5rem;
 
+    .card-title{
+        font-size: 22px;
+    }
 `
 
 export const StyledImageCard = styled.div`

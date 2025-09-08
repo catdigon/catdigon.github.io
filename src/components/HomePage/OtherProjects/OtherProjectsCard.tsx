@@ -36,4 +36,8 @@ export const StyledCard = styled.div`
   .card{
     max-width: 38rem;
   }
+
+  .card-title{
+    font-size: 22px;
+  }
 `

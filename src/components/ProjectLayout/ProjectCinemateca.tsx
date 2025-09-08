@@ -41,7 +41,7 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
         <>
             <Header
                 title={"Cinemateca"}
-                text={"A redesign of the website of the Cinemateca Portuguesa originally created in 2013. This project explored how to improve navigation, accessibility, and visual coherence, while respecting the institution and its mission with a modern visual."}
+                text={"A redesign of the Cinemateca Portuguesa website, originally created in 2013. This project explored how to improve navigation, accessibility, and visual coherence, while respecting the institution and its mission with a more modern visual."}
             >
                 <ImageHeader
                     image={"/projects/cinemateca/cinemateca-broswer.webp"}
@@ -83,8 +83,8 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
                                 ref={el => { sectionRefs.current["Summary"] = el }}>
                                 <ProjectIntroCard projectId={projectID}
                                     description={[
-                                        "This was the first project I developed from initial concept to final implementation. The brief was to design a website for a product-based brand, but I chose to reinterpret it by redesigning the Cinemateca Portuguesa website. My goal was to improve navigation, usability, and accessibility while respecting the institution's identity and giving it a fresh, contemporary look.",
-                                        "This approach allowed me to explore branding, storytelling, and interface design from a more authentic perspective, balancing visual coherence with clear structure and user-focused interaction."
+                                        "This was the first project I developed from initial concept to final implementation. The brief asked for a website for a product-based brand, but I chose to reinterpret it by redesigning the Cinemateca Portuguesa website. My goal was to improve navigation, usability, and accessibility while respecting the institution's identity and giving it a fresh, contemporary look.",
+                                        "This approach allowed me to explore branding, storytelling, and interface design from a more authentic perspective — balancing visual coherence with clear structure and user-focused interaction."
                                     ]}
                                 />
 
@@ -95,7 +95,7 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
                                     ]}
                                 >
                                     <CardListSimple list={[
-                                        "Overwhelming, with very long landing page",
+                                        "Overwhelming, with an excessively long landing page",
                                         "Confusing to navigate, especially for new users",
                                         "Outdated in terms of hierarchy and accessibility"
                                     ]} />
@@ -113,17 +113,17 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
                                 <ProjectCard
                                     title={"Define the Concept"}
                                     description={[
-                                        "To start the project, I began by identifing the key user goals, tacking into consideration the website structure I needed to follow.",
+                                        "To start the project, I began by identifying the key user goals, taking into consideration the website structure I needed to follow.",
                                     ]}
                                 >
                                     <CardListSimple
                                         title="Key user goals:"
                                         list={[
-                                            "Learn about institution and its mission",
+                                            "Learn about the institution and its mission",
                                             "Find upcoming screenings and events",
                                             "Explore the film archive",
                                             "Read news and editorial content",
-                                            "Access contact and  location information"
+                                            "Access contact and location information"
                                         ]} />
                                     <ImageDisplaySimple
                                         imageSrc={"/projects/cinemateca/structure.webp"}
@@ -136,8 +136,8 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
                                 <ProjectCard
                                     title={"Research"}
                                     description={[
-                                        "To support the identity of Cinemateca Portuguesa, I wanted the website to reflect not only the institution's mission but also the richness of national film culture. For visual inspirations, I drew from Portuguese film posters, archival materials, and the Cinemateca's own collection.",
-                                        "In parallel, I studied how other cinema-related institutions structured their websites. I analyzed content organization, navigation flows, and design components, with a focus on usability and accessibility."
+                                        "To support the identity of Cinemateca Portuguesa, I wanted the website to reflect not only the institution's mission but also the richness of national film culture. For visual inspiration, I drew from Portuguese film posters, archival materials, and the Cinemateca's own collection.",
+                                        "In parallel, I studied how other cinema-related institutions structured their websites. I analyzed content organization, navigation flows, and design components, with a strong focus on usability and accessibility."
                                     ]}
                                 >
                                     <ImageDisplaySimple
@@ -155,7 +155,7 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
                                 <ProjectCard
                                     title={"Design & Prototyping"}
                                     description={[
-                                        "The design and prototyping phase was divided into two main stages, with feedback after each iteration. First, I worked on visual consistency, clear layouts, and better information architecture. Then, I refined components and added interactions for more dynamic, user-friendly experience.",
+                                        "The design and prototyping phase was divided into two main stages, with feedback after each iteration. First, I worked on visual consistency, clear layouts, and improved information architecture. Then, I refined components and added interactions to create a more dynamic, user-friendly experience.",
                                     ]}
                                 >
                                     <CardListComplete
@@ -163,16 +163,16 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
                                         list={[
                                             {
                                                 title: "Reducing and reorganizing the homepage",
-                                                text: "The original homepage was extremely long and visually overwhelming. I streamlined the layout and prioritized the access to upcoming events, the film archive, and the lastest news."
+                                                text: "The original homepage was extremely long and visually overwhelming. I streamlined the layout and prioritized the access to upcoming events, the film archive, and the latest news."
                                             },
                                             {
                                                 title: "Redesigning the navigation menu",
-                                                text: "The original structure was confusing, making it difficult to find essential sections like the digital archive. I reorganized the menu for better clarity and added shortcuts on the homepage for quicker access."
+                                                text: "The original structure was confusing, making it difficult to find essential sections like the digital archive. I reorganized the menu for better clarity and added shortcuts for quicker access."
                                             },
 
                                             {
                                                 title: "Refining content cards",
-                                                text: "I gave special attention to the design of event and news cards, which are highly interactive elements. The goal was to provide key information clearly while maintaining legibility and a balanced use of negative space."
+                                                text: "I gave special attention to the design of event and news cards, which are highly interactive elements. The goal was to ppresent key information clearly while maintaining legibility and a balanced use of negative space."
                                             },
                                             {
                                                 title: "Creating a new footer",
@@ -208,7 +208,7 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
                                 <ProjectCard
                                     title={"From Prototype to Code"}
                                     description={[
-                                        "The prototype was developed into a fully functional website using HTML, CSS, JavaScript, and Bootstrap. I implemented JSON to dynamically populate news and film pages, which strengthned my understanding of data handling. Adapting the design to Bootstrap components required adjustments, but allowed for faster implementation while keeping visual consistency.",
+                                        "The prototype was developed into a fully functional website using HTML, CSS, JavaScript, and Bootstrap. I implemented JSON to dynamically populate news and film pages, which strengthened my understanding of data handling. Adapting the design to Bootstrap components required some adjustments but allowed for faster implementation while maintaining visual consistency.",
                                         "Since the project was designed desktop-first, I had to rethink layouts and interactions to ensure a smooth mobile experience. Throughout development, I used GitHub for version control and documentation, following best practices to keep the code organized and maintainable.",
                                     ]}
                                 >
@@ -222,7 +222,7 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
                                 <ProjectCard
                                     title={"Accessibility & Responsiveness"}
                                     description={[
-                                        "To ensure accessibility and responsiveness, I followed the Web Content Accessibility Guidelines (WCAG) and tested the site with Lighthouse, improving performance, SEO, and usability across devices. I used ARIA attributes to reinforce semantic structure and assistive technology support. and added descriptive alt text to all images to make content accessible to screen readers.",
+                                        "To ensure accessibility and responsiveness, I followed the Web Content Accessibility Guidelines (WCAG) and tested the site with Lighthouse, improving performance, SEO, and usability across devices. I used ARIA attributes to reinforce semantic structure and support assistive technologies, and added descriptive alt text to all images to make the content fully accessible to screen readers.",
                                     ]}
                                 >
                                     <CardCarousel
@@ -278,7 +278,7 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
                                 <ProjectCard
                                     title={"Outcome"}
                                     description={[
-                                        "The final design improved clarity, reduced cognitive load, and created a modern aesthetic aligned with Cinemateca's mission.",
+                                        "The final design enhanced clarity, reduced cognitive load, and delivered a modern aesthetic aligned with Cinemateca's mission.",
                                     ]}
                                 >
                                     <iframe
@@ -306,11 +306,11 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
                                 <ProjectCard
                                     title={"Reflection & Learnings"}
                                     description={[
-                                        "This was my first full UX/UI project, and many decisions reflect my learning process. From the beginning, I relied on my cinematic sensibility, not just to redesign the website, but to reimagine it as something clear, functional, and meaningful for real users.",
+                                        "This was my first full UX/UI project, and many decisions reflect my learning process. From the start, I relied on my cinematic sensibility — not just to redesign the website, but to reimagine it as something clear, functional, and meaningful for real users.",
                                         "Balancing respect for the original with a fresh, cinematic feel was challenging, especially when defining the color palette and homepage layout. After testing different directions, I chose a yellow-gold tone: warm, emotional, and rooted in cinema's heritage.",
-                                        "The design phase taught me to think from the user's perspective, explore new tools, and create engaging structures. Prototyping was a turning point, showing me how subtle interactions and motion can enrich a design without overwhelming it.",
-                                        "Coding pushed me even further. Turning the design into a responsive site meant constant cycles of building, testing, and refining. Adapting ideas into Bootstrap's framework was challenging, but it showed me how design systems can speed up development without losing creativity or usability.",
-                                        "This project took me further than I expected. Even with areas I'd like to refine, I'm proud of how much I've grown. Above all, I learned that design, like film, is never truly finished."
+                                        "The design phase taught me to think from the user's perspective, explore new tools, and create engaging structures. Prototyping was a turning point, demonstrating how subtle interactions and motion can enhance a design without overwhelming it.",
+                                        "Coding pushed me even further. Translating the design into a fully responsive site required constant cycles of building, testing, and refining. Adapting ideas into Bootstrap's framework was challenging, but it showed me how design systems can speed up development without losing creativity or usability.",
+                                        "This project took me further than I expected. While there are areas I'd still like to refine, I'm proud of how much I've grown. Above all, I learned that design, like film, is never truly finished."
                                     ]}
                                     children={undefined} />
 
