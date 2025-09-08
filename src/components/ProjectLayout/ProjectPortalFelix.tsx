@@ -115,7 +115,7 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
                                     >
                                         <ImageDisplayScroll
                                             imageSrc={"/projects/portal/find-list.webp"}
-                                            imageAlt={"Findings' list (PT)"}
+                                            imageAlt={"List of findings with severity and heuristic type"}
                                             isLink={true}
                                             imageMobile={"/projects/portal/find-list-mobile.webp"} 
                                             imageLink={"/projects/portal/find-list.webp"} />
@@ -137,7 +137,7 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
 
                                         <ImageDisplayScroll
                                             imageSrc={"/projects/portal/script-test.webp"}
-                                            imageAlt={"Usability testing script with task scenarios (PT)"}
+                                            imageAlt={"Usability testing script with task scenarios"}
                                             isLink={true}
                                             imageMobile={"/projects/portal/script-test-mobile.webp"} 
                                             imageLink={"/projects/portal/script-test.webp"} />
