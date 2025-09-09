@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+export const StyledHeaderContainer = styled.div`
+    display: flex;
+    justify-content: center;
+`
+
 export const StyledHeader = styled.div`
     padding: 14rem 0rem 4rem 0;
     display: flex;

@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+export const StyledFooterContainer = styled.div`
+display: flex;
+justify-content: center;
+`
+
 export const StyledFooter = styled.footer`
 
     background: white;

@@ -3,9 +3,10 @@ import styled from "styled-components";
 export const StyledNavbarContainer = styled.div<{$scrolled: boolean}>`
   position: fixed;
   width: 100%;
-  height: 128px;
   z-index: 99;
   background: transparent;
+  display: flex;
+  justify-content: center;
 
   &::before {
     content: "";

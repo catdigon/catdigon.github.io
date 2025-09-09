@@ -1,5 +1,5 @@
 import type React from 'react';
-import { StyledBtnContainer, StyledHeader } from './Header.styled';
+import { StyledBtnContainer, StyledHeader, StyledHeaderContainer } from './Header.styled';
 import HeaderPresentation from './HeaderText/HeaderPresentation';
 import { Col, Container, Row } from 'react-bootstrap';
 import ButtonCTA from '../Button/ButtonCTA';
@@ -18,7 +18,7 @@ interface Props {
 export default function Header({ id, title, text, isButton, button, link, children }: Props) {
 
     return (
-        <>
+        <StyledHeaderContainer>
             <StyledHeader id={id}>
                 <Container>
                     <Row>
@@ -44,6 +44,6 @@ export default function Header({ id, title, text, isButton, button, link, childr
                     </Row>
                 </Container>
             </StyledHeader>
-        </>
+        </StyledHeaderContainer>
     )
 }
