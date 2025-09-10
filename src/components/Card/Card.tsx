@@ -15,7 +15,7 @@ interface Props {
 export default function CardItem({ card, showText, showLabel, showBadgeList }: Props) {
   
       const imgVersions = [
-        card.imageMobile ? `${card.imageMobile} 767w` : null,
+        card.imageMobile ? `${card.imageMobile} 768w` : null,
         card.imageDesktop ? `${card.imageDesktop} 1920w` : null,
         ].filter(Boolean).join(', ');
 
@@ -28,7 +28,7 @@ export default function CardItem({ card, showText, showLabel, showBadgeList }: P
               variant="top"
               src={card.imageDesktop}
               srcSet={imgVersions}
-              sizes="(max-width: 767px) 100vw, 1920px"
+              sizes="(max-width: 768px) 100vw, 1920px"
               alt={card.alt}
             />
           </StyledCardImgContainer>

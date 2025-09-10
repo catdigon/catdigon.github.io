@@ -21,7 +21,7 @@ export const StyledContainer = styled.div`
         margin-bottom: 0rem;
     }
 
-    @media (max-width: 767px){
+    @media (max-width: 768px){
         ul{
             gap: 0.3rem;
         }

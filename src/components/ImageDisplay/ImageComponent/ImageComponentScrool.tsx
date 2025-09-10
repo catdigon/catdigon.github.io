@@ -13,14 +13,14 @@ interface Props {
 export default function ImageDisplayScroll({ imageSrc, imageMobile, imageAlt, isLink, imageLink }: Props) {
 
         const imgVersions = [
-        imageMobile ? `${imageMobile} 767w` : null,
+        imageMobile ? `${imageMobile} 768w` : null,
         imageSrc ? `${imageSrc} 1920w` : null,
     ].filter(Boolean);
 
     const imgProps = {
         src: imageSrc,
         srcSet: imgVersions.join(', '),
-        sizes: `(max-width: 767px) 100vw, 1920px`,
+        sizes: `(max-width: 768px) 100vw, 1920px`,
         imageAlt,
     };
 

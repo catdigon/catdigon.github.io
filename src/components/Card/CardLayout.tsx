@@ -17,7 +17,7 @@ export default function CardLayout({ data, showText, showLabel, showBadgeList}: 
       <Row className="g-4">
         {data.map((project, idx) => (
 
-          <Col key={idx} xs={12} md={4}>
+          <Col key={idx} sm={12} md={6} xl={4}>
 
             <CardItem card={project}
             showText={showText}

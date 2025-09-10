@@ -98,7 +98,7 @@ export const ProjectsCardsText: CardProject[] = [
     alt: "Heatmap image from the project",
     label: projectsLabel.RESEARCH,
     badge: [{
-      name: "GazePoint 3 (Eye Tracking & Biometrics)",
+      name: "GazePoint 3",
       badgeColor: badgeColor.GREEN
     },
     {

@@ -46,6 +46,15 @@ export const StyledNavbar = styled.div`
 
     .container{
       max-width: unset;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    @media (max-width: 768px){
+        .container{
+          padding: 0;
+        }
     }
 `
 export const StyledLogo = styled.div`
@@ -56,4 +65,14 @@ export const StyledLogo = styled.div`
     .btn:hover{
             color: #0080A3;}
 
+`
+
+export const NavbarMobile = styled.div`
+      display: flex;
+
+      @media (max-width: 768px){
+        flex-wrap: nowrap;
+        width: 100%;
+        justify-content: space-between;
+        }
 `

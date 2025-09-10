@@ -1,4 +1,4 @@
-import { StyledLogo, StyledNavbar, StyledNavbarContainer } from "./Navbar.styled";
+import { NavbarMobile, StyledLogo, StyledNavbar, StyledNavbarContainer } from "./Navbar.styled";
 import ButtonTransparent from "../Button/ButtonTransparent";
 import ButtonCTA from "../Button/ButtonCTA";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
@@ -6,7 +6,7 @@ import NavbarLogo from "./NavbarLogo";
 import { appRoutes } from "../../data/constants";
 import { HashLink } from 'react-router-hash-link';
 import { useEffect, useState, useRef } from "react";
-import { FiMenu } from "react-icons/fi";
+import { FiMenu, FiX } from "react-icons/fi";
 
 export default function NavBar() {
     const [scrolled, setScrolled] = useState(false);
@@ -46,6 +46,7 @@ export default function NavBar() {
                     ref={navRef}
                     expanded={expanded}>
                     <Container>
+                        <NavbarMobile>
                         <Navbar.Brand>
                             <StyledLogo>
                                 <HashLink
@@ -65,9 +66,10 @@ export default function NavBar() {
                             aria-controls="main-navbar"
                             id="btn-toggle"
                             onClick={() => setExpanded(expanded ? false : true)}>
-                            <FiMenu size={26} />
+                                {expanded ? <FiX size={28} /> : <FiMenu size={26} />}
                         </Navbar.Toggle>
-
+                        </NavbarMobile>
+                        
                         <Navbar.Collapse id="main-navbar">
                             <Nav className="ms-auto">
                                 <Nav.Link as="div">

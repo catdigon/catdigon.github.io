@@ -11,7 +11,7 @@ export const StyleBackground = styled.div`
     background: url('/background.webp');
     background-size: cover;
     
-    @media (max-width: 767px){
+    @media (max-width: 768px){
         background: url('/background-mobile.webp');
     background-size: cover;
     }
