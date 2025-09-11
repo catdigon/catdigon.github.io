@@ -52,7 +52,7 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
             <div style={{ marginTop: -100 }}>
                 <GradientArea>
                     <Row style={{ margin: "6rem 0" }}>
-                        <Col md={3} className="d-none d-md-block">
+                        <Col lg={3} className="d-none d-lg-block">
                             <StyledProgressStickyArea>
                                 {sectionIds.map((id) => {
                                     const pct = Math.round((progress[id] || 0) * 100);
@@ -78,7 +78,7 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
                                 })}
                             </StyledProgressStickyArea>
                         </Col>
-                        <Col md={8}>
+                        <Col lg={8}>
                             <section id={"Summary"}
                                 ref={el => { sectionRefs.current["Summary"] = el }}>
                                 <ProjectIntroCard projectId={projectID}
