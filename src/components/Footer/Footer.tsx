@@ -24,7 +24,6 @@ export default function Footer() {
                             <div className="text-muted mt-2">©2025 | Website by Cátia Diogo</div>
                         </Col>
                     </Row>
-
                 </footer>
             </StyledFooter>
         </StyledFooterContainer>

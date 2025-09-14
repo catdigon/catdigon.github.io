@@ -22,7 +22,8 @@ export default function CardItem({ card, showText, showLabel, showBadgeList }: P
   return (
     <>
       <StyledCard>
-        <Card>
+        <a href={card.buttonLink}>
+        <Card className="card-link">
           <StyledCardImgContainer>
             <Card.Img
               variant="top"
@@ -76,7 +77,8 @@ export default function CardItem({ card, showText, showLabel, showBadgeList }: P
 
           </Card.Body>
         </Card>
-      </StyledCard >
+        </a>
+      </StyledCard>
     </>
   );
 }

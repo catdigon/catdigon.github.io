@@ -7,11 +7,13 @@ export const StyledCardImgContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-
+    border-radius: var(--bs-card-border-radius);
+    
     img{
         width: 100%;
         height: 100%;
         object-fit: cover;
+        transition: transform 0.4s ease;
     }
 `
 
@@ -19,8 +21,8 @@ export const StyledCard = styled.div`
     .card{
         --bs-card-bg: transparent;
         --bs-card-border-color: transparent;
-        padding: 2.5rem 0;
-    
+        margin: 2rem 0;
+        padding: 0.5rem;
     }
 
     .card-body{
@@ -35,9 +37,13 @@ export const StyledCard = styled.div`
         margin-bottom: 10px;
     }
 
-    .card-img-top{
-        border-radius: var(--bs-card-border-radius);
-    }
+    a{
+        text-decoration: none;
+    }  
+
+    .card-link:hover img {
+        transform: scale(1.06);
+        }
 `
 
 export const BadgeCardContainer = styled.div`

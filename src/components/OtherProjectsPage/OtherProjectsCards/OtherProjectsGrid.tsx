@@ -17,10 +17,10 @@ export default function OtherProjectsCards() {
     return (
         <>
             <StyledOtherProjectsGrid>
-                <Row style={{ flexWrap: 'wrap', width: '100%' }}>
+                <Row style={{ flexWrap: 'wrap', width: '100%'}}>
                     {projectYears.map(({year, projects}) => 
                         projects.map((project, index) => (
-                            <Col key={`${year}-${index}`} xs={12} md={4}>
+                            <Col key={`${year}-${index}`} sm={12} md={6} xl={4}>
                             {index === 0 ? ( 
                             <h4 style={{ height: 0 }}>
                                 {year}

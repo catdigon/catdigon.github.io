@@ -7,10 +7,14 @@ justify-content: center;
 
 export const StyledFooter = styled.footer`
 
+    .row{
+        position: relative;
+        padding: 14px 22px;
+    }
+
     background: white;
     border-radius: 14px;
     margin: -2px 48px 34px;
-    padding: 14px 22px;
     box-shadow: 0 0.9px 4px 0 var(--Shadow-6, rgba(0, 0, 0, 0.08)), 0 2.6px 8px 0 var(--Shadow-4, rgba(0, 0, 0, 0.06)), 0 5.7px 12px 0 var(--Shadow-3, rgba(0, 0, 0, 0.05)), 0 15px 15px 0 var(--Shadow-2, rgba(0, 0, 0, 0.04));
     max-width: 1400px;
     width: 80%;
@@ -27,7 +31,6 @@ export const StyledFooter = styled.footer`
         text-decoration: none;
     }
 
-    
     .footeright{
         display: flex;
         flex-direction: column;

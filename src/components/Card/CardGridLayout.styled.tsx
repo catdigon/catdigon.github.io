@@ -4,6 +4,6 @@ export const StyledContainerArea = styled.div`
     justify-content: center;
 
     h1{
-        padding-bottom: 2rem;
+        padding-bottom: 1rem;
     }
 `
