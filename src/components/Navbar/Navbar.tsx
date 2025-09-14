@@ -76,8 +76,7 @@ export default function NavBar() {
                                     <HashLink
                                         to={appRoutes.ABOUT_ME}
                                         onClick={() => setExpanded(false)}>
-                                        <ButtonTransparent
-                                            aria-label="Go to About me section">
+                                        <ButtonTransparent >
                                             About
                                         </ButtonTransparent>
                                     </HashLink>
@@ -86,15 +85,13 @@ export default function NavBar() {
                                     <HashLink
                                         to={`${appRoutes.HOME}#Projects`}
                                         onClick={() => setExpanded(false)}>
-                                        <ButtonTransparent
-                                            aria-label="Go to Projects section">
+                                        <ButtonTransparent >
                                             Projects
                                         </ButtonTransparent>
                                     </HashLink>
                                 </Nav.Link>
                                 <Nav.Link as="div">
                                     <ButtonCTA
-                                        aria-label="Go to Contacts section"
                                         onClick={() =>
                                             document.getElementById("Contacts")?.scrollIntoView({ behavior: "smooth" })
                                             &&

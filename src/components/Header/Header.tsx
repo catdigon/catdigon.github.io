@@ -31,8 +31,7 @@ export default function Header({ id, title, text, isButton, button, link, childr
                                 <StyledBtnContainer>
                                     <ButtonCTA className='btn-presentation'
                                         href={link}
-                                        target='_blank' rel='noopener'
-                                        aria-label="CV">
+                                        target='_blank' rel='noopener'>
                                         {button}
                                     </ButtonCTA>
                                 </StyledBtnContainer>

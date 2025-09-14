@@ -31,8 +31,7 @@ export default function OtherProjectCardDetails({ card }: Props) {
         <>
 
             <HashLink to={appRoutes.OTHER_PROJECTS}>
-                <ButtonTransparent
-                    aria-label="Go back">
+                <ButtonTransparent>
                     <IoChevronBackOutline
                         style={{ marginLeft: "0.5rem" }} />
                     Return
@@ -75,7 +74,7 @@ export default function OtherProjectCardDetails({ card }: Props) {
 
                                 {card.primaryOutButton && (
                                     <Link to={card.primaryOutButtonLink!}>
-                                        <ButtonCTA aria-label="Project">
+                                        <ButtonCTA>
                                             {card.primaryOutButton}
                                             <GoLinkExternal style={{ marginLeft: "0.5rem" }} />
                                         </ButtonCTA>

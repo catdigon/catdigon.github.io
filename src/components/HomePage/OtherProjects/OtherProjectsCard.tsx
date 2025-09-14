@@ -18,8 +18,7 @@ export default function OtherProjectsCard() {
             <Card.Text>{OtherProjectsText.text}</Card.Text>
 
             <HashLink to={appRoutes.OTHER_PROJECTS}>
-              <ButtonCTA
-                aria-label="Other Projects">
+              <ButtonCTA >
                 {OtherProjectsText.button}
                 <BsChevronRight style={{ marginLeft: "0.5rem" }} />
               </ButtonCTA>

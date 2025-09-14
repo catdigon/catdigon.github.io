@@ -290,8 +290,7 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
 
                                     <div style={{ display: "flex", marginBottom: "12px" }}>
                                         <a href="https://github.com/catdigon/cinemateca" target='_blank' rel='noopener'>
-                                            <ButtonCTA
-                                                aria-label="Go to GitHub repository">
+                                            <ButtonCTA>
                                                 <div style={{ display: "flex", gap: "0.4rem", alignItems: "center" }}>
                                                     <FaGithub />
                                                     See the GitHub repository

@@ -13,12 +13,12 @@ export default function FooterEmail() {
                 <Button
                     variant="link"
                     href="mailto:catdigon.all@gmail.com"
-                    aria-label="Send email"
+                    aria-label="Send email to catdigon.all@gmail.com"
                     className="d-inline-flex align-items-center gap-2"
                     onMouseEnter={ () => setHovered(true) }
                     onMouseLeave={ () => setHovered(false) }
                 >
-                    {hovered ? <BsEnvelopeAtFill /> : <BsEnvelopeAt /> }
+                    {hovered ? <BsEnvelopeAtFill aria-hidden="true"/> : <BsEnvelopeAt aria-hidden="true"/> }
                     
                     catdigon.all@gmail.com
                 </Button>

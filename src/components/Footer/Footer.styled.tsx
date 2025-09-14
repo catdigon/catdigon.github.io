@@ -5,7 +5,7 @@ display: flex;
 justify-content: center;
 `
 
-export const StyledFooter = styled.footer`
+export const StyledFooter = styled.div`
 
     .row{
         position: relative;
