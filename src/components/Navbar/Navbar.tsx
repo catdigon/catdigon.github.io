@@ -54,7 +54,7 @@ export default function NavBar() {
                                     onClick={() => setExpanded(false)}>
                                     <Button
                                         variant="link"
-                                        aria-label="Go to Homepage"
+                                        aria-label="Cátia Diogo's portfolio logo - button to return to homepage"
                                         className="navbarlogo">
                                         <NavbarLogo />
                                     </Button>
