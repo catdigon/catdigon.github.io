@@ -13,8 +13,6 @@ import ProjectNotifications from './pages/ProjectNotifications';
 import PageLayout from './components/PageLayout/PageLayout';
 import ProjectPortalFelix from './pages/ProjectPortal Félix';
 
-
-
 const router = createBrowserRouter([
   { 
   element: <PageLayout children={undefined} />,

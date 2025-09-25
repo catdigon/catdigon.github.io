@@ -3,12 +3,14 @@ import { StyleBackground } from "../Background/Background.styled";
 import Footer from "../Footer/Footer";
 import NavBar from "../Navbar/Navbar";
 import ScrollToTop from "../ScroolToTop/ScrollToTop";
+import usePageTracking from "../../hooks/usePageTracking";
 
 interface Props {
     children: React.ReactNode;
 }
 
 export default function PageLayout({ children }: Props) {
+    usePageTracking();
 
     return (
         <>
