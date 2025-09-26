@@ -3,7 +3,7 @@ import { Button } from "react-bootstrap";
 import { StyledContainer } from "./FooterBtnLinks.styled";
 import BtnOrcid from "./IconOrcid";
 import BtnCienciaID from "./IconCienciaID";
-import { FaSquareGithub } from "react-icons/fa6";
+import { FaSquareDribbble, FaSquareGithub } from "react-icons/fa6";
 import IconCv from "./IconCv";
 
 
@@ -39,6 +39,17 @@ export default function BtnGridLinks() {
             <li>
               <Button
                 variant="link"
+                href="https://dribbble.com/catdigon-all"
+                target='_blank' rel='noopener'
+                aria-label="Dribble"
+              >
+                <FaSquareDribbble />
+              </Button>
+            </li>
+
+            <li>
+              <Button
+                variant="link"
                 href="https://orcid.org/0000-0002-9129-5021"
                 target='_blank' rel='noopener'
                 aria-label="Orcid"
@@ -50,7 +61,7 @@ export default function BtnGridLinks() {
             <li>
               <Button
                 variant="link"
-                href="https://www.cienciavitae.pt//pt/B11F-1F8E-B063"
+                href="https://www.cienciavitae.pt/portal/en/B11F-1F8E-B063"
                 target='_blank' rel='noopener'
                 aria-label="Ciencia ID"
               >
