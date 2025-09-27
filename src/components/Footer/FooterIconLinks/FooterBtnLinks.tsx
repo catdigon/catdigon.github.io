@@ -50,17 +50,6 @@ export default function BtnGridLinks() {
             <li>
               <Button
                 variant="link"
-                href="https://orcid.org/0000-0002-9129-5021"
-                target='_blank' rel='noopener'
-                aria-label="Orcid"
-              >
-                <BtnOrcid />
-              </Button>
-            </li>
-
-            <li>
-              <Button
-                variant="link"
                 href="https://www.cienciavitae.pt/portal/en/B11F-1F8E-B063"
                 target='_blank' rel='noopener'
                 aria-label="Ciencia ID"
