@@ -1,7 +1,6 @@
 import { FaBehanceSquare, FaLinkedin } from "react-icons/fa";
 import { Button } from "react-bootstrap";
 import { StyledContainer } from "./FooterBtnLinks.styled";
-import BtnOrcid from "./IconOrcid";
 import BtnCienciaID from "./IconCienciaID";
 import { FaSquareDribbble, FaSquareGithub } from "react-icons/fa6";
 import IconCv from "./IconCv";
