@@ -1,6 +1,6 @@
-import { StarAnimationStyle } from "./HeaderArtGraphics.styled"
+import { StarAnimationStyle } from "./HeroArtGraphics.styled"
 
-export default function HeaderArtGraphics() {
+export default function HeroArtGraphics() {
 
     return (
         <>

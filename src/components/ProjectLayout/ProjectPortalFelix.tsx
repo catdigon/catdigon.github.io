@@ -1,8 +1,6 @@
 import { Col, Row } from "react-bootstrap";
 import GradientArea from "../GradientArea/GradientArea";
-import Header from "../Header/Header";
 import { StyledProgressStickyArea } from "./ProgressDisplay/ProgressDisplay.styled";
-import ImageHeader from "./ImageHeader/ImageHeader";
 import ProjectsBreackLine from "../BreakLine/ProjectsBreak";
 import CardLayout from "../Card/CardLayout";
 import ProjectIntroCard from "./Project/ProjectIntro/ProjectIntroCard";
@@ -14,6 +12,8 @@ import ImageDisplayScroll from "../ImageDisplay/ImageComponent/ImageComponentScr
 import { ProjectsCardsText } from "../../data/projectsDesign";
 import CardCarousel from "../ImageDisplay/Carousel/CardCarousel";
 import { useSectionProgress } from "./ProgressDisplay/ProgressDisplayLogic";
+import ImageHero from "./ImageHero/ImageHero";
+import Hero from "../Hero/Hero";
 
 interface ProjectProps {
     projectID: string;
@@ -36,15 +36,15 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
 
     return (
         <>
-            <Header
+            <Hero
                 title={"Portal Félix"}
                 text={"This project reimagines the platform through a user-centered design process. From heuristic evaluation to high-fidelity prototypes, the goal was to improve navigation, accessibility, and research workflows."}
             >
-                <ImageHeader
+                <ImageHero
                     image={"/projects/portal/portal.webp"}
                     alt={"Portal Felix Mockup"} 
                     imageMobile={"/projects/portal/portal.webp"} />
-            </Header>
+            </Hero>
 
             <div style={{ marginTop: -100 }}>
                 <GradientArea>

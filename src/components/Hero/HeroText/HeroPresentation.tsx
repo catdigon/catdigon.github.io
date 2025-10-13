@@ -1,12 +1,12 @@
 import Card from 'react-bootstrap/Card';
-import CardPresentationGlass from './HeaderPresentation.styled';
+import CardPresentationGlass from './HeroPresentation.styled';
 
 interface Props {
     title: string;
     text: string;
 }
 
-export default function HeaderPresentation({title, text}: Props) {
+export default function HeroPresentation({title, text}: Props) {
 
     return (
         <CardPresentationGlass>

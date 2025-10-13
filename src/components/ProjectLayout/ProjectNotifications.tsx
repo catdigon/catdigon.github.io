@@ -1,8 +1,6 @@
 import { Col, Row } from "react-bootstrap";
 import GradientArea from "../GradientArea/GradientArea";
-import Header from "../Header/Header";
 import { StyledProgressStickyArea } from "./ProgressDisplay/ProgressDisplay.styled";
-import ImageHeader from "./ImageHeader/ImageHeader";
 import ProjectsBreackLine from "../BreakLine/ProjectsBreak";
 import CardLayout from "../Card/CardLayout";
 import { ProjectsCardsText } from "../../data/projectsDesign";
@@ -12,6 +10,8 @@ import CardListSimple from "../List/ListSimple";
 import ImageDisplaySimple from "../ImageDisplay/ImageComponent/ImageComponentDefault";
 import ProjectSubCard from "./Project/ProjectCard/ProjectSubCard";
 import { useSectionProgress } from "./ProgressDisplay/ProgressDisplayLogic";
+import ImageHero from "./ImageHero/ImageHero";
+import Hero from "../Hero/Hero";
 
 interface ProjectProps {
     projectID: string;
@@ -33,15 +33,15 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
 
     return (
         <>
-            <Header
+            <Hero
                 title={"Impact of Notifications"}
                 text={"This academic study explored how desktop notifications disrupt attention and reading performance. The experiment combined eye-tracking and biometric sensors to evaluate subtle cognitive and physiological effects."}
             >
-                <ImageHeader
+                <ImageHero
                     image={"/projects/notifications/not-pc.webp"}
                     alt={"Protocol with highlighted AIOs showing notifications"} 
                     imageMobile={"/projects/notifications/not-pc-mobile.webp"} />
-            </Header>
+            </Hero>
 
             <div style={{ marginTop: -100 }}>
                 <GradientArea>

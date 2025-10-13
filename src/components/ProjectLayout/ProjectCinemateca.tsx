@@ -1,8 +1,6 @@
 import { Col, Row } from "react-bootstrap";
 import GradientArea from "../GradientArea/GradientArea";
-import Header from "../Header/Header";
 import { StyledProgressStickyArea } from "./ProgressDisplay/ProgressDisplay.styled";
-import ImageHeader from "./ImageHeader/ImageHeader";
 import ProjectsBreackLine from "../BreakLine/ProjectsBreak";
 import CardLayout from "../Card/CardLayout";
 import { ProjectsCardsText } from "../../data/projectsDesign";
@@ -17,6 +15,8 @@ import ButtonCTA from "../Button/ButtonCTA";
 import { FaGithub } from "react-icons/fa";
 import { GoLinkExternal } from "react-icons/go";
 import { useSectionProgress } from "./ProgressDisplay/ProgressDisplayLogic";
+import ImageHero from "./ImageHero/ImageHero";
+import Hero from "../Hero/Hero";
 
 interface ProjectProps {
     projectID: string;
@@ -39,15 +39,15 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
 
     return (
         <>
-            <Header
+            <Hero
                 title={"Cinemateca"}
                 text={"A redesign of the Cinemateca Portuguesa website, originally created in 2013. This project explored how to improve navigation, accessibility, and visual coherence, while respecting the institution and its mission with a more modern visual."}
             >
-                <ImageHeader
+                <ImageHero
                     image={"/projects/cinemateca/cinemateca-broswer.webp"}
                     alt={"Homepage Mockup"} 
                     imageMobile={"/projects/cinemateca/cinemateca-broswer-mobile.webp"}/>
-            </Header>
+            </Hero>
 
             <div style={{ marginTop: -100 }}>
                 <GradientArea>

@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
-export const StyledHeaderContainer = styled.div`
+export const StyledHeroContainer = styled.div`
     display: flex;
     justify-content: center;
 `
 
-export const StyledHeader = styled.div`
+export const StyledHero = styled.div`
     padding: 14rem 0rem 4rem 0;
     display: flex;
     justify-self: anchor-center;

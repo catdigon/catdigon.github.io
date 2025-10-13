@@ -1,5 +1,5 @@
 import Image from 'react-bootstrap/Image';
-import { StyledImageCover } from './ImageHeader.styled';
+import { StyledImageCover } from './ImageHero.styled';
 
 interface Props{
     image: string;
@@ -7,7 +7,7 @@ interface Props{
     alt: string;
 }
 
-export default function ImageHeader({image, imageMobile,  alt}: Props){
+export default function ImageHero({image, imageMobile,  alt}: Props){
 
     const imgVersions = [
         imageMobile ? `${imageMobile} 768w` : null,

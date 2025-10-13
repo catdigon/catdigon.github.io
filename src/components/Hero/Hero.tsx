@@ -1,8 +1,8 @@
 import type React from 'react';
-import { StyledBtnContainer, StyledHeader, StyledHeaderContainer } from './Header.styled';
-import HeaderPresentation from './HeaderText/HeaderPresentation';
+import { StyledBtnContainer, StyledHero, StyledHeroContainer } from './Hero.styled';
 import { Col, Container, Row } from 'react-bootstrap';
 import ButtonCTA from '../Button/ButtonCTA';
+import HeroPresentation from './HeroText/HeroPresentation';
 
 
 interface Props {
@@ -15,15 +15,15 @@ interface Props {
     children: React.ReactNode;
 }
 
-export default function Header({ id, title, text, isButton, button, link, children }: Props) {
+export default function Hero({ id, title, text, isButton, button, link, children }: Props) {
 
     return (
-        <StyledHeaderContainer>
-            <StyledHeader id={id}>
+        <StyledHeroContainer>
+            <StyledHero id={id}>
                 <Container>
                     <Row>
                         <Col md={6}>
-                            <HeaderPresentation
+                            <HeroPresentation
                                 title={title}
                                 text={text} />
 
@@ -42,7 +42,7 @@ export default function Header({ id, title, text, isButton, button, link, childr
                         </Col>
                     </Row>
                 </Container>
-            </StyledHeader>
-        </StyledHeaderContainer>
+            </StyledHero>
+        </StyledHeroContainer>
     )
 }
