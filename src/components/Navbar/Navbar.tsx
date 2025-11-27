@@ -1,7 +1,6 @@
 import { NavbarMobile, StyledLogo, StyledNavbar, StyledNavbarContainer } from "./Navbar.styled";
-import ButtonTransparent from "../Button/ButtonTransparent";
 import ButtonCTA from "../Button/ButtonCTA";
-import { Button, Container, Nav, Navbar } from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import NavbarLogo from "./NavbarLogo";
 import { appRoutes } from "../../data/constants";
 import { HashLink } from 'react-router-hash-link';
@@ -51,14 +50,12 @@ export default function NavBar() {
                             <StyledLogo>
                                 <HashLink
                                     to={`${appRoutes.HOME}#Home`}
-                                    onClick={() => setExpanded(false)}>
-                                    <Button
-                                        variant="link"
-                                        aria-label="Cátia Diogo's portfolio logo - button to return to homepage"
-                                        className="navbarlogo">
-                                        <NavbarLogo />
-                                    </Button>
-                                </HashLink>
+                                    onClick={() => setExpanded(false)}
+                                    aria-label="Cátia Diogo's portfolio logo - button to return to homepage"
+                                    className="navbarlogo"
+                                    >
+                                    <NavbarLogo />
+                                    </HashLink>
                             </StyledLogo>
                         </Navbar.Brand>
 
@@ -75,19 +72,17 @@ export default function NavBar() {
                                 <Nav.Link as="div">
                                     <HashLink
                                         to={appRoutes.ABOUT_ME}
-                                        onClick={() => setExpanded(false)}>
-                                        <ButtonTransparent >
-                                            About
-                                        </ButtonTransparent>
+                                        onClick={() => setExpanded(false)}
+                                        className="button-transparent-style">
+                                        About
                                     </HashLink>
                                 </Nav.Link>
                                 <Nav.Link as="div">
                                     <HashLink
                                         to={`${appRoutes.HOME}#Projects`}
-                                        onClick={() => setExpanded(false)}>
-                                        <ButtonTransparent >
+                                        onClick={() => setExpanded(false)}
+                                        className="button-transparent-style">
                                             Projects
-                                        </ButtonTransparent>
                                     </HashLink>
                                 </Nav.Link>
                                 <Nav.Link as="div">

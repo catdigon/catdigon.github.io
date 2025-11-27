@@ -56,14 +56,35 @@ export const StyledNavbar = styled.div`
           padding: 0;
         }
     }
+
+    .button-transparent-style {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    padding: 0.5rem 1rem;
+    color: #212529;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+
+  .button-transparent-style:hover {
+    color: #0080A3;
+    text-decoration: none;
+    filter: drop-shadow(0 0 10px rgba(0,128,163,0.4))
+            drop-shadow(0 0 20px rgba(0,128,163,0.2));
+  }
 `
 export const StyledLogo = styled.div`
-   .btn-link{
-    --bs-btn-color: black;
-   }
+   .navbarlogo {
+    color: currentColor; 
+    text-decoration: none; 
+  }
 
-    .btn:hover{
-            color: #0080A3;}
+  .navbarlogo:hover {
+    color: #0080A3;
+  }
 
 `
 

@@ -1,13 +1,13 @@
 import { Badge, Card, Col, Figure, Row } from "react-bootstrap";
-import ButtonTransparent from "../Button/ButtonTransparent";
 import { appRoutes } from "../../data/constants";
-import { HashLink } from "react-router-hash-link";
 import { IoChevronBackOutline } from "react-icons/io5";
 import { Link } from "react-router";
 import ButtonCTA from "../Button/ButtonCTA";
 import { GoLinkExternal } from "react-icons/go";
 import { CardBlock, StyledImageCard, StyledOtherCard } from "./OtherProjectCard.styled";
 import type { CardProject } from "../../data/models";
+import { TransparentLink } from "./StyledOtherProjectCard";
+
 
 
 interface Props {
@@ -29,14 +29,10 @@ export default function OtherProjectCardDetails({ card }: Props) {
 
     return (
         <>
-
-            <HashLink to={appRoutes.OTHER_PROJECTS}>
-                <ButtonTransparent>
-                    <IoChevronBackOutline
-                        style={{ marginLeft: "0.5rem" }} />
-                    Return
-                </ButtonTransparent>
-            </HashLink>
+            <TransparentLink to={appRoutes.OTHER_PROJECTS}>
+                <IoChevronBackOutline style={{ marginLeft: "0.5rem" }} />
+                Return
+            </TransparentLink>
 
             <StyledOtherCard>
                 <Card>

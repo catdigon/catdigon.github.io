@@ -2,7 +2,6 @@ import { Badge, Card } from "react-bootstrap";
 import ButtonCTA from "../Button/ButtonCTA";
 import { BsChevronRight } from "react-icons/bs";
 import { BadgeCardContainer, StyledCard, StyledCardImgContainer } from "./Card.styled";
-import { HashLink } from "react-router-hash-link";
 import type { CardProject } from "../../data/models";
 
 interface Props {
@@ -68,12 +67,10 @@ export default function CardItem({ card, showText, showLabel, showBadgeList }: P
               </BadgeCardContainer>
             )}
 
-            <HashLink to={card.buttonLink}>
-              <ButtonCTA >
+              <ButtonCTA as="span">
                 {card.buttonLabel}
                 <BsChevronRight style={{ marginLeft: "0.5rem" }} />
               </ButtonCTA>
-            </HashLink>
 
           </Card.Body>
         </Card>

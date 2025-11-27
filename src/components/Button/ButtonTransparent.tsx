@@ -9,7 +9,8 @@ export default function ButtonTransparent({ children }: Props) {
 
     return (
         <Overide>
-            <Button variant='light'>
+            <Button variant='light'
+            >
                 {children}
             </Button>
         </Overide>

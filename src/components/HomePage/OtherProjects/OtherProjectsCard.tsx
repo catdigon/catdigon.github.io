@@ -1,7 +1,6 @@
 import Card from 'react-bootstrap/Card';
 import { OtherProjectsText } from './OtherProjectsCardText';
 import { BsChevronRight } from 'react-icons/bs';
-import ButtonCTA from '../../Button/ButtonCTA';
 import styled from 'styled-components';
 import { appRoutes } from '../../../data/constants';
 import { HashLink } from 'react-router-hash-link';
@@ -17,11 +16,9 @@ export default function OtherProjectsCard() {
             
             <Card.Text>{OtherProjectsText.text}</Card.Text>
 
-            <HashLink to={appRoutes.OTHER_PROJECTS}>
-              <ButtonCTA >
-                {OtherProjectsText.button}
-                <BsChevronRight style={{ marginLeft: "0.5rem" }} />
-              </ButtonCTA>
+            <HashLink to={appRoutes.OTHER_PROJECTS} className="button-cta-style">
+              {OtherProjectsText.button}
+              <BsChevronRight style={{ marginLeft: "0.5rem" }} />
             </HashLink>
 
           </Card.Body>
@@ -38,5 +35,25 @@ export const StyledCard = styled.div`
 
   .card-title{
     font-size: 22px;
+  }
+
+  .button-cta-style {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    background-color: #000;
+    color: #fff;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+
+  .button-cta-style:hover {
+    background-color: #0080A3;
+    box-shadow: 0 0 0 0px rgba(0, 128, 163, 0.5),
+                0 0 10px rgba(0, 128, 163, 0.3),
+                0 0 30px rgba(0, 128, 163, 0.2);
   }
 `
