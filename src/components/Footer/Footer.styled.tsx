@@ -21,7 +21,7 @@ export const StyledFooter = styled.div`
     justify-self: anchor-center;
 
     span{
-        font-family: "Outfit", sans-serif !important;
+        font-family: var(--font-heading)!important;
         font-size: 3.5rem;
         font-weight: 600;
     }
