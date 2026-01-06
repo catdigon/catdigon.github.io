@@ -41,7 +41,7 @@ export default function NavBar() {
         <>
             <StyledNavbarContainer $scrolled={scrolled}>
                 <div className="navbar bg-base-50 shadow-sm">
-                    <div className="flex-1">
+                    <div className="flex-2">
                         <HashLink
                             to={`${appRoutes.HOME}#Home`}
                             onClick={() => setExpanded(false)}
@@ -52,7 +52,7 @@ export default function NavBar() {
                         </HashLink>
                     </div>
                     <div className="flex-none">
-                        <ul className="menu menu-horizontal px-1">
+                        <ul className="menu menu-horizontal px-2">
                             <li>
 
                                 <HashLink

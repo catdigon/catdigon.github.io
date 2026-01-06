@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 interface Props {
     title: string;
-    text: string;
+    text: React.ReactNode;
     text2?: string;
 }
 
@@ -29,8 +29,7 @@ const Overide = styled.div`
   }
 
   .card-title{
-  font-size: 48px;
-  margin-bottom: 1rem;
+  font-size: 50px;
   }
 
   .card-text2{

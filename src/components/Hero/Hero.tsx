@@ -5,7 +5,7 @@ import HeroPresentation from './HeroText/HeroPresentation';
 interface Props {
     id?: string;
     title: string;
-    text: string;
+    text: React.ReactNode;
     text2?: string;
     isButton?: boolean;
     button?: React.ReactNode;

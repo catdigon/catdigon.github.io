@@ -7,13 +7,22 @@ export default function HomePage() {
 
   return (
     <>
-        <Hero
-          id="Home"
-          title={"Cátia Diogo"}
-          text={"UX/UI Designer with a background in research and performing arts."}
-          text2={'Find out more'}>
-          <HeroArt />
-        </Hero>
+      <Hero
+        id="Home"
+        title={"Cátia Diogo"}
+        text={[
+          <span className="text-rotate">
+            <span>
+              <span>UX/UI</span>
+              <span>Web </span>
+            </span>
+          </span>,
+          " Designer with a background in research and performing arts."
+        ]
+        }
+        text2={'Find out more'}>
+        <HeroArt />
+      </Hero>
       <ProjectsSection />
     </>
 
