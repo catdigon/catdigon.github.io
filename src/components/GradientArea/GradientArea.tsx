@@ -1,8 +1,4 @@
 import styled from "styled-components";
-import EndGradientArea from "./EndGradientArea";
-import { MiddleGradientArea } from "./MiddleGradientArea";
-import StartGradientArea from "./StartGradientArea";
-
 
 interface Props {
     children: React.ReactNode;
@@ -16,13 +12,9 @@ export default function GradientArea( {children, id }: Props ) {
 
         <>
         <div id={id} />
-            <StartGradientArea/>
-            <MiddleGradientArea>
                 <BodyContainer>
                 {children}
                 </BodyContainer>
-            </MiddleGradientArea>
-            <EndGradientArea />
         </>
 
     )

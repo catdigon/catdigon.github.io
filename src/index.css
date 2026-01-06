@@ -1,3 +1,13 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: light --default, light --prefersdark;
+  root: ":root";
+  include: ;
+  exclude: ;
+  prefix: ;
+  logs: true;
+}
+
 :root {
   --font-body: 'Red Hat Display', system-ui, Avenir, Helvetica, Arial, sans-serif;
   --font-heading: 'Marko One', system-ui, Avenir, Helvetica, Arial, sans-serif;

@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const StyledAboutme = styled.div`
-    background: #9ED7E0;
     justify-content: center;
 
     .AboutmeContainer{

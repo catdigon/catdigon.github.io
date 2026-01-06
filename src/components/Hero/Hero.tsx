@@ -1,8 +1,6 @@
-import { StyledBtnContainer, StyledHero, StyledHeroContainer } from './Hero.styled';
-import { Col, Container, Row } from 'react-bootstrap';
+import { StyledBtnContainer} from './Hero.styled';
 import ButtonCTA from '../Button/ButtonCTA';
 import HeroPresentation from './HeroText/HeroPresentation';
-
 
 interface Props {
     id?: string;
@@ -18,15 +16,15 @@ interface Props {
 export default function Hero({ id, title, text, text2, isButton, button, link, children }: Props) {
 
     return (
-        <StyledHeroContainer>
-            <StyledHero id={id}>
-                <Container>
-                    <Row>
-                        <Col md={6}>
+            <div id={id}>
+                <div className="hero min-h-screen" style={{minHeight: "80vh"}}>
+                    <div className="hero-content flex-col lg:flex-row-reverse" style={{alignItems: "initial"}}>
+                        {children}
+                        <div>
                             <HeroPresentation
                                 title={title}
-                                text={text} 
-                                text2={text2}/>
+                                text={text}
+                                text2={text2} />
 
                             {isButton && (
                                 <StyledBtnContainer>
@@ -37,13 +35,9 @@ export default function Hero({ id, title, text, text2, isButton, button, link, c
                                     </ButtonCTA>
                                 </StyledBtnContainer>
                             )}
-                        </Col>
-                        <Col md={6}>
-                            {children}
-                        </Col>
-                    </Row>
-                </Container>
-            </StyledHero>
-        </StyledHeroContainer>
+                        </div>
+                    </div>
+                </div>
+            </div>
     )
 }
