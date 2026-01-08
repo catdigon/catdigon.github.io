@@ -54,7 +54,7 @@ export const ProjectsCardsText: CardProject[] = [
     title: "Portal Félix Plataform",
     subtitle: "Portal Félix",
     text: [
-      "A UX evaluation and user-centered design of Portal Félix, aiming to improve usability, accessibility, and workflows."
+      "A UX audit and user-centered redesign of Portal Félix, aiming to improve usability, accessibility, and workflows."
     ],
     imageDesktop: "projects/portal.webp",
     imageMobile: "projects/portal-mobile.webp",

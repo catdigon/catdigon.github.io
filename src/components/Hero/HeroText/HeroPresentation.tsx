@@ -13,7 +13,7 @@ export default function HeroPresentation({ title, text, text2 }: Props) {
         <Overide>
             <div>
                 <div className="card-body">
-                    <h1 className="card-title">{title}</h1>
+                    <h1>{title}</h1>
                     <span><p>{text}</p></span>
                     <p className="card-text2">{text2}</p>
                 </div>
@@ -26,10 +26,6 @@ export default function HeroPresentation({ title, text, text2 }: Props) {
 const Overide = styled.div`
   p{
     font-size: 32px;
-  }
-
-  .card-title{
-  font-size: 50px;
   }
 
   .card-text2{

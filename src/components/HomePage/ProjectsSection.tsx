@@ -1,28 +1,27 @@
 import { ProjectsCardsText } from "../../data/projectsDesign";
-import ProjectsArea from "../Card/CardGridLayout";
 import CardLayout from "../Card/CardLayout";
-import GradientArea from "../GradientArea/GradientArea";
 import ProjectsBreackLine from "../BreakLine/ProjectsBreak";
 import OtherProjectsSection from "./OtherProjects/OtherProjectsSection";
+import SectionArea from "../SectionsAreas/SectionArea";
 
 
 export default function ProjectsSection() {
 
     return (
         <>
-            <GradientArea id="Projects">
-                <ProjectsArea>
+            <SectionArea id="Projects" color="#F8C200" zIndex={10} >
                     <h2>Projects</h2>
                     <CardLayout
                         data={ProjectsCardsText}
                         showText={true}
                         showLabel={false}
                         showBadgeList={true}/>
-                </ProjectsArea>
+                </SectionArea>
+
+            <SectionArea id="OtherProjects" color="#FF98BD" zIndex={20}>
                 <ProjectsBreackLine />
                 <OtherProjectsSection />
-            </GradientArea>
-
+            </SectionArea>
         </>
     )
 }

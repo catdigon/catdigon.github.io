@@ -31,10 +31,6 @@ export const StyledOtherCard = styled.div`
 
 export const CardBlock = styled.div`
     margin-bottom: 1.5rem;
-
-    .card-title{
-        font-size: 22px;
-    }
 `
 
 export const StyledImageCard = styled.div`

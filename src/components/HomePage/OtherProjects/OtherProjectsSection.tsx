@@ -17,8 +17,6 @@ export default function OtherProjectsSection() {
 
 const Overide = styled.div`
     .card{
-    --bs-card-bg: transparent;
-    --bs-card-border-color: transparent;
     padding: 2.5rem 0;
     }
 

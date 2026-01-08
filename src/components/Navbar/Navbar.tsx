@@ -38,13 +38,12 @@ export default function NavBar() {
 
     return (
         <StyledNavbarContainer $scrolled={scrolled} ref={navRef}>
-
             <div className="drawer">
                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle"/>
                 <div className="drawer-content flex flex-col">
                     {/* Navbar */}
                     <div className="navbar bg-base-50 shadow-sm">
-                        <div className="flex-none lg:hidden">
+                        <div className="flex-none md:hidden">
                             <label htmlFor="my-drawer-2" aria-label="open sidebar" className="btn btn-square btn-ghost">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -71,7 +70,7 @@ export default function NavBar() {
                                 <NavbarLogo />
                             </HashLink>
                         </div>
-                        <div className="hidden flex-none lg:block">
+                        <div className="hidden flex-none md:block">
                             <ul className="menu menu-horizontal">
                                 {/* Navbar menu content here */}
                                 <li>

@@ -1,4 +1,3 @@
-import { Button } from "react-bootstrap";
 import { BsEnvelopeAt, BsEnvelopeAtFill } from "react-icons/bs";
 import { StyledEmailLink } from "./FooterEmail.styled";
 import { useState } from "react";
@@ -10,8 +9,7 @@ export default function FooterEmail() {
     return (
         <>
             <StyledEmailLink>
-                <Button
-                    variant="link"
+                <a
                     href="mailto:catdigon.all@gmail.com"
                     aria-label="Send email to catdigon.all@gmail.com"
                     className="d-inline-flex align-items-center gap-2"
@@ -21,7 +19,7 @@ export default function FooterEmail() {
                     {hovered ? <BsEnvelopeAtFill aria-hidden="true"/> : <BsEnvelopeAt aria-hidden="true"/> }
                     
                     catdigon.all@gmail.com
-                </Button>
+                </a>
             </StyledEmailLink>
         </>
     )

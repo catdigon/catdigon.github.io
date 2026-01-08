@@ -1,4 +1,3 @@
-import { StyledBtnContainer} from './Hero.styled';
 import ButtonCTA from '../Button/ButtonCTA';
 import HeroPresentation from './HeroText/HeroPresentation';
 
@@ -16,8 +15,8 @@ interface Props {
 export default function Hero({ id, title, text, text2, isButton, button, link, children }: Props) {
 
     return (
-            <div id={id}>
-                <div className="hero min-h-screen" style={{minHeight: "80vh"}}>
+            <div id={id} className='sticky top-0 z-0'>
+                <div className="hero min-h-screen" style={{paddingTop:"48px", minHeight: "80vh"}}>
                     <div className="hero-content flex-col lg:flex-row-reverse" style={{alignItems: "initial"}}>
                         {children}
                         <div>
@@ -27,13 +26,11 @@ export default function Hero({ id, title, text, text2, isButton, button, link, c
                                 text2={text2} />
 
                             {isButton && (
-                                <StyledBtnContainer>
                                     <ButtonCTA className='btn-presentation'
                                         href={link}
                                         target='_blank' rel='noopener'>
                                         {button}
                                     </ButtonCTA>
-                                </StyledBtnContainer>
                             )}
                         </div>
                     </div>

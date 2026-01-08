@@ -1,5 +1,5 @@
 import { Col, Container, Row } from "react-bootstrap";
-import { StyledAboutme, StyledGradientArea } from "./AboutmeSection.styled";
+import { StyledAboutme, StyledSectionArea } from "./AboutmeSection.styled";
 import ProjectsBreackLine from "../BreakLine/ProjectsBreak";
 import ImagesArea from "./ImagesArea/ImagesArea";
 import AboutMeText from "./AboutmeText";
@@ -9,7 +9,7 @@ export default function AboutMeSection() {
     return (
 
         <>
-            <StyledGradientArea id="Aboutme">
+            <StyledSectionArea id="Aboutme">
                     <ProjectsBreackLine />
                     <StyledAboutme>
                         <Container className="AboutmeContainer" >
@@ -29,7 +29,7 @@ export default function AboutMeSection() {
                             </Row>
                         </Container>
                     </StyledAboutme>
-            </StyledGradientArea>
+            </StyledSectionArea>
         </>
     )
 }

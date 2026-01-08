@@ -19,10 +19,10 @@ export default function CardItem({ card, showText, showLabel, showBadgeList }: P
     <>
       <StyledCard>
         <a href={card.buttonLink}>
-          <div className="card bg-base-100 w-96 shadow-sm">
+          <div className="card w-90">
             <figure>
               <StyledCardImgContainer>
-                <figure>
+                <figure style={{borderRadius: "16px"}}>
                   <img
                     src={card.imageDesktop}
                     srcSet={imgVersions}
@@ -55,7 +55,8 @@ export default function CardItem({ card, showText, showLabel, showBadgeList }: P
                       style={{
                         backgroundColor: tool.badgeColor,
                         marginBottom: 0,
-                        fontWeight: 500
+                        fontWeight: 500,
+                        border: "none"
                       }}>
                       {tool.name}
                     </div>

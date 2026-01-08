@@ -1,5 +1,4 @@
 import { Col, Row } from "react-bootstrap";
-import GradientArea from "../GradientArea/GradientArea";
 import { StyledProgressStickyArea } from "./ProgressDisplay/ProgressDisplay.styled";
 import ProjectsBreackLine from "../BreakLine/ProjectsBreak";
 import CardLayout from "../Card/CardLayout";
@@ -17,6 +16,7 @@ import { GoLinkExternal } from "react-icons/go";
 import { useSectionProgress } from "./ProgressDisplay/ProgressDisplayLogic";
 import ImageHero from "./ImageHero/ImageHero";
 import Hero from "../Hero/Hero";
+import SectionArea from "../SectionsAreas/SectionArea";
 
 interface ProjectProps {
     projectID: string;
@@ -50,7 +50,7 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
             </Hero>
 
             <div style={{ marginTop: -100 }}>
-                <GradientArea>
+                <SectionArea>
                     <Row style={{ margin: "6rem 0" }}>
                         <Col lg={3} className="d-none d-lg-block">
                             <StyledProgressStickyArea>
@@ -326,7 +326,7 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
                             showLabel={false} />
                     </div>
 
-                </GradientArea>
+                </SectionArea>
             </div>
 
         </>
