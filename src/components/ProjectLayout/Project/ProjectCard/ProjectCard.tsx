@@ -18,10 +18,7 @@ export default function ProjectCard({ title, subtitle, description, children }: 
                     {description?.map((line, idx) => (
                         <Card.Text key={idx}>{line}</Card.Text>
                     ))}
-
-
                     {children}
-
                 </Card.Body>
             </StyledProjectCard>
         </>

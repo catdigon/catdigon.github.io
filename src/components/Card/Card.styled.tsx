@@ -19,36 +19,24 @@ export const StyledCardImgContainer = styled.div`
 
 export const StyledCard = styled.div`
     .card{
-        --bs-card-bg: transparent;
-        --bs-card-border-color: transparent;
         margin: 2rem 0;
         padding: 0.5rem;
     }
 
     .card-body{
-        padding: 8px 0;
+        padding: 16px 8px;
     }
 
     .card-title{
         font-size: 22px;
     }
 
-    .badge{
-        margin-bottom: 10px;
-    }
 
     a{
         text-decoration: none;
     }  
 
-    .card-link:hover img {
+    .card:hover img {
         transform: scale(1.06);
         }
-`
-
-export const BadgeCardContainer = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    padding-bottom: 1rem;
 `

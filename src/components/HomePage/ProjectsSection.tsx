@@ -12,7 +12,7 @@ export default function ProjectsSection() {
         <>
             <GradientArea id="Projects">
                 <ProjectsArea>
-                    <h1>Projects</h1>
+                    <h2>Projects</h2>
                     <CardLayout
                         data={ProjectsCardsText}
                         showText={true}

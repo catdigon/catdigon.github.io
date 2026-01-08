@@ -7,7 +7,7 @@ interface Props{
     alt: string;
 }
 
-export default function ImageHero({image, imageMobile,  alt}: Props){
+export default function ImageHero({image, imageMobile, alt}: Props){
 
     const imgVersions = [
         imageMobile ? `${imageMobile} 768w` : null,

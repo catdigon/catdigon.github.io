@@ -13,7 +13,7 @@ export default function HeroPresentation({ title, text, text2 }: Props) {
         <Overide>
             <div>
                 <div className="card-body">
-                    <h2 className="card-title">{title}</h2>
+                    <h1 className="card-title">{title}</h1>
                     <span><p>{text}</p></span>
                     <p className="card-text2">{text2}</p>
                 </div>

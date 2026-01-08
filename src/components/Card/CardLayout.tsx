@@ -1,4 +1,3 @@
-import { Col, Row } from "react-bootstrap";
 import CardItem from "./Card";
 import type { CardProject} from "../../data/models";
 
@@ -14,20 +13,20 @@ export default function CardLayout({ data, showText, showLabel, showBadgeList}: 
   return (
     <>
 
-      <Row className="g-4">
+      <div className="flex flex-wrap gap-4">
         {data.map((project, idx) => (
 
-          <Col key={idx} sm={12} md={6} xl={4}>
+          <div key={idx}>
 
             <CardItem card={project}
             showText={showText}
             showLabel={showLabel} 
             showBadgeList={showBadgeList} />
 
-          </Col>
+          </div>
         ))}
 
-      </Row>
+      </div>
 
 
     </>

@@ -13,8 +13,8 @@ export default function HomePage() {
         text={[
           <span className="text-rotate">
             <span>
-              <span>UX/UI</span>
-              <span>Web </span>
+              <span>Ux/Ui</span>
+              <span>Web</span>
             </span>
           </span>,
           " Designer with a background in research and performing arts."
