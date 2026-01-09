@@ -1,14 +1,16 @@
 
-import { StyledFooter} from "./Footer.styled";
+import { StyledFooter } from "./Footer.styled";
 import BtnGridLinks from "./FooterIconLinks/FooterBtnLinks";
 import FooterEmail from "./FooterEmail";
+import SectionArea from "../SectionsAreas/SectionArea";
 
 
 export default function Footer() {
 
     return (
-            <StyledFooter id="Contacts">
-                <footer className="footer p-10 sticky top-0 z-99" style={{minHeight: "80vh"}}>
+        <SectionArea id="Contacts" color="#ffffffff" zIndex={90}>
+            <StyledFooter>
+                <footer className="footer p-10">
                     <aside>
                         <h2>Get in touch</h2>
                         <FooterEmail />
@@ -57,5 +59,6 @@ export default function Footer() {
                     </nav>
                 </footer>
             </StyledFooter>
+        </SectionArea>
     );
 }

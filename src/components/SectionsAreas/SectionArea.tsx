@@ -5,21 +5,17 @@ interface Props {
     id?: string;
     color?: string;
     zIndex?: number;
-    heightPercent?: number;
 }
 
 
-export default function SectionArea({ children, id, color, zIndex = 1, heightPercent = 100, }: Props) {
+export default function SectionArea({ children, id, color, zIndex = 1 }: Props) {
 
     return (
         <>
             <Section id={id}
-                style={{
-                    background: color,
-                    zIndex,
-                    height: `${heightPercent}vh`
-                }}>
-                <BodyContainer>
+                bg={color}
+                style={{zIndex}}>
+                <BodyContainer >
                     {children}
                 </BodyContainer>
             </Section>
@@ -28,18 +24,17 @@ export default function SectionArea({ children, id, color, zIndex = 1, heightPer
     )
 }
 
-const Section = styled.section`
+const Section = styled.section <{ bg?: string }>`
     position: sticky;
     top: 0;
     width: 100%;
-    padding-top: 72px;
+    border-radius: 16px;
+    background: ${({ bg }) => bg || "white"};
 `;
 
 export const BodyContainer = styled.div`
     width: 100%;
-    border-radius: 16px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding: 72px;
-            `;
+`;

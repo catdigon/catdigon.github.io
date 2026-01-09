@@ -9,8 +9,10 @@ export default function ProjectsSection() {
 
     return (
         <>
-            <SectionArea id="Projects" color="#F8C200" zIndex={10} >
+            <SectionArea id="Projects" color="#F8C200" zIndex={10}>
+                    <span>
                     <h2>Projects</h2>
+                    </span>
                     <CardLayout
                         data={ProjectsCardsText}
                         showText={true}

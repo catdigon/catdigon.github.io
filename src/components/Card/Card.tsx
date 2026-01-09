@@ -14,12 +14,12 @@ export default function CardItem({ card, showText, showLabel, showBadgeList }: P
     card.imageMobile ? `${card.imageMobile} 768w` : null,
     card.imageDesktop ? `${card.imageDesktop} 1920w` : null,
   ].filter(Boolean).join(', ');
-
+  
   return (
     <>
       <StyledCard>
         <a href={card.buttonLink}>
-          <div className="card w-90">
+          <div className="card w-full">
             <figure>
               <StyledCardImgContainer>
                 <figure style={{borderRadius: "16px"}}>

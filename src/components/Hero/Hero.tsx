@@ -15,9 +15,9 @@ interface Props {
 export default function Hero({ id, title, text, text2, isButton, button, link, children }: Props) {
 
     return (
-            <div id={id} className='sticky top-0 z-0'>
-                <div className="hero min-h-screen" style={{paddingTop:"48px", minHeight: "80vh"}}>
-                    <div className="hero-content flex-col lg:flex-row-reverse" style={{alignItems: "initial"}}>
+            <div id={id} className='sticky top-0 -z-10'>
+                <div className="hero min-h-screen" style={{paddingTop:"48px", minHeight: "80vh", width:"100%"}}>
+                    <div className="hero-content flex-col lg:flex-row-reverse">
                         {children}
                         <div>
                             <HeroPresentation

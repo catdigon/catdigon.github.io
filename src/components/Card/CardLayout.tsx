@@ -12,22 +12,16 @@ interface Props {
 export default function CardLayout({ data, showText, showLabel, showBadgeList}: Props) {
   return (
     <>
-      <div className="flex flex-wrap gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols- gap-6">
         {data.map((project, idx) => (
-
           <div key={idx}>
-
             <CardItem card={project}
             showText={showText}
             showLabel={showLabel} 
             showBadgeList={showBadgeList} />
-
           </div>
         ))}
-
       </div>
-
-
     </>
   );
 }

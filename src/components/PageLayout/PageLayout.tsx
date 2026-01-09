@@ -11,18 +11,18 @@ export default function PageLayout({ children }: Props) {
 
     return (
         <>
-        <ScrollToTop />
+            <ScrollToTop />
             {/*Skip link for accessibility*/}
             <a href="#main-content" className="skip-link">
                 Skip to main content
             </a>
 
             <NavBar />
-                <main id="main-content">
+            <main id="main-content">
                 <Outlet />
                 {children}
-                </main>
-            <Footer />
+                <Footer />
+            </main>
         </>
     )
 }

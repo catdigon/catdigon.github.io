@@ -1,6 +1,6 @@
 import { FaBehanceSquare, FaLinkedin } from "react-icons/fa";
 import { Button } from "react-bootstrap";
-import { StyledContainer } from "./FooterBtnLinks.styled";
+
 import BtnCienciaID from "./IconCienciaID";
 import { FaSquareDribbble, FaSquareGithub } from "react-icons/fa6";
 import IconCv from "./IconCv";
@@ -10,7 +10,6 @@ export default function BtnGridLinks() {
 
   return (
     <>
-      <StyledContainer>
         <div className="mt-3 d-flex gap-2" role="navigation" aria-label="Social links">
           <ul>
             <li>
@@ -80,8 +79,6 @@ export default function BtnGridLinks() {
             </li>
           </ul>
         </div>
-
-      </StyledContainer>
     </>
   )
 }
