@@ -1,6 +1,10 @@
-import ProjectsSection from "../../components/HomePage/ProjectsSection"
 import Hero from "../../components/Hero/Hero"
 import HeroArt from "../../components/Hero/ArtHero/HeroFinalArt"
+import SectionArea from "../../components/SectionsAreas/SectionArea"
+import CardLayout from "../../components/Card/CardLayout"
+import ProjectsBreackLine from "../../components/BreakLine/ProjectsBreak"
+import OtherProjectsSection from "../../components/HomePage/OtherProjects/OtherProjectsSection"
+import { ProjectsCardsText } from "../../data/projectsDesign"
 
 
 export default function HomePage() {
@@ -23,7 +27,23 @@ export default function HomePage() {
         text2={'Find out more'}>
         <HeroArt />
       </Hero>
-      <ProjectsSection />
+      <div>
+        <SectionArea id="Projects" color="#F8C200" zIndex={10}>
+          <span>
+            <h2>Projects</h2>
+          </span>
+          <CardLayout
+            data={ProjectsCardsText}
+            showText={true}
+            showLabel={false}
+            showBadgeList={true} />
+        </SectionArea>
+
+        <SectionArea id="OtherProjects" color="#FF98BD" zIndex={20}>
+          <ProjectsBreackLine />
+          <OtherProjectsSection />
+        </SectionArea>
+      </div>
     </>
 
   )

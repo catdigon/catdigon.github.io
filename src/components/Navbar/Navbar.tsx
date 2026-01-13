@@ -72,9 +72,8 @@ export default function NavBar() {
                         </div>
                         <div className="hidden flex-none md:block">
                             <ul className="menu menu-horizontal">
-                                {/* Navbar menu content here */}
+                                {/* Navbar menu */}
                                 <li>
-
                                     <HashLink
                                         to={appRoutes.ABOUT_ME}
                                         onClick={() => setExpanded(false)}
@@ -95,7 +94,7 @@ export default function NavBar() {
                                     <HashLink
                                         to={`${appRoutes.HOME}#Contacts`}
                                         onClick={() => setExpanded(false)}
-                                        className="btn btn-neutral">
+                                        className="btn btn-neutral hover:bg-yellow-400 hover:text-black transition-colors duration-200">
                                         Get in touch
                                     </HashLink>
                                 </li>
@@ -106,7 +105,15 @@ export default function NavBar() {
                 <div className="drawer-side">
                     <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
                     <ul className="menu bg-base-200 min-h-full w-80" style={{padding: "1rem"}}>
-                        {/* Sidebar content here */}
+                        {/* Sidebar*/}
+                        <li>
+                            <HashLink
+                                to={appRoutes.HOME}
+                                onClick={() => setExpanded(false)}
+                                className="btn btn-ghost">
+                                Home
+                            </HashLink>
+                        </li>
                         <li>
                             <HashLink
                                 to={appRoutes.ABOUT_ME}

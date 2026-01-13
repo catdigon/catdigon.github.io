@@ -11,5 +11,20 @@ export const StyledFooter = styled.div`
         color: black;
         text-decoration: none;
     }
+
+    a:hover{
+        text-decoration: underline
+        }
+    
+    p{
+    font-size: 14px
+    }
     `
 
+export const StyledEmailLink = styled.div`
+    a{  
+        padding-left: 4px;
+        display: flex;
+        font-size: 24px;
+    }
+`
