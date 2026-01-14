@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledNavbarContainer = styled.div<{$scrolled: boolean}>`
+export const StyledNavbarContainer = styled.div`
   position: fixed;
   width: 100%;
   z-index: 99;
@@ -21,7 +21,6 @@ export const StyledNavbarContainer = styled.div<{$scrolled: boolean}>`
     width: 100%;
     height: 100%;
     z-index: -1;
-    opacity: ${({ $scrolled }) => ($scrolled ? 1 : 0)};
     transition: opacity 0.4s ease-in-out;
   }
 

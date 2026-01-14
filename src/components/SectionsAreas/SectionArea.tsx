@@ -8,7 +8,6 @@ interface Props {
     className?: string;
 }
 
-
 export default function SectionArea({ children, id, color, zIndex = 1, className }: Props) {
 
     return (
@@ -20,7 +19,6 @@ export default function SectionArea({ children, id, color, zIndex = 1, className
                     {children}
             </Section>
         </>
-
     )
 }
 

@@ -1,6 +1,5 @@
 
 import { StyledEmailLink, StyledFooter } from "./Footer.styled";
-import SectionArea from "../SectionsAreas/SectionArea";
 import { BsEnvelope, BsEnvelopePaperHeart } from "react-icons/bs";
 import { useState } from "react";
 import SocialLinks from "./FooterIconLinks/FooterBtnLinks";
@@ -11,7 +10,7 @@ export default function Footer() {
     const [hovered, setHovered] = useState(false);
 
     return (
-            <StyledFooter className="h-screen">
+            <StyledFooter className="h-screen" id="Contacts">
                 <footer className="footer" style={{paddingTop: "72px"}}>
                     <h2>Get in touch</h2>
 

@@ -1,43 +1,13 @@
 import { StyledNavbarContainer } from "./Navbar.styled";
 import { appRoutes } from "../../data/constants";
 import { HashLink } from 'react-router-hash-link';
-import { useEffect, useState, useRef } from "react";
 import NavbarLogo from "./NavbarLogo";
 
 
 export default function NavBar() {
-    const [scrolled, setScrolled] = useState(false);
-    const [expanded, setExpanded] = useState(false)
-
-    const navRef = useRef<HTMLDivElement | null>(null)
-
-    useEffect(() => {
-        const handleScroll = () => {
-            setScrolled(window.scrollY > 150);
-            if (expanded) setExpanded(false);
-        };
-
-        const handleClickOutside = (event: MouseEvent) => {
-            if (
-                expanded &&
-                navRef.current &&
-                !navRef.current.contains(event.target as Node)
-            ) {
-                setExpanded(false)
-            }
-        };
-
-        window.addEventListener("scroll", handleScroll);
-        document.addEventListener("mousedown", handleClickOutside)
-
-        return () => {
-            window.removeEventListener("scroll", handleScroll)
-            document.removeEventListener("mousedown", handleClickOutside)
-        }
-    }, [expanded]);
 
     return (
-        <StyledNavbarContainer $scrolled={scrolled} ref={navRef}>
+        <StyledNavbarContainer >
             <div className="drawer">
                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle"/>
                 <div className="drawer-content flex flex-col">
@@ -63,7 +33,6 @@ export default function NavBar() {
                         <div className="mx-2 flex-1 px-2">
                             <HashLink
                                 to={`${appRoutes.HOME}#Home`}
-                                onClick={() => setExpanded(false)}
                                 aria-label="Cátia Diogo's portfolio logo - button to return to homepage"
                                 className="btn btn-ghost text-xl"
                             >
@@ -76,7 +45,6 @@ export default function NavBar() {
                                 <li>
                                     <HashLink
                                         to={appRoutes.ABOUT_ME}
-                                        onClick={() => setExpanded(false)}
                                         className="btn btn-ghost">
                                         About
                                     </HashLink>
@@ -84,7 +52,6 @@ export default function NavBar() {
                                 <li>
                                     <HashLink
                                         to={`${appRoutes.HOME}#Projects`}
-                                        onClick={() => setExpanded(false)}
                                         className="btn btn-ghost">
                                         Projects
                                     </HashLink>
@@ -93,7 +60,6 @@ export default function NavBar() {
                                 <li>
                                     <HashLink
                                         to={`${appRoutes.HOME}#Contacts`}
-                                        onClick={() => setExpanded(false)}
                                         className="btn btn-neutral hover:bg-yellow-400 hover:text-black transition-colors duration-200">
                                         Get in touch
                                     </HashLink>
@@ -109,31 +75,27 @@ export default function NavBar() {
                         <li>
                             <HashLink
                                 to={appRoutes.HOME}
-                                onClick={() => setExpanded(false)}
                                 className="btn btn-ghost">
                                 Home
                             </HashLink>
                         </li>
                         <li>
                             <HashLink
-                                to={appRoutes.ABOUT_ME}
-                                onClick={() => setExpanded(false)}
+                                to={appRoutes.ABOUT_ME}                                
                                 className="btn btn-ghost">
                                 About
                             </HashLink>
                         </li>
                         <li>
                             <HashLink
-                                to={`${appRoutes.HOME}#Projects`}
-                                onClick={() => setExpanded(false)}
+                                to={`${appRoutes.HOME}#Projects`}                                
                                 className="btn btn-ghost">
                                 Projects
                             </HashLink>
                         </li>
                         <li>
                             <HashLink
-                                to={`${appRoutes.HOME}#Contacts`}
-                                onClick={() => setExpanded(false)}
+                                to={`${appRoutes.HOME}#Contacts`}                                
                                 className="btn btn-neutral">
                                 Get in touch
                             </HashLink>
