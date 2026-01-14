@@ -11,9 +11,8 @@ export default function Footer() {
     const [hovered, setHovered] = useState(false);
 
     return (
-        <SectionArea id="Contacts" color="#ffffffff" zIndex={90}>
-            <StyledFooter>
-                <footer className="footer p-8">
+            <StyledFooter className="h-screen">
+                <footer className="footer" style={{paddingTop: "72px"}}>
                     <h2>Get in touch</h2>
 
                     <StyledEmailLink>
@@ -33,6 +32,5 @@ export default function Footer() {
                         <p>Copyright © {new Date().getFullYear()} - All right reserved by Cátia Diogo</p>
                 </footer>
             </StyledFooter>
-        </SectionArea>
     );
 }

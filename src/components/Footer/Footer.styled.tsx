@@ -1,10 +1,15 @@
 import styled from "styled-components";
 
 export const StyledFooter = styled.div`
-
+    display: flex;
+    padding: 100px 72px;
+    background-color: white;
+    flex-direction: column;
+    gap: 32px;
 
     h2{
-        font-size: 48px;
+        font-size: 3rem;
+        line-height: 3rem;
     }
 
     a{

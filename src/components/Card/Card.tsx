@@ -6,9 +6,10 @@ interface Props {
   showText?: boolean;
   showLabel?: boolean;
   showBadgeList?: boolean;
+  color?: string;
 }
 
-export default function CardItem({ card, showText, showLabel, showBadgeList }: Props) {
+export default function CardItem({ card, showText, showLabel, showBadgeList, color}: Props) {
 
   const imgVersions = [
     card.imageMobile ? `${card.imageMobile} 768w` : null,
@@ -19,7 +20,7 @@ export default function CardItem({ card, showText, showLabel, showBadgeList }: P
     <>
       <StyledCard>
         <a href={card.buttonLink}>
-          <div className="card w-full">
+          <div className="card w-full h-full" style={{backgroundColor: color}}>
             <figure>
               <StyledCardImgContainer>
                 <figure style={{borderRadius: "16px"}}>

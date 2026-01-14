@@ -13,6 +13,7 @@ export default function CardLayout({ data, showText, showLabel, showBadgeList}: 
   return (
     <>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols- gap-6">
+        
         {data.map((project, idx) => (
           <div key={idx}>
             <CardItem card={project}
