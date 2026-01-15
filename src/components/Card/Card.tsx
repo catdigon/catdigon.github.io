@@ -21,7 +21,7 @@ export default function CardItem({ card, showText, showLabel, showBadgeList, col
       <StyledCard>
         <a href={card.buttonLink}>
           <div className="card w-full h-full" style={{backgroundColor: color}}>
-            <figure>
+            
               <StyledCardImgContainer>
                 <figure style={{borderRadius: "16px"}}>
                   <img
@@ -31,7 +31,7 @@ export default function CardItem({ card, showText, showLabel, showBadgeList, col
                     alt={card.alt} />
                 </figure>
               </StyledCardImgContainer>
-            </figure>
+
             <div className="card-body">
               {showLabel && card.label && (
               <div className="badge">

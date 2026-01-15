@@ -1,7 +1,7 @@
 import styled from "styled-components"
-import MeImg from "../../components/AboutMePage/ImagesArea/Images/MeImg"
 import Hero from "../../components/Hero/Hero"
 import SectionArea from "../../components/SectionsAreas/SectionArea"
+import ImgDisplay from "../../components/ImageVersion/ImgVersion"
 
 export default function AboutMe() {
 
@@ -13,63 +13,172 @@ export default function AboutMe() {
         }
         children={
           <div className="w-full lg:w-1/2">
-            <MeImg />
+            <ImgDisplay srcDesktop={"/about/me-smile.png"} srcMobile="/about/me-mobile.webp" alt="Photo of me smiling" />
           </div>
         }>
       </Hero>
 
-      <SectionArea id="Projects" color="#F8C200" zIndex={99} className="w-full flex place-content-evenly py-12 lg:py-0">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-8 lg:gap-0 place-content-evenly">
-          <div className="grid place-content-center flex sticky top-0 lg:h-screen">
+      <SectionArea id="Projects" color="#FC83AE" zIndex={99} className="w-full">
+        <div className="flex justify-center px-4">
 
-          </div>
-          <div className='grid gap-8 w-[90vw] md:w-[44rem] lg:w-[80%] mx-auto'>
+          <StickyCards className="grid gap-8">
 
-            <figure className="grid place-content-center lg:sticky lg:top-0 lg:h-screen w-full">
-
-              <CardStyle className="mx-auto" id="Aboutme">
-                <div className="flex flex-col lg:flex-row gap-8 items-center">
-                  <div className="w-full lg:w-1/2 presentation-text">
-                    <h1>Hey all!</h1>
-                    <p>I'm Cátia, and I grew up in Portugal but I have lived in Bratislava, Slovakia, and Crete, Greece.</p>
-                    <p>These experiences allowed me to engage with different cultures and learn how to work in truly multicultural environments.</p>
-                    <p>My path into design grew from a background in research, documentary cinema, theatre, and education.</p>
-                    <p>I once dreamed of directing films, but editing captured me instead through structure, rhythm, and problem-solving behind every story.
-                      That same attention to intention and form eventually led me to design.</p>
-                    <p>I believe design, like art, should listen before it speaks.
-                      The world isn't made for a few — it's shaped by all of us, together.</p>
+            <figure>
+              <article className="">
+                <CardStyle>
+                  <div className="flex-1">
+                    <h2>Hi, I'm Cátia Diogo.</h2>
+                    <p>I'm currently UX/UI Designer Intern at <a href="https://crafton.eu/" className="font-semibold underline decoration-double hover:font-bold  transition-colors duration-300">Crafton</a>.</p>
                   </div>
-                  <div className="w-full lg:w-1/2 img-container">
-                    <MeImg />
+
+                  <div className="flex-1">
+                    <ImgDisplay
+                      srcDesktop="/about/me.webp"
+                      srcMobile="/about/me-mobile.webp"
+                      alt="Photo of me smiling"
+                      className="w-full h-auto object-cover rounded-lg"
+                    />
                   </div>
-                </div>
-              </CardStyle>
+                </CardStyle>
+              </article>
             </figure>
-          </div>
+
+            <figure>
+              <article className="bg-white rotate-6">
+                <CardStyle>
+                  <div className="flex-1">
+                    <h2>From</h2>
+                    <p>
+                      I grew up in the montains site of Portugal. I lived in Slovakia and Greece. Now, I moved to Figueira da Foz, and live by the sea!
+                    </p>
+                  </div>
+
+                  <div className="flex-2">
+                    <ImgDisplay
+                      srcDesktop="/about/piodao.png"
+                      alt="Photo of the Figueira' sea"
+                      className="w-full h-auto object-cover rounded-lg"
+                    />
+                  </div>
+                </CardStyle>
+              </article>
+            </figure>
+
+          <figure>
+              <article className="bg-[#F08447] -rotate-2">
+                <CardStyle>
+                  <div className="flex-1">
+                    <h2>Education </h2>
+                    <p>2016 - Graduated from ESEC's Bachelor of Theather and Education</p>
+                    <p>2019 - Graduated from ESTA's Bachelor of Film Studies</p>
+                    <p>2023 - Graduated from UBI's Master of Cinema</p>
+                    <p>2025 - Graduated from ESEC's PostGradution of Web Desing</p>
+                    <p>On going - UC's PhD of Fine Arts</p>
+                  </div>
+
+                  <div className="flex-2">
+                    <ImgDisplay
+                      srcDesktop="/about/master.png"
+                      srcMobile="/about/me-mobile.webp"
+                      alt="Photo of me smiling"
+                      className="w-full h-auto object-cover rounded-lg"
+                    />
+                  </div>
+                </CardStyle>
+              </article>
+            </figure>
+
+          <figure>
+              <article className="bg-[#F1CE50] rotate-3">
+                <CardStyle>
+                  <div className="flex-1">
+                    <h2>Experience</h2>
+                    <p>I taught kids and teens, which taught me the importance of listening carefully, adpating to diffente needs, and learning continuously</p>
+                  </div>
+
+                  <div className="flex-2">
+                    <ImgDisplay
+                      srcDesktop="/about/cinema1.png"
+                      srcMobile="/about/me-mobile.webp"
+                      alt="Photo of me smiling"
+                      className="w-full h-auto object-cover rounded-lg"
+                    />
+                  </div>
+                </CardStyle>
+              </article>
+            </figure>
+
+            <figure>
+              <article className="bg-[#F08447]">
+                <CardStyle>
+                  <div className="flex-1">
+                    <h2>I believe </h2>
+                    <p>design is more than creating stunning things, it's building experiences that are acessible to everyone.</p>
+                  </div>
+
+                  <div className="flex-2">
+                    <ImgDisplay
+                      srcDesktop="/about/me-c.png"
+                      srcMobile="/about/me-mobile.webp"
+                      alt="Photo of me smiling"
+                      className="w-full h-auto object-cover rounded-lg"
+                    />
+                  </div>
+                </CardStyle>
+              </article>
+            </figure>
+
+          </StickyCards>
+
         </div>
       </SectionArea>
-
-
     </>
   )
 }
 
+const StickyCards = styled.div`
+figure{
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+article{
+  display: grid;
+  border-radius: 16px;
+  place-content: center;
+  gap: calc(var(--spacing) * 4);
+  padding: 32px;
+  width: 60vw;
+  }
+  
+@media (max-width: 768px){
+    article
+    width: 90vw;
+    }
+`
+
+
 const CardStyle = styled.div`
-
-margin: 4rem 0;
-
-.presentation-text{
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  padding: 0 4rem;
-}
+  align-items: center;
+  gap: 2rem;
 
-.img-container{
-  padding: 0 4rem;
-}
+  @media (min-width: 1024px) {
+    flex-direction: row;
+  }
 
-h1{
-    padding-bottom: 1rem;
+p{
+  font-size: 24px;
+  margin-bottom: 0.5rem;
+  }
+
+
+
+h2{
+    margin-bottom: 1rem;
 }  
 `

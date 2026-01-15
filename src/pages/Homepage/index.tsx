@@ -14,7 +14,7 @@ export default function HomePage() {
         text={[
           <span className="text-rotate">
             <span>
-              <span>Ux/Ui</span>
+              <span>UX/UI</span>
               <span>Web</span>
             </span>
           </span>,
@@ -23,7 +23,7 @@ export default function HomePage() {
         <HeroArt />
       </Hero>
       <div>
-        <SectionArea id="Projects" color="#F8C200" className="w-full flex place-content-evenly  py-12 lg:py-0">
+        <SectionArea id="Projects" color="#F8C200" className="w-full flex place-content-evenly py-12 lg:py-0">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-8 lg:gap-0 place-content-evenly">
             <div className="grid place-content-center flex sticky top-0 lg:h-screen">
               <h2 className="text-center lg:text-left text-3xl font-bold">
