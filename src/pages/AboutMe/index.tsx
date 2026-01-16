@@ -2,6 +2,8 @@ import styled from "styled-components"
 import Hero from "../../components/Hero/Hero"
 import SectionArea from "../../components/SectionsAreas/SectionArea"
 import ImgDisplay from "../../components/ImageVersion/ImgVersion"
+import { TfiDirectionAlt } from "react-icons/tfi"
+import { BsAward, BsMarkerTip, BsSortUp } from "react-icons/bs"
 
 export default function AboutMe() {
 
@@ -9,7 +11,7 @@ export default function AboutMe() {
     <>
 
       <Hero title={"Hey all!"}
-        text={"I once dreamed of directing films, but eventually life led me to design."
+        text={"I once dreamed of directing films, but life eventually led me to design."
         }
         children={
           <div className="w-full lg:w-1/2">
@@ -44,12 +46,15 @@ export default function AboutMe() {
             </figure>
 
             <figure>
-              <article className="bg-white rotate-6">
+              <article className="bg-[#FAF9F6] rotate-6">
                 <CardStyle>
                   <div className="flex-1">
-                    <h2>From</h2>
-                    <p>
-                      I grew up in the montains site of Portugal. I lived in Slovakia and Greece. Now, I moved to Figueira da Foz, and live by the sea!
+                    <h2> <TfiDirectionAlt /> From </h2>
+                    <p className="card-text">
+                      I grew up surrounded by the enchanted forest of <span className="badge bg-green-500/60 text-black border-none">Arganil</span>.</p>
+                    <p className="card-text">
+                      Along the way, I lived in <span className="badge bg-red-500/60 text-black border-none">Slovakia</span> and <span className="badge bg-blue-500/60 text-black border-none">Greece</span>.
+                      Now I'm based in <span className="badge bg-yellow-500/70 text-black border-none">Figueira da Foz</span>, living by the sea!
                     </p>
                   </div>
 
@@ -64,16 +69,33 @@ export default function AboutMe() {
               </article>
             </figure>
 
-          <figure>
-              <article className="bg-[#F08447] -rotate-2">
+            <figure>
+              <article className="bg-[#6DC1E4] -rotate-2">
                 <CardStyle>
                   <div className="flex-1">
-                    <h2>Education </h2>
-                    <p>2016 - Graduated from ESEC's Bachelor of Theather and Education</p>
-                    <p>2019 - Graduated from ESTA's Bachelor of Film Studies</p>
-                    <p>2023 - Graduated from UBI's Master of Cinema</p>
-                    <p>2025 - Graduated from ESEC's PostGradution of Web Desing</p>
-                    <p>On going - UC's PhD of Fine Arts</p>
+                    <h2><BsAward /> Education </h2>
+                    <ul className="timeline timeline-vertical">
+                      <li>
+                        <div className="timeline-start timeline-box">2016</div>
+                        <div className="timeline-end"><span>Bachelor's degree in Theatre and Education, ESEC</span></div>
+                      </li>
+                      <li>
+                        <div className="timeline-start timeline-box">2019</div>
+                        <div className="timeline-end"><span>Bachelor's degree in Film Studies, ESTA</span></div>
+                      </li>
+                      <li>
+                        <div className="timeline-start timeline-box">2023</div>
+                        <div className="timeline-end "><span>Master's degree in Cinema, UBI</span></div>
+                      </li>
+                      <li>
+                        <div className="timeline-start timeline-box">2025</div>
+                        <div className="timeline-end"><span>Postgraduate degree in Web Design, ESEC</span></div>
+                      </li>
+                      <li>
+                        <div className="timeline-start timeline-box">Ongoing</div>
+                        <div className="timeline-end"><span>PhD in Fine Arts, University of Coimbra</span></div>
+                      </li>
+                    </ul>
                   </div>
 
                   <div className="flex-2">
@@ -88,12 +110,23 @@ export default function AboutMe() {
               </article>
             </figure>
 
-          <figure>
-              <article className="bg-[#F1CE50] rotate-3">
+            <figure>
+              <article className="bg-[#F2CF21] rotate-3">
                 <CardStyle>
                   <div className="flex-1">
-                    <h2>Experience</h2>
-                    <p>I taught kids and teens, which taught me the importance of listening carefully, adpating to diffente needs, and learning continuously</p>
+                    <h2><BsSortUp /> Experience</h2>
+                    <p className="card-text">
+                      I worked on a European volunteering project and taught kids and teens, developing key skills in:
+                    </p>
+                    <div className="flex flex-wrap gap-2 mt-2">
+                      <span className="badge bg-[#FFB74D] text-black border-0">Visual storytelling</span>
+                      <span className="badge bg-[#66BB6A] text-black border-0">Content creation</span>
+                      <span className="badge bg-[#2196F3]/80 text-black border-0">Brand communication</span>
+                      <span className="badge bg-[#FFA726] text-black border-0">Empathy</span>
+                      <span className="badge bg-[#E57373] text-black border-0">Adaptability</span>
+                      <span className="badge bg-[#26A69A] text-black border-0">Active listening</span>
+                      <span className="badge bg-[#9C84EE] text-black border-0">Continuous learning</span>
+                    </div>
                   </div>
 
                   <div className="flex-2">
@@ -109,11 +142,15 @@ export default function AboutMe() {
             </figure>
 
             <figure>
-              <article className="bg-[#F08447]">
+              <article className="bg-[#E76F51]">
                 <CardStyle>
                   <div className="flex-1">
-                    <h2>I believe </h2>
-                    <p>design is more than creating stunning things, it's building experiences that are acessible to everyone.</p>
+                    <h2><BsMarkerTip /> My Vision </h2>
+                    <p className="card-text">
+                      Design is more than just making things look stunning.
+                      It's about crafting experiences that are <span className="badge bg-[#FFD54F] text-black px-2 py-0.5 border-0">accessible</span>,
+                      <span className="badge bg-green-500/70 text-black px-2 py-0.5 border-0">inclusive</span>, and <span className="badge bg-[#64B5F6] text-black px-2 py-0.5 border-0">meaningful</span> for everyone
+                    </p>
                   </div>
 
                   <div className="flex-2">
@@ -137,12 +174,13 @@ export default function AboutMe() {
 }
 
 const StickyCards = styled.div`
+  padding-bottom: 2rem;
 figure{
+  display: grid;
+  place-content: center;
   position: sticky;
   top: 0;
   height: 100vh;
-  display: grid;
-  place-content: center;
 }
 
 article{
@@ -155,8 +193,17 @@ article{
   }
   
 @media (max-width: 768px){
-    article
-    width: 90vw;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+
+    article{
+    width: 80vw;
+}
+      figure {
+    position: static;
+    height: auto;
+  }
     }
 `
 
@@ -171,14 +218,31 @@ const CardStyle = styled.div`
     flex-direction: row;
   }
 
+li{
+  display: flex;
+  flex-direction: row;
+}
+
+
 p{
-  font-size: 24px;
+  font-size: 32px;
   margin-bottom: 0.5rem;
   }
 
+.card-text{
+  font-size: 28px;
+  line-height: 2.4rem;
+  }
 
+span{
+font-size: 20px;
+}
 
 h2{
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 40px;
 }  
 `
