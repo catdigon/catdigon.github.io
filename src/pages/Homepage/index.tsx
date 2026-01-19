@@ -3,6 +3,8 @@ import HeroArt from "../../components/Hero/ArtHero/HeroFinalArt"
 import SectionArea from "../../components/SectionsAreas/SectionArea"
 import { ProjectsCardsText } from "../../data/projectsDesign"
 import CardItem from "../../components/Card/Card"
+import ImgDisplay from "../../components/ImageVersion/ImgVersion"
+import styled from "styled-components"
 
 export default function HomePage() {
 
@@ -12,7 +14,7 @@ export default function HomePage() {
         id="Home"
         title={"Cátia Diogo"}
         text={[
-          <span className="text-rotate">
+          <span key="role" className="text-rotate">
             <span>
               <span>UX/UI</span>
               <span>Web</span>

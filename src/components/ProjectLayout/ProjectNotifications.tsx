@@ -1,5 +1,4 @@
 import { Col, Row } from "react-bootstrap";
-import { StyledProgressStickyArea } from "./ProgressDisplay/ProgressDisplay.styled";
 import ProjectsBreackLine from "../BreakLine/ProjectsBreak";
 import CardLayout from "../Card/CardLayout";
 import { ProjectsCardsText } from "../../data/projectsDesign";
@@ -8,7 +7,6 @@ import ProjectCard from "./Project/ProjectCard/ProjectCard";
 import CardListSimple from "../List/ListSimple";
 import ImageDisplaySimple from "../ImageDisplay/ImageComponent/ImageComponentDefault";
 import ProjectSubCard from "./Project/ProjectCard/ProjectSubCard";
-import { useSectionProgress } from "./ProgressDisplay/ProgressDisplayLogic";
 import ImageHero from "./ImageHero/ImageHero";
 import Hero from "../Hero/Hero";
 import SectionArea from "../SectionsAreas/SectionArea";
@@ -22,14 +20,6 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
         (project) => project.id !== projectID
     ) || [];
 
-    const sectionIds = [
-        "Summary",
-        "Study & Experiment",
-        "Data Analysis",
-        "Conclusion",
-    ]
-
-    const { sectionRefs, progress, activeSection } = useSectionProgress(sectionIds);
 
     return (
         <>
@@ -46,36 +36,9 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
             <div style={{ marginTop: -100 }}>
                 <SectionArea>
                     <Row style={{ margin: "6rem 0" }}>
-                        <Col md={3} className="d-none d-md-block">
-                            <StyledProgressStickyArea>
-                                {sectionIds.map((id) => {
-                                    const pct = Math.round((progress[id] || 0) * 100);
-                                    const isActive = activeSection === id;
-                                    return (
-                                        <div key={id} style={{ marginBottom: "0.6rem" }}>
-                                            <a
-                                                key={id}
-                                                href={`#${id}`}
-                                                style={{
-                                                    fontWeight: isActive ? 600 : 400,
-                                                }}
-                                            >
-                                                {id}
-                                                <div className="progress-bar"
-                                                    style={{
-                                                        height: isActive ? "8px" : "4px",
-                                                        width: `${pct}%`,
-                                                    }}>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    )
-                                })}
-                            </StyledProgressStickyArea>
-                        </Col>
+
                         <Col md={8}>
-                            <section id={"Summary"}
-                                ref={el => { sectionRefs.current["Summary"] = el }}>
+                           
                                 <ProjectIntroCard projectId={projectID}
                                     description={[
                                         "This project examined how desktop notifications influence attention during digital reading tasks. Together with four colleagues, we monitored 35 participants using eye-tracking and biometric sensors across three conditions: no notifications, visual-only alerts, and visual + auditory alerts.",
@@ -89,10 +52,7 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
                                         "Investigate how visual and auditory desktop notifications disrupt reading focus and how they affect sustained attention.",
                                     ]} children={undefined}  >
                                 </ProjectCard>
-                            </section>
-
-                            <section id={"Study & Experiment"}
-                                ref={el => { sectionRefs.current["Study & Experiment"] = el }}>
+                           
                                 <ProjectCard
                                     title={"Study Design"}
                                     description={[
@@ -162,10 +122,7 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
                                     </ProjectSubCard>
 
                                 </ProjectCard>
-                            </section>
-
-                            <section id={"Data Analysis"}
-                                ref={el => { sectionRefs.current["Data Analysis"] = el }}>
+                
                                 <ProjectCard
                                     title={"Data Analysis"}
                                     description={[
@@ -196,10 +153,7 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
                                         ]} />
                                     </ProjectSubCard>
                                 </ProjectCard>
-                            </section>
-
-                            <section id={"Conclusion"}
-                                ref={el => { sectionRefs.current["Conclusion"] = el }}>
+                           
                                 <ProjectCard
                                     title={"Outcome"}
                                     description={[
@@ -217,7 +171,8 @@ export default function ProjectCinematecaLayout({ projectID }: ProjectProps) {
                                         "This experience strengthened my ability to combine analytical methods with creative intuition, turning quantitative insights into actionable design improvements. It also sparked my ongoing interest in exploring how design, attention, and emotion intersect in digital environments.",
                                     ]}
                                     children={undefined} />
-                            </section>
+                            
+
                         </Col>
                     </Row>
                     <ProjectsBreackLine />

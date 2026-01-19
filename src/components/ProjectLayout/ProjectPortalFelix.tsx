@@ -1,5 +1,4 @@
 import { Col, Row } from "react-bootstrap";
-import { StyledProgressStickyArea } from "./ProgressDisplay/ProgressDisplay.styled";
 import ProjectsBreackLine from "../BreakLine/ProjectsBreak";
 import CardLayout from "../Card/CardLayout";
 import ProjectIntroCard from "./Project/ProjectIntro/ProjectIntroCard";
@@ -10,7 +9,6 @@ import ProjectSubCard from "./Project/ProjectCard/ProjectSubCard";
 import ImageDisplayScroll from "../ImageDisplay/ImageComponent/ImageComponentScrool";
 import { ProjectsCardsText } from "../../data/projectsDesign";
 import CardCarousel from "../ImageDisplay/Carousel/CardCarousel";
-import { useSectionProgress } from "./ProgressDisplay/ProgressDisplayLogic";
 import ImageHero from "./ImageHero/ImageHero";
 import Hero from "../Hero/Hero";
 import SectionArea from "../SectionsAreas/SectionArea";
@@ -23,16 +21,6 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
     const filteredProjects = ProjectsCardsText?.filter(
         (project) => project.id !== projectID
     ) || [];
-
-    const sectionIds = [
-        "Summary",
-        "Heuristic Evaluation",
-        "User Flow",
-        "Wireframes & Prototype",
-        "Conclusion",
-    ]
-
-    const { sectionRefs, progress, activeSection } = useSectionProgress(sectionIds);
 
     return (
         <>
@@ -49,36 +37,9 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
             <div style={{ marginTop: -100 }}>
                 <SectionArea>
                     <Row style={{ margin: "6rem 0" }}>
-                        <Col md={3} className="d-none d-md-block">
-                            <StyledProgressStickyArea>
-                                {sectionIds.map((id) => {
-                                    const pct = Math.round((progress[id] || 0) * 100);
-                                    const isActive = activeSection === id;
-                                    return (
-                                        <div key={id} style={{ marginBottom: "0.6rem" }}>
-                                            <a
-                                                key={id}
-                                                href={`#${id}`}
-                                                style={{
-                                                    fontWeight: isActive ? 600 : 400,
-                                                }}
-                                            >
-                                                {id}
-                                                <div className="progress-bar"
-                                                style={{
-                                                    height: isActive ? "8px" : "4px",
-                                                    width: `${pct}%`,
-                                                }}>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    )
-                                })}
-                            </StyledProgressStickyArea>
-                        </Col>
+                        
                         <Col md={8}>
-                            <section id={"Summary"}
-                                ref={el => { sectionRefs.current["Summary"] = el }}>
+
                                 <ProjectIntroCard projectId={projectID}
                                     description={[
                                         "Portal Félix is the official film database of Cinemateca Portuguesa, launched in 2024 as a centralized access point for Portuguese cinematographic heritage. Designed for both researchers and the general public, it offers a vast colletion of films, people, events and archival resources.",
@@ -96,10 +57,7 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
                                     children={undefined}
                                 />
 
-                            </section>
 
-                            <section id={"Heuristic Evaluation"}
-                                ref={el => { sectionRefs.current["Heuristic Evaluation"] = el }}>
                                 <ProjectCard
                                     title={"Phase 1: Heuristic Evaluation & User Testing"}
                                     description={[
@@ -158,10 +116,7 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
                                     </ProjectSubCard>
 
                                 </ProjectCard>
-                            </section>
-
-                            <section id={"User Flow"}
-                                ref={el => { sectionRefs.current["User Flow"] = el }}>
+                  
                                 <ProjectCard
                                     title={"Phase 2: Insights & User Flow Strategy"}
                                     description={[
@@ -203,10 +158,7 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
                                         </Row>
                                     </ProjectSubCard>
                                 </ProjectCard>
-                            </section>
-
-                            <section id={"Wireframes & Prototype"}
-                                ref={el => { sectionRefs.current["Wireframes & Prototype"] = el }}>
+         
                                 <ProjectCard
                                     title={"Phase 3: Wireframes & Prototyping"}
                                     description={[
@@ -276,10 +228,7 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
                                         </iframe>
                                     </ProjectSubCard>
                                 </ProjectCard>
-                            </section>
-
-                            <section id={"Conclusion"}
-                                ref={el => { sectionRefs.current["Conclusion"] = el }}>
+                         
                                 <ProjectCard
                                     title={"Outcome"}
                                     description={[
@@ -305,7 +254,7 @@ export default function ProjectPortalFelixLayout({ projectID }: ProjectProps) {
                                     ]}
                                     children={undefined} />
 
-                            </section>
+                      
 
                         </Col>
                     </Row>

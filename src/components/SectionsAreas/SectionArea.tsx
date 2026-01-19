@@ -13,7 +13,7 @@ export default function SectionArea({ children, id, color, zIndex = 1, className
     return (
         <>
             <Section id={id}
-                bg={color}
+                $bg={color}
                 style={{zIndex}}
                 className={className}>
                     {children}
@@ -22,9 +22,9 @@ export default function SectionArea({ children, id, color, zIndex = 1, className
     )
 }
 
-const Section = styled.section <{ bg?: string }>`
+const Section = styled.section <{ $bg?: string }>`
     width: 100%;
-    background: ${({ bg }) => bg || "white"};
+    background: ${({ $bg }) => $bg || "white"};
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
     border-radius: 16px;
 }

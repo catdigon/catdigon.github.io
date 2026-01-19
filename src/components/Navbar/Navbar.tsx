@@ -32,9 +32,9 @@ export default function NavBar() {
                         </div>
                         <div className="mx-2 flex-1 px-2">
                             <HashLink
-                                to={`${appRoutes.HOME}#Home`}
+                                to={appRoutes.HOME}
                                 aria-label="Cátia Diogo's portfolio logo - button to return to homepage"
-                                className="btn btn-ghost text-xl"
+                                className="btn btn-ghost"
                             >
                                 <NavbarLogo />
                             </HashLink>
@@ -59,7 +59,7 @@ export default function NavBar() {
                                 </li>
                                 <li>
                                     <HashLink
-                                        to={`${appRoutes.HOME}#Contacts`}
+                                        to="#Contacts"
                                         className="btn btn-neutral hover:bg-yellow-400 hover:text-black transition-colors duration-200">
                                         Get in touch
                                     </HashLink>

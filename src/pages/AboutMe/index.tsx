@@ -4,12 +4,12 @@ import SectionArea from "../../components/SectionsAreas/SectionArea"
 import ImgDisplay from "../../components/ImageVersion/ImgVersion"
 import { TfiDirectionAlt } from "react-icons/tfi"
 import { BsAward, BsMarkerTip, BsSortUp } from "react-icons/bs"
+import { educationTimeline } from "../../data/education"
 
 export default function AboutMe() {
 
   return (
     <>
-
       <Hero title={"Hey all!"}
         text={"I once dreamed of directing films, but life eventually led me to design."
         }
@@ -22,9 +22,7 @@ export default function AboutMe() {
 
       <SectionArea id="Projects" color="#FC83AE" zIndex={99} className="w-full">
         <div className="flex justify-center px-4">
-
           <StickyCards className="grid gap-8">
-
             <figure>
               <article className="">
                 <CardStyle>
@@ -32,7 +30,6 @@ export default function AboutMe() {
                     <h2>Hi, I'm Cátia Diogo.</h2>
                     <p>I'm currently UX/UI Designer Intern at <a href="https://crafton.eu/" className="font-semibold underline decoration-double hover:font-bold  transition-colors duration-300">Crafton</a>.</p>
                   </div>
-
                   <div className="flex-1">
                     <ImgDisplay
                       srcDesktop="/about/me.webp"
@@ -72,29 +69,19 @@ export default function AboutMe() {
             <figure>
               <article className="bg-[#6DC1E4] -rotate-2">
                 <CardStyle>
-                  <div className="flex-1">
+                  <div className="flex-1 self-start">
                     <h2><BsAward /> Education </h2>
-                    <ul className="timeline timeline-vertical">
-                      <li>
-                        <div className="timeline-start timeline-box">2016</div>
-                        <div className="timeline-end"><span>Bachelor's degree in Theatre and Education, ESEC</span></div>
-                      </li>
-                      <li>
-                        <div className="timeline-start timeline-box">2019</div>
-                        <div className="timeline-end"><span>Bachelor's degree in Film Studies, ESTA</span></div>
-                      </li>
-                      <li>
-                        <div className="timeline-start timeline-box">2023</div>
-                        <div className="timeline-end "><span>Master's degree in Cinema, UBI</span></div>
-                      </li>
-                      <li>
-                        <div className="timeline-start timeline-box">2025</div>
-                        <div className="timeline-end"><span>Postgraduate degree in Web Design, ESEC</span></div>
-                      </li>
-                      <li>
-                        <div className="timeline-start timeline-box">Ongoing</div>
-                        <div className="timeline-end"><span>PhD in Fine Arts, University of Coimbra</span></div>
-                      </li>
+                    <ul className="relative timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
+                      <span className="absolute left-0 top-0 w-0.5 h-full bg-white"></span>
+                      {educationTimeline.map((item, idx) => (
+                        <li key={idx} className="relative mb-2">
+                          <span className="absolute -left-1.5 top-3 w-3 h-3 rounded-full bg-yellow-400 border-2 border-white"></span>
+                          <div className="timeline-start mb-1 md:text-start ml-2">
+                            <time className="badge">{item.year}</time>
+                            <div className="text-education">{item.degree}</div>
+                          </div>
+                        </li>
+                      ))}
                     </ul>
                   </div>
 
@@ -234,7 +221,7 @@ p{
   line-height: 2.4rem;
   }
 
-span{
+span, .text-education{
 font-size: 20px;
 }
 
