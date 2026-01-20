@@ -1,44 +1,63 @@
 import styled from "styled-components";
 
 export const StyledCardImgContainer = styled.div`
-    position: relative;
-  overflow: hidden;
   border-radius: 16px;
-  
+
   img {
-    display: block;
     width: 100%;
-    transition: transform 0.4s ease;
-  }
-
-  &:hover img {
-    transform: scale(1.06);
-  }
-
-  &:hover::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    transition: background-color 0.2s ease;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease-in-out;
   }
 `
 
 export const StyledCard = styled.div`
-    .card{
-        margin: 1rem 0;
-        border-radius: 16px;
-        width: 100%;
-    }
+  .card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
 
-    .card-body{
-        padding: 16px 8px;
-    }
-
-    a{
-        text-decoration: none;
+  a{
+    text-decoration: none;
     }  
 
-    .card:hover img {
-        transform: scale(1.06);
-        }
+  .card-body{
+      display: flex;
+      flex-direction: row;
+      z-index: 10;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 2rem;
+      position: relative;
+      border-radius: 16px;
+    }
+
+    .card-overlay {
+    border-radius: 16px;
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        360deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 0.6) 70%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      opacity: 0.5;
+      transition: opacity 0.6s ease-in-out;
+      z-index: 1;
+  }
+
+  .card-title{
+    padding-top: 1rem;
+  }
+
+
+  &:hover img {
+    transform: scale(1.04);
+  }
+
+  &:hover .card-overlay {
+    opacity: 1;
+  }
+
 `

@@ -3,8 +3,6 @@ import HeroArt from "../../components/Hero/ArtHero/HeroFinalArt"
 import SectionArea from "../../components/SectionsAreas/SectionArea"
 import { ProjectsCardsText } from "../../data/projectsDesign"
 import CardItem from "../../components/Card/Card"
-import ImgDisplay from "../../components/ImageVersion/ImgVersion"
-import styled from "styled-components"
 
 export default function HomePage() {
 
@@ -32,6 +30,7 @@ export default function HomePage() {
                 Projects
               </h2>
             </div>
+            
             <div className='grid gap-8 w-[90vw] md:w-[44rem] lg:w-[80%] mx-auto'>
               {ProjectsCardsText.map((project, idx) => (
                 <figure
@@ -43,11 +42,12 @@ export default function HomePage() {
                     showText
                     showLabel
                     showBadgeList
-                    color="#F8C200"
+                    color="transparent"
                   />
                 </figure>
               ))}
             </div>
+            
           </div>
         </SectionArea>
       </div>

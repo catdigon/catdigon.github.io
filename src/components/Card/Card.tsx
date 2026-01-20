@@ -9,46 +9,47 @@ interface Props {
   color?: string;
 }
 
-export default function CardItem({ card, showText, showLabel, showBadgeList, color}: Props) {
+export default function CardItem({ card, showText, showLabel, showBadgeList, color }: Props) {
 
   const imgVersions = [
     card.imageMobile ? `${card.imageMobile} 768w` : null,
     card.imageDesktop ? `${card.imageDesktop} 1920w` : null,
   ].filter(Boolean).join(', ');
-  
+
   return (
     <>
       <StyledCard>
         <a href={card.buttonLink}>
-          <div className="card w-full h-full" style={{backgroundColor: color}}>
-            
-              <StyledCardImgContainer>
-                <figure style={{borderRadius: "16px"}}>
-                  <img
-                    src={card.imageDesktop}
-                    srcSet={imgVersions}
-                    sizes="(max-width: 768px) 100vw, 1920px"
-                    alt={card.alt} />
-                </figure>
-              </StyledCardImgContainer>
+
+          <div className="card bg-base-100 image-full shadow-sm w-full h-full" style={{ backgroundColor: color }}>
+            <StyledCardImgContainer>
+                <img
+                  src={card.imageDesktop}
+                  srcSet={imgVersions}
+                  sizes="(max-width: 768px) 100vw, 1920px"
+                  alt={card.alt} />
+            </StyledCardImgContainer>
+
+            <div className="card-overlay" />
 
             <div className="card-body">
-              {showLabel && card.label && (
-              <div className="badge">
-                {card.label}
-              </div>
-              
-            )}
-              <h3 className="card-title">
-                {card.subtitle}
-              </h3>
+              <div className="flex-2">
+                {showLabel && card.label && (
+                  <div className="badge">
+                    {card.label}
+                  </div>
+                )}
 
-              {showText && card.text && (
-                <p>{card.text}</p>
-              )}
+                <h3 className="card-title">
+                  {card.subtitle}
+                </h3>
+                {showText && card.text && (
+                  <p>{card.text}</p>
+                )}
+              </div>
 
               {showBadgeList && card.badge && (
-                <div className="card-actions justify-end">
+                <div className="card-actions flex-1 justify-end">
                   {card.badge?.map((tool, index) => (
                     <div
                       key={index}
