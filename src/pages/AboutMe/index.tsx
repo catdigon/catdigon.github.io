@@ -21,7 +21,6 @@ export default function AboutMe() {
       </Hero>
 
       <SectionArea id="Projects" color="#FC83AE" zIndex={99} className="w-full">
-        <div className="flex justify-center px-4">
           <StickyCards className="grid gap-8">
             <figure>
               <article className="">
@@ -154,7 +153,6 @@ export default function AboutMe() {
 
           </StickyCards>
 
-        </div>
       </SectionArea>
     </>
   )
@@ -162,6 +160,7 @@ export default function AboutMe() {
 
 const StickyCards = styled.div`
   padding-bottom: 2rem;
+  
 figure{
   display: grid;
   place-content: center;

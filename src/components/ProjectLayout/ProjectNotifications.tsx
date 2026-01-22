@@ -2,7 +2,7 @@ import { Col, Row } from "react-bootstrap";
 import ProjectsBreackLine from "../BreakLine/ProjectsBreak";
 import CardLayout from "../Card/CardLayout";
 import { ProjectsCardsText } from "../../data/projectsDesign";
-import ProjectIntroCard from "./Project/ProjectIntro/ProjectIntroCard";
+import ProjectIntroCard from "./Project/ProjectIntroCard";
 import ProjectCard from "./Project/ProjectCard/ProjectCard";
 import CardListSimple from "../List/ListSimple";
 import ImageDisplaySimple from "../ImageDisplay/ImageComponent/ImageComponentDefault";

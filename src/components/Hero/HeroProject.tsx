@@ -6,14 +6,14 @@ interface Props {
     text: React.ReactNode;
     text2?: string;
     children: React.ReactNode;
+    color?: string;
 }
 
-export default function Hero({ id, title, text, text2, children }: Props) {
+export default function HeroProject({ id, title, text, text2, children, color }: Props) {
 
     return (
-
-        <HeroPresentationStyle id={id} className='sticky top-0 -z-10 hero h-screen'>
-            <div className="hero-content flex-col lg:flex-row-reverse">
+        <HeroPresentationStyle id={id} className="hero h-[90vh]" $bg={color}>
+            <div className="hero-content flex-col md:flex-row-reverse">
                 {children}
                 <div className="card-body">
                     <h1>{title}</h1>
@@ -25,7 +25,13 @@ export default function Hero({ id, title, text, text2, children }: Props) {
     )
 }
 
-const HeroPresentationStyle = styled.div`
+const HeroPresentationStyle = styled.div <{ $bg?: string }>`
+    background: ${({ $bg }) => $bg || "white"};
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
   .hero-text{
     font-size: 32px;
 

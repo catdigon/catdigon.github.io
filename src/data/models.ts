@@ -3,7 +3,9 @@ export interface CardProject {
   year?: string;
   title?: string;
   subtitle: string;
+  context?: string;
   text?: string[];
+  overview: string[];
   imageDesktop: string;
   imageMobile: string;
   alt: string;

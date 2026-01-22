@@ -14,8 +14,6 @@ export default function HeroArt() {
 }
 
 const HeroArtStyled = styled.div`
-margin-top: 2rem;
-
 svg {
     width: 100%;
     height: auto;
