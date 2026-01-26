@@ -13,7 +13,7 @@ export default function HeroProject({ id, title, text, text2, children, color }:
 
     return (
         <HeroPresentationStyle id={id} className="hero md:h-[90vh] pt-4 md:pt-0" $bg={color}>
-            <div className="hero-content flex-col md:flex-row-reverse">
+            <div className="hero-content p-0 flex-col md:flex-row-reverse">
                 {children}
                 <div className="card-body">
                     <h1>{title}</h1>

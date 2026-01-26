@@ -31,7 +31,7 @@ const Section = styled.section <{ $bg?: string; marginTop?: string; $boxShadow: 
     background: ${({ $bg }) => $bg || "white"};
     box-shadow: ${({ $boxShadow }) => ($boxShadow ? "0 0 15px rgba(0,0,0,0.25)" : "none")};
     border-radius: 16px;
-    margin-top: ${({ marginTop }) => marginTop || "-5rem"};
+    margin-top: ${({ marginTop }) => marginTop || "0rem"};
     display: flex;
     flex-direction: column;
     justify-content: center;

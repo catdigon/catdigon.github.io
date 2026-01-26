@@ -2,9 +2,6 @@
 @plugin "daisyui" {
   themes: light --default, light --prefersdark;
   root: ":root";
-  include: ;
-  exclude: ;
-  prefix: ;
   logs: true;
 }
 

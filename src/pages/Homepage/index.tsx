@@ -18,7 +18,7 @@ export default function HomePage() {
       <div>
 
 
-        <SectionArea id="Projects" boxShadow={false} marginTop="0" className="w-full flex place-content-evenly py-12 lg:py-8 gap-4 lg:px-32 2xl:px-60">
+        <SectionArea id="Projects" boxShadow={false}  className="w-full flex place-content-evenly py-12 lg:py-8 gap-4 lg:px-32 2xl:px-60">
               <h2 className="text-center lg:text-left text-3xl font-bold">
                 Projects
               </h2>

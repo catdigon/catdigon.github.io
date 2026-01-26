@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
 export const StyledNavbarContainer = styled.div`
-  position: fixed;
+  position: sticky;
   width: 100%;
   z-index: 99;
   display: flex;
   justify-content: center;
   background: white;
+  top: 0;
 
   .menu{
     gap: 1rem;

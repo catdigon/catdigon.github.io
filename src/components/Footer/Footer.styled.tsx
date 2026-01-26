@@ -3,6 +3,11 @@ import styled from "styled-components";
 export const StyledFooter = styled.div`
     display: flex;
     padding: 100px 72px;
+
+    @media (max-width: 768px) {
+        padding: 18px;
+    }
+    
     background-color: white;
     flex-direction: column;
     gap: 32px;

@@ -16,7 +16,7 @@ export default function ProjectIntroCard({ projectId }: Props) {
         <>
             <div className="flex flex-col md:flex-row items-start">
 
-                <div className="flex-1 md:flex-2 p-4 flex-col gap-8 gap-8">
+                <div className="flex-1 md:flex-2 p-4 flex-col gap-8">
                     <h2>Project Overview</h2>
                     <div className="space-y-4 w-full max-w-xl">
                         {project.overview?.map((paragraph, index) => (
@@ -25,7 +25,7 @@ export default function ProjectIntroCard({ projectId }: Props) {
                     </div>
                 </div>
 
-                <div className="flex flex-1 p-4 flex-col gap-8 self-center items-end text-right min-w-[250px] [&>div]:space-y-1">
+                <div className="flex flex-1 p-4 flex-col gap-8 self-center items-end text-right min-w-62.5 [&>div]:space-y-1">
                     <div className="gap-2">
                         <p className="font-bold">Context</p>
                         <p>{project.context}</p>
