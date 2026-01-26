@@ -2,11 +2,11 @@ import ImageHero from "../../components/ProjectLayout/ImageHero/ImageHero";
 import ProjectIntroCard from "../../components/ProjectLayout/Project/ProjectIntroCard";
 import { ProjectsCardsText } from "../../data/projectsDesign";
 import ProjectsBreackLine from "../../components/BreakLine/ProjectsBreak";
-import CardLayout from "../../components/Card/CardLayout";
 import HeroProject from "../../components/Hero/HeroProject";
 import SectionArea from "../../components/SectionsAreas/SectionArea";
 import ImageDisplay from "../../components/ImageDisplay/ImageDisplay";
 import ProjectSection from "../../components/ProjectLayout/Project/ProjectSection";
+import CardItem from "../../components/Card/Card";
 
 interface ProjectProps {
     projectID: string;
@@ -64,7 +64,7 @@ export default function ProjectCinemateca({ projectID }: ProjectProps) {
 
                 <ImageDisplay
                     imageDesktop={"/projects/cinemateca/wireframes.png"}
-                    className="w-full h-auto mx-auto rounded-sm"/>
+                    className="w-full h-auto mx-auto rounded-sm" />
 
                 <ProjectSection projectId={projectID}
                     title={"My Approach"}>
@@ -105,27 +105,28 @@ export default function ProjectCinemateca({ projectID }: ProjectProps) {
                         <p>The final result delivers a modern, and user-centered experience, built to be a coherent digital product. By organizing complex content into clear flows and keepping navigation accessible all times, users can quickly explore and access to film archive, read news and discover screenings.</p>
                         <p>More than respecting the Cinemateca's identity, it gives it a fresh and contemporary visual language.</p>
                     </div>
-
-                    <iframe
-                        title="Cinemateca Prototype in Figma"
-                        style={{ border: "1px solid rgba(0, 0, 0, 0.1)", borderRadius: "16px"}}
-                        className="w-full max-w-[800px] h-[60vh] mx-auto"
-                        src="https://embed.figma.com/proto/yzkj3eD8ZRNSNn8b7BOBle/Cinemateca-Final--Prototipo-?page-id=6%3A164&node-id=12-403&viewport=-50%2C359%2C0.31&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=12%3A403&embed-host=share"
-                        allowFullScreen>
-                    </iframe>
-
                 </ProjectSection>
+
+
+                <ProjectsBreackLine />
+
+                <h2>More projects</h2>
+
+                <ul className="grid grid-cols-1 gap-4 transition-all duration-300">
+                    {filteredProjects.map((project, idx) => (
+                        <li
+                            key={idx}
+                        >
+                            <CardItem
+                                card={project}
+                                showTask
+                                showBadgeList
+                            />
+                        </li>
+                    ))}
+                </ul>
+
             </SectionArea>
-
-            <ProjectsBreackLine />
-            <div style={{ marginTop: 40 }}>
-                <h3 style={{ justifySelf: "center", fontWeight: 600 }}>More projects</h3>
-                <CardLayout
-                    data={filteredProjects}
-                    showText={false}
-                    showLabel={false} />
-            </div>
-
         </>
     )
 }

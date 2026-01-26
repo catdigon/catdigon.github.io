@@ -68,10 +68,16 @@ export default function NavBar() {
                         </div>
                     </div>
                 </div>
+                
                 <div className="drawer-side">
                     <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
                     <ul className="menu bg-base-200 min-h-full w-80" style={{padding: "1rem"}}>
                         {/* Sidebar*/}
+                        <li>
+                            <label htmlFor="my-drawer-2" aria-label="close sidebar">
+                                X
+                            </label>
+                        </li>
                         <li>
                             <HashLink
                                 to={appRoutes.HOME}

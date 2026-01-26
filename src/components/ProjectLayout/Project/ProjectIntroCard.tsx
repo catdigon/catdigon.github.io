@@ -34,16 +34,12 @@ export default function ProjectIntroCard({ projectId }: Props) {
                     <div>
                         <p className="font-bold">Tools</p>
                         <div className="card-actions flex flex-wrap flex-1 justify-end">
-                            {project.badge?.map((tool, index) => (
+                            {project.tools?.map((tool, index) => (
                                 <div
                                     key={index}
                                     className="badge"
-                                    style={{
-                                        backgroundColor: tool.badgeColor,
-                                        border: "none"
-                                    }}
                                 >
-                                    {tool.name}
+                                    {tool}
                                 </div>
                             ))}
                         </div>

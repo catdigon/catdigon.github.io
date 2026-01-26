@@ -1,4 +1,3 @@
-import { badgeColor } from "./badgeColor";
 import { appRoutes } from "./constants";
 import type { CardProject } from "./models";
 import { projectsLabel } from "./projectsLabel";
@@ -20,37 +19,11 @@ export const ProjectsCardsText: CardProject[] = [
     ],
     imageDesktop: "projects/cinemateca.webp",
     imageMobile: "projects/cinemateca-mobile.webp",
-    imageDesktopCard: "projects/cinemateca1.png",
     alt: "Cinemateca's landing page image",
     label: projectsLabel.ACADEMIC,
-    badge: [{
-      name: "Figma",
-      badgeColor: badgeColor.PINK
-    },
-    {
-      name: "HTML & CSS",
-      badgeColor: badgeColor.BLUE
-    },
-    {
-      name: "Bootstrap",
-      badgeColor: badgeColor.BLUE
-    },
-    {
-      name: "JavaScript",
-      badgeColor: badgeColor.BLUE
-    },
-    {
-      name: "JSON",
-      badgeColor: badgeColor.BLUE
-    },
-    {
-      name: "Lighthouse",
-      badgeColor: badgeColor.GREEN
-    },
-    {
-      name: "GitHub",
-      badgeColor: badgeColor.DARK
-    }],
+    tools: ["Figma", "HTML & CSS","Bootstrap",
+      "JavaScript", "JSON", "Lighthouse", "GitHub",
+],
     buttonLabel: "See full project",
     buttonLink: appRoutes.CINEMATECA,
     abstract: [""],
@@ -71,30 +44,9 @@ export const ProjectsCardsText: CardProject[] = [
     ],
     imageDesktop: "projects/portal.webp",
     imageMobile: "projects/portal-mobile.webp",
-    imageDesktopCard: "projects/portal11.png",
     alt: "Portal Felix prototype image",
     label: projectsLabel.ACADEMIC,
-    badge: [{
-      name: "Notion",
-      badgeColor: badgeColor.RED
-    },
-    {
-      name: "Figma",
-      badgeColor: badgeColor.PINK
-    },
-    {
-      name: "Octopus.do",
-      badgeColor: badgeColor.PINK
-    },
-      {
-      name: "ZOOM",
-      badgeColor: badgeColor.GOLD
-    },
-    {
-      name: "AccessMonitor",
-      badgeColor: badgeColor.GREEN
-    },
-  ],
+    tools: ["Notion", "Figma", "Octopus.do", "ZOOM", "AccessMonitor" ],
     buttonLabel: "See full project",
     buttonLink: appRoutes.PORTAL_FELIX,
     abstract: [""],
@@ -115,26 +67,9 @@ export const ProjectsCardsText: CardProject[] = [
     ],
     imageDesktop: "projects/notification.webp",
     imageMobile: "projects/notification-mobile.webp",
-    imageDesktopCard: "projects/notification1.png",
     alt: "Heatmap image from the project",
     label: projectsLabel.RESEARCH,
-    badge: [{
-      name: "GazePoint 3",
-      badgeColor: badgeColor.GREEN
-    },
-    {
-      name: "AOI Analysis",
-      badgeColor: badgeColor.PURPLE
-    },
-    {
-      name: "Overleaf",
-      badgeColor: badgeColor.RED
-    },
-    {
-      name: "Excel & Docs",
-      badgeColor: badgeColor.RED
-    },
-  ],
+    tools: [ "GazePoint 3",  "AOI Analysis", "Overleaf", "Excel & Docs" ],
     buttonLabel: "See full project",
     buttonLink: appRoutes.IMPACT_NOTIFICATIONS,
     abstract: [""],

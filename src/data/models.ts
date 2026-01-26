@@ -9,22 +9,15 @@ export interface CardProject {
   overview: string[];
   imageDesktop: string;
   imageMobile: string;
-  imageDesktopCard?: string;
-  imageMobileCard?: string;
   alt: string;
   imageProject?: string;
   imageProjectMobile?: string;
   altImageProject?: string;
   label?: string;
   buttonLabel: string;
-  badge?: Tool[];
+  tools?: string[];
   buttonLink: string;
   abstract?: string[];
   primaryOutButton?: string;
   primaryOutButtonLink?: string;
-}
-
-export interface Tool{
-    name: string;
-    badgeColor: string;
 }

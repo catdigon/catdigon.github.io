@@ -1,5 +1,5 @@
 import ProjectsBreackLine from "../../components/BreakLine/ProjectsBreak";
-import CardLayout from "../../components/Card/CardLayout";
+import CardItem from "../../components/Card/Card";
 import HeroProject from "../../components/Hero/HeroProject";
 import ImageDisplay from "../../components/ImageDisplay/ImageDisplay";
 import ImageHero from "../../components/ProjectLayout/ImageHero/ImageHero";
@@ -86,8 +86,8 @@ export default function ProjectPortalFelix({ projectID }: ProjectProps) {
                         </ul>
 
                         <ImageDisplay
-                    imageDesktop={"/projects/portal/phase1.png"}
-                    className="w-full max-w-[800px] h-auto mx-auto pt-7 pb-7" />
+                            imageDesktop={"/projects/portal/phase1.png"}
+                            className="w-full max-w-[800px] h-auto mx-auto pt-7 pb-7" />
                     </div>
 
 
@@ -100,8 +100,8 @@ export default function ProjectPortalFelix({ projectID }: ProjectProps) {
                         </ul>
 
                         <ImageDisplay
-                    imageDesktop={"/projects/portal/octo-flow.webp"}
-                    className="w-full max-w-[800px] h-auto mx-auto pt-7 pb-7" />
+                            imageDesktop={"/projects/portal/octo-flow.webp"}
+                            className="w-full max-w-[800px] h-auto mx-auto pt-7 pb-7" />
                     </div>
 
                     <div className="pt-1">
@@ -113,31 +113,37 @@ export default function ProjectPortalFelix({ projectID }: ProjectProps) {
                         </ul>
 
                         <ImageDisplay
-                    imageDesktop={"/projects/portal/phase3.png"}
-                    className="w-full max-w-[800px] h-auto mx-auto pt-7 pb-7" />
+                            imageDesktop={"/projects/portal/phase3.png"}
+                            className="w-full max-w-[800px] h-auto mx-auto pt-7 pb-7" />
                     </div>
                 </ProjectSection>
 
                 <ProjectSection projectId={projectID}
                     title={"Results"}>
-                        <p>By discovering a critical usability failure with a non-functional account creation, this project highlighted how broken workflows impact trust and user efficiency. This insight directly impacted user trust and efficiency, becoming a turning point for the redesign and guiding all subsequent decisions.</p>
-                        <p>The final outcome delivers a user-centered and research-focused solution that simplifies complex workflows and makes exploring the Portal Félix intuitive. Key improvements include a search tool with autocomplete, fully functional account creation and login, profile management, a favorites system, and adaptive navigation responsive to the user's state. </p>
-                        <p>Overall, the redesign supports and respects users by addressing the platform's original pain points and enabling a more reliable and efficient experience.</p>
-                    </ProjectSection>
+                    <p>By discovering a critical usability failure with a non-functional account creation, this project highlighted how broken workflows impact trust and user efficiency. This insight directly impacted user trust and efficiency, becoming a turning point for the redesign and guiding all subsequent decisions.</p>
+                    <p>The final outcome delivers a user-centered and research-focused solution that simplifies complex workflows and makes exploring the Portal Félix intuitive. Key improvements include a search tool with autocomplete, fully functional account creation and login, profile management, a favorites system, and adaptive navigation responsive to the user's state. </p>
+                    <p>Overall, the redesign supports and respects users by addressing the platform's original pain points and enabling a more reliable and efficient experience.</p>
+                </ProjectSection>
+            
+            <ProjectsBreackLine />
 
+                <h2>More projects</h2>
 
-                <ProjectsBreackLine />
-                <div style={{ marginTop: 40 }}>
-                    <h3 style={{ justifySelf: "center", fontWeight: 600 }}>More projects</h3>
-                    <CardLayout
-                        data={filteredProjects}
-                        showText={false}
-                        showLabel={false} />
-                </div>
-
-            </SectionArea >
-
-
+                <ul className="grid grid-cols-1 gap-4 transition-all duration-300">
+                    {filteredProjects.map((project, idx) => (
+                        <li
+                            key={idx}
+                        >
+                            <CardItem
+                                card={project}
+                                showTask
+                                showBadgeList
+                            />
+                        </li>
+                    ))}
+                </ul>
+            
+</SectionArea >
         </>
     )
 }

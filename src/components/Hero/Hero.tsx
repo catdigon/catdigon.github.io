@@ -12,7 +12,7 @@ export default function Hero({ id, title, text, text2, children }: Props) {
 
     return (
 
-        <HeroPresentationStyle id={id} className='sticky top-0 -z-10 hero h-screen'>
+        <HeroPresentationStyle id={id} className='hero h-screen'>
             <div className="hero-content flex-col lg:flex-row-reverse">
                 {children}
                 <div className="card-body">

@@ -1,5 +1,5 @@
 import ProjectsBreackLine from "../../components/BreakLine/ProjectsBreak";
-import CardLayout from "../../components/Card/CardLayout";
+import CardItem from "../../components/Card/Card";
 import HeroProject from "../../components/Hero/HeroProject";
 import ImageDisplay from "../../components/ImageDisplay/ImageDisplay";
 import ImageHero from "../../components/ProjectLayout/ImageHero/ImageHero";
@@ -71,17 +71,25 @@ export default function ProjectNotifications({ projectID }: ProjectProps) {
                         <p>This project was valuble for understanding how suble desing elements can affect attention over time and reinforced the importance of using quantitative methods to inform design decisions, particularly in digital enviroments where attention is easily fragmented.</p>
                     </ProjectSection>
 
-                <ProjectsBreackLine />
-                <div style={{ marginTop: 40 }}>
-                    <h3 style={{ justifySelf: "center", fontWeight: 600 }}>More projects</h3>
-                    <CardLayout
-                        data={filteredProjects}
-                        showText={false}
-                        showLabel={false} />
-                </div>
+            
+            <ProjectsBreackLine />
 
-            </SectionArea>
-
+                            <h2>More projects</h2>
+            
+                            <ul className="grid grid-cols-1 gap-4 transition-all duration-300">
+                                {filteredProjects.map((project, idx) => (
+                                    <li
+                                        key={idx}
+                                    >
+                                        <CardItem
+                                            card={project}
+                                            showTask
+                                            showBadgeList
+                                        />
+                                    </li>
+                                ))}
+                            </ul>
+</SectionArea>
         </>
     )
 }

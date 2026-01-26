@@ -1,30 +1,24 @@
 import HeroArt from "../../components/Hero/ArtHero/HeroFinalArt"
 import SectionArea from "../../components/SectionsAreas/SectionArea"
 import { ProjectsCardsText } from "../../data/projectsDesign"
+import Hero from "../../components/Hero/Hero"
 import CardItem from "../../components/Card/Card"
-import HeroProject from "../../components/Hero/HeroProject"
 export default function HomePage() {
 
   return (
     <>
-      <HeroProject
+      <Hero
         id="Home"
         title={"Cátia Diogo"}
         text={[
-          <span key="role" className="text-rotate">
-            <span>
-              <span>UX/UI</span>
-              <span>Web</span>
-            </span>
-          </span>,
-          " Designer with a background in research and performing arts."
+          "UX/UI Designer with a background in research and performing arts."
         ]}>
         <HeroArt />
-      </HeroProject>
+      </Hero>
       <div>
 
 
-        <SectionArea id="Projects" boxShadow={false} className="w-full flex place-content-evenly py-12 lg:py-8 gap-4 lg:px-32 2xl:px-60">
+        <SectionArea id="Projects" boxShadow={false} marginTop="0" className="w-full flex place-content-evenly py-12 lg:py-8 gap-4 lg:px-32 2xl:px-60">
               <h2 className="text-center lg:text-left text-3xl font-bold">
                 Projects
               </h2>
@@ -38,7 +32,6 @@ export default function HomePage() {
                     card={project}
                     showTask
                     showBadgeList
-                    color="#F8C200"
                   />
                 </li>
               ))}

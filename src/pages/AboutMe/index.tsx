@@ -1,10 +1,10 @@
 import styled from "styled-components"
-import Hero from "../../components/Hero/Hero"
 import SectionArea from "../../components/SectionsAreas/SectionArea"
 import ImgDisplay from "../../components/ImageVersion/ImgVersion"
 import { TfiDirectionAlt } from "react-icons/tfi"
 import { BsAward, BsMarkerTip, BsSortUp } from "react-icons/bs"
 import { educationTimeline } from "../../data/education"
+import Hero from "../../components/Hero/Hero"
 
 export default function AboutMe() {
 
