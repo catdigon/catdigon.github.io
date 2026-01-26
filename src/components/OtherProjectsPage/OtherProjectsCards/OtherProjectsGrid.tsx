@@ -1,4 +1,3 @@
-import { Col, Row } from "react-bootstrap";
 import { OtherProjectsCardsText2018, OtherProjectsCardsText2019, OtherProjectsCardsText2020, OtherProjectsCardsText2022, OtherProjectsCardsText2023, OtherProjectsCardsText2024 } from "../../../data/otherProjects";
 import CardItem from "../../Card/Card";
 import { StyledOtherProjectsGrid } from "./OtherProjectsGrid.styled";
@@ -17,10 +16,10 @@ export default function OtherProjectsCards() {
     return (
         <>
             <StyledOtherProjectsGrid>
-                <Row style={{ flexWrap: 'wrap', width: '100%'}}>
+                <div className="flex flex-wrap w-full">
                     {projectYears.map(({year, projects}) => 
                         projects.map((project, index) => (
-                            <Col key={`${year}-${index}`} sm={12} md={6} xl={4}>
+                            <div key={`${year}-${index}`} className="w-full md:w-1/2 xl:w-1/3">
                             {index === 0 ? ( 
                             <h4 style={{ height: 0 }}>
                                 {year}
@@ -29,10 +28,10 @@ export default function OtherProjectsCards() {
                                 <div style={{height: "0.5rem"}} />
                             )}
                             <CardItem card={project} showText={false} />
-                        </Col>
+                        </div>
                         ))
                     )}
-                </Row>
+                </div>
             </StyledOtherProjectsGrid>
         </>
     )

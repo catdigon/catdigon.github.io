@@ -74,8 +74,8 @@ export default function AboutMe() {
                       <span className="absolute left-0 top-0 w-0.5 h-full bg-white"></span>
                       {educationTimeline.map((item, idx) => (
                         <li key={idx} className="relative mb-2">
-                          <span className="absolute -left-1.5 top-3 w-3 h-3 rounded-full bg-yellow-400 border-2 border-white"></span>
-                          <div className="timeline-start mb-1 md:text-start ml-2">
+                          <span className="absolute -left-1.5 top-3 w-3 h-3 rounded-full bg-white border-2 border-white"></span>
+                          <div className="timeline-start mb-1 md:text-start ml-3">
                             <time className="badge">{item.year}</time>
                             <div className="text-education">{item.degree}</div>
                           </div>

@@ -42,7 +42,7 @@ const router = createBrowserRouter([
     },
     {
       path: appRoutes.IMPACT_NOTIFICATIONS,
-      element: <ProjectNotifications projectID={'notifications'} />,
+      element: <ProjectNotifications projectID={'impact-of-notification'} />,
     }
   ]
   }

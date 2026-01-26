@@ -13,12 +13,14 @@ export const ProjectsCardsText: CardProject[] = [
     text: [
       "A design of the website of the Cinemateca Portuguesa originally created in 2013."
     ],
+    task:["UI Design, Prototyping, Front-end"],
     overview: [
       "This academic project explored the creation of the Cinemateca Portuguesa website from scratch, designed as if no prior platform existed, with a structure and navigation fully guided by user needs and content logic. The site was designed to help users easily learn about the institution, explore the film archive, discover screenings and events, read editorial content, and access key information.",
       "The project delivered a high-fidelity prototype and a responsive HTML/CSS implementation. Research included analysis of international cinematecas and film festivals platforms informed content hierarchy, navigation and usability, resulting in a functional, accessible, and modern digital website."
     ],
     imageDesktop: "projects/cinemateca.webp",
     imageMobile: "projects/cinemateca-mobile.webp",
+    imageDesktopCard: "projects/cinemateca1.png",
     alt: "Cinemateca's landing page image",
     label: projectsLabel.ACADEMIC,
     badge: [{
@@ -58,12 +60,18 @@ export const ProjectsCardsText: CardProject[] = [
     year: "October 2024 - February 2025",
     title: "Portal Félix Plataform",
     subtitle: "Portal Félix",
+    context: "Film Heritage Platform (Public Cultural Institution)",
     text: [
       "A UX audit and user-centered redesign of Portal Félix, aiming to improve usability, accessibility, and workflows."
     ],
-    overview: [],
+    task:["User Research, UX Design, Interaction Design, Prototyping"],
+    overview: [
+      "This use case study focused on Portal Félix, the centralized access point to Portuguese cinematographic heritage, designed for cinema researchers and the general public. The platform faced usability and navigation challenges, with workflows that did not support research effectively.",
+      "Through heuristic and accessibility evaluations, user testing, mapping new user flows, and iterative prototyping, the project delivered a medium-fidelity prototype in Figma. The redesign enables researchers to manage large content sets efficiently, reduce repetitive actions, and make search results more intuitive and actionable."
+    ],
     imageDesktop: "projects/portal.webp",
     imageMobile: "projects/portal-mobile.webp",
+    imageDesktopCard: "projects/portal11.png",
     alt: "Portal Felix prototype image",
     label: projectsLabel.ACADEMIC,
     badge: [{
@@ -96,12 +104,18 @@ export const ProjectsCardsText: CardProject[] = [
     year: "December 2024 - July 2025",
     title: "Impact of Notifications on Reading Tasks",
     subtitle: "Impact of Notifications",
+    context: "Academic Research",
     text: [
       "An academic research project exploring how desktop notifications impact attention and reading performance."
     ],
-    overview: [],
+    task:["UX Research, Experimental Design, Data Analysis"],
+    overview: [
+      "This academic research project examined how desktop notifications affect attention during digital reading tasks. Using eye-trackinh and biometric sensors, we analysed the cognitive and physiological impact of visual and auditory interruptions.",
+      "The study involved 35 participants tested under three conditions: no notifications, visual.only notifications, and combined visual and auditory notifications. Resulst showed that while notifications do not always cause immediate visual distraction, they generate subtle responses that negatively affect sustained attention over time."
+    ],
     imageDesktop: "projects/notification.webp",
     imageMobile: "projects/notification-mobile.webp",
+    imageDesktopCard: "projects/notification1.png",
     alt: "Heatmap image from the project",
     label: projectsLabel.RESEARCH,
     badge: [{

@@ -1,8 +1,6 @@
-import { Badge, Card, Col, Figure, Row } from "react-bootstrap";
 import { appRoutes } from "../../data/constants";
 import { IoChevronBackOutline } from "react-icons/io5";
 import { Link } from "react-router";
-import ButtonCTA from "../Button/ButtonCTA";
 import { GoLinkExternal } from "react-icons/go";
 import { CardBlock, StyledImageCard, StyledOtherCard } from "./OtherProjectCard.styled";
 import type { CardProject } from "../../data/models";
@@ -35,63 +33,59 @@ export default function OtherProjectCardDetails({ card }: Props) {
             </TransparentLink>
 
             <StyledOtherCard>
-                <Card>
-                    <Row>
-                        <Col sm={12} lg={7}>
-                            <Card.Body>
+                <div className="card">
+                    <div>
+                        <div className="w-full lg:w-7/12">
+                            <div>
 
-                                <Badge bg="light" text="dark">{card.label}</Badge>
+                                <div className="badge" >{card.label}</div>
 
                                 <CardBlock>
-                                    <Card.Title>{card.title}</Card.Title>
+                                    <h2>{card.title}</h2>
                                     {card.text?.map((item, index) => {
                                         return (
-                                            <Card.Text key={index}>
+                                            <div key={index}>
                                                 {item}
-                                            </Card.Text>
+                                            </div>
                                         )
                                     })}
                                 </CardBlock>
 
                                 <CardBlock>
                                     {card.abstract && card.abstract.length > 0 && (
-                                        <Card.Subtitle className="mb-2">Abstract</Card.Subtitle>
+                                        <div className="mb-2">Abstract</div>
                                     )}
 
                                     {card.abstract && card.abstract.map((text, index) => (
-                                        <Card.Text key={index}>{text}</Card.Text>
+                                        <div key={index}>{text}</div>
                                     ))}
                                 </CardBlock>
 
                                 <CardBlock>
-                                    <Card.Subtitle className="mb-2">Year</Card.Subtitle>
-                                    <Card.Text>{card.year}</Card.Text>
+                                    <div className="mb-2">Year</div>
+                                    <div>{card.year}</div>
                                 </CardBlock>
 
                                 {card.primaryOutButton && (
                                     <Link to={card.primaryOutButtonLink!}>
-                                        <ButtonCTA>
                                             {card.primaryOutButton}
                                             <GoLinkExternal style={{ marginLeft: "0.5rem" }} />
-                                        </ButtonCTA>
                                     </Link>
                                 )}
-                            </Card.Body>
-                        </Col>
+                            </div>
+                        </div>
 
-                        <Col sm={12} lg={5}>
+                        <div className="w-full lg:w-5/12">
                             <StyledImageCard>
-                                <Card.Img
-                                    variant="top"
+                                <img
                                     src={card.imageProject || card.imageDesktop}
                                     srcSet={imgProjectsVersions || imgVersions}
                                     sizes="(max-width: 768px) 100vw, 1920px"
                                     alt={card.altImageProject || card.alt} />
-                                <Figure.Caption>{card.altImageProject || card.alt}</Figure.Caption>
                             </StyledImageCard>
-                        </Col>
-                    </Row>
-                </Card>
+                        </div>
+                    </div>
+                </div>
             </StyledOtherCard>
         </>
     )

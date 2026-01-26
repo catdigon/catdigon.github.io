@@ -3,11 +3,14 @@ export interface CardProject {
   year?: string;
   title?: string;
   subtitle: string;
-  context?: string;
+  task: string[];
+  context: string;
   text?: string[];
   overview: string[];
   imageDesktop: string;
   imageMobile: string;
+  imageDesktopCard?: string;
+  imageMobileCard?: string;
   alt: string;
   imageProject?: string;
   imageProjectMobile?: string;

@@ -14,8 +14,6 @@ interface ProjectProps {
 
 export default function ProjectCinemateca({ projectID }: ProjectProps) {
 
-    console.log(projectID);
-
     const filteredProjects = ProjectsCardsText?.filter(
         (project) => project.id !== projectID
     ) || [];
@@ -27,7 +25,7 @@ export default function ProjectCinemateca({ projectID }: ProjectProps) {
                 color="#F8C200"
                 title={"Cinemateca"}
                 text={"Creating the institutional website from scratch into a clear, functional, and accessible digital experience."}
-                text2="UI Design, prototyping, Front-end "
+                text2="UI Design, Prototyping, Front-end"
             >
                 <ImageHero
                     image={"/projects/cinemateca/cinemateca-broswer.webp"}
@@ -65,8 +63,8 @@ export default function ProjectCinemateca({ projectID }: ProjectProps) {
                 </ProjectSection>
 
                 <ImageDisplay
-                imageDesktop={"/projects/cinemateca/wireframes.png"}
-                className="w-full h-auto mx-auto mt-8 mb-8" />
+                    imageDesktop={"/projects/cinemateca/wireframes.png"}
+                    className="w-full h-auto mx-auto rounded-sm"/>
 
                 <ProjectSection projectId={projectID}
                     title={"My Approach"}>
@@ -97,17 +95,26 @@ export default function ProjectCinemateca({ projectID }: ProjectProps) {
                     </div>
                 </ProjectSection>
 
-                 <ImageDisplay
+                <ImageDisplay
                     imageDesktop={"/projects/cinemateca/mock-devices.png"}
-                    className="w-full max-w-[800px] h-auto mx-auto " />
+                    className="w-full max-w-[800px] h-auto mx-auto" />
 
-                    <ProjectSection projectId={projectID}
+                <ProjectSection projectId={projectID}
                     title={"Results"}>
-                        <div className="space-y-4 w-full">
+                    <div className="space-y-4 w-full">
                         <p>The final result delivers a modern, and user-centered experience, built to be a coherent digital product. By organizing complex content into clear flows and keepping navigation accessible all times, users can quickly explore and access to film archive, read news and discover screenings.</p>
                         <p>More than respecting the Cinemateca's identity, it gives it a fresh and contemporary visual language.</p>
                     </div>
-                    </ProjectSection>
+
+                    <iframe
+                        title="Cinemateca Prototype in Figma"
+                        style={{ border: "1px solid rgba(0, 0, 0, 0.1)", borderRadius: "16px"}}
+                        className="w-full max-w-[800px] h-[60vh] mx-auto"
+                        src="https://embed.figma.com/proto/yzkj3eD8ZRNSNn8b7BOBle/Cinemateca-Final--Prototipo-?page-id=6%3A164&node-id=12-403&viewport=-50%2C359%2C0.31&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=12%3A403&embed-host=share"
+                        allowFullScreen>
+                    </iframe>
+
+                </ProjectSection>
             </SectionArea>
 
             <ProjectsBreackLine />
