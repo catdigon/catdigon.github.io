@@ -1,7 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { createBrowserRouter, RouterProvider } from 'react-router';
 import AboutMe from './pages/AboutMe';
 import { appRoutes } from './data/constants';
@@ -35,15 +34,15 @@ const router = createBrowserRouter([
     },
     {
       path: appRoutes.CINEMATECA,
-      element: <ProjectCinemateca />,
+     element: <ProjectCinemateca projectID={'cinemateca'} />
     },
     {
       path: appRoutes.PORTAL_FELIX,
-      element: <ProjectPortalFelix />,
+      element: <ProjectPortalFelix projectID={'portal-felix'}/>,
     },
     {
       path: appRoutes.IMPACT_NOTIFICATIONS,
-      element: <ProjectNotifications />,
+      element: <ProjectNotifications projectID={'impact-of-notification'} />,
     }
   ]
   }

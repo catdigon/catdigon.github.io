@@ -1,87 +1,54 @@
-import { FaBehanceSquare, FaLinkedin } from "react-icons/fa";
-import { Button } from "react-bootstrap";
-import { StyledContainer } from "./FooterBtnLinks.styled";
+import { PiBehanceLogoLight, PiLinkedinLogoLight, PiGithubLogoLight, PiDribbbleLogoLight, PiReadCvLogoLight} from "react-icons/pi";
 import BtnCienciaID from "./IconCienciaID";
-import { FaSquareDribbble, FaSquareGithub } from "react-icons/fa6";
-import IconCv from "./IconCv";
 
-
-export default function BtnGridLinks() {
+export default function SocialLinks() {
 
   return (
     <>
-      <StyledContainer>
-        <div className="mt-3 d-flex gap-2" role="navigation" aria-label="Social links">
-          <ul>
-            <li>
-              <Button
-                variant="link"
+        <div className="grid grid-flow-col gap-2" role="navigation" aria-label="Social links">
+              <a
                 href="https://www.linkedin.com/in/catia-diogo"
-                target='_blank' rel='noopener'
+                target='_blank' rel='noreferrer'
                 aria-label="LinkedIn"
               >
-                <FaLinkedin />
-              </Button>
-            </li>
-
-            <li>
-              <Button
-                variant="link"
+                <PiLinkedinLogoLight className="icon btn btn-square btn-ghost"/>
+              </a>
+              <a
                 href="https://www.behance.net/catiadiogo"
-                target='_blank' rel='noopener'
+                target='_blank' rel='noreferrer'
                 aria-label="Behance"
               >
-                <FaBehanceSquare />
-              </Button>
-            </li>
-
-            <li>
-              <Button
-                variant="link"
+                <PiBehanceLogoLight className="icon btn btn-square btn-ghost"/>
+              </a>
+              <a
                 href="https://dribbble.com/catdigon-all"
-                target='_blank' rel='noopener'
+                target='_blank' rel='noreferrer'
                 aria-label="Dribble"
               >
-                <FaSquareDribbble />
-              </Button>
-            </li>
-
-            <li>
-              <Button
-                variant="link"
+                <PiDribbbleLogoLight className="icon btn btn-square btn-ghost"/>
+              </a>
+              <a
                 href="https://www.cienciavitae.pt/portal/en/B11F-1F8E-B063"
-                target='_blank' rel='noopener'
+                target='_blank' rel='noreferrer'
                 aria-label="Ciencia ID"
               >
-                <BtnCienciaID />
-              </Button>
-            </li>
-
-            <li>
-              <Button
-                variant="link"
+                <BtnCienciaID className="icon btn btn-square btn-ghost"/>
+              </a>
+              <a
                 href="https://github.com/catdigon"
-                target='_blank' rel='noopener'
+                target='_blank' rel='noreferrer'
                 aria-label="Github"
               >
-                <FaSquareGithub />
-              </Button>
-            </li>
-
-            <li>
-              <Button
-                variant="link"
+                <PiGithubLogoLight className="icon btn btn-square btn-ghost"/>
+              </a>
+              <a
                 href="/doc/CatDiGon-CV.pdf"
-                target='_blank' rel='noopener'
+                target='_blank' rel='noreferrer'
                 aria-label="CV"
               >
-                <IconCv />
-              </Button>
-            </li>
-          </ul>
+                <PiReadCvLogoLight className="icon btn btn-square btn-ghost"/>
+              </a>
         </div>
-
-      </StyledContainer>
     </>
   )
 }

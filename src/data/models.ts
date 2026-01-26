@@ -3,7 +3,10 @@ export interface CardProject {
   year?: string;
   title?: string;
   subtitle: string;
+  task: string[];
+  context: string;
   text?: string[];
+  overview: string[];
   imageDesktop: string;
   imageMobile: string;
   alt: string;
@@ -12,14 +15,9 @@ export interface CardProject {
   altImageProject?: string;
   label?: string;
   buttonLabel: string;
-  badge?: Tool[];
+  tools?: string[];
   buttonLink: string;
   abstract?: string[];
   primaryOutButton?: string;
   primaryOutButtonLink?: string;
-}
-
-export interface Tool{
-    name: string;
-    badgeColor: string;
 }

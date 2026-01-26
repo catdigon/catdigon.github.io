@@ -1,39 +1,45 @@
-import styled from "styled-components"
-import ProjectsSection from "../../components/HomePage/ProjectsSection"
-import { BsFiletypePdf } from "react-icons/bs"
-import Hero from "../../components/Hero/Hero"
 import HeroArt from "../../components/Hero/ArtHero/HeroFinalArt"
-
-
+import SectionArea from "../../components/SectionsAreas/SectionArea"
+import { ProjectsCardsText } from "../../data/projectsDesign"
+import Hero from "../../components/Hero/Hero"
+import CardItem from "../../components/Card/Card"
 export default function HomePage() {
 
   return (
     <>
-      <Overide>
-        <Hero
-          id="Home"
-          title={"Hi, I'm Cátia!"}
-          text={"I'm learning and growing as a UX/Product Designer, blending research and storytelling to create more human-centered and accessible experiences."}
-          isButton={true}
-          button={
-            <>
-            <BsFiletypePdf />
-              View resume
-            </>
-          }
-          link="/doc/CatDiGon-CV.pdf">
-          <HeroArt />
-        </Hero>
-      </Overide>
-      <ProjectsSection />
+      <Hero
+        id="Home"
+        title={"Cátia Diogo"}
+        text={[
+          "UX/UI Designer with a background in research and performing arts."
+        ]}>
+        <HeroArt />
+      </Hero>
+      <div>
+
+
+        <SectionArea id="Projects" boxShadow={false} marginTop="0" className="w-full flex place-content-evenly py-12 lg:py-8 gap-4 lg:px-32 2xl:px-60">
+              <h2 className="text-center lg:text-left text-3xl font-bold">
+                Projects
+              </h2>
+            
+            <ul className="grid grid-cols-1 gap-4 transition-all duration-300">
+              {ProjectsCardsText.map((project, idx) => (
+                <li
+                  key={idx}
+                >
+                  <CardItem
+                    card={project}
+                    showTask
+                    showBadgeList
+                  />
+                </li>
+              ))}
+
+          </ul>
+        </SectionArea>
+      </div>
     </>
 
   )
 }
-
-const Overide = styled.div`
-  #Home p{
-    font-size: 17px;
-  }
-`
-

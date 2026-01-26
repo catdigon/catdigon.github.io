@@ -1,7 +1,19 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: light --default, light --prefersdark;
+  root: ":root";
+  include: ;
+  exclude: ;
+  prefix: ;
+  logs: true;
+}
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif, "Outfit", sans-serif;
+  --font-body: 'Red Hat Display', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-heading: 'Marko One', system-ui, Avenir, Helvetica, Arial, sans-serif;
+
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 500;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -10,6 +22,7 @@
 }
 
 html {
+  font-size: 18px; 
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -19,32 +32,22 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: var(--font-body) !important;
 }
 
-p {
-  font-size: 17px;
+h1, h2, h3, .card-title, .card-subtitle{
+  font-family: var(--font-heading)!important;
+}
+h4, h5, h6 {
+  font-family: var(--font-body) !important;
 }
 
-section {
-  scroll-margin-top: 150px;
-}
-
-h1, h2, h3, h4, h5, h6, .card-title, .card-subtitle{
-  font-family: "Outfit", sans-serif !important;
-  font-weight: 600;
-}
-
-h1 {
-  margin-block-start: 0;
-  margin-block-end: 0;
-}
-
-ul {
-  list-style-type: none;
-  margin-block-start: 0;
-  margin-block-end: 0;
-  padding-inline-start: 0;
-}
+h1 { font-size: 3rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; } 
+h5 { font-size: 1.25rem; } 
+h6, p { font-size: 1.125rem; }
 
 .btn{
   font-weight: 400 !important;
@@ -76,4 +79,8 @@ ul {
   overflow: auto;
 }
 
-
+.icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}

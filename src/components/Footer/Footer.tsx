@@ -1,31 +1,35 @@
 
-
-import { Row, Col } from "react-bootstrap";
-import { StyledFooter, StyledFooterContainer } from "./Footer.styled";
-import BtnGridLinks from "./FooterIconLinks/FooterBtnLinks";
-import FooterEmail from "./FooterEmail";
+import { StyledEmailLink, StyledFooter } from "./Footer.styled";
+import { BsEnvelope, BsEnvelopePaperHeart } from "react-icons/bs";
+import { useState } from "react";
+import SocialLinks from "./FooterIconLinks/FooterBtnLinks";
 
 
 export default function Footer() {
 
+    const [hovered, setHovered] = useState(false);
+
     return (
-        <StyledFooterContainer>
-            <StyledFooter id="Contacts">
-                <footer role="contentinfo" className="py-4 mt-auto">
+            <StyledFooter className="h-screen" id="Contacts">
+                <footer className="footer" style={{paddingTop: "72px"}}>
+                    <h2>Get in touch</h2>
 
-                    <Row>
-                        <Col md={6} className="mb-3">
-                            <span>Get in touch</span>
-                            <FooterEmail />
-                        </Col>
+                    <StyledEmailLink>
+                        <a
+                            href="mailto:catdigon.all@gmail.com"
+                            aria-label="Send email to catdigon.all@gmail.com"
+                            className="d-inline-flex align-items-center gap-2"
+                            onMouseEnter={() => setHovered(true)}
+                            onMouseLeave={() => setHovered(false)}
+                        >
+                            {hovered ? <BsEnvelopePaperHeart aria-hidden="true" /> : <BsEnvelope aria-hidden="true" />}
 
-                        <Col md={6} className="footeright">
-                            <BtnGridLinks />
-                            <div className="text-muted mt-2">©2025 | Website by Cátia Diogo</div>
-                        </Col>
-                    </Row>
+                            catdigon.all@gmail.com
+                        </a>
+                    </StyledEmailLink>
+                    <SocialLinks />
+                        <p>Copyright © {new Date().getFullYear()} - All right reserved by Cátia Diogo</p>
                 </footer>
             </StyledFooter>
-        </StyledFooterContainer>
     );
 }

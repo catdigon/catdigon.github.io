@@ -1,5 +1,4 @@
-import Image from 'react-bootstrap/Image';
-import { StyledImageCover } from './ImageHero.styled';
+import { StyledImageCover } from "./ImageHero.styled";
 
 interface Props{
     image: string;
@@ -7,7 +6,7 @@ interface Props{
     alt: string;
 }
 
-export default function ImageHero({image, imageMobile,  alt}: Props){
+export default function ImageHero({image, imageMobile, alt}: Props){
 
     const imgVersions = [
         imageMobile ? `${imageMobile} 768w` : null,
@@ -24,7 +23,7 @@ export default function ImageHero({image, imageMobile,  alt}: Props){
     return(
         <>
         <StyledImageCover>
-                <Image {...imgProps} rounded />
+                <img {...imgProps}/>
             </StyledImageCover>
         </>
     )

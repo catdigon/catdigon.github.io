@@ -1,48 +1,41 @@
-import type React from 'react';
-import { StyledBtnContainer, StyledHero, StyledHeroContainer } from './Hero.styled';
-import { Col, Container, Row } from 'react-bootstrap';
-import ButtonCTA from '../Button/ButtonCTA';
-import HeroPresentation from './HeroText/HeroPresentation';
-
+import styled from 'styled-components';
 
 interface Props {
     id?: string;
     title: string;
-    text: string;
-    isButton?: boolean;
-    button?: React.ReactNode;
-    link?: string;
+    text: React.ReactNode;
+    text2?: string;
     children: React.ReactNode;
 }
 
-export default function Hero({ id, title, text, isButton, button, link, children }: Props) {
+export default function Hero({ id, title, text, text2, children }: Props) {
 
     return (
-        <StyledHeroContainer>
-            <StyledHero id={id}>
-                <Container>
-                    <Row>
-                        <Col md={6}>
-                            <HeroPresentation
-                                title={title}
-                                text={text} />
 
-                            {isButton && (
-                                <StyledBtnContainer>
-                                    <ButtonCTA className='btn-presentation'
-                                        href={link}
-                                        target='_blank' rel='noopener'>
-                                        {button}
-                                    </ButtonCTA>
-                                </StyledBtnContainer>
-                            )}
-                        </Col>
-                        <Col md={6}>
-                            {children}
-                        </Col>
-                    </Row>
-                </Container>
-            </StyledHero>
-        </StyledHeroContainer>
+        <HeroPresentationStyle id={id} className='hero h-screen'>
+            <div className="hero-content flex-col lg:flex-row-reverse">
+                {children}
+                <div className="card-body">
+                    <h1>{title}</h1>
+                    <div className='hero-text'>{text}</div>
+                    <p className="card-text2">{text2}</p>
+                </div>
+            </div>
+        </HeroPresentationStyle>
     )
 }
+
+const HeroPresentationStyle = styled.div`
+  .hero-text{
+    font-size: 32px;
+
+    span {
+    font-size: inherit;
+    }
+  }
+
+  .card-text2{
+  font-size: 20px;
+  font-weight: 800;
+  }
+`

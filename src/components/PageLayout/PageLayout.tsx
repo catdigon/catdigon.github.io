@@ -1,5 +1,4 @@
 import { Outlet } from "react-router";
-import { StyleBackground } from "../Background/Background.styled";
 import Footer from "../Footer/Footer";
 import NavBar from "../Navbar/Navbar";
 import ScrollToTop from "../ScroolToTop/ScrollToTop";
@@ -12,19 +11,18 @@ export default function PageLayout({ children }: Props) {
 
     return (
         <>
-        <ScrollToTop />
+            <ScrollToTop />
             {/*Skip link for accessibility*/}
             <a href="#main-content" className="skip-link">
                 Skip to main content
             </a>
 
-            <StyleBackground />
             <NavBar />
-                <main id="main-content">
+            <main id="main-content">
                 <Outlet />
                 {children}
-                </main>
-            <Footer />
+                <Footer />
+            </main>
         </>
     )
 }
