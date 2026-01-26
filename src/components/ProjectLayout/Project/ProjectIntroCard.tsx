@@ -19,7 +19,7 @@ export default function ProjectIntroCard({ projectId }: Props) {
                 <div className="flex-1 md:flex-2 p-4 flex-col gap-8 gap-8">
                     <h2>Project Overview</h2>
                     <div className="space-y-4 w-full max-w-xl">
-                        {project.overview.map((paragraph, index) => (
+                        {project.overview?.map((paragraph, index) => (
                             <p key={index}>{paragraph}</p>
                         ))}
                     </div>
