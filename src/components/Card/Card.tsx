@@ -22,7 +22,7 @@ export default function CardItem({ card, showText, showLabel, showBadgeList, sho
             <StyledCard>
                 <a href={card.buttonLink}>
 
-                    <div className="card relative overflow-hidden rounde-lg flex md:flex-row h-[500px] md:h-[600px]" style={{ backgroundColor: color }}>
+                    <div className="card relative overflow-hidden rounde-lg flex md:flex-row h-125 md:h-150" style={{ backgroundColor: color }}>
 
                         <StyledCardImgContainer>
                             <img
@@ -59,7 +59,7 @@ export default function CardItem({ card, showText, showLabel, showBadgeList, sho
                                         {card.tools?.map((tool, index) => (
                                             <div
                                                 key={index}
-                                                className="badge badge-sm bg-white/60 text-gray-800 border border-white/40">
+                                                className="badge badge-sm bg-white/60 text-gray-800 border border-none">
                                                 {tool}
                                             </div>
                                         ))}

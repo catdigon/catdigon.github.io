@@ -11,7 +11,7 @@ export const StyledCardImgContainer = styled.figure`
     transition: transform 0.4s ease-in-out;
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
   padding-top: unset;
   position: relative;
 
@@ -25,7 +25,7 @@ export const StyledCard = styled.div`
   align-self: self-end;
   z-index: 1;
   color: white;
-  background-image: linear-gradient(0deg, #000, #f1f1f100);
+  background: linear-gradient(360deg,rgba(0, 0, 0, 1) 30%, rgba(241, 241, 241, 0) 100%);
   bottom: 0;
   left: 0;
   width: 100%;
@@ -51,7 +51,7 @@ export const StyledCard = styled.div`
     transform: scale(1.04);
   }
 
- @media (max-width: 767px)  {
+ @media (max-width: 768px)  {
     .card-body{
     flex-direction: column;
     align-items: flex-start;

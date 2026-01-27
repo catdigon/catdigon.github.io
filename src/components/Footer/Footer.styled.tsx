@@ -5,7 +5,7 @@ export const StyledFooter = styled.div`
     padding: 100px 72px;
 
     @media (max-width: 768px) {
-        padding: 18px;
+        padding: 50px 18px;
     }
     
     background-color: white;

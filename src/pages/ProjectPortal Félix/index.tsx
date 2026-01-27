@@ -93,7 +93,7 @@ export default function ProjectPortalFelix({ projectID }: ProjectProps) {
                             imageDesktop={"/projects/portal/mock-displays.png"}
                             imageMobile={"/projects/portal/mock-displays-mobile.webp"}
                             alt="Desktop and laptop mockups displaying findings, with two zoom user testing sessions in view"
-                            className="w-full max-w-200 h-auto mx-auto pt-7 pb-7" />
+                            className="w-full max-w-200 h-auto mx-auto pt-7 pb-3" />
                     </div>
 
 
@@ -109,7 +109,7 @@ export default function ProjectPortalFelix({ projectID }: ProjectProps) {
                             imageDesktop={"/projects/portal/octo-flow.webp"}
                             imageMobile={"/projects/portal/octo-flow-mobile.webp"}
                             alt="Platform architecture in Octopus.io"
-                            className="w-full max-w-200 h-auto mx-auto pt-7 pb-7" />
+                            className="w-full max-w-150 h-auto mx-auto pt-7 pb-3" />
                     </div>
 
                     <div className="pt-1">
@@ -121,8 +121,10 @@ export default function ProjectPortalFelix({ projectID }: ProjectProps) {
                         </ul>
 
                         <ImageDisplay
-                            imageDesktop={"/projects/portal/phase3.png"}
-                            className="w-full max-w-200 h-auto mx-auto pt-7 pb-7" />
+                            imageDesktop={"/projects/portal/proto.png"}
+                            imageMobile={"/projects/portal/proto-mobile.webp"}
+                            alt="Figma prototype screenshot showing frames and the connections between them"
+                            className="w-full max-w-200 h-auto mx-auto pt-6" />
                     </div>
                 </ProjectSection>
 

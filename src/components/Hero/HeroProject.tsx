@@ -13,7 +13,7 @@ export default function HeroProject({ id, title, text, text2, children, color }:
 
     return (
         <HeroPresentationStyle id={id} className="hero md:h-[90vh] pt-4 md:pt-0" $bg={color}>
-            <div className="hero-content p-0 flex-col md:flex-row-reverse">
+            <div className="hero-content p-0 flex-col lg:flex-row-reverse">
                 {children}
                 <div className="card-body">
                     <h1>{title}</h1>
@@ -34,14 +34,23 @@ const HeroPresentationStyle = styled.div <{ $bg?: string }>`
 
   .hero-text{
     font-size: 32px;
-
-    span {
-    font-size: inherit;
+        span {
+            font-size: inherit;
+            }
     }
-  }
 
-  .card-text2{
-  font-size: 20px;
-  font-weight: 800;
-  }
+    .card-text2{
+    font-size: 20px;
+    font-weight: 800;
+    }
+
+    @media (max-width:768px) {
+        h1{
+            font-size: 2.6rem;
+        }
+        
+        .hero-text{
+            font-size: 28px;
+        }
+    }
 `
