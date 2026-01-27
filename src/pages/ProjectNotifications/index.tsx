@@ -41,7 +41,9 @@ export default function ProjectNotifications({ projectID }: ProjectProps) {
 
                 <ImageDisplay
                     imageDesktop={"/projects/notifications/mock.png"}
-                    className="w-full max-w-[600px] h-auto mx-auto " />
+                    imageMobile={"/projects/notifications/mock-mobile.webp"}
+                    alt="Gazepoint program interface showing the definition of Areas of Interest (AIOs)"
+                    className="w-full max-w-150 h-auto mx-auto " />
 
 
                 <ProjectSection projectId={projectID}
@@ -57,11 +59,14 @@ export default function ProjectNotifications({ projectID }: ProjectProps) {
 
                 <ProjectSection projectId={projectID}
                     title={"My Role"}>
-                    <p>I was responsible for participant setup, data acquisition, and analysis. This included operating the Gazepoint eye-tracking system, managing biometric sensors and calibration, and ensuring protocol consistency across sessions. I also analyzed fixations patterns using predefined Areas of Interest (AOIs) and processed gaze data using custom JavaScript scripts.</p>
+                    <p>I was responsible for participant setup, data acquisition, and analysis. This included operating the GazePoint eye-tracking system, managing biometric sensors and calibration, and ensuring protocol consistency across sessions. I also analyzed fixations patterns using predefined Areas of Interest (AOIs) and processed gaze data using custom JavaScript scripts.</p>
                     <p>Metrics such as eye fixation, blink rate, hear rate, galvanic skin response, and pupil dilation were analyzed to assess attentional and cognitive responses.</p>
+                    
                     <ImageDisplay
                         imageDesktop={"/projects/notifications/tests.webp"}
-                        className="w-full max-w-[700px] h-auto mx-auto " />
+                        imageMobile={"/projects/notifications/tests-mobile.webp"}
+                        alt="Me conducting a user test, operating the GazePoint eye-tracking and biometric devices"
+                        className="w-full max-w-175 h-auto mx-auto " />
                 </ProjectSection>
 
                 <ProjectSection projectId={projectID}

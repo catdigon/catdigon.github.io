@@ -41,7 +41,9 @@ export default function ProjectCinemateca({ projectID }: ProjectProps) {
 
                 <ImageDisplay
                     imageDesktop={"/projects/cinemateca/mock-agenda.png"}
-                    className="w-full max-w-[800px] h-auto mx-auto " />
+                    imageMobile={"/projects/cinemateca/mock-agenda-mobile.webp"}
+                    alt="Laptop displaying a website landing page"
+                    className="w-full max-w-200 h-auto mx-auto " />
 
                 <ProjectSection projectId={projectID}
                     title={"Challenges & Expectations"}>
@@ -64,6 +66,8 @@ export default function ProjectCinemateca({ projectID }: ProjectProps) {
 
                 <ImageDisplay
                     imageDesktop={"/projects/cinemateca/wireframes.png"}
+                    imageMobile={"/projects/cinemateca/wireframes-mobile.webp"}
+                    alt="Website pages displayed in a tiled layout, showcasing the site design"
                     className="w-full h-auto mx-auto rounded-sm" />
 
                 <ProjectSection projectId={projectID}
@@ -97,7 +101,9 @@ export default function ProjectCinemateca({ projectID }: ProjectProps) {
 
                 <ImageDisplay
                     imageDesktop={"/projects/cinemateca/mock-devices.png"}
-                    className="w-full max-w-[800px] h-auto mx-auto" />
+                    imageMobile={"/projects/cinemateca/mock-devices-mobile.webp"}
+                    alt="Tablet and two smartphones arranged together, each showing different sections of the website: archive access, contact form, and contacts page"
+                    className="w-full max-w-200 h-auto mx-auto" />
 
                 <ProjectSection projectId={projectID}
                     title={"Results"}>

@@ -40,7 +40,9 @@ export default function ProjectPortalFelix({ projectID }: ProjectProps) {
 
                 <ImageDisplay
                     imageDesktop={"/projects/portal/mock-pc.png"}
-                    className="w-full max-w-[800px] h-auto mx-auto " />
+                    imageMobile={"/projects/portal/mock-pc-mobile.webp"}
+                    alt="Computer screen mockup displaying the platform's homepage"
+                    className="w-full max-w-200 h-auto mx-auto " />
 
                 <ProjectSection projectId={projectID}
                     title={"Challenges"}>
@@ -71,7 +73,9 @@ export default function ProjectPortalFelix({ projectID }: ProjectProps) {
 
                 <ImageDisplay
                     imageDesktop={"/projects/portal/mocks-grid.png"}
-                    className="w-full max-w-[1200px] h-auto mx-auto " />
+                    imageMobile={"/projects/portal/mocks-grid-mobile.webp"}
+                    alt="Multiple tablet mockups showing various pages, highlighting the responsive design of the wireframes"
+                    className="w-full max-w-300 h-auto mx-auto " />
 
 
                 <ProjectSection projectId={projectID}
@@ -86,8 +90,10 @@ export default function ProjectPortalFelix({ projectID }: ProjectProps) {
                         </ul>
 
                         <ImageDisplay
-                            imageDesktop={"/projects/portal/phase1.png"}
-                            className="w-full max-w-[800px] h-auto mx-auto pt-7 pb-7" />
+                            imageDesktop={"/projects/portal/mock-displays.png"}
+                            imageMobile={"/projects/portal/mock-displays-mobile.webp"}
+                            alt="Desktop and laptop mockups displaying findings, with two zoom user testing sessions in view"
+                            className="w-full max-w-200 h-auto mx-auto pt-7 pb-7" />
                     </div>
 
 
@@ -101,7 +107,9 @@ export default function ProjectPortalFelix({ projectID }: ProjectProps) {
 
                         <ImageDisplay
                             imageDesktop={"/projects/portal/octo-flow.webp"}
-                            className="w-full max-w-[800px] h-auto mx-auto pt-7 pb-7" />
+                            imageMobile={"/projects/portal/octo-flow-mobile.webp"}
+                            alt="Platform architecture in Octopus.io"
+                            className="w-full max-w-200 h-auto mx-auto pt-7 pb-7" />
                     </div>
 
                     <div className="pt-1">
@@ -114,7 +122,7 @@ export default function ProjectPortalFelix({ projectID }: ProjectProps) {
 
                         <ImageDisplay
                             imageDesktop={"/projects/portal/phase3.png"}
-                            className="w-full max-w-[800px] h-auto mx-auto pt-7 pb-7" />
+                            className="w-full max-w-200 h-auto mx-auto pt-7 pb-7" />
                     </div>
                 </ProjectSection>
 

@@ -15,143 +15,144 @@ export default function AboutMe() {
         }
         children={
           <div className="w-full lg:w-1/2">
-            <ImgDisplay srcDesktop={"/about/me-smile.png"} srcMobile="/about/me-mobile.webp" alt="Photo of me smiling" />
+            <ImgDisplay
+              srcDesktop={"/about/me-smile.webp"}
+              srcMobile="/about/me-smile-mobile.webp"
+              alt="Self-portrait of me smilings at the camera, framed by autumn leaves in warm orange tones" />
           </div>
         }>
       </Hero>
 
       <SectionArea id="Projects" color="#FC83AE" zIndex={99} className="w-full">
-          <StickyCards className="grid gap-8">
-            <figure>
-              <article className="">
-                <CardStyle>
-                  <div className="flex-1">
-                    <h2>Hi, I'm Cátia Diogo.</h2>
-                    <p>I'm currently UX/UI Designer Intern at <a href="https://crafton.eu/" className="font-semibold underline decoration-double hover:font-bold  transition-colors duration-300">Crafton</a>.</p>
-                  </div>
-                  <div className="flex-1">
-                    <ImgDisplay
-                      srcDesktop="/about/me.webp"
-                      srcMobile="/about/me-mobile.webp"
-                      alt="Photo of me smiling"
-                      className="w-full h-auto object-cover rounded-lg"
-                    />
-                  </div>
-                </CardStyle>
-              </article>
-            </figure>
+        <StickyCards className="grid gap-8">
+          <figure>
+            <article className="">
+              <CardStyle>
+                <div className="flex-1">
+                  <h2>Hi, I'm Cátia Diogo.</h2>
+                  <p>I'm currently UX/UI Designer Intern at <a href="https://crafton.eu/" className="font-semibold underline decoration-double hover:font-bold  transition-colors duration-300">Crafton</a>.</p>
+                </div>
+                <div className="flex-1">
+                  <ImgDisplay
+                    srcDesktop="/about/me.webp"
+                    srcMobile="/about/me-mobile.webp"
+                    alt="Seated self-portrait with a gentle smile"
+                    className="w-full h-auto object-cover rounded-lg"
+                  />
+                </div>
+              </CardStyle>
+            </article>
+          </figure>
 
-            <figure>
-              <article className="bg-[#FAF9F6] rotate-6">
-                <CardStyle>
-                  <div className="flex-1">
-                    <h2> <TfiDirectionAlt /> From </h2>
-                    <p className="card-text">
-                      I grew up surrounded by the enchanted forest of <span className="badge bg-green-500/60 text-black border-none">Arganil</span>.</p>
-                    <p className="card-text">
-                      Along the way, I lived in <span className="badge bg-red-500/60 text-black border-none">Slovakia</span> and <span className="badge bg-blue-500/60 text-black border-none">Greece</span>.
-                      Now I'm based in <span className="badge bg-yellow-500/70 text-black border-none">Figueira da Foz</span>, living by the sea!
-                    </p>
-                  </div>
+          <figure>
+            <article className="bg-[#FAF9F6] rotate-6">
+              <CardStyle>
+                <div className="flex-1">
+                  <h2> <TfiDirectionAlt /> From </h2>
+                  <p className="card-text">
+                    I grew up surrounded by the enchanted forest of <span className="badge bg-green-500/60 text-black border-none">Arganil</span>.</p>
+                  <p className="card-text">
+                    Along the way, I lived in <span className="badge bg-red-500/60 text-black border-none">Slovakia</span> and <span className="badge bg-blue-500/60 text-black border-none">Greece</span>.
+                    Now I'm based in <span className="badge bg-yellow-500/70 text-black border-none">Figueira da Foz</span>, living by the sea!
+                  </p>
+                </div>
 
-                  <div className="flex-2">
-                    <ImgDisplay
-                      srcDesktop="/about/piodao.png"
-                      alt="Photo of the Figueira' sea"
-                      className="w-full h-auto object-cover rounded-lg"
-                    />
-                  </div>
-                </CardStyle>
-              </article>
-            </figure>
+                <div className="flex-2">
+                  <ImgDisplay
+                    srcDesktop="/about/piodao.webp"
+                    alt="Me with arms open in the air, expressing joy in Piódão, with hilside buildings and montains behind me"
+                    className="w-full h-auto object-cover rounded-lg"
+                  />
+                </div>
+              </CardStyle>
+            </article>
+          </figure>
 
-            <figure>
-              <article className="bg-[#6DC1E4] -rotate-2">
-                <CardStyle>
-                  <div className="flex-1 self-start">
-                    <h2><BsAward /> Education </h2>
-                    <ul className="relative timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
-                      <span className="absolute left-0 top-0 w-0.5 h-full bg-white"></span>
-                      {educationTimeline.map((item, idx) => (
-                        <li key={idx} className="relative mb-2">
-                          <span className="absolute -left-1.5 top-3 w-3 h-3 rounded-full bg-white border-2 border-white"></span>
-                          <div className="timeline-start mb-1 md:text-start ml-3">
-                            <time className="badge">{item.year}</time>
-                            <div className="text-education">{item.degree}</div>
-                          </div>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+          <figure>
+            <article className="bg-[#6DC1E4] -rotate-2">
+              <CardStyle>
+                <div className="flex-1 self-start">
+                  <h2><BsAward /> Education </h2>
+                  <ul className="relative timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
+                    <span className="absolute left-0 top-0 w-0.5 h-full bg-white"></span>
+                    {educationTimeline.map((item, idx) => (
+                      <li key={idx} className="relative mb-2">
+                        <span className="absolute -left-1.5 top-3 w-3 h-3 rounded-full bg-white border-2 border-white"></span>
+                        <div className="timeline-start mb-1 md:text-start ml-3">
+                          <time className="badge">{item.year}</time>
+                          <div className="text-education">{item.degree}</div>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
-                  <div className="flex-2">
-                    <ImgDisplay
-                      srcDesktop="/about/master.png"
-                      srcMobile="/about/me-mobile.webp"
-                      alt="Photo of me smiling"
-                      className="w-full h-auto object-cover rounded-lg"
-                    />
-                  </div>
-                </CardStyle>
-              </article>
-            </figure>
+                <div className="flex-2">
+                  <ImgDisplay
+                    srcDesktop="/about/master.webp"
+                    alt="Me at my dissertation defense, listening attentively to the final feedback from the committee"
+                    className="w-full h-auto object-cover rounded-lg"
+                  />
+                </div>
+              </CardStyle>
+            </article>
+          </figure>
 
-            <figure>
-              <article className="bg-[#F2CF21] rotate-3">
-                <CardStyle>
-                  <div className="flex-1">
-                    <h2><BsSortUp /> Experience</h2>
-                    <p className="card-text">
-                      I worked on a European volunteering project and taught kids and teens, developing key skills in:
-                    </p>
-                    <div className="flex flex-wrap gap-2 mt-2">
-                      <span className="badge bg-[#FFB74D] text-black border-0">Visual storytelling</span>
-                      <span className="badge bg-[#66BB6A] text-black border-0">Content creation</span>
-                      <span className="badge bg-[#2196F3]/80 text-black border-0">Brand communication</span>
-                      <span className="badge bg-[#FFA726] text-black border-0">Empathy</span>
-                      <span className="badge bg-[#E57373] text-black border-0">Adaptability</span>
-                      <span className="badge bg-[#26A69A] text-black border-0">Active listening</span>
-                      <span className="badge bg-[#9C84EE] text-black border-0">Continuous learning</span>
-                    </div>
+          <figure>
+            <article className="bg-[#F2CF21] rotate-3">
+              <CardStyle>
+                <div className="flex-1">
+                  <h2><BsSortUp /> Experience</h2>
+                  <p className="card-text">
+                    I worked on a European volunteering project and taught kids and teens, developing key skills in:
+                  </p>
+                  <div className="flex flex-wrap gap-2 mt-2">
+                    <span className="badge bg-[#FFB74D] text-black border-0">Visual storytelling</span>
+                    <span className="badge bg-[#66BB6A] text-black border-0">Content creation</span>
+                    <span className="badge bg-[#2196F3]/80 text-black border-0">Brand communication</span>
+                    <span className="badge bg-[#FFA726] text-black border-0">Empathy</span>
+                    <span className="badge bg-[#E57373] text-black border-0">Adaptability</span>
+                    <span className="badge bg-[#26A69A] text-black border-0">Active listening</span>
+                    <span className="badge bg-[#9C84EE] text-black border-0">Continuous learning</span>
                   </div>
+                </div>
 
-                  <div className="flex-2">
-                    <ImgDisplay
-                      srcDesktop="/about/cinema1.png"
-                      srcMobile="/about/me-mobile.webp"
-                      alt="Photo of me smiling"
-                      className="w-full h-auto object-cover rounded-lg"
-                    />
-                  </div>
-                </CardStyle>
-              </article>
-            </figure>
+                <div className="flex-2">
+                  <ImgDisplay
+                    srcDesktop="/about/cinema.webp"
+                    srcMobile="/about/cinema-mobile.webp"
+                    alt="Me taking part in a filmed interview during my volunteer work in Slovakia, seated at a table with the interviewer"
+                    className="w-full h-auto object-cover rounded-lg"
+                  />
+                </div>
+              </CardStyle>
+            </article>
+          </figure>
 
-            <figure>
-              <article className="bg-[#E76F51]">
-                <CardStyle>
-                  <div className="flex-1">
-                    <h2><BsMarkerTip /> My Vision </h2>
-                    <p className="card-text">
-                      Design is more than just making things look stunning.
-                      It's about crafting experiences that are <span className="badge bg-[#FFD54F] text-black px-2 py-0.5 border-0">accessible</span>,
-                      <span className="badge bg-green-500/70 text-black px-2 py-0.5 border-0">inclusive</span>, and <span className="badge bg-[#64B5F6] text-black px-2 py-0.5 border-0">meaningful</span> for everyone
-                    </p>
-                  </div>
+          <figure>
+            <article className="bg-[#E76F51]">
+              <CardStyle>
+                <div className="flex-1">
+                  <h2><BsMarkerTip /> My Vision </h2>
+                  <p className="card-text">
+                    Design is more than just making things look stunning.
+                    It's about crafting experiences that are <span className="badge bg-[#FFD54F] text-black px-2 py-0.5 border-0">accessible</span>,
+                    <span className="badge bg-green-500/70 text-black px-2 py-0.5 border-0">inclusive</span>, and <span className="badge bg-[#64B5F6] text-black px-2 py-0.5 border-0">meaningful</span> for everyone.
+                  </p>
+                </div>
 
-                  <div className="flex-2">
-                    <ImgDisplay
-                      srcDesktop="/about/me-c.png"
-                      srcMobile="/about/me-mobile.webp"
-                      alt="Photo of me smiling"
-                      className="w-full h-auto object-cover rounded-lg"
-                    />
-                  </div>
-                </CardStyle>
-              </article>
-            </figure>
+                <div className="flex-2">
+                  <ImgDisplay
+                    srcDesktop="/about/me-light.webp"
+                    alt="Me gazing directly into the camera, framed by lights and surrounded by an autumn forest"
+                    className="w-full h-auto object-cover rounded-lg"
+                  />
+                </div>
+              </CardStyle>
+            </article>
+          </figure>
 
-          </StickyCards>
+        </StickyCards>
 
       </SectionArea>
     </>
