@@ -9,12 +9,7 @@ export const StyledNavbarContainer = styled.div`
   background: white;
   top: 0;
 
-  .menu{
-    gap: 1rem;
-  }
-  
-
-  &::before {
+  &::after {
     content: "";
     position: absolute;
     top: 0;

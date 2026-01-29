@@ -55,7 +55,7 @@ export default function CardItem({ card, showText, showLabel, showBadgeList, sho
 
                                 <div className="card-tools">
                                 {showBadgeList && card.tools && (
-                                    <div className="flex flex-wrap gap-1 md:justify-end">
+                                    <div className="hidden md:flex flex-wrap gap-1 md:justify-end ">
                                         {card.tools?.map((tool, index) => (
                                             <div
                                                 key={index}
