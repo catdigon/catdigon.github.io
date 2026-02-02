@@ -18,9 +18,9 @@ export default function ProjectSection({ projectId, title, children }: Props) {
         <>
             <div className="flex flex-col md:flex-row items-start">
 
-                <div className="flex-1 md:flex-2 p-4 flex-col gap-8 gap-8">
+                <div className="flex-1 md:flex-2 p-4 flex-col gap-8">
                     <h3>{title}</h3>
-                    <div className="space-y-4">
+                    <div className="space-y-4 pt-4">
                     {children}
                     </div>
                 </div>

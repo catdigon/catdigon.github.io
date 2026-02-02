@@ -48,20 +48,19 @@ export default function ProjectNotifications({ projectID }: ProjectProps) {
 
                 <ProjectSection projectId={projectID}
                     title={"Objective"}>
-                    <p>To investigate whether desktop notifications disrupt focus, and whether visual or auditory alerts have a greater impact on attention.</p>
+                    <p>Investigate how desktop notifications affect focus and determine whether visual or auditory alerts have a greater impact on attention.</p>
                 </ProjectSection>
 
                 <ProjectSection projectId={projectID}
                     title={"Methodology"}>
-                    <p>The study folowwed an experiemntal design combining eye-tracking and biometric data. Thirty-five participants completed reading tasks under three conditions. </p>
-                    <p>Metrics such as eye fixation, blink rate, hear rate, galvanic skin response, and pupil dilation were analyzed to assess attentional and cognitive responses.</p>
+                    <p>Conducted an experimental study with 35 participants, combining eye-tracking and biometric data to measure attentional and cognitive responses under three conditions. </p>
+                    <p>Metrics such as eye fixation, blink rate, heart rate, galvanic skin response, and pupil dilation were analyzed to assess the suble effects of notifications on focus.</p>
                 </ProjectSection>
 
                 <ProjectSection projectId={projectID}
                     title={"My Role"}>
-                    <p>I was responsible for participant setup, data acquisition, and analysis. This included operating the GazePoint eye-tracking system, managing biometric sensors and calibration, and ensuring protocol consistency across sessions. I also analyzed fixations patterns using predefined Areas of Interest (AOIs) and processed gaze data using custom JavaScript scripts.</p>
-                    <p>Metrics such as eye fixation, blink rate, hear rate, galvanic skin response, and pupil dilation were analyzed to assess attentional and cognitive responses.</p>
-                    
+                    <p>I was responsible for participant setup, data acquisition, and analysis. I operate the GazePoint eye-tracking system, managed biometric sensors and calibration, and ensured protocol consistency across sessions. I also analyzed fixation patterns using predefined Areas of Interest (AOIs) and processed gaze data using custom JavaScript scripts.</p>
+
                     <ImageDisplay
                         imageDesktop={"/projects/notifications/tests.webp"}
                         imageMobile={"/projects/notifications/tests-mobile.webp"}
@@ -71,9 +70,9 @@ export default function ProjectNotifications({ projectID }: ProjectProps) {
 
                 <ProjectSection projectId={projectID}
                     title={"Results & Insights"}>
-                        <p>Resulst suggest that notifications do not always cause immediate visual distraction, but often trigger delayed cognitive and physiological responses. In many cases, participantes did not fixate directly on notifications, yet their attentionm shifted afterward, indicating subtle but persistent disruptions of sustained attention. Combined visual and auditory notifications showed a stronger interference patterns.</p>
-                        <p>However, these effects were not strong enough to classify both types of notifications as significantly disruptive for short reading tasks. Future studies could focus on longer blocks ans tasks requiring higher sustained attention to better capture potential disruption.</p>
-                        <p>This project was valuble for understanding how suble desing elements can affect attention over time and reinforced the importance of using quantitative methods to inform design decisions, particularly in digital enviroments where attention is easily fragmented.</p>
+                        <p>Results suggest that desktop notifications do not always cause immediate visual distraction, but they can trigger delayed cognitive and physiological responses. Participants rarely fixated directly on notifications, yet their attention often shifted afterward, indicating subtle but persistent disruptions of sustained attention. Combined visual and auditory notifications caused the strongest interference patterns.</p>
+                        <p>Although these effects were not strong enough to classify notifications as significantly disruptive for short reading tasks, they reveal nuanced ways in which user focus can be affected. Future studies could investigate longer sessions and tasks that require higher sustained attention to better capture potential disruption.</p>
+                        <p>This project was valuable for understanding how subtle design elements can influence attention over time. Insights from this research informed UX design decisions aimed to minimize distraction in digital interfaces. The work also demonstrates the importance of quantitative, evidence-based approaches in delivering user-centered design.</p>
                     </ProjectSection>
 
             

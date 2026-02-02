@@ -12,10 +12,12 @@ interface Props {
 export default function HeroProject({ id, title, text, text2, children, color }: Props) {
 
     return (
-        <HeroPresentationStyle id={id} className="hero md:h-[90vh] pt-4 md:pt-0" $bg={color}>
-            <div className="hero-content p-0 flex-col lg:flex-row-reverse">
+        <HeroPresentationStyle id={id} className="hero lg:h-[90vh] h-full pt-4 md:pt-0" $bg={color}>
+            <div className="hero-content p-0 flex-col lg:flex-row-reverse items-stretch md:items-center">
+                <div className='md:flex-1 p-6 lg:p-0'>
                 {children}
-                <div className="card-body">
+                </div>
+                <div className="card-body md:flex-1">
                     <h1>{title}</h1>
                     <div className='hero-text'>{text}</div>
                     <p className="card-text2">{text2}</p>

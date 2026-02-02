@@ -136,8 +136,7 @@ export default function AboutMe() {
                   <h2><BsMarkerTip /> My Vision </h2>
                   <p className="card-text">
                     Design is more than just making things look stunning.
-                    It's about crafting experiences that are <span className="badge bg-[#FFD54F] text-black px-2 py-0.5 border-0">accessible</span>,
-                    <span className="badge bg-green-500/70 text-black px-2 py-0.5 border-0">inclusive</span>, and <span className="badge bg-[#64B5F6] text-black px-2 py-0.5 border-0">meaningful</span> for everyone.
+                    It's about crafting experiences that are <span className="badge bg-[#FFD54F] text-black px-2 py-0.5 border-0">accessible</span>, <span className="badge bg-green-500/70 text-black px-2 py-0.5 border-0">inclusive</span>, and <span className="badge bg-[#64B5F6] text-black px-2 py-0.5 border-0">meaningful</span> for everyone.
                   </p>
                 </div>
 

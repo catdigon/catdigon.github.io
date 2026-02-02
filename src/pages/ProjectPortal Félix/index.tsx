@@ -54,7 +54,7 @@ export default function ProjectPortalFelix({ projectID }: ProjectProps) {
                         </li>
                         <li>
                             <span className="font-bold">Ineffective Search & Feedback: </span>
-                            The rearch experience was complex and unintuitive, offering limited guidance for errors or empty results.
+                            The research experience was complex and unintuitive, offering limited guidance for errors or empty results.
                         </li>
                         <li>
                             <span className="font-bold">Usability & Accessibility Gaps: </span>
@@ -65,7 +65,7 @@ export default function ProjectPortalFelix({ projectID }: ProjectProps) {
                             Account creation and personalized tools were non-functional, and workflows did not support researchers' needs, leading to repetitive and inefficient actions.
                         </li>
                         <li>
-                            <span className="font-bold">Academic Context:</span>
+                            <span className="font-bold">Academic Context: </span>
                             As my first in-depth UX case study, the project required continuous learning and iterative problem-solving.
                         </li>
                     </ol>
@@ -84,7 +84,7 @@ export default function ProjectPortalFelix({ projectID }: ProjectProps) {
                     <div className="pt-4">
                         <h4 style={{ fontSize: '1.125rem', fontWeight: 700 }} className="pb-3">Research & Evaluation</h4>
                         <ul className="list-disc list-inside space-y-3">
-                            <li><span className="font-bold">Heurist Evaluation:</span> Applied Nielsen's principles to indentify critical issues in clarity, search, and error prevention</li>
+                            <li><span className="font-bold">Heuristic Evaluation:</span> Applied Nielsen's principles to identify critical issues in clarity, search, and error prevention</li>
                             <li> <span className="font-bold">User Testing:</span> Observed three representative profiles performing key tasks, uncovering unclear flows, inefficient navigation, and lack of feedback</li>
                             <li> <span className="font-bold">Accessibility Assessment:</span> Tested with screen readers, zoom, and AccessMonitor, revealing gaps in alt text, focus management, and color (WCAG 2.1)</li>
                         </ul>
@@ -101,7 +101,7 @@ export default function ProjectPortalFelix({ projectID }: ProjectProps) {
                         <h4 style={{ fontSize: '1.125rem', fontWeight: 700 }} className="pb-3">Insights & Strategy</h4>
                         <ul className="list-disc list-inside space-y-3">
                             <li><span className="font-bold">User-Centered Insights:</span>  Defined researchers as the primary users, with specific needs for searching, selecting, and cataloguing films, guiding all design decisions</li>
-                            <li> <span className="font-bold">Prioritized Feautures:</span> Focused on enabling core workflows such as account creation, login, and personalized tools</li>
+                            <li> <span className="font-bold">Prioritized Features:</span> Focused on enabling core workflows such as account creation, login, and personalized tools</li>
                             <li> <span className="font-bold">User Flows & Sitemap:</span> Mapped complete flows in Octopus and Figma, addressing navigation gaps and improving feedback</li>
                         </ul>
 
@@ -115,7 +115,7 @@ export default function ProjectPortalFelix({ projectID }: ProjectProps) {
                     <div className="pt-1">
                         <h4 style={{ fontSize: '1.125rem', fontWeight: 700 }} className="pb-3">Prototyping & Design</h4>
                         <ul className="list-disc list-inside  space-y-3">
-                            <li><span className="font-bold">Low-Fidelity Prototypes:</span> Built paper designs based on the new user flows, incorporating early modular thinking and reusable component for scalable design</li>
+                            <li><span className="font-bold">Low-Fidelity Prototypes:</span> Built paper designs based on the new user flows, incorporating early modular thinking and reusable components for scalable design</li>
                             <li> <span className="font-bold">User Testing:</span> Validated paper prototypes with a user performing key tasks, collecting insights to refine flows and interface clarity</li>
                             <li> <span className="font-bold">Medium-Fidelity Figma Prototypes:</span> Developed interactive wireframes with component-based design, variants, and auto-layouts for flexibility across content and screen sizes</li>
                         </ul>
@@ -129,10 +129,10 @@ export default function ProjectPortalFelix({ projectID }: ProjectProps) {
                 </ProjectSection>
 
                 <ProjectSection projectId={projectID}
-                    title={"Results"}>
-                    <p>By discovering a critical usability failure with a non-functional account creation, this project highlighted how broken workflows impact trust and user efficiency. This insight directly impacted user trust and efficiency, becoming a turning point for the redesign and guiding all subsequent decisions.</p>
-                    <p>The final outcome delivers a user-centered and research-focused solution that simplifies complex workflows and makes exploring the Portal Félix intuitive. Key improvements include a search tool with autocomplete, fully functional account creation and login, profile management, a favorites system, and adaptive navigation responsive to the user's state. </p>
-                    <p>Overall, the redesign supports and respects users by addressing the platform's original pain points and enabling a more reliable and efficient experience.</p>
+                    title={"Outcomes"}>
+                    <p>By uncovering a critical usability failure in account creation, the project improved trust and efficiency for Portal Félix users. </p>
+                    <p>The solution delivers a user-centered experience with simplified workflows, intuitive search with autocomplete, functional account management, a favorites system, and adaptive navigation responsive to the user's state.</p>
+                    <p>Overall, the redesign addresses the platform's original pain points, supporting users with a more reliable, efficient, and engaging experience.</p>
                 </ProjectSection>
             
             <ProjectsBreackLine />

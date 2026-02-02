@@ -24,7 +24,7 @@ export default function ProjectCinemateca({ projectID }: ProjectProps) {
                 id=""
                 color="#F8C200"
                 title={"Cinemateca"}
-                text={"Creating the institutional website from scratch into a clear, functional, and accessible digital experience."}
+                text={"Creating the institutional website from scratch as a clear, functional, and accessible digital experience."}
                 text2="UI Design, Prototyping, Front-end"
             >
                 <ImageHero
@@ -48,18 +48,18 @@ export default function ProjectCinemateca({ projectID }: ProjectProps) {
                 <ProjectSection projectId={projectID}
                     title={"Challenges & Expectations"}>
 
-                    <ol className="my-4 list-decimal list-inside space-y-4 marker:font-bold">
+                    <ol className="list-decimal list-inside space-y-4 marker:font-bold">
                         <li >
                             <span className="font-bold">Clear Content Flows: </span>
                             Organize extensive content into logical flows for each section, helping users find information with minimal effort.
                         </li>
                         <li>
-                            <span className="font-bold">Intuituive Navigation: </span>
+                            <span className="font-bold">Intuitive Navigation: </span>
                             Keep navigation visible and consistent to guide users, reduce scrolling, and make key information immediately accessible.
                         </li>
                         <li>
-                            <span className="font-bold">Modern Visual Comunication: </span>
-                            Respect Cinemateca's identity while updating its visual presentation to contemporary standard.
+                            <span className="font-bold">Modern Visual Communication: </span>
+                            Respect Cinemateca's identity while updating its visual presentation to contemporary standards.
                         </li>
                     </ol>
                 </ProjectSection>
@@ -73,10 +73,10 @@ export default function ProjectCinemateca({ projectID }: ProjectProps) {
                 <ProjectSection projectId={projectID}
                     title={"My Approach"}>
 
-                    <div className="pt-4">
+                    <div>
                         <h4 style={{ fontSize: '1.125rem', fontWeight: 700 }}>Research & Inspiration</h4>
                         <ul className="list-disc list-inside">
-                            <li>Reviewed international cinematecas, film festivals websites, and archival materials</li>
+                            <li>Reviewed international cinematecas, film festivals' websites, and archival materials</li>
                             <li>Defined content hierarchy, navigation patterns, and visual guidelines</li>
                         </ul>
                     </div>
@@ -85,7 +85,7 @@ export default function ProjectCinemateca({ projectID }: ProjectProps) {
                         <h4 style={{ fontSize: '1.125rem', fontWeight: 700 }}>Design & Prototyping</h4>
                         <ul className="list-disc list-inside">
                             <li>Created wireframes and high-fidelity prototypes</li>
-                            <li>Iterated on layouts, components, and interactions to improve usability, clarity, an user engagement</li>
+                            <li>Iterated on layouts, components, and interactions to improve usability, clarity, and user engagement</li>
                         </ul>
                     </div>
 
@@ -94,7 +94,7 @@ export default function ProjectCinemateca({ projectID }: ProjectProps) {
                         <ul className="list-disc list-inside">
                             <li>Translated the final design into a responsive website using HTML, CSS, Bootstrap, and JavaScript</li>
                             <li>Implemented a Git-based workflow for version control</li>
-                            <li>Ensure site perfomance and responsiveness, including loading speed and image scaling</li>
+                            <li>Ensured site performance and responsiveness, including loading speed and image scaling</li>
                         </ul>
                     </div>
                 </ProjectSection>
@@ -106,10 +106,10 @@ export default function ProjectCinemateca({ projectID }: ProjectProps) {
                     className="w-full max-w-200 h-auto mx-auto" />
 
                 <ProjectSection projectId={projectID}
-                    title={"Results"}>
+                    title={"Outcomes"}>
                     <div className="space-y-4 w-full">
-                        <p>The final result delivers a modern, and user-centered experience, built to be a coherent digital product. By organizing complex content into clear flows and keepping navigation accessible all times, users can quickly explore and access to film archive, read news and discover screenings.</p>
-                        <p>More than respecting the Cinemateca's identity, it gives it a fresh and contemporary visual language.</p>
+                        <p>This original design delivers a modern and user-centered experience, allowing users to explore the film archive, read news, and discover upcoming screenings effortlessly.  By organizing complex content into clear flows and keeping navigation accessible at all times, users can find information quickly and confidently.</p>
+                        <p>The visual language gives the Cinemateca a fresh and contemporary identity, creating an engaging experience that connects both new and existing audiences.</p>
                     </div>
                 </ProjectSection>
 

@@ -28,7 +28,7 @@ export default function Footer() {
                         </a>
                     </StyledEmailLink>
                     <SocialLinks />
-                        <p>Copyright © {new Date().getFullYear()} - All right reserved by Cátia Diogo</p>
+                        <p>Copyright © {new Date().getFullYear()} - All rights reserved by Cátia Diogo</p>
                 </footer>
             </StyledFooter>
     );

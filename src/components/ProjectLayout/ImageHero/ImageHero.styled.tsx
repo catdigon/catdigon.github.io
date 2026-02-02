@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledImageCover = styled.div`
 
-    margin-top: 3rem;
+    margin-top: 2rem;
 
 img{
     width: 100%;
